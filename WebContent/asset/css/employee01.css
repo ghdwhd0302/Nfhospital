@@ -1,0 +1,97 @@
+body {
+        
+    background: #fff;
+}
+
+div#wrap{
+    width: 99vw;
+    margin: auto auto; 
+}
+
+header {
+    float: left;
+    width: 89vw;
+    height: 5vh;
+    background: #ffffff;	
+
+}
+
+aside {
+    float: left;
+    width: 10vw;
+    height: 99vh;
+    background: #2763ba;
+    position: fixed;
+}
+
+section {
+    float: right;
+    width: 89vw;
+    height: 183vh;
+    background:#b4ccdd4a;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+}
+
+h3 {
+   padding-left: 30px;
+   }
+.home {
+    padding-right: 30px;
+    padding-top: 20px;
+}
+
+
+.body_wrap_table1 {
+    width: 94%;
+    height: 97px;
+    margin: auto;
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 20px;
+    text-align: left;
+}
+ .table1 {
+    width: 98%;
+    height: 45px;
+    margin-left: auto;
+    margin-right: auto;
+   }   
+
+table, th, td {
+    border: 1px solid #dbd1d1de ;
+    border-collapse: collapse;
+    height: 45px;
+    padding-left: 20px;
+}
+
+.table1_th {
+    width: 10%;
+}
+.table1 #situ {
+    padding-left: 68%;
+}
+
+.table1 #pati_name {
+    padding-right: 68%;
+}
+
+.body_wrap_table2 {
+    width: 94%;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 27px;
+    height: 152vh
+}
+.table2 {
+    width: 98%;
+    height: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px; 
+    text-align: center;
+}
