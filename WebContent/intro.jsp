@@ -9,6 +9,7 @@
     <title>병원개요 | 서울대학교병원</title>
     <link rel="stylesheet" href="asset/css/intro.css">
     <link rel="stylesheet" href="asset/css/footer.css">
+    <link rel="stylesheet" href="asset/css/aside.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
@@ -91,6 +92,58 @@
                 <img src="http://www.snuh.org/asset/img/about/img_overview02.jpg" alt="1.서울대학교 의학, 간호학 및 약학 등 학생의 임상교육, 2.전공의 수련 및 의료요원 훈련, 3.의학, 간호학, 약학 등의 연구, 4.임상연구, 5.진료사업, 6.국민보건향상에 관한 사업전개">
             </div>
         </main>
+        <aside id="aside" class="asideWrap" style="position: absolute; top: 180px;">
+            <h2>관련 콘텐츠</h2>
+            <!-- asideContList -->
+            <ul class="asideContList">
+        
+                
+        
+                
+                    <!-- <li class=""><a href="/join/client.do">고객의소리 등록</a></li>
+                
+                    <li class=""><a href="/content/M004001002.do">고객상담실 업무안내</a></li>
+                 -->
+            </ul>
+            <!-- //asideContList -->
+            <h2>자주 찾는 서비스</h2>
+            <!-- asideServiceList -->
+            <ul class="asideServiceList clearFix">
+                
+                    <li class=""><a href="/reservation/meddept/main.do">본원</a></li>
+                
+                    <li class=""><a href="/reservation/reservation.do">진료예약</a></li>
+                
+                    <li class=""><a href="/content/M001004001.do">진료안내</a></li>
+                
+                    <li class=""><a href="/reservation/confirm/rsvConfirm.do">외래예약확인</a></li>
+                
+            </ul>
+            <!-- //asideServiceList -->
+            <!-- outcomesTab -->
+            
+            <!-- //outcomesTab -->
+            <!-- phoneNum -->
+            <ul class="phoneNum">
+                <!-- <li class="b">
+                    <span>진료예약</span>
+                    <strong>1588-5700</strong>
+                </li>
+                <li class="b">
+                    <span>대표전화</span>
+                    <strong>02-2072-2114</strong>
+                </li> -->
+                <li class="">
+                    <span>대표전화</span>
+                    <strong>1234-1234</strong>
+                </li>
+                
+            </ul>
+            <!-- //phoneNum -->
+            <a href="#" class="btnTop">
+                <img src="http://www.snuh.org/asset/img/common/img_top.png" alt="TOP">
+            </a>
+        </aside>
         <footer id="footer">
             <div class="ftMenuWrap">
                 <div class="footerMenu">
@@ -154,4 +207,5 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="asset/js/intro.js"></script>
+<script src="asset/js/aside.js"></script>
 </html>
