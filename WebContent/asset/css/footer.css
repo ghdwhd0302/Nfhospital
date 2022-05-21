@@ -1,3 +1,98 @@
+
+@charset "UTF-8"; 
+
+#content {
+	word-spacing: 0;
+	letter-spacing: -.5px
+}
+
+#footer {
+	margin-top: 100px;
+	background-color: #31354e;
+	
+}
+#footer li {
+	float: left
+}
+.footerMenu {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 50;
+	width: 100%;
+	height: 60px;
+	background-color: #31354e
+}
+.footerMenu:before, .footerMenu>.b {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 60px;
+	background-color: #22263b
+}
+.footerLink {
+	position: relative;
+	height: 59px;
+	margin-left: 26vw;
+}
+p {
+    margin: 0 0 10px 40px;
+}
+
+.footerLink li {
+	margin: 8px
+}
+
+.footerLink a {
+	display: block;
+	padding: 9px;
+	color: #ccc;
+	white-space: nowrap
+}
+
+.footerLink img {
+	margin-top: -2px;
+	margin-left: 3px
+}
+
+.ie7Only .footerLink img {
+	margin-top: 2px
+}
+.clearFix{
+	margin-left: 40px;
+	
+}
+.footerInfo {
+	padding: 26px 0 60px ;
+	border-top: 1px solid #22263b;
+	margin-left: 26vw;
+}
+
+.footerInfo address p, .copyright {
+	color: #999;
+	font-size: 14px
+}
+
+.footerInfo address {
+	display: block
+}
+
+.footerInfo address p {
+	float: left
+}
+
+.footerInfo address p+p {
+	margin: 0 0 0 15px
+}
+
+.footerInfo address a {
+	color: #999
+}
+
+	
+
 #footer{
     margin-top: 100px;
     background-color: #31354e;
@@ -226,3 +321,4 @@ p{
 .footerInfo address a{
     color: #999;
 }
+
