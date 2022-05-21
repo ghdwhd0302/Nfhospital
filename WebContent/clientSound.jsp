@@ -9,6 +9,7 @@
     <title>고객의 소리 등록 | 서울대학교병원</title>
     <link rel="stylesheet" href="asset/css/clientSound.css">
     <link rel="stylesheet" href="asset/css/footer.css">
+    <link rel="stylesheet" href="asset/css/aside.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
@@ -77,6 +78,57 @@
                 <img src="http://www.snuh.org/asset/img/join/img_cstomerOdList.png" alt="1.접수:고객의 소리 접수, 2.확인:해당부서 전달 및 확인, 3.회신:결과 회신 및 개선활동">
             </div>
         </main>
+        <aside id="aside" class="asideWrap" style="position: absolute; top: 180px;">
+            <h2>관련 콘텐츠</h2>
+            <!-- asideContList -->
+            <ul class="asideContList">
+        
+                
+        
+                
+                
+                    <li class=""><a href="/content/M004001002.do">고객상담실 업무안내</a></li>
+                
+            </ul>
+            <!-- //asideContList -->
+            <h2>자주 찾는 서비스</h2>
+            <!-- asideServiceList -->
+            <ul class="asideServiceList clearFix">
+                
+                    <li class=""><a href="/reservation/meddept/main.do">본원</a></li>
+                
+                    <li class=""><a href="/reservation/reservation.do">진료예약</a></li>
+                
+                    <li class=""><a href="/content/M001004001.do">진료안내</a></li>
+                
+                    <li class=""><a href="/reservation/confirm/rsvConfirm.do">외래예약확인</a></li>
+                
+            </ul>
+            <!-- //asideServiceList -->
+            <!-- outcomesTab -->
+            
+            <!-- //outcomesTab -->
+            <!-- phoneNum -->
+            <ul class="phoneNum">
+                <!-- <li class="b">
+                    <span>진료예약</span>
+                    <strong>1588-5700</strong>
+                </li>
+                <li class="b">
+                    <span>대표전화</span>
+                    <strong>02-2072-2114</strong>
+                </li> -->
+                <li class="">
+                    <span>대표전화</span>
+                    <strong>1234-1234</strong>
+                </li>
+                
+            </ul>
+            <!-- //phoneNum -->
+            <a href="#" class="btnTop">
+                <img src="http://www.snuh.org/asset/img/common/img_top.png" alt="TOP">
+            </a>
+        </aside>
         <footer id="footer">
             <div class="ftMenuWrap">
                 <div class="footerMenu">
@@ -138,5 +190,7 @@
         </footer>
     </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="asset/js/clientSound.js"></script>
+<script src="asset/js/aside.js"></script>
 </html>

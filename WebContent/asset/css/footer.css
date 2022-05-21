@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 @charset "UTF-8"; 
 
@@ -93,6 +94,8 @@ p {
 
 	
 
+=======
+>>>>>>> introduce/intro
 #footer{
     margin-top: 100px;
     background-color: #31354e;
@@ -320,5 +323,9 @@ p{
 
 .footerInfo address a{
     color: #999;
+<<<<<<< HEAD
 }
 
+=======
+}
+>>>>>>> introduce/intro
