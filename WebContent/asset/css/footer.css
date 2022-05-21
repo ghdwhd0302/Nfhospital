@@ -1,4 +1,4 @@
-@charset "UTF-8"; 
+@charset "UTF-8";
 
 #content {
 	word-spacing: 0;
@@ -6,13 +6,19 @@
 }
 
 #footer {
+	width: 100%;
 	margin-top: 100px;
 	background-color: #31354e;
-	
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 0;
 }
+
 #footer li {
 	float: left
 }
+
 .footerMenu {
 	position: absolute;
 	bottom: 0;
@@ -22,6 +28,7 @@
 	height: 60px;
 	background-color: #31354e
 }
+
 .footerMenu:before, .footerMenu>.b {
 	content: '';
 	position: absolute;
@@ -31,17 +38,27 @@
 	height: 60px;
 	background-color: #22263b
 }
+
 .footerLink {
-	position: relative;
 	height: 59px;
-	margin-left: 26vw;
+	border-bottom: 1px solid black;
+	
 }
+
 p {
-    margin: 0 0 10px 40px;
+	margin: 0 0 10px 40px;
 }
 
 .footerLink li {
 	margin: 8px
+}
+
+.footerLink ul {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+
 }
 
 .footerLink a {
@@ -49,6 +66,7 @@ p {
 	padding: 9px;
 	color: #ccc;
 	white-space: nowrap
+	
 }
 
 .footerLink img {
@@ -59,14 +77,15 @@ p {
 .ie7Only .footerLink img {
 	margin-top: 2px
 }
-.clearFix{
+
+.clearFix {
 	margin-left: 40px;
-	
 }
+
 .footerInfo {
-	padding: 26px 0 60px ;
-	border-top: 1px solid #22263b;
-	margin-left: 26vw;
+	/* padding: 26px 0 60px ; */
+	/* border-top: 1px solid #22263b; */
+	
 }
 
 .footerInfo address p, .copyright {
@@ -89,5 +108,3 @@ p {
 .footerInfo address a {
 	color: #999
 }
-
-	
