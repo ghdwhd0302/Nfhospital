@@ -16,11 +16,12 @@
 
 .road {
 	text-align: center;
+	border-top:1px solid black; 
 }
 
 .row {
 	width: 100%;
-	height: 50vh;
+	height: 100vh;
 }
 
 .row2 {
@@ -127,34 +128,46 @@ div.btns {
 .col1 {
 	background-color: #008ace;
 	color: white;
-	width: 198px;
-	height: 203px;
+	width: 260px;
+	height: 260px;
 	text-align: left;
 	padding-left: 15px;
+	margin-right: 20px;
 }
 
 .col2 {
 	background-color: #2763ba;
 	color: white;
-	width: 198px;
-	height: 203px;
+	width: 260px;
+	height: 260px;
 	text-align: left;
 	padding-left: 15px;
+	margin-right: 20px;
 }
 
 .col3 {
 	background-color: #2ca48f;
 	color: white;
-	width: 198px;
-	height: 203px;
+		width: 260px;
+	height: 260px;
 	text-align: left;
 	padding-left: 15px;
+	margin-right: 20px;
 }
 
 .col4 {
-	width: 198px;
-	height: 203px;
+	width: 260px;
+	height: 260px;
 	border: 1px solid #2763ba;
+	margin-right: 20px;
+}
+.col5{
+	width: 260px;
+	height: 260px;
+	text-align: left;
+	background-image: url("https://www.snuh.org/asset/img/main/bg_mainHealth01.jpg");
+	
+	
 }
 .textForm{
 	border: 1px solid white;

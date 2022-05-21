@@ -6,6 +6,9 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="asset/css/footer.css">
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
@@ -13,197 +16,18 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
-<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 
 
 
 	<footer id="footer">
-		<!-- ftMenuWrap -->
+		
 
 
 
 
-
-
-
-
-		<div class="ftMenuWrap">
-			<!-- footerMenu -->
-
-			<!-- innerWrap -->
-			<div class="innerWrap clearFix">
-				<ul class="ftMenuList01">
-					<li><a href="//child.snuh.org/main.do" target="_blank">어린이병원</a></li>
-					<li class=""><a href="//cancer.snuh.org/main.do"
-						target="_blank">암병원</a></li>
-					<li class=""><a href="//www.snubh.org/" target="_blank">분당서울대병원</a></li>
-					<li class=""><a href="//www.brmh.org/" target="_blank">보라매병원</a></li>
-					<li class=""><a href="//healthcare.snuh.org/" target="_blank">강남센터</a></li>
-					<li class=""><a href="http://medicine.snu.ac.kr"
-						target="_blank">서울대학교의과대학</a></li>
-				</ul>
-				<ul class="ftMenuList02">
-					<li><a href="#ftMenuCol01" class="" title="진료과 메뉴 레이어 열기">진료과</a></li>
-					<li><a href="#ftMenuCol02" class="" title="주요센터 메뉴 레이어 열기">주요센터</a></li>
-					<li><a href="#ftMenuCol03" class="" title="주요부서 메뉴 레이어 열기">주요부서</a></li>
-					<li><a href="#ftMenuCol04" class="" title="주요서비스 메뉴 레이어 열기">주요서비스</a></li>
-					<li><a href="#ftMenuCol05" class="" title="패밀리사이트 메뉴 레이어 열기">패밀리사이트</a></li>
-				</ul>
-				<!-- ftMenuLayer -->
-				<div class="ftMenuLayer clearFix" role="region" aria-hidden="true"
-					aria-expanded="false" style="display: none; visibility: visible;">
-					<!-- ftMenuCol01 -->
-					<div id="ftMenuCol01" class="ftMenuCol01">
-						<h3>진료과</h3>
-						<ul class="clearFix">
-							<li class=""><a href="http://im.snu.ac.kr" target="_blank">내과</a></li>
-							<li class=""><a href="http://surgery.snu.ac.kr"
-								target="_blank">외과</a></li>
-							<li class=""><a
-								href="//www.snuh.org/reservation/meddept/TS/mainIntro.do"
-								target="_blank">흉부외과</a></li>
-							<li class=""><a
-								href="https://www.snuh.org/reservation/meddept/NS/mainIntro.do"
-								target="_blank">신경외과</a></li>
-							<li class=""><a
-								href="//www.snuh.org/reservation/meddept/OS/mainIntro.do">정형외과</a></li>
-							<li class=""><a
-								href="https://www.snuh.org/reservation/meddept/PS/mainIntro.do"
-								target="_blank">성형외과</a></li>
-							<li class=""><a
-								href="//www.snuh.org/reservation/meddept/OG/mainIntro.do">산부인과</a></li>
-							<li class=""><a
-								href="//www.snuh.org/reservation/meddept/DM/mainIntro.do">피부과</a></li>
-							<li class=""><a
-								href="//www.snuh.org/reservation/meddept/UR/mainIntro.do">비뇨의학과</a></li>
-							<li class=""><a
-								href="//www.snuh.org/reservation/meddept/OT/mainIntro.do">안과</a></li>
-							<li class=""><a
-								href="//www.snuh.org/reservation/meddept/OL/mainIntro.do">이비인후과</a></li>
-							<li class=""><a
-								href="//www.snuh.org/reservation/meddept/NP/mainIntro.do">정신건강의학과</a></li>
-							<li class=""><a href="http://www.snuhneurology.net/"
-								target="_blank">신경과</a></li>
-							<li class=""><a
-								href="//www.snuh.org/reservation/meddept/AN/mainIntro.do">마취통증의학과</a></li>
-							<li class=""><a
-								href="//www.snuh.org/reservation/meddept/FM/mainIntro.do">가정의학과</a></li>
-							<li class=""><a
-								href="http://www.snuher.org/ercenter/ercenter1.php"
-								target="_blank">응급의학과</a></li>
-							<li class=""><a
-								href="//www.snuh.org/reservation/meddept/RH/mainIntro.do">재활의학과</a></li>
-							<li class=""><a
-								href="http://snurad.snu.ac.kr/radiology/index.html">영상의학과</a></li>
-							<li class=""><a
-								href="//www.snuh.org/reservation/meddept/TR/mainIntro.do">방사선종양학과</a></li>
-							<li class=""><a href="http://nm.snu.ac.kr/" target="_blank">핵의학과</a></li>
-							<li class=""><a href="http://www.snuhlab.org/"
-								target="_blank">진단검사의학과</a></li>
-							<li class=""><a
-								href="//www.snuh.org/reservation/meddept/PA/mainIntro.do">병리과</a></li>
-						</ul>
-					</div>
-					<!-- //ftMenuCol01 -->
-					<!-- ftMenuCol02 -->
-					<div id="ftMenuCol02" class="ftMenuCol02">
-						<h3>주요센터</h3>
-						<ul class="clearFix">
-							<li class=""><a
-								href="https://www.snuh.org/reservation/meddept/GLC/deptIntro.do"
-								target="_blank">감마나이프센터</a></li>
-							<li class=""><a
-								href="http://dept.snuh.org/dept/HPC/index.do" target="_blank">건강증진센터</a></li>
-							<li class=""><a href="/" class="winPopup"
-								data-popup-url="/asset/layer/layerInter.html"
-								data-popup-width="1000" data-popup-height="1400" target="_blank">국제진료센터</a></li>
-							<li class=""><a href="http://www.snuh.org/dmc"
-								target="_blank">약물안전센터</a></li>
-							<li class=""><a href="http://www.childheart.net/"
-								target="_blank">어린이병원심장센터</a></li>
-							<li class=""><a href="http://www.breastsnu.org/"
-								target="_blank">유방센터</a></li>
-							<li class=""><a href="http://www.snuhcic.com/"
-								target="_blank">인공와우센터</a></li>
-							<li class=""><a href="http://www.transplant.or.kr/"
-								target="_blank">장기이식센터</a></li>
-							<li class=""><a href="http://nrefer.snuh.org/"
-								target="_blank">진료협력센터</a></li>
-							<li class=""><a href="http://www.snumdc.org/"
-								target="_blank">파킨슨센터</a></li>
-							<li class=""><a href="http://raredisease.snuh.org/"
-								target="_blank">희귀질환센터</a></li>
-						</ul>
-					</div>
-					<!-- //ftMenuCol02 -->
-					<!-- ftMenuColWrap -->
-					<div class="ftMenuColWrap">
-						<!-- ftMenuCol03 -->
-						<div id="ftMenuCol03" class="ftMenuCol03">
-							<h3>주요부서</h3>
-							<ul class="clearFix">
-								<li class=""><a
-									href="https://dept.snuh.org/dept/NU/index.do" target="_blank">간호부문</a></li>
-								<li class=""><a href="http://pharm.snuh.org/"
-									target="_blank">약제부</a></li>
-							</ul>
-						</div>
-						<!-- //ftMenuCol03 -->
-						<!-- ftMenuCol04 -->
-						<div id="ftMenuCol04" class="ftMenuCol04">
-							<h3>주요서비스</h3>
-							<ul class="clearFix">
-								<li class=""><a href="//recruit.snuh.org/" target="_blank">채용사이트</a></li>
-								<li class=""><a href="//qrcode.snuh.org/" target="_blank">QRCODE</a></li>
-								<!-- 		<li class="b"><a href="//www.snuh.org/m" target="_blank">MOBILE</a></li> -->
-								<li class=""><a href="//search.snuh.org/" target="_blank">통합검색</a></li>
-								<li class=""><a href="//sdoc.snuh.org/" target="_blank">증명서발급</a></li>
-							</ul>
-						</div>
-						<!-- //ftMenuCol04 -->
-					</div>
-					<!-- //ftMenuColWrap -->
-					<!-- ftMenuCol05 -->
-					<div id="ftMenuCol05" class="ftMenuCol05">
-						<h3>패밀리사이트</h3>
-						<ul class="clearFix">
-							<!--		<li class="b"><a href="http://public.snuh.org/index.do" target="_blank">공공보건의료진흥원</a></li>   -->
-							<li class=""><a
-								href="http://dept.snuh.org/dept/HHCC/index.do" target="_blank">의학역사문화원</a></li>
-							<li class=""><a href="http://www.snuhfund.org/"
-								target="_blank">발전후원회</a></li>
-							<li class=""><a href="https://isupport.tistory.com/"
-								target="_blank">어린이병원후원회</a></li>
-							<li class=""><a
-								href="http://bri.snuh.org/pub/_/singlecont/view.do"
-								target="_blank">의생명연구원</a></li>
-							<li class=""><a href="http://mrcc.snuh.org/" target="_blank">의학연구협력센터</a></li>
-							<li class=""><a
-								href="http://ctc.bri.snuh.org/pub/_/singlecont/view.do"
-								target="_blank">임상시험센터</a></li>
-							<li class=""><a href="http://www.celltherapy.re.kr"
-								target="_blank">혁신세포치료연구사업단</a></li>
-							<li class=""><a href="http://www.ahp.or.kr" target="_blank">의료경영고위과정</a></li>
-							<!-- <li class="b"><a href="http://www.rarediseasecenter.org" target="_blank">희귀질환 연구지원센터</a></li> -->
-							<li class=""><a
-								href="http://dept.snuh.org/dept/HRDC/index.do" target="_blank">서울대학교병원
-									인재원</a></li>
-							<!-- <li class="b"><a href="http://dept.snuh.org/dept/USA/index.do" target="_blank">서울대학교병원 LA오피스</a></li> -->
-							<!-- <li class="b"><a href="http://posc.snuh.org/" target="_blank">2018평창동계올림픽 지원원회</a></li> -->
-						</ul>
-					</div>
-					<!-- //ftMenuCol05 -->
-					<button class="layerCloseBtn" type="button">메뉴 레이어 닫기</button>
-				</div>
-				<!-- //ftMenuLayer -->
-			</div>
-			<!-- //innerWrap -->
-
-		</div>
 
 		<!-- //ftMenuWrap -->
 		<!-- footerLink -->
