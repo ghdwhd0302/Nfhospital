@@ -1,11 +1,10 @@
 
-
 body{
     color: #000;
     font-size: 16px;
     word-spacing: -0.5px;
     letter-spacing: -1px; 
-    height: 1529.62px;
+    height: 2201.950px;
     font-family: 'Noto Sans KR', sans-serif;
 }
 
@@ -23,10 +22,11 @@ body{
     overflow: hidden;
     position: relative;
     min-width: 1120px;
-    height: 1529.62px;
+    height: 2201.950px;
     background-color: #fff; 
     margin-top: 23px;
 }
+
 a:link{
     text-decoration: none;
 }
@@ -172,7 +172,7 @@ li.zoomIn{
     margin-left: 401.500px;
     margin-right: 401.500px;
     padding-top: 0;
-    height: 925px;
+    height: 1597.33px;
 }
 
 #content{
@@ -199,170 +199,6 @@ h2, h3{
     font-weight: 700;
 }
 
-.clearFix::before{
-    content: ' ';
-    display: table;
-}
-
-.clearFix::after{
-    content: ' ';
-    clear: both;
-    display: table;
-}
-
-.cstomLinkBox .cstomBox{
-    float: left;
-    width: 333px;
-    height: 166px;
-    margin-top: 8px;
-    padding: 23px 37px 30px 30px;
-    background: url("http://www.snuh.org/asset/img/join/bg_customerBox01.png") no-repeat 0 0;
-}
-
-.cstomLinkBox .cstomBox h4{
-    margin-bottom: 7px;
-    font-size: 28px;
-    color: #fff;
-    font-weight: 700;
-}
-
-.cstomLinkBox .cstomBox p{
-    font-size: 18px;
-    color: #fff;
-}
-
-p{
-    word-break: keep-all;
-    line-height: 1.63;
-}
-
-[class*=btnType]{
-    overflow: visible;
-    vertical-align: top;
-    height: 40px;
-    padding: 0 20px;
-    color: #000;
-    font-size: 16px;
-    text-align: center;
-    line-height: 38px;
-    background-color: #fff;
-    cursor: pointer;
-}
-
-[class*=btn] {
-    display: inline-block;
-    border: 0;
-}
-
-.cstomLinkBox p + [class*=btnWrap] {
-    margin-top: 50px;
-}
-
-.alignL{
-    text-align: left!important;
-}
-
-.cstomLinkBox [class*=btnWrap].alignL [class*=btnType]{
-    margin: 0;
-    padding: 0 15px;
-    border-color: #fff;
-    background-color: transparent;
-}
-
-.cstomLinkBox .cstomBox a{
-    color: #fff;
-}
-
-.cstomLinkBox [class*=btnType]{
-    float: left;
-}
-
-a[class*=btnType]{
-    height: 38px;
-}
-
-a:visited{
-    text-decoration: none;
-}
-
-.btnType02{
-    border: 1px solid #000;
-}
-
-.cstomLinkBox [class*=btnType] + [class*=btnType] {
-    float: right;
-}
-
-[class*=btnWrap].alignL [class*=btnType]{
-    margin: 0 10px 0 0;
-}
-
-.cstomLinkBox .cstomBox + .cstomBox {
-    background: url("http://www.snuh.org/asset/img/join/bg_customerBox02.png") no-repeat 0 0;
-}
-
-[class*=btnWrap]{
-    display: block;
-    position: relative;
-    margin-top: 30px;
-    text-align: right;
-}
-
-[class*=btnWrap] [class*=btnType]{
-    margin: 0 0 0 10px;
-}
-
-.btnType01{
-    border: 1px solid #ccc;
-}
-
-.contTitleWrap > :first-child{
-    float: left;
-    font-size: 28px;
-    letter-spacing: -2.1px;
-}
-
-.cstomerGuide{
-    position: relative;
-    height: 80px;
-    padding-left: 100px;
-}
-
-.cstomerGuide::before{
-    content: ' ';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 80px;
-    height: 82px;
-    background: url("http://www.snuh.org/asset/img/join/spr_join.png") no-repeat -52px -173px;
-}
-
-.cstomerGuide .contTextWrap{
-    margin-top: 0;
-}
-
-.contTextWrap{
-    overflow: hidden;
-    margin: 30px 0 10px;
-}
-
-.contTextWrap > p:first-child{
-    float: none;
-    width: 100%;
-}
-
-.contTextWrap > :first-child {
-    overflow: hidden;
-    float: left;
-    width: 80%;
-    font-size: 20px;
-}
-
-.cstomLinkBox ~ .contTitleWrap{
-    margin-top: 50px;
-}
-
 .contTitleWrap{
     overflow: hidden;
     position: relative;
@@ -375,11 +211,65 @@ a:visited{
     letter-spacing: -2.1px;
 }
 
-.cstomerContent .custImg{
+.overviewContent .imgWrap1{
+    margin-bottom: 35px;
+    height: 243px;
+}
+
+.lightTxtIntro{
+    color: #000;
+    font-size: 32px;
+    letter-spacing: -1.6px;
+    line-height: 1.4;
+    font-weight: 300;
+}
+
+p + p{
+    margin-top: 8px;
+}
+
+p{
+    color: #333;
+    word-break: keep-all;
+    line-height: 1.63;
+}
+
+.colorPoint{
+    color: #2763ba!important;
+}
+
+.overviewContent .imgWrap2{
+    margin-bottom: 35px;
     text-align: center;
+    height: 160px;
+}
+
+.contTextWrap{
+    overflow: hidden;
+    margin: 30px 0 10px;
+    font-weight: 400;
+}
+
+.contTextWrap > p:first-child{
+    float: none;
+    width: 100%;
+}
+
+.contTextWrap > :first-child{
+    overflow: hidden;
+    font-size: 20px;
+}
+
+.alignC{
+    text-align: center!important;
+}
+
+.contTitleWrap{
+    overflow: hidden;
+    position: relative;
+    margin: 50px 0 28px;
 }
 
 img{
     vertical-align: middle;
-    border: none;
 }
