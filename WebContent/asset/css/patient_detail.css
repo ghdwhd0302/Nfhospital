@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 * {
     margin:0;
     padding:0; 
@@ -136,7 +135,7 @@ button {
 }
 
 a:link {
-    color : #fff;
+    color : #1ac3a8;
   }
   a:visited {
     color : pink;
