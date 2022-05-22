@@ -63,7 +63,7 @@
 
 
 		<div class="row">
-			<div class="col-sm-12">
+			<div class="wrap2">
 				<div class="col-sm-3">
 					<div class="col1">
 						<p>
@@ -106,8 +106,7 @@
 				<div class="col-sm-3">
 					<div class="col4">
 						<form action="index.html" method="post" class="loginForm">
-							<p>로그인
-							<p>
+							<p>로그인</p>
 							<div class="textForm">
 								<input type="text" id="id" placeholder="아이디 입력">
 							</div>
@@ -115,16 +114,13 @@
 								<input type="password" id="pwd" placeholder="패스워드 입력">
 							</div>
 							<div class="bottomText">
-								<a href="regi1.html">회원가입</a> <a href="find.html">아이디/비밀번호
+								<a href="regi1.jsp">회원가입</a> <a href="find.jsp">아이디/비밀번호
 									찾기</a>
 							</div>
 							<div>
 
 								<button type="button" id="login">로그인</button>
-								<div OnClick="location.href ='find.html'"
-									style="cursor: pointer;">
-									<b>아이디/비밀번호 찾기</b>
-								</div>
+								
 
 
 							</div>
@@ -134,12 +130,45 @@
 				</div>
 
 			</div>
-			<div class="col-sm-12">
+			<div class="wrap3">
 				<div class="col-sm-3">
 					<div class="col5">
 						<a href="http://www.snuh.org/health/tv.do"> <br>건강 TV<br>
 							<br> <br>서울대학교 병원 의료진에게<br>듣는 팟캐스트
 						</a>
+
+					</div>
+
+				</div>
+				
+				<div class="col-sm-3">
+					<div class="col6">
+						<a href="http://www.snuh.org/health/myDoctor.do"> <br>우리 집 주치의<br>
+							<br> <br>하나의 질병에 대해서<br>깊이 있게 알아봅니다.
+						</a>
+
+					</div>
+
+				</div>
+				<div class="col-sm-3">
+					<div class="col7">
+						<a href="http://www.snuh.org/about/news/lecture/list.do"> <br>공개강좌<br>
+							<br> <br>누구에게나 열려있는<br>공개 건강강좌
+						</a>
+
+					</div>
+
+				</div>
+				<div class="col-sm-3">
+					<div class="col8">
+						<p > <br>건강 채널<br>
+							<br> <br>더 편하게 만나는 건강정보<br><br>
+						</p>
+						
+						<a>페이스북</a>
+						<a>포스트</a>
+						<a>네이버 TV</a>
+						<a>블로그</a>
 
 					</div>
 

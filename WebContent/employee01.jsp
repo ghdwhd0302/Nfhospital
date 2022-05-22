@@ -28,15 +28,25 @@
             </li>
             <li id="list2">
               <div class="label">
+<<<<<<< HEAD
+                <a href="clinic_management.jsp">
+                  <div>진료관리</div>
+=======
                 <a href="">
                   <span>진료관리</span>
+>>>>>>> Nfhospital/master
                 </a>
               </div>
             </li>
             <li id="list3">
               <div class="label">
+<<<<<<< HEAD
+                <a href="https://www.snuh.org/main.do">
+                  <div>로그아웃</div>
+=======
                 <a href="">
                   <span>로그아웃</span>
+>>>>>>> Nfhospital/master
                 </a>
               </div>
             </li>
