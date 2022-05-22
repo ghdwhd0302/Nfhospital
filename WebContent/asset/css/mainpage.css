@@ -125,6 +125,15 @@ div.btns {
     width:40x;
     margin-left: 15%
 }
+.wrap2{
+	width:1140px;
+	height: 310.06px;
+}
+.wrap3{
+	width:1140px;
+	height: 310.06px;
+	background-color: 
+}
 .col1 {
 	background-color: #008ace;
 	color: white;
@@ -159,15 +168,107 @@ div.btns {
 	width: 260px;
 	height: 260px;
 	border: 1px solid #2763ba;
+	padding-top:15px;	
+	padding-left:15px;
 	margin-right: 20px;
+	
+	
+}
+.bottomText{
+	width:198px;
+	height:20px;
+}
+#login{
+	width:198px;
+	height: 40px;
+	border: 1px solid white;
+	
+}
+
+.col4 p {
+   
+    font-family: 'Noto Sans KR Bold','Noto Sans CJK KR','Noto Sans KR','맑은 고딕',sans-serif;
+    font-size: 30px;
+    font-weight: 700;
 }
 .col5{
 	width: 260px;
-	height: 260px;
+	height: 350px;
 	text-align: left;
 	background-image: url("https://www.snuh.org/asset/img/main/bg_mainHealth01.jpg");
+	padding-left:15px;
 	
-	
+}
+.col6 {
+	width: 260px;
+	height: 350px;
+	border: 1px solid #2763ba;
+	margin-right: 20px;
+	background-image: url("https://www.snuh.org/asset/img/main/bg_mainHealth02.jpg");
+	padding-left:15px;
+}
+.col7 {
+	width: 260px;
+	height: 350px;
+	border: 1px solid #2763ba;
+	margin-right: 20px;
+	background-image: url("https://www.snuh.org/asset/img/main/bg_mainHealth03.jpg");
+	padding-left:15px;
+}
+.col8 {
+	width: 260px;
+	height: 350px;
+	border: 1px solid #2763ba;
+	margin-right: 20px;
+	background-image: url("https://www.snuh.org/asset/img/main/bg_mainHealth04.jpg");
+	padding-left:15px;
+}
+.col01 > a{
+	 display: block;
+    float: left;
+    margin-top: -1px;
+    padding-top:7px;
+    color: #fff;
+    border: 1px solid white;
+    width:100px;
+    height: 40px;
+    text-align: center;
+}
+
+.col02 > a{
+	display: block;
+    float: left;
+    margin-top: -1px;
+    padding-top:7px;
+    color: #fff;
+    border: 1px solid white;
+    width:100px;
+    height: 40px;
+    text-align: center;
+}
+.col03 > a{
+	display: block;
+    float: left;
+    margin-top: -1px;
+    padding-top:7px;
+    color: #fff;
+    border: 1px solid white;
+    width:100px;
+    height: 40px;
+    text-align: center;
+}
+
+.col8 > a {
+    display: block;
+    float: none;
+    margin-top: -1px;
+    margin-left:20px;
+    color: #fff;
+    border: 1px solid white;
+    width:201px;
+    height: 40px;
+    text-align: center;
+    
 }
 .textForm{
 	border: 1px solid white;

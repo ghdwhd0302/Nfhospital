@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 @charset "UTF-8";
 
 * {
     margin:0;
     padding:0; 
 }
+=======
+>>>>>>> Nfhospital/master
 body {
         
     background: #fff;
@@ -15,43 +18,19 @@ div#wrap{
 }
 
 header {
-    float: right;
+    float: left;
     width: 89vw;
-    height: 50px;
+    height: 5vh;
     background: #ffffff;	
 
-}
-#doc_name {
-    text-align: right;
-    padding-right: 32px;
-    padding-top: 22px;
 }
 
 aside {
     float: left;
     width: 10vw;
-    height: 100vh;
+    height: 99vh;
     background: #2763ba;
     position: fixed;
-}
-#aside_blank {
-   height: 50px;
-}
-.employee_page {
-    line-height: 3.5;
-    height: 60px;
-    text-align: center;
-    background-color: #093464;
-    color: #fff;
-    
-}
-.list {
-    list-style: none;
-    line-height: 3.5;
-    height: 60px;
-    text-align: center;
-    color: #fff;
-   
 }
 
 section {
@@ -68,7 +47,6 @@ section {
 
 h3 {
    padding-left: 30px;
-   padding-top: 16px;
    }
 .home {
     padding-right: 30px;
@@ -90,54 +68,33 @@ h3 {
     height: 45px;
     margin-left: auto;
     margin-right: auto;
-    
    }   
 
 table, th, td {
     border: 1px solid #dbd1d1de ;
     border-collapse: collapse;
     height: 45px;
-    padding-right: 20px;
     padding-left: 20px;
-    
 }
 
 .table1_th {
     width: 10%;
 }
-.table1 #state {
-    width: -webkit-fill-available;
-    text-align: center;
+.table1 #situ {
+    padding-left: 68%;
 }
 
 .table1 #pati_name {
-    width: -webkit-fill-available;
-}
-input#date {
-    width: -webkit-fill-available;
-    text-align: center;
-    cursor: pointer;
+    padding-right: 68%;
 }
 
-.search {
-    background-color: #1ac3a8;
-    width: 60px;
-    height: 30px;
-    color: #fff;
-    border: 0;
-    cursor: pointer;
-}
-
-a.name {
-    color: #1ac3a8;
-}
 .body_wrap_table2 {
     width: 94%;
     margin: auto;
     background-color: #ffffff;
     padding: 20px;
     margin-top: 27px;
-    height:155vh;
+    height: 152vh
 }
 .table2 {
     width: 98%;
@@ -146,6 +103,7 @@ a.name {
     margin-right: auto;
     margin-top: 30px; 
     text-align: center;
+<<<<<<< HEAD
 }
 a {
     text-decoration: none;
@@ -157,3 +115,6 @@ a:link {
 a:visited {
     color : #1ac3a8;
   }
+=======
+}
+>>>>>>> Nfhospital/master

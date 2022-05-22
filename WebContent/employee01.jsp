@@ -8,34 +8,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>환자관리</title>
     <link rel="stylesheet" href="asset/css/employee01.css">
-    
+    <style>
+        
+    </style>
 </head>
 <body>
     <div id="wrap">
 		<aside>
       <div id="topic_list" class="list">
-        <div id="aside_blank"></div>
-        <div class="employee_page">관리자</div>
+        <div class="employee page">직원 페이지</div>
         <nav class="sub_nav">
           <ul id="topic_list_tree" class="tree">
-            <li id="list1" class="list">
+            <li id="list1">
               <div class="label">
-                <a>
-                    <div>환자관리</div>
+                <a href="employee.html">
+                    <span>환자관리</span>
                 </a>
               </div>
             </li>
-            <li id="list2" class="list">
+            <li id="list2">
               <div class="label">
+<<<<<<< HEAD
                 <a href="clinic_management.jsp">
                   <div>진료관리</div>
+=======
+                <a href="">
+                  <span>진료관리</span>
+>>>>>>> Nfhospital/master
                 </a>
               </div>
             </li>
-            <li id="list3" class="list">
+            <li id="list3">
               <div class="label">
+<<<<<<< HEAD
                 <a href="https://www.snuh.org/main.do">
                   <div>로그아웃</div>
+=======
+                <a href="">
+                  <span>로그아웃</span>
+>>>>>>> Nfhospital/master
                 </a>
               </div>
             </li>
@@ -44,8 +55,8 @@
       </div>
         </aside>
         <header>
-          <div id="doc_name">
-              장준혁 님(jjh1234)
+          <div>
+              000님
           </div>
             
         </header>
@@ -66,10 +77,7 @@
                       환자상태
                     </th>
                     <td>
-                      <select name="patient_state" id="state">
-                        <option value="all">전체</option>
-                        <option value="normal">-</option>
-                      </select>
+                      <input type="text" name="situation" id="situ">
                     </td>
                     <th class="table1_th">
                       환자명
@@ -85,7 +93,7 @@
                     <td>
                       <input type="date" value="2022-05-01" name="date" id="date">
                     </td>
-                    <td colspan="2"><button class="search">검색</button></td>
+                    <td colspan="2"></td>
                   </tr>
                 </table>
               </div>
@@ -107,12 +115,12 @@
                   </tr>
                   <tr>
                     <td>29</td>
-                    <td><a href="patient_detail.jsp" class="name">이순신</a></td>
-                    <td>남</td>
-                    <td>88</td>
-                    <td>1호실</td>
-                    <td>2022-05-01</td>
-                    <td>-</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>28</td>

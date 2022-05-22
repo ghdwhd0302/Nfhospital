@@ -1,0 +1,719 @@
+body{
+    color: #000;
+    font-size: 16px;
+    word-spacing: -0.5px;
+    letter-spacing: -1px; 
+    height: 2260.72px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+ *{
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    text-size-adjust: none;
+    list-style: none;
+    font-weight: 400;
+    font-family: 'Noto Sans KR', sans-serif;
+    outline: 0!important;
+}
+
+#wrap{
+    overflow: hidden;
+    position: relative;
+    min-width: 1120px;
+    height: 2260.72px;
+    background-color: #fff; 
+    margin-top: 23px;
+}
+a:link{
+    text-decoration: none;
+}
+
+.skipToContent{
+    position: absolute;
+    top: -60px;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    min-width: 320px;
+    height: 60px;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: -1.5px;
+    line-height: 60px;
+    background-color: rgba(25, 145, 205, .8);
+    transition: .1s ease-in-out;
+}
+
+#header{
+    left: 0;
+    z-index: 105;
+    width: 100%;
+    height: 129px;
+    border-bottom: 1px solid #fff;
+    background-color: #fff;
+}
+
+.contTopBar{
+    z-index: 99;
+    width: 100%;
+    height: 50px;
+    background-color: #2763ba;
+}
+
+.contUtilMenuWrap{
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    width: 800px;
+    height: 30px;
+    margin: 264px auto 0;
+    padding: 1px 300px 0 0;
+}
+
+.contUtilMenuWrap .contUtilMenu{
+    margin-top: 0;
+}
+
+.contUtilMenu{
+    float: right;
+}
+
+.contUtilMenu li{
+    float: left;
+    position: relative;
+    margin-right: 26px;
+}
+
+.contUtilMenu a{
+    color: #888;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.likeContent::before {
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left: -13px;
+    width: 2px;
+    height: 9px;
+    margin-top: -3px;
+    background-color: #ccc;
+}
+
+.contUtilMenu .lastChild{
+    margin-right: 0;
+}
+
+.copyURL::before{
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left: -13px;
+    width: 2px;
+    height: 9px;
+    margin-top: -3px;
+    background-color: #ccc;
+}
+
+.contUtilMenu .zoomOut{
+    margin-left: 20px;
+}
+
+li.zoomOut, li.zoomIn{
+    margin-right: 0;
+    height: 30px;
+}
+
+li.zoomIn{
+    left: -1px;
+}
+
+.contUtilMenu button{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    background-color: transparent;
+    top: -4px;
+}
+
+.contUtilMenu button::before{
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left:  50%;
+    width: 10px;
+    height: 10px;
+    margin: -5px 0 0 -5px;
+    background: url("http://www.snuh.org/asset/img/common/spr_common.png") no-repeat -65px -39px;
+}
+
+.contUtilMenu .zoomOut button::before{
+    width: 10px;
+    height: 2px;
+    margin: -1px 0 0 -5px;
+    background-position: -65px -35px;
+}
+
+.hideTxt{
+    overflow: hidden;
+    color: transparent;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+
+#content.replaceUtilMenu{
+    margin-top: -48px;
+    margin-left: 401.500px;
+    margin-right: 401.500px;
+    padding-top: 0;
+    height: 1656.09px;
+}
+
+#content{
+    word-spacing: 0;
+    letter-spacing: -.5px;
+    min-height: 800px;
+    margin: auto;
+    padding-right: 300px;
+}
+
+.contHeadingWrap{
+    overflow: hidden;
+    position: relative;
+    margin: -12px 0 43px;
+}
+
+.contHeadingWrap > :first-child{
+    float: left;
+    font-size: 40px;
+    letter-spacing: -2px;
+}
+
+h2, h3{
+    font-weight: 700;
+}
+
+.cstomerContent .btnWrap.alignC .btnBig{
+    min-width: 205px;
+}
+
+[class*=btnWrap].alignC [class*=btnType]{
+    margin: 0 5px;
+}
+
+[class*=btn] {
+    display: inline-block;
+    border: 0;
+}
+[class*=btnWrap]{
+    display: block;
+    position: relative;
+}
+
+.btnType02{
+    border: 1px solid #000;
+}
+
+button[class*=btnType]{
+    line-height: normal;
+}
+
+
+
+[class*=btnType]{
+    overflow: visible;
+    vertical-align: top;
+    height: 40px;
+    padding: 0 20px;
+    color: #000;
+    font-size: 16px;
+    text-align: center;
+    line-height: 38px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.btnBig{
+    min-width: 120px;
+    height: 60px;
+    padding: 0 30px;
+    font-size: 18px;
+    letter-spacing: -1px;
+    line-height: 58px;
+}
+
+.btnType03 {
+    border: 1px solid #2263bb;
+    color: #fff;
+    background-color: #2263bb;
+}
+[class*=boxType].boxVtical{
+    overflow: hidden;
+}
+
+.boxTypeGray{
+    background-color: #f9f9f9;
+}
+
+[class*=boxType] {
+    margin-top: 28px;
+    padding: 25px 30px;
+}
+
+[class*=boxType] strong.boxTit{
+    color: #2763ba;
+}
+
+[class*=boxType] .boxTit{
+    display: block;
+    margin-bottom: 9px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+.boxVtical .boxTit{
+    float: left;
+    margin: 0 25px 0 0;
+}
+
+
+.boxVtical .boxTit:before{
+    content: ' ';
+    display: inline-block;
+    width: 30px;
+    height: 27px;
+    margin: 0 10px -5px 0;
+    background-image: url("http://www.snuh.org/asset/img/common/spr_common.png");
+    background-repeat: no-repeat;
+    background-position: -1px -125px;
+}
+
+.boxVtical .txtWrap{
+    float: left;
+    margin-top: -4px;
+}
+
+[class*=boxType] p:first-child{
+    margin-top: 0;
+}
+
+p{
+    color: #333;
+    word-break: keep-all;
+    line-height: 1.63;
+}
+
+p + p{
+    margin-top: 8px;
+}
+
+.colorPoint{
+    color: #2763ba!important;
+    font-weight: 700;
+}
+
+label{
+    vertical-align: middle;
+}
+
+fieldset{
+    border: none;
+}
+
+legend{
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border: none;
+    clip: rect(1px,1px,1px,1px);
+}
+
+.persInforWrap{
+    margin-top: 38px;
+}
+.cstomerContent .persInforWrap{
+    margin-top: 30px;
+}
+
+.persInforWrap .contTextWrap{
+    margin: 0 0 26px;
+}
+
+.contTextWrap{
+    overflow: hidden;
+    margin: 30px 0 10px;
+}
+
+.contTextWrap > :first-child {
+    overflow: hidden;
+    float: left;
+    width: 80%;
+    font-size: 20px;
+}
+
+.persInforWrap .scrollBox{
+    max-height: 171px;
+}
+
+[class*=scrollBox]{
+    overflow-y: scroll;
+    padding: 26px 30px 0;
+    border: 1px solid #ccc;
+}
+
+[class*=scrollBox] [class*=innerScroll]{
+    margin-bottom: 26px;
+}
+
+.persInforWrap .checkWrap{
+    padding: 29px;
+    border: 1px solid #ccc;
+    border-top: 0;
+}
+
+.feFoCheck{
+    width: 24px;
+    height: 24px;
+    margin-right: 9px;
+    background: url("http://www.snuh.org/asset/img/common/spr_common.png") no-repeat -195px -27px;
+}
+
+.feFoCheck.checked{
+    background-position: -195px -53px;
+}
+
+[class*=feFo]{
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+}
+
+[class*=feFo] > input{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+[type=checkbox]{
+    appearance: checkbox;
+}
+
+.boardTypeForm{
+    margin-top: 20px;
+}
+
+.persInforWrap + .boardTypeForm{
+    margin-top: 40px;
+}
+
+[class*=boardType]{
+    margin-top: 30px;
+    border: 1px solid #000;
+    border-width: 2px 0 1px;
+}
+
+[class*=boardType] table{
+    table-layout: fixed;
+}
+
+table{
+    position: relative;
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+caption{
+    position: static;
+    color: transparent;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    border: none;
+    clip: rect(1px,1px,1px,1px);
+}
+
+.boardTypeForm tr th{
+    border-top: 1px solid #ccc;
+}
+
+.boardTypeForm tr:first-child th{
+    border-top: 0;
+}
+
+.boardTypeForm th, .boardTypeForm td{
+    vertical-align: middle;
+    height: 40px;
+    padding: 10px 10px 10px 20px;
+    color: #666;
+    font-weight: 400;
+    text-align: left;
+}
+
+.boardTypeForm tr td{
+    border-top: 1px solid #ccc;
+}
+
+.boardTypeForm tr:first-child td{
+    border-top: 0;
+}
+
+.boardTypeForm td{
+    padding-left: 0;
+    color: #000;
+}
+
+.boardTypeForm td :first-child{
+    margin-left: 0;
+}
+
+.mdBrowser input[type=text]{
+    line-height: inherit;
+}
+
+.boardTypeForm .inputText{
+    width: 178px;
+}
+
+input[type=text]{
+    height: 38px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+    color: #666;
+    font-size: 16px;
+}
+
+.boardTypeForm .txtWrap{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+    line-height: 38px;
+}
+
+
+.boardTypeForm .feFoSelect{
+    width: 151px;
+}
+.boardTypeForm .selectSmall{
+    width: 50px;
+}
+.feFoSelect{
+    position: relative;
+    width: 58px;
+    height: 38px;
+    padding: 0 35px 0 12px;
+    border: 1px solid #ccc;
+    color: #666;
+    font-size: 16px;
+    text-align: left;
+    line-height: 38px;
+    background-color: #fff;
+}
+
+.feFoSelect:after{
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    width: 7px;
+    height: 4px;
+    margin-top: -2px;
+    background: url("http://www.snuh.org/asset/img/common/spr_common.png") no-repeat -65px -70px;
+}
+
+.mdBrowser input[type=tel]{
+    line-height: inherit;
+}
+
+.boardTypeForm .inputTextSmall{
+    width: 78px;
+}
+
+input[type=tel], input[type=text], input[type=email], input[type=number], input[type=password]{
+    height: 38px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+    color: #666;
+    font-size: 16px;
+    line-height: 38px;
+}
+
+.cstomerContent .boardTypeForm p.desc{
+    margin-top: 6px;
+}
+
+.boardTypeForm .desc{
+    color: #2763ba;
+}
+
+.feFoRadio{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url("http://www.snuh.org/asset/img/common/spr_common.png") no-repeat -169px -27px;
+}
+
+.boardTypeForm .lblTxt{
+    display: inline-block;
+    margin: 0 15px 0 2px;
+}
+
+.feFoRadio.checked0{
+    background-position: -169px -53px;
+}
+
+.checked0{
+    background-position: -169px -53px;
+}
+
+.boardTypeForm [class*=btnType]{
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.btnSmall{
+    height: 30px;
+    padding: 0 10px;
+    font-size: 14px;
+    letter-spacing: -.7px;
+    line-height: 28px;
+}
+
+.btnType04{
+    border: 1px solid #2763ba;
+    color: #2763ba;
+    background-color: #fff;
+}
+
+[class*=boardType] .verTop{
+    vertical-align: top;
+    padding-top: 13px;
+}
+
+.feFoSelect select {
+    display: inline-block;
+    width: 100%;
+    color: #666;
+    font-size: 16px;
+
+}
+
+[class*=feFo] > select{
+    z-index: 1;
+    border: none;
+    border-radius: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.boardTypeForm textarea{
+    width: 595px;
+    height: 378px;
+    max-height: 378px;
+}
+
+textarea{
+    padding: 10px;
+    border: 1px solid #ccc;
+    color: #888;
+    font-size: 16px;
+    resize: vertical;
+    appearance: none;
+}
+
+.boardTypeForm .feFoFileInpTxt{
+    width: 493px;
+    margin-right: 10px;
+}
+
+[class*='feFo'] .feFoFileInpTxt{
+    position: static;
+}
+
+.boardTypeForm .fileWrap{
+    display: inline-block;
+}
+
+[class*=feFo] > [type=file]{
+    display: none;
+}
+
+.boardTypeForm .feFoFileBtn{
+    width: 95px;
+    height: 40px;
+    border: 1px solid #ccc;
+    color:  #000;
+    font-size: 16px;
+    text-align: center;
+    line-height: 38px;
+    background-color: #fff;
+}
+
+.autoJoin{
+    overflow: hidden;
+    padding-top: 5px;
+}
+
+.autoJoin .img{
+    float: left;
+    width: 220px;
+    height: 107px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.autoJoin .img img{
+    display: inline-block;
+    margin-top: 40px;
+}
+
+.autoJoin .info{
+    float: left;
+    margin-left: 20px;
+    padding-top: 5px;
+}
+
+.autoJoin .info p{
+    margin-bottom: 10px;
+    line-height: 1.63;
+}
+
+.autoJoin .info input{
+    width: 176px;
+}
+
+.boardTypeForm + .btnWrap{
+    margin-top: 40px;
+}
+
+.alignC{
+    text-align: center!important;
+}
+
+.cstomerContent .btnWrap.alignC .btnBig{
+    min-width: 205px;
+    font-weight: 700;
+}
