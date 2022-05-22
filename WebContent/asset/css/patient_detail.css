@@ -4,8 +4,25 @@
     padding:0; 
 }
 body {
-        
     background: #fff;
+}
+
+table, th, td {
+    border: 1px solid #dbd1d1de ;
+    border-collapse: collapse;
+    height: 45px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+th {
+    width: 20%;
+}
+td {
+    width: 30%;
+}
+
+a {
+    text-decoration: none;
 }
 
 div#wrap{
@@ -56,7 +73,7 @@ aside {
 section {
     float: right;
     width: 89vw;
-    height: 183vh;
+    height: 95vh;
     background:#b4ccdd4a;
 }
 
@@ -74,51 +91,41 @@ h3 {
     padding-top: 20px;
 }
 
-
-.body_wrap_table1 {
+.wrap_table {
+    position: relative;
+    height: 50vh;
     width: 94%;
-    height: 97px;
     margin: auto;
     margin-top: 30px;
     background-color: #fff;
     padding: 20px;
     text-align: left;
 }
- .table1 {
+
+.table1 {
     width: 98%;
     height: 45px;
     margin-left: auto;
     margin-right: auto;
-    
-   }   
+}
 
-table, th, td {
-    border: 1px solid #dbd1d1de ;
-    border-collapse: collapse;
+.table2 {
+    width: 98%;
     height: 45px;
-    padding-right: 20px;
-    padding-left: 20px;
-    
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px; 
 }
 
-.table1_th {
-    width: 10%;
-}
-.table1 #state {
-    width: -webkit-fill-available;
-    text-align: center;
+.blank_td {
+  padding-left: 0;
+  padding-right: 0;
 }
 
-.table1 #pati_name {
-    width: -webkit-fill-available;
-}
-input#date {
-    width: -webkit-fill-available;
-    text-align: center;
-    cursor: pointer;
-}
-
-.search {
+button {
+    position: absolute;
+    right: 38px;
+    bottom: 15px;
     background-color: #1ac3a8;
     width: 60px;
     height: 30px;
@@ -127,32 +134,9 @@ input#date {
     cursor: pointer;
 }
 
-a.name {
-    color: #1ac3a8;
-}
-.body_wrap_table2 {
-    width: 94%;
-    margin: auto;
-    background-color: #ffffff;
-    padding: 20px;
-    margin-top: 27px;
-    height:155vh;
-}
-.table2 {
-    width: 98%;
-    height: 45px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px; 
-    text-align: center;
-}
-a {
-    text-decoration: none;
-    
-}
 a:link {
-    color : #1ac3a8;
+    color : #fff;
   }
-a:visited {
-    color : #1ac3a8;
+  a:visited {
+    color : pink;
   }
