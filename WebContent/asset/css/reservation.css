@@ -1,0 +1,567 @@
+@charset "UTF-8";
+* {
+    font-family: 'Noto Sans KR Regular','Noto Sans CJK KR','Noto Sans KR','맑은 고딕',sans-serif;
+}
+
+#wrap {
+    overflow: hidden;
+    position: relative;
+    min-width: 1120px;
+    background-color: #fff;
+}
+
+#header {
+    left: 0;
+    z-index: 105;
+    width: 100%;
+    height: 129px;
+    border-bottom: 1px solid #fff;
+    background-color: #fff;
+    position: fixed;
+    top: 0px;
+}
+
+#header:before, #header > .b {
+    content: '';
+    position: absolute;
+    top: 59px;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background-color: #ebebeb;
+}
+
+#header h1 {
+    display: block;
+    position: relative;
+    top: 18px;
+    width: 239px;
+    height: 25px;
+    margin: auto;
+}
+
+.innerwrap{
+    padding: 0 10px;
+    position: relative;
+    width: 1100px;
+    margin: auto;
+}
+
+#header .topLeftWrap {
+    position: absolute;
+    top: 18px;
+    left: 9px;
+    z-index: 100;
+}
+
+#header .topLeftWrap a {
+    display: block;
+    position: relative;
+    width: 160px;
+    height: 25px;
+    margin: auto;
+}
+
+.topMenuWrap {
+    position: absolute;
+    top: 18px;
+    right: 9px;
+    z-index: 100;
+}
+
+.topMenuWrap ul, .topMenuWrap li {
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+
+.utilMenu {
+    margin: 2px 20px 0 0;
+}
+
+.utilMenu a, .utilMenu label {
+    color: #000;
+    font-size: 14px;
+}
+
+.topMenuWrap li{
+    list-style: none;
+}
+
+.topMenu li {
+    margin-right: 13px;
+}
+
+#gnb{
+    position: relative;
+    width: 1100px;
+    margin: auto;
+}
+
+.gnbList {
+    height: 70px;
+    margin: 0 100px;
+    text-align: center;
+    top: 58px;
+    position: absolute;
+    left: 28px;
+}
+
+
+.gnbList > li {
+    display: inline-block;
+    margin: 10px 25px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+}
+
+.gnbList * {
+    text-align: left;
+}
+
+.gnbList > li > a {
+    display: inline-block;
+    padding: 10px;
+    font-size: 20px;
+    transition: .2s color;
+}
+
+.contTopBar {
+    position: fixed;
+    top: 130px;
+    z-index: 99;
+    width: 100%;
+    height: 50px;
+    background-color: #2763ba;
+}
+
+.breadcrumb {
+    float: left;
+}
+
+.contUtilMenuWrap {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    width: 800px;
+    height: 30px;
+    margin: 264px auto 0;
+}
+
+#content{
+    min-height: 800px;
+    word-spacing: 0;
+    letter-spacing: -.5px;
+    width: 1090px;
+    margin: auto;
+}
+
+#content.replaceUtilMenu {
+    margin-top: -48px;
+    padding-top: 0;
+}
+
+.contHeadingWrap {
+    overflow: hidden;
+    margin: -12px 0 9px;
+    top: 248px;
+}
+
+.contHeadingWrap > :first-child {
+    float: left;
+    font-size: 40px;
+    letter-spacing: -2px;
+}
+
+/* .bodyBg #wrap {
+    background-color: #f3f3f3;
+}
+
+#content.rsvCheckup {
+    width: 1100px;
+    padding-top: 70px;
+    padding-right: 0;
+} */
+
+#wrap {
+    background-color: #f3f3f3;
+}
+
+.rsvContainer {
+    zoom: 1;
+}
+
+.rsvClinicWrap.current {
+    width: 730px;
+    height: 241px;
+    padding: 30px;
+    border: 5px solid #2763ba;
+    background-color: #fff;
+    position: relative;
+}
+
+.rsvContainer > div {
+    float: left;
+}
+
+.boardInfo {
+    position: relative;
+    height: 40px;
+    margin-bottom: 30px;
+}
+
+.rsvClinicList {
+    overflow: hidden;
+    position: relative;
+    height: 178px;
+    padding: 0 31px;
+    border: 1px solid #000;
+    border-width: 2px 0 1px;
+}
+
+.rsvClinicWrap .contTabWrap {
+    float: left;
+}
+
+.rsvClinicWrap li {
+    float: left;
+    list-style: none;
+}
+
+.rsvClinicWrap .current a {
+    border-color: #2263bb;
+    color: #fff;
+    background-color: #2263bb;
+    display: block;
+    width: 108px;
+    height: 38px;
+    margin-left: -1px;
+    text-align: center;
+    line-height: 2.3;
+    text-decoration-line: none;
+    position: absolute;
+    top: 0px;
+    left: 3px;
+}
+
+.boardSearch {
+    float: right;
+}
+
+.boardSearch .btnType01 {
+    margin-left: 10px;
+    padding: 0 17px;
+}
+
+.btnType01 {
+    overflow: visible;
+    vertical-align: top;
+    height: 40px;
+    padding: 0 20px;
+    color: #000;
+    font-size: 16px;
+    text-align: center;
+    background-color: #fff;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    float: none;
+}
+
+.feS1Mask {
+	overflow: hidden;
+    position: relative;
+    width: 678px;
+    height: 178px;
+}
+
+.feSlWrap {
+	overflow: hidden;
+    top: 0px;
+    left: 0px;
+    width: 2712px;
+    height: 178px;
+}
+
+.rsvClinicList .feSlItem {
+    width: 678px;
+    height: 178px;
+}
+
+.rsvClinicList .feFoRadio {
+    overflow: visible;
+    width: 223px;
+    margin-top: 16px;
+    font-size: 14px;
+    background: none;
+}
+
+[class*=feFo] > input, [class*=feFo] > select {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* .rsvClinicList .checked span {
+    border-bottom: 1px solid #2763ba;
+    color: #2763ba;
+} */
+
+.feFoRadio {
+    display: inline-block;
+    height: 24px;
+}
+
+[class*=feFo] {
+    position: relative;
+    vertical-align: middle;
+}
+
+[type=radio] {
+    appearance: radio;
+}
+
+div.arrow {
+    position: absolute;
+    font-size: 2rem;
+    cursor: pointer;
+    padding-top: 60px;
+    color: #00000070;
+}
+
+div.next {
+    right: 27px;
+}
+
+.rsvContainer > div {
+    float: left;
+}
+
+.rsvInfoWrap {
+    margin-left: 20px;
+    background-color: #2763ba;
+    width: 280px;
+    height: 311px;
+}
+
+.rsvInfoWrap .user {
+    height: 115px;
+    padding-top: 24px;
+}
+
+.rsvInfoWrap > div {
+    padding: 30px;
+    color: #fff;
+}
+
+.rsvInfoWrap dd {
+    float: left;
+    margin: 0;
+}
+
+.rsvInfoWrap dt {
+    float: left;
+    margin-right: 5px;
+}
+
+.rsvInfoWrap dl {
+    overflow: hidden;
+    margin-top: 16px;
+    margin-bottom: 0;
+}
+
+.rsvInfoWrap h3 {
+    margin-bottom: 25px;
+    font-size: 20px;
+    margin: 0;
+}
+
+.rsvInfoWrap .btnWrap {
+    margin-top: 7px;
+    text-align: left;
+}
+
+[class*=btnWrap] {
+    display: block;
+    position: relative;
+}
+
+.rsvInfoWrap [class*=btnType] {
+    width: 92px;
+    height: 30px;
+    margin: 0 10px 0 0;
+    padding: 0;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    line-height: normal;
+    background-color: transparent;
+}
+
+.rsvInfoWrap .info {
+    padding-top: 0;
+}
+
+.rsvInfoWrap li:first-child {
+    margin-top: 0;
+}
+
+.rsvInfoWrap li {
+    margin-top: 5px;
+	list-style: none;
+}
+
+.rsvInfoWrap li em {
+    color: #64dbc6;
+}
+
+address, em {
+    font-style: normal;
+}
+
+.rsvContainer > div {
+    float: left;
+}
+
+.rsvDoctorWrap {
+    width: 730px;
+    height: 810px;
+    margin-top: 20px;
+    padding: 22px 30px 30px;
+    border: 5px solid #fff;
+    background-color: #fff;
+}
+
+.rsvDoctorWrap .contTitleWrap {
+    position: relative;
+    margin: 0 0 95px;
+}
+
+.contTitleWrap > :first-child {
+    float: left;
+    font-size: 28px;
+    letter-spacing: -2.1px;
+    margin: 0;
+}
+
+.rsvDoctorWrap .contTitleWrap li {
+    float: right;
+    margin-top: 5px;
+    margin-right: 18px;
+}
+
+.rsvDoctorList {
+    width: 700px;
+    border: 1px solid #333;
+    border-width: 2px 0 1px;
+}
+
+.rsvDoctorList .noResult {
+    clear: both;
+    width: 100%;
+    height: 740px;
+    color: #666;
+    font-size: 20px;
+    text-align: center;
+    line-height: 670px;
+}
+
+.rsvDoctorList > ul {
+    overflow-x: hidden;
+    /* overflow-y: scroll; */
+    position: relative;
+    height: 740px;
+    padding: 0;
+    margin: 0;
+}
+
+.rsvDoctorList li:nth-child(odd) {
+    margin-left: 0;
+}
+
+.rsvDoctorList li {
+    float: left;
+    position: relative;
+    margin-left: 40px;
+    padding: 24px 0 25px;
+    border: 0;
+}
+
+.rsvDoctorInfo {
+    position: relative;
+    height: 197px;
+    padding-left: 130px;
+}
+
+.rsvDoctorInfo .thumb {
+    position: absolute;
+    top: 6px;
+    left: 0;
+}
+
+.rsvDoctorInfo .thumb img {
+    width: 110px;
+    height: 136px;
+}
+
+.rsvDoctorInfo .info {
+    position: relative;
+    width: 200px;
+}
+
+.rsvDoctorInfo .name {
+    display: inline-block;
+    position: relative;
+    max-width: 220px;
+    margin: 0;
+    padding-right: 20px;
+    font-size: 20px;
+}
+
+.rsvDoctorInfo em {
+    display: block;
+    overflow: hidden;
+    margin: 11px 0 2px;
+    font-size: 18px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.rsvDoctorInfo p {
+    overflow: hidden;
+    max-height: 104px;
+    color: #666;
+    word-break: keep-all;
+    line-height: 1.63;
+}
+
+.rsvDoctorInfo p span {
+    margin-right: 4px;
+}
+
+.rsvDoctorInfo button {
+    overflow: hidden;
+    position: absolute;
+    top: 154px;
+    left: 0;
+    z-index: 1;
+    width: 110px;
+    height: 40px;
+    white-space: nowrap;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+}
+
+.rsvDoctorList li:nth-child(odd):after {
+    content: '';
+    position: absolute;
+    top: 247px;
+    left: 0;
+    width: 700px;
+    border-bottom: 1px solid #ccc;
+}
