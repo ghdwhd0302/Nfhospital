@@ -1,0 +1,348 @@
+@charset "UTF-8";
+
+#content {
+	word-spacing: 0;
+	letter-spacing: -.5px
+}
+
+#footer {
+	width: 100%;
+	margin-top: 100px;
+	background-color: #31354e;
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+#footer li {
+	float: left
+}
+
+.footerMenu {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 50;
+	width: 100%;
+	height: 60px;
+	background-color: #31354e
+}
+
+.footerMenu:before, .footerMenu>.b {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 60px;
+	background-color: #22263b
+}
+
+.footerLink {
+	height: 59px;
+	border-bottom: 1px solid black;
+	
+}
+
+p {
+	margin: 0 0 10px 40px;
+}
+
+.footerLink li {
+	margin: 8px
+}
+
+.footerLink ul {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+
+}
+
+.footerLink a {
+	display: block;
+	padding: 9px;
+	color: #ccc;
+	white-space: nowrap
+	
+}
+
+.footerLink img {
+	margin-top: -2px;
+	margin-left: 3px
+}
+
+.ie7Only .footerLink img {
+	margin-top: 2px
+}
+
+.clearFix {
+	margin-left: 40px;
+}
+
+.footerInfo {
+	/* padding: 26px 0 60px ; */
+	/* border-top: 1px solid #22263b; */
+	
+}
+
+.footerInfo address p, .copyright {
+	color: #999;
+	font-size: 14px
+}
+
+.footerInfo address {
+	display: block
+}
+
+.footerInfo address p {
+	float: left
+}
+
+.footerInfo address p+p {
+	margin: 0 0 0 15px
+}
+
+.footerInfo address a {
+	color: #999
+
+}
+
+
+	
+
+=======
+>>>>>>> introduce/intro
+#footer{
+    margin-top: 100px;
+    background-color: #31354e;
+    display: block;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    height: 257.625px;
+}
+
+.ftMenuWrap{
+    position: relative;
+    height: 59px;
+    border-bottom: 1px solid #22263b;
+}
+
+.ftMenuWrap a{
+    color: #fff;
+}
+
+.footerMenu{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 50;
+    width: 100%;
+    background-color: #31354e;
+}
+
+.footerMenu:before{
+    content: ' ';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 60px;
+    background-color: #22263b;
+}
+
+.innerWrap{
+    padding: 0 10px;
+    position: relative;
+    width: 1100px;
+    height: 51.625px;
+    margin: auto;
+}
+
+.ftMenuList01{
+    float: left;
+    height: 59px;
+    margin-left: -14px;
+}
+
+[class*=ftMenuList]{
+    overflow: hidden;
+    position: relative;
+}
+
+[class*=ftMenuList] a{
+    display: block;
+}
+
+.ftMenuList02{
+    float: right;
+}
+
+#footer li{
+    float: left;
+}
+
+.ftMenuList01 li{
+    position: relative;
+    margin: 8px 4px;
+}
+
+.ftMenuList01 li + li:before{
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left: -4px;
+    width: 1px;
+    height: 16px;
+    margin-top: -6px;
+    background-color: #31354e;
+}
+
+.ftMenuList01 a{
+    padding: 10px;
+}
+
+a:link{
+   text-decoration: none; 
+}
+.ftMenuList02 li{
+    margin: 8px 4px;
+}
+
+
+.ftMenuList02 a{
+    position: relative;
+    padding: 12px 15px 12px 3px;
+    color: #999;
+    font-size: 14px;
+}
+
+.ftMenuList02 a::after{
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 7px;
+    height: 4px;
+    margin-top: 0;
+    background: url("http://www.snuh.org/asset/img/common/spr_common.png") no-repeat -65px -51px;
+}
+
+.footerLink{
+    position: relative;
+    left: -18px;
+    height: 59px;
+    margin: auto;
+}
+
+#footer li{
+    float: left;
+}
+
+.footerLink li{
+    margin: 8px;
+}
+
+#footer .colorPoint04{
+    color: #a4e1ff!important;
+}
+
+.footerLink a{
+    display: block;
+    padding: 9px;
+    color: #ccc;
+    white-space: nowrap;
+}
+
+.footerInfo{
+    padding: 26px 0 60px;
+    border-top: 1px solid #22263b;
+}
+
+.footerInfo address{
+    display: block;
+    height: 22.813px;
+}
+
+address{
+    font-style: normal;
+}
+
+.clearFix::before{
+    content: ' ';
+    display: table;
+}
+a{
+    color: #000;
+}
+
+.footerInfo address p{
+    float: left;
+    color: #999;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+p{
+    color: #333;
+    word-break: keep-all;
+    line-height: 1.63;
+}
+.copyright{
+    margin-top: 6px;
+    letter-spacing: 0;
+    color: #999;
+    font-size: 14px;
+}
+
+.footerInfo address p + p{
+    margin: 0 0 0 15px;
+}
+
+.clearFix::after{
+    clear: both;
+    content: ' ';
+    display: table;
+}
+
+.awardList{
+    position: absolute;
+    top: 4px;
+    right: 10px;
+}
+
+.awardList .item05 a{
+    width: 144px;
+    background-position: -124px -176px;
+}
+
+.awardList a{
+    display: block;
+    width: 133px;
+    height: 32px;
+    background: url("http://www.snuh.org/asset/img/common/spr_common.png") no-repeat 0 -91px;
+}
+
+
+.awardList li + li{
+    margin-left: 30px;
+}
+
+.awardList .item04 a{
+    width: 129px;
+    background-position: -337px -160px;
+}
+
+.ftIsmsTxt{
+    display: none;
+}
+
+.footerInfo address a{
+    color: #999;
+
+}
+
+

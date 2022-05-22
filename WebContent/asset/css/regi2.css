@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+
+
+#content{
+	width:60%;
+	margin-left: 20%;
+	margin-right: 20%;
+
+}
+.contHeadingWrap{
+	font-size: 30px;
+	font-weight: bold;
+	margin-left: 40px;
+	margin-top: 70px;
+}
+ul.clearFix{
+	width:100%;
+	height:200px;
+	padding: 0;
+	
+}
+ul.clearFix li{
+	border:1px solid #ccc;
+	color: #ccc;
+	font-weight:bold;
+	list-style: none;
+	width: 33%;
+	height:50px;
+	float: left;
+	font-size: 26px;
+	letter-spacing: 1px;
+	text-align: center;
+	
+	
+}
+.current {
+	background-color: #2763ba;
+	color: #black;
+}
+.current b{
+	width:200px;
+	color: black;
+}
+.supText{
+	
+	text-align: right;
+}
+
+/* .boardTypeForm{
+	border-top:1px solid black; 
+}
+ */
+table{
+	width:100%;
+	border-spacing:0 40px;
+	border-collapse: collapse;
+	font-size: 20px;
+}
+tr{
+	border-top:1px solid #ccc; 
+	margin-bottom: 20px;
+}
+td{
+	padding: 10px 10px 10px 20px;
+}
+.desc{
+	color: #2763ba;
+}
+
+.colorPoint {
+    color: #2763ba;
+}
+.boardTypeForm td {
+    vertical-align: middle;
+    height: 40px;
+    padding: 10px 10px 10px 20px;
+    color: #666;
+    font-weight: 400;
+    text-align: left;
+}
+[type=radio] {
+     appearance: radio;
+}
+.feFoRadio {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}
+ [class*=feFo] > select {
+    z-index: 1;
+    border: none;
+    border-radius: 0;
+}
+ .feFoSelect select {
+    display: inline-block;
+    width: 100%;
+    color: #666;
+    font-size: 16px;
+} 
+ [class*=feFo] > select {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+input[type=tel], input[type=text], input[type=email], input[type=number], input[type=password] {
+    height: 38px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+    color: #666;
+    font-size: 16px;
+   
+}
+.feFoRadio {
+	margin-top:10px;
+	padding-left:10px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url("https://www.snuh.org/asset/img/common/spr_common.png") no-repeat -169px -27px;
+}
