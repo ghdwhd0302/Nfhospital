@@ -117,16 +117,6 @@ $button.on('click', function(){
         return;
     }
 
-    if(!$ptname){
-        alert("[환자성함] 입력하신 정보를 다시 확인 해 주시기 바랍니다.");
-        return;
-    }
-
-    if(!$ptcd){
-        alert("[환자등록정보 성함] 입력하신 정보를 다시 확인 해 주시기 바랍니다.")
-        return;
-    }
-
     if(!$wrtname){
         alert("[작성자 성함] 입력하신 정보를 다시 확인 해 주시기 바랍니다.")
         return;
@@ -153,4 +143,3 @@ $button.on('click', function(){
     }
 
 })
-

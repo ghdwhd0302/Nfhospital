@@ -1,0 +1,415 @@
+body{
+    color: #000;
+    font-size: 16px;
+    word-spacing: -0.5px;
+    letter-spacing: -1px; 
+    height: 1404.72px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+ *{
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    text-size-adjust: none;
+    list-style: none;
+    font-weight: 400;
+    font-family: 'Noto Sans KR', sans-serif;
+    outline: 0!important;
+}
+
+#wrap{
+    overflow: hidden;
+    position: relative;
+    min-width: 1120px;
+    height: 1404.72px;
+    background-color: #fff; 
+    margin-top: 23px;
+}
+a:link{
+    text-decoration: none;
+}
+
+p{
+    color: #333;
+    word-break: keep-all;
+    line-height: 1.63;
+}
+
+.skipToContent{
+    position: absolute;
+    top: -60px;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    min-width: 320px;
+    height: 60px;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: -1.5px;
+    line-height: 60px;
+    background-color: rgba(25, 145, 205, .8);
+    transition: .1s ease-in-out;
+}
+
+#header{
+    left: 0;
+    z-index: 105;
+    width: 100%;
+    height: 129px;
+    border-bottom: 1px solid #fff;
+    background-color: #fff;
+}
+
+.contTopBar{
+    z-index: 99;
+    width: 100%;
+    height: 50px;
+    background-color: #2763ba;
+}
+
+.contUtilMenuWrap{
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    width: 800px;
+    height: 30px;
+    margin: 264px auto 0;
+    padding: 1px 300px 0 0;
+}
+
+.contUtilMenuWrap .contUtilMenu{
+    margin-top: 0;
+}
+
+.contUtilMenu{
+    float: right;
+}
+
+.contUtilMenu li{
+    float: left;
+    position: relative;
+    margin-right: 26px;
+}
+
+.contUtilMenu a{
+    color: #888;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.likeContent::before {
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left: -13px;
+    width: 2px;
+    height: 9px;
+    margin-top: -3px;
+    background-color: #ccc;
+}
+
+.contUtilMenu .lastChild{
+    margin-right: 0;
+}
+
+.copyURL::before{
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left: -13px;
+    width: 2px;
+    height: 9px;
+    margin-top: -3px;
+    background-color: #ccc;
+}
+
+.contUtilMenu .zoomOut{
+    margin-left: 20px;
+}
+
+li.zoomOut, li.zoomIn{
+    margin-right: 0;
+    height: 30px;
+}
+
+li.zoomIn{
+    left: -1px;
+}
+
+.contUtilMenu button{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    background-color: transparent;
+    top: -4px;
+}
+
+.contUtilMenu button::before{
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left:  50%;
+    width: 10px;
+    height: 10px;
+    margin: -5px 0 0 -5px;
+    background: url("http://www.snuh.org/asset/img/common/spr_common.png") no-repeat -65px -39px;
+}
+
+.contUtilMenu .zoomOut button::before{
+    width: 10px;
+    height: 2px;
+    margin: -1px 0 0 -5px;
+    background-position: -65px -35px;
+}
+
+.hideTxt{
+    overflow: hidden;
+    color: transparent;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+
+#content.replaceUtilMenu{
+    margin-top: -48px;
+    margin-left: 401.500px;
+    margin-right: 401.500px;
+    padding-top: 0;
+    height: 800px;
+}
+
+#content{
+    word-spacing: 0;
+    letter-spacing: -.5px;
+    min-height: 800px;
+    margin: auto;
+    padding-right: 300px;
+}
+
+.contHeadingWrap{
+    overflow: hidden;
+    position: relative;
+    margin: -12px 0 43px;
+}
+
+.contHeadingWrap > :first-child{
+    float: left;
+    font-size: 40px;
+    letter-spacing: -2px;
+}
+.colorPoint{
+    color: #2763ba!important;
+    font-weight: 700;
+}
+h2, h3{
+    font-weight: 700;
+}
+
+.contHeadingWrap{
+    overflow: hidden;
+    position: relative;
+    margin: -12px 0 43px;
+}
+
+.contHeadingWrap > :first-child{
+    float: left;
+    font-size: 40px;
+    letter-spacing: -2px;
+}
+
+.contHeadingWrap + .alignR{
+    margin-top: 50px;
+}
+
+.alignR{
+    text-align: right!important;
+}
+
+
+[class*=btnType]{
+    overflow: visible;
+    vertical-align: top;
+    height: 40px;
+    padding: 0 20px;
+    color: #000;
+    font-size: 16px;
+    text-align: center;
+    line-height: 38px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+
+[class*=btn]{
+    display: inline-block;
+    border: 0;
+}
+
+a[class*=btnType]{
+    height: 38px;
+}
+
+a:visited{
+    text-decoration: none;
+}
+
+.btnType03 {
+    border: 1px solid #2263bb;
+    color: #fff;
+    background-color: #2263bb;
+}
+
+[class*=boardType]{
+    margin-top: 30px;
+    border: 1px solid #000;
+    border-width: 2px 0 1px;
+}
+
+[class*=boardType] table{
+    table-layout: fixed;
+}
+
+table{
+    position: relative;
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+caption, legend{
+    position: static;
+    color: transparent;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    border: none;
+    clip: rect(1px,1px,1px,1px);
+}
+
+caption{
+    position: static;
+    color: transparent;
+}
+
+.boardTypeTbl th, .boardTypeTbl td{
+    vertical-align: middle;
+    padding: 15px 5px;
+    font-weight: 400;
+    text-align: center;
+    word-break: break-all;
+}
+
+.boardTypeTbl thead th{
+    padding: 18px 5px;
+    color: #666;
+}
+
+.boardTypeTbl td{
+    border-top: 1px solid #000;
+}
+
+.pagination{
+    position: relative;
+    margin-top: 30px;
+    text-align: center;
+}
+.pagination a{
+    display: inline-block;
+    vertical-align: middle;
+    min-width: 28px;
+    min-height: 28px;
+    margin-left: 2px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    white-space: nowrap;
+    line-height: 28px;
+}
+
+.pagination [class*=Btn]{
+    position: relative;
+    width: 38px;
+    height: 38px;
+    margin-left: 0;
+    padding: 0;
+}
+
+.hideEl, .pagination [class*=Btn] span{
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border: none;
+
+}
+
+.pagination .firstBtn:after, .pagination .firstBtn > .a, .pagination .lastBtn:after, .pagination .lastBtn > .a {
+    width: 12px;
+    height: 11px;
+    margin: -5.5px 0 0 -6px;
+}
+
+.pagination [class*=Btn]:after{
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-image: url("http://www.snuh.org/asset/img/common/spr_common.png");
+    background-repeat: no-repeat;
+    background-position: -221px -27px;
+}
+
+.firstBtn{
+    left: 7px;
+}
+
+.pagination .prevBtn{
+    left: 4px;
+    margin-right: 16px;
+    margin-left: 1px;
+}
+
+.pagination .prevBtn:after{
+    width: 6px;
+    height: 11px;
+    margin: -5.5px 0 0 -3px;
+    background-position: -221px -40px;
+}
+
+.pagination .current{
+    border-color: #2763ba;
+    color: #fff;
+    background-color: #2763ba;
+}
+
+.pagination .nextBtn{
+    margin-left: 16px;
+    right: 3px
+}
+
+.pagination .nextBtn:after{
+    width: 6px;
+    height: 11px;
+    margin: -5.5px 0 0 -3px;
+    background-position: -221px -53px;
+}
+
+.pagination .lastBtn{
+    margin-left: 1px;
+    right: 6px;
+}
+
+.pagination .lastBtn:after{
+    width: 12px;
+    height: 11px;
+    margin: -5.5px 0 0 -6px;
+    background-position: -221px -66px;
+}
+
+
+
+
+
