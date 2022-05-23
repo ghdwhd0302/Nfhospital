@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+.logBox {
+	border-top: 1px solid #2263bb;
+	margin-top: 100px;
+	margin-left: 20%;
+	margin-right: 20%;
+	background-color: #f9f9f9d1;
+}
+
+.regularTxt {
+	text-align: center;
+}
+
+.background1 {
+	height: 20%;
+	background-color: #f9f9f9d1;
+}
+
+.background2 {
+	padding-top: 0;
+	background-color: #f9f9f9d1;
+}
+
+[class*=logBoxWrap] .logBox {
+	float: left;
+	width: 352px;
+	height: 656px;
+	padding: 62px 93px 60px;
+	border-top: 2px solid #2763ba;
+	text-align: center;
+	background-color: #fff;
+}
+
+input[type=id] {
+	margin-left: 20%;
+	margin-right: 20%;
+	padding: 20px;
+	float: left;
+	width: 60%
+}
+
+.logBox .inputText, .completeJoin .inputText {
+	display: block;
+	width: 40%;
+	height: 50px;
+	margin-left: 30%;
+	padding: 20px; color : #000;
+	line-height: 48px;
+	color: #000;
+}
+.btnBig{
+	width:40%;
+	margin-left: 30%;
+}
+
+.Box1 {
+	width: 400px;
+	height: 260px;
+	margin-left: 30%;
+}
+
+.Box1 a {
+	float: left;
+	color: black;
+	width: 150px;
+	height: 80px;
+	font-size: 15px;
+	
+}

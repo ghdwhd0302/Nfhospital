@@ -29,21 +29,24 @@
 
 <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
 
-<link rel="stylesheet" href="asset/css/header.css"> 
+<link rel="stylesheet" href="asset/css/header.css">
 
 </head>
 <body>
-	<div class="wrap">
+	<div>
 
 		<div class="title">
 
-			<img class="logo" src="https://www.snuh.org/asset/img/common/outcomesbook_bt.png"
-				align="left" >
-			<p >
-				<strong>서울대학교병원</strong>
+			<img class="logo"
+				src="https://www.snuh.org/asset/img/common/outcomesbook_bt.png"
+				align="left">
+			<p>
+				<a href="mainpage.jsp" style="padding-left: 27vw;"><strong>서울대학교병원</strong></a><a href="login.jsp" style="font-size: 20px; margin-left: 50px;padding-left: 13vw;">로그인</a> <a href="regi1.jsp" style="font-size: 20px; margin-left: 30px;padding-left: 5px;">회원가입</a>
 			</p>
-
+		
 		</div>
+	</div>
+	<div class="wrap">
 		<ul class="nav nav-tabs">
 
 			<li class="nav-item dropdown"><img class="menubar"
@@ -51,7 +54,8 @@
 				id="navbarDropdown" role="button" data-bs-toggle="dropdown"
 				aria-expanded="false">
 
-				<ul id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
+				<ul id="dropdown-menu" class="dropdown-menu"
+					aria-labelledby="navbarDropdown">
 					<li><a class="dropdown-item" href="#">진료안내</a></li>
 					<li><a class="dropdown-item" href="#">이용안내</a></li>
 					<li><hr class="dropdown-divider">병원소개</li>
