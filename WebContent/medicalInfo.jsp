@@ -110,13 +110,13 @@
             <!-- asideServiceList -->
             <ul class="asideServiceList clearFix">
                 
-                    <li class=""><a href="/reservation/meddept/main.do">본원</a></li>
+                    <li class=""><a href="mainpage.jsp">본원</a></li>
                 
-                    <li class=""><a href="/reservation/reservation.do">진료예약</a></li>
+                    <li class=""><a href="reservation.jsp">진료예약</a></li>
                 
-                    <li class=""><a href="/content/M001004001.do">진료안내</a></li>
+                    <li class=""><a href="medicalInfo.jsp">진료안내</a></li>
                 
-                    <li class=""><a href="/reservation/confirm/rsvConfirm.do">외래예약확인</a></li>
+                    <li class=""><a href="newreservation.jsp">외래예약확인</a></li>
                 
             </ul>
             <!-- //asideServiceList -->
