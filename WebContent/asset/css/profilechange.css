@@ -1,0 +1,549 @@
+@charset "UTF-8";
+* {
+    font-family: 'Noto Sans KR Regular','Noto Sans CJK KR','Noto Sans KR','맑은 고딕',sans-serif;
+}
+
+#wrap {
+    overflow: hidden;
+    position: relative;
+    min-width: 1120px;
+    background-color: #fff;
+}
+
+#header {
+    left: 0;
+    z-index: 105;
+    width: 100%;
+    height: 129px;
+    border-bottom: 1px solid #fff;
+    background-color: #fff;
+    position: fixed;
+    top: 0px;
+}
+
+#header:before, #header > .b {
+    content: '';
+    position: absolute;
+    top: 59px;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background-color: #ebebeb;
+}
+
+#header h1 {
+    display: block;
+    position: relative;
+    top: 18px;
+    width: 239px;
+    height: 25px;
+    margin: auto;
+}
+
+.innerwrap{
+    padding: 0 10px;
+    position: relative;
+    width: 1100px;
+    margin: auto;
+}
+
+#header .topLeftWrap {
+    position: absolute;
+    top: 18px;
+    left: 9px;
+    z-index: 100;
+}
+
+#header .topLeftWrap a {
+    display: block;
+    position: relative;
+    width: 160px;
+    height: 25px;
+    margin: auto;
+}
+
+.topMenuWrap {
+    position: absolute;
+    top: 18px;
+    right: 9px;
+    z-index: 100;
+}
+
+.topMenuWrap ul, .topMenuWrap li {
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+
+.utilMenu {
+    margin: 2px 20px 0 0;
+}
+
+.utilMenu a, .utilMenu label {
+    color: #000;
+    font-size: 14px;
+}
+
+.topMenuWrap li{
+    list-style: none;
+}
+
+.topMenu li {
+    margin-right: 13px;
+}
+
+#gnb{
+    position: relative;
+    width: 1100px;
+    margin: auto;
+}
+
+.gnbList {
+    height: 70px;
+    margin: 0 100px;
+    text-align: center;
+    top: 58px;
+    position: absolute;
+    left: 28px;
+}
+
+
+.gnbList > li {
+    display: inline-block;
+    margin: 10px 25px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+}
+
+.gnbList * {
+    text-align: left;
+}
+
+.gnbList > li > a {
+    display: inline-block;
+    padding: 10px;
+    font-size: 20px;
+    transition: .2s color;
+}
+
+.contTopBar {
+    position: fixed;
+    top: 130px;
+    z-index: 99;
+    width: 100%;
+    height: 50px;
+    background-color: #2763ba;
+}
+
+.breadcrumb {
+    float: left;
+}
+
+.contUtilMenuWrap {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    width: 800px;
+    height: 30px;
+    margin: 264px auto 0;
+}
+
+#content{
+    min-height: 800px;
+    word-spacing: 0;
+    letter-spacing: -.5px;
+    width: 1090px;
+    margin: auto;
+}
+
+#content.replaceUtilMenu {
+    margin-top: -48px;
+    padding-top: 0;
+}
+
+.contHeadingWrap {
+    overflow: hidden;
+    margin: -12px 0 9px;
+    top: 248px;
+}
+
+.contHeadingWrap > :first-child {
+    float: left;
+    font-size: 40px;
+    letter-spacing: -2px;
+}
+
+[class*=tabType] {
+    position: relative;
+    margin: 50px 0 40px;
+}
+
+[class*=tabType] ul {
+    position: relative;
+    width: 100%;
+}
+
+.tabTypeCol2 li {
+    width: 47%;
+}
+
+[class*=tabType] li {
+    float: left;
+    position: absolute;
+}
+
+[class*=tabType] .current a {
+    border-color: #2263bb;
+    color: #fff;
+    background-color: #2263bb;
+}
+
+[class*=tabType] li:first-child a {
+    margin-left: 0;
+}
+
+[class*=tabType] a {
+    display: block;
+    height: 48px;
+    margin-left: -1px;
+    border: 1px solid #ccc;
+    border-bottom-color: transparent;
+    color: #666;
+    text-align: center;
+    line-height: 48px;
+}
+
+.boardTypeForm {
+    margin-top: 20px;
+}
+
+[class*=boardType] {
+    border: 1px solid #000;
+    border-width: 2px 0 1px;
+}
+
+.boardTypeForm + .btnWrap {
+    margin-top: 40px;
+}
+
+[class*=btnWrap] {
+    display: block;
+    position: relative;
+    text-align: right;
+}
+
+[class*=btn] {
+    border: 0;
+}
+
+[class*=boardType] table {
+    table-layout: fixed;
+}
+
+.boardTypeForm tr:first-child td, .boardTypeForm tr:first-child th {
+    border-top: 0;
+}
+
+.boardTypeForm th, .boardTypeForm td {
+    vertical-align: middle;
+    height: 40px;
+    padding: 10px 10px 10px 20px;
+    color: #666;
+    font-weight: 400;
+    text-align: left;
+}
+
+.boardTypeForm td {
+    padding-left: 0;
+    color: #000;
+}
+
+.boardTypeForm th, .boardTypeForm td {
+    vertical-align: middle;
+    height: 40px;
+    padding: 10px 10px 10px 20px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.boardTypeForm tr td, .boardTypeForm tr th {
+    border-top: 1px solid #ccc;
+}
+
+audio, button, canvas, iframe, img, input, label, select, svg, video {
+    vertical-align: middle;
+}
+
+.boardTypeForm td :first-child {
+    margin-left: 0;
+}
+
+.boardTypeForm .inputText {
+    width: 178px;
+}
+
+.mdBrowser input[type=tel], .mdBrowser input[type=text], .mdBrowser input[type=email], .mdBrowser input[type=number], .mdBrowser input[type=password] {
+    line-height: inherit;
+}
+
+input[type=tel], input[type=text], input[type=email], input[type=number], input[type=password] {
+    height: 38px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+    color: #666;
+    font-size: 16px;
+    width: 77px;
+}
+
+.boardTypeForm .txtWrap {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+    line-height: 38px;
+}
+
+.boardTypeForm .inputText + .feFoSelect {
+    margin-left: 8px;
+}
+
+.boardTypeForm .emailSelect {
+    width: 108px;
+}
+
+.feFoSelect {
+    position: relative;
+    height: 38px;
+    padding: 0 35px 0 12px;
+    border: 1px solid #ccc;
+    color: #666;
+    font-size: 16px;
+    text-align: left;
+    line-height: 38px;
+    background-color: #fff;
+    width: 50px;
+}
+
+[class*=feFo] {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.boardTypeForm td :first-child {
+    margin-left: 0;
+}
+
+.feFoSelect > span {
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.feFoSelect select {
+    display: inline-block;
+    width: 100%;
+    color: #666;
+    font-size: 16px;
+}
+
+[class*=feFo] > select {
+    z-index: 1;
+    border: none;
+    border-radius: 0;
+}
+
+[class*=feFo] > input, [class*=feFo] > select {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+[class*=tableType] .verTop, [class*=boardType] .verTop {
+    vertical-align: top;
+    padding-top: 13px;
+}
+
+.boardTypeForm [class*=btnType] {
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+button[class*=btnType] {
+    line-height: normal;
+}
+
+.btnType01 {
+    border: 1px solid #ccc;
+}
+
+[class*=btnType] {
+    overflow: visible;
+    height: 40px;
+    padding: 0 20px;
+    color: #000;
+    font-size: 16px;
+    text-align: center;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.boardTypeForm .inputAddress {
+    width: 408px;
+    margin-top: 10px;
+}
+
+[class*=tableType] .verTop, [class*=boardType] .verTop {
+    vertical-align: top;
+    padding-top: 13px;
+}
+
+.boardTypeForm td :first-child {
+    margin-left: 0;
+}
+
+[class*=boxType].boxVtical {
+    overflow: hidden;
+}
+
+.boxTypeGray {
+    background-color: #f9f9f9;
+}
+
+[class*=boxType] {
+    margin-top: 28px;
+    padding: 25px 30px;
+}
+
+.memJoinContent .innerRow em, .myPage .innerRow em {
+    display: inline-block;
+    width: 75px;
+    margin-right: 48px;
+    color: #666;
+}
+
+.boardTypeForm .selectSmall {
+    width: 50px;
+}
+
+.boardTypeForm .txtWrap {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+    line-height: 38px;
+}
+
+.boardTypeForm .inputTextSmall {
+    width: 78px;
+}
+
+.feFoCheck {
+    width: 24px;
+    height: 24px;
+    margin-right: 9px;
+    background: url(/asset/img/common/spr_common.png) no-repeat -195px -27px;
+}
+
+.boardTypeForm p.error, .boardTypeForm p.desc {
+    margin-top: 8px;
+}
+
+.boardTypeForm .desc {
+    color: #2763ba;
+}
+
+p {
+    word-break: keep-all;
+    line-height: 1.63;
+}
+.btnWrap {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    width: 335px;
+    margin-top: 0;
+}
+
+.btnType03 {
+    border: 1px solid #ccc;
+    overflow: visible;
+    vertical-align: top;
+    height: 40px;
+    padding: 0 20px;
+    color: #000;
+    font-size: 16px;
+    text-align: center;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.boardTypeForm + .btnWrap {
+    margin-top: 40px;
+}
+
+[class*=btnWrap] {
+    display: block;
+    position: relative;
+    text-align: right;
+}
+
+[class*=btnWrap] [class*=btnType] {
+    margin: 0 0 0 10px;
+}
+
+a[class*=btnType] {
+    height: 38px;
+    width: 31px;
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+.btnType03 {
+    border: 1px solid #2263bb;
+    color: #fff;
+    background-color: #2263bb;
+    padding: 10px 30px 0px 30px;
+    position: absolute;
+    left: 931px;
+    top: 5px;
+}
+
+caption {
+    position: static;
+    color: transparent;
+}
+
+caption, legend {
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border: none;
+    clip: rect(1px,1px,1px,1px);
+}
+
+th {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: -internal-center;
+}
+
+td {
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+table {
+    border-collapse: separate;
+    text-indent: initial;
+    border-spacing: 2px;
+}

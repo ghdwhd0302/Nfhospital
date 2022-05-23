@@ -1,0 +1,448 @@
+body{
+    color: #000;
+    font-size: 16px;
+    word-spacing: -0.5px;
+    letter-spacing: -1px; 
+    height: 2154.62px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+ *{
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    text-size-adjust: none;
+    list-style: none;
+    font-weight: 400;
+    font-family: 'Noto Sans KR', sans-serif;
+    outline: 0!important;
+}
+
+#wrap{
+    overflow: hidden;
+    position: relative;
+    min-width: 1120px;
+    height: 2154.62px;
+    background-color: #fff; 
+    margin-top: 23px;
+}
+a:link{
+    text-decoration: none;
+}
+
+p{
+    color: #333;
+    word-break: keep-all;
+    line-height: 1.63;
+}
+
+.skipToContent{
+    position: absolute;
+    top: -60px;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    min-width: 320px;
+    height: 60px;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: -1.5px;
+    line-height: 60px;
+    background-color: rgba(25, 145, 205, .8);
+    transition: .1s ease-in-out;
+}
+
+#header{
+    left: 0;
+    z-index: 105;
+    width: 100%;
+    height: 129px;
+    border-bottom: 1px solid #fff;
+    background-color: #fff;
+}
+
+.contTopBar{
+    z-index: 99;
+    width: 100%;
+    height: 50px;
+    background-color: #2763ba;
+}
+
+b, h1, h2, h3, h4, h5, h6, strong, th{
+    font-weight: 700;
+}
+
+.contUtilMenuWrap{
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    width: 800px;
+    height: 30px;
+    margin: 264px auto 0;
+    padding: 1px 300px 0 0;
+}
+
+.contUtilMenuWrap .contUtilMenu{
+    margin-top: 0;
+}
+
+.contUtilMenu{
+    float: right;
+}
+
+.contUtilMenu li{
+    float: left;
+    position: relative;
+    margin-right: 26px;
+}
+
+.contUtilMenu a{
+    color: #888;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.likeContent::before {
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left: -13px;
+    width: 2px;
+    height: 9px;
+    margin-top: -3px;
+    background-color: #ccc;
+}
+
+.contUtilMenu .lastChild{
+    margin-right: 0;
+}
+
+.copyURL::before{
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left: -13px;
+    width: 2px;
+    height: 9px;
+    margin-top: -3px;
+    background-color: #ccc;
+}
+
+.contUtilMenu .zoomOut{
+    margin-left: 20px;
+}
+
+li.zoomOut, li.zoomIn{
+    margin-right: 0;
+    height: 30px;
+}
+
+li.zoomIn{
+    left: -1px;
+}
+
+.contUtilMenu button{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    background-color: transparent;
+    top: -4px;
+}
+
+.contUtilMenu button::before{
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left:  50%;
+    width: 10px;
+    height: 10px;
+    margin: -5px 0 0 -5px;
+    background: url("http://www.snuh.org/asset/img/common/spr_common.png") no-repeat -65px -39px;
+}
+
+.contUtilMenu .zoomOut button::before{
+    width: 10px;
+    height: 2px;
+    margin: -1px 0 0 -5px;
+    background-position: -65px -35px;
+}
+
+.hideTxt{
+    overflow: hidden;
+    color: transparent;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+
+#content.replaceUtilMenu{
+    margin-top: -48px;
+    margin-left: 401.500px;
+    margin-right: 401.500px;
+    padding-top: 0;
+    height: 1550px;
+}
+
+#content{
+    word-spacing: 0;
+    letter-spacing: -.5px;
+    min-height: 800px;
+    margin: auto;
+    padding-right: 300px;
+}
+
+.contHeadingWrap{
+    overflow: hidden;
+    position: relative;
+    margin: -12px 0 43px;
+}
+
+.contHeadingWrap > :first-child{
+    float: left;
+    font-size: 40px;
+    letter-spacing: -2px;
+}
+
+h2, h3{
+    font-weight: 700;
+}
+
+[class*=tabType]{
+    position: relative;
+    margin: 50px 0 40px;
+}
+
+[class*=tabType] ul{
+    position: relative;
+    width: 100%;
+}
+
+[class*=tabType]:after{
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #2263bb;
+}
+
+.clearFix:before, .clearFix:after{
+    content: ' ';
+    display: table;
+}
+
+[class*=tabType] li{
+    float: left;
+    width: 25%;
+}
+
+.tabTypeCol4 li{
+    width: 20%;
+}
+
+[class*=tabType] a{
+    display: block;
+    height: 48px;
+    margin-left: -1px;
+    border: 1px solid #ccc;
+    border-bottom-color: transparent;
+    color: #666;
+    text-align: center;
+    line-height: 48px;
+}
+
+a:link, a:visited, a:hover, a:active{
+    text-decoration: none;
+}
+
+[class*=tabType] li:first-child a{
+    margin-left: 0;
+}
+
+[class*=tabType] .current a{
+    border-color: #2263bb;
+    color: #fff;
+    background-color: #2263bb;
+}
+
+.clearFix:after{
+    clear: both;
+}
+
+
+.contTitleWrap{
+    overflow: hidden;
+    position: relative;
+    margin: 45px 0 28px;
+}
+
+.contTitleWrap > :first-child{
+    float: left;
+    font-size: 28px;
+    letter-spacing: -2.1px;
+}
+
+[class*=tabType] + .contTitleWrap{
+    margin-top: -10px;
+}
+
+
+
+.rsvGuide > li{
+    position: relative;
+    margin-top: 30px;
+    padding-left: 99px;
+}
+
+.rsvGuide > li:first-child{
+    margin-top: 0;
+}
+
+.rsvGuide > li > em{
+    display: block;
+    margin: 15px 0;
+    color: #2763ba;
+    font-size: 18px;
+}
+
+.rsvGuide > li > em:first-child{
+    margin-bottom: 13px;
+    color: #000;
+    font-size: 20px;
+}
+
+address, em{
+    font-style: normal;
+}
+
+[class*=listType]{
+    margin-top: 12px;
+
+}
+
+[class*=listType] li{
+    position: relative;
+    padding-left: 8px;
+    color: #666;
+    word-break: keep-all;
+}
+
+.listType01 li:before{
+    content: ' ';
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 5px;
+    height: 1px;
+    background-color: #666;
+}
+
+[class*=listType] li + li{
+    margin-top: 7px;
+}
+
+[class*=listType] + p{
+    margin-top: 10px;
+}
+
+.rsvGuide > li.skin01:after{
+    background: url("http://www.snuh.org/asset/img/reservation/spr_reservation.png") no-repeat 0 0;
+}
+
+.rsvGuide > li:after{
+    content: ' ';
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 80px;
+    height: 80px;
+}
+
+.colorPoint{
+    color: #2763ba!important;
+}
+
+
+.rsvGuide > li.skin02:after{
+    background: url("http://www.snuh.org/asset/img/reservation/spr_reservation.png") no-repeat 0 0;
+}
+
+[class*=btn] {
+    display: inline-block;
+    border: 0;
+}
+
+[class*=btnWrap]{
+    display: block;
+    position: relative;
+    margin-top: 30px;
+    text-align: right;
+}
+
+p + [class*=btnWrap]{
+    margin-top: 20px;
+}
+
+.alignL {
+    text-align: left!important;
+}
+
+[class*=btnWrap] [class*=btnType]{
+    margin: 0 0 0 10px;
+}
+
+[class*=btnWrap].alignL [class*=btnType]{
+    margin: 0 10px 0 0;
+}
+
+[class*=btnType]{
+    overflow: visible;
+    vertical-align: top;
+    height: 40px;
+    padding: 0 20px;
+    color: #000;
+    font-size: 16px;
+    text-align: center;
+    line-height: 38px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.btnType03 {
+    border: 1px solid #2263bb;
+    color: #fff;
+    background-color: #2263bb;
+}
+
+.btnSmall{
+    height: 30px;
+    padding: 0 10px;
+    font-size: 14px;
+    letter-spacing: -.7px;
+    line-height: 28px;
+}
+
+a[class*=btnType]{
+    height: 38px;
+}
+
+a.btnSmall {
+    height: 28px;
+    line-height: 28px;
+}
+
+.rsvGuide > li.skin03:after{
+    background: url("http://www.snuh.org/asset/img/reservation/spr_reservation.png") no-repeat -164px 0;
+}
+
+.rsvGuide > li.skin04:after{
+    background: url("http://www.snuh.org/asset/img/reservation/spr_reservation.png") no-repeat -328px 0;
+}
+
+.rsvGuide > li.skin05:after{
+    background: url("http://www.snuh.org/asset/img/reservation/spr_reservation.png") no-repeat -410px 0px;
+}
+
