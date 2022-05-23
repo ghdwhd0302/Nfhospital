@@ -34,6 +34,18 @@ aside {
 }
 #aside_blank {
    height: 50px;
+   
+}
+#aside_blank img {
+	width : 30px;
+	padding-top: 10px;
+	float: left;
+    padding-left: 12px;
+}
+
+span {
+	
+	line-height : 3px;
 }
 div.employee_page {
     line-height: 3.5;
