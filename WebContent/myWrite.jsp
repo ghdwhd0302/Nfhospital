@@ -17,8 +17,123 @@
 <body>
     <div id="wrap">
         <a href="#content" class="skipToContent">본문으로 바로가기</a>
-        <header id="header" class style="position: fixed; top: 0px"></header>
-        <div class="contTopBar" style="position: fixed; top: 130px;"></div>
+        <header id="header">
+            <div class="innerwrap">
+                <h1><a href="mainpage.jsp" class="hideTxt">서울대학교병원</a></h1>
+                <div class="topLeftWrap">
+                    <a href="https://dept.snuh.org/dept/OC/index.do" class="hideTxt" id="outcomes">Outcomes Book</a>
+                </div>
+                <div class="topMenuWrap">
+                    <ul class="utilMenu">
+                        <li>
+                            <a style="margin-right: 16px;">원격</a>
+                        </li>
+                    </ul>
+                    <ul class="topMenu">
+                        <li>
+                            <a>로그아웃</a>
+                        </li>
+                        <li>
+                            <a>마이페이지</a>
+                        </li>
+                        <li>
+                            <a>Language</a>
+                        </li>
+                    </ul>
+                </div>
+                <nav id="gnb" class>
+<!--                     <button class="totMenuBtn hideTxt" type="button" aria-controls="totMenu">
+                    </button> -->
+                    <!-- 전체 메뉴 아이콘 집어넣어야함 -->
+                    <button class="totMenuBtn hideTxt" type="button" aria-controls="totMenu">전체 메뉴 열기</button>
+                    <ul class="gnbList clearFix">
+                        <li>
+                            <a>진료안내</a>
+                        </li>
+                        <li>
+                            <a>이용안내</a>
+                        </li>
+                        <li>
+                            <a>건강정보</a>
+                        </li>
+                        <li>
+                            <a>고객참여</a>
+                        </li>
+                        <li>
+                            <a>병원소개</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="contTopBar" style="position: fixed; top: 130px;">
+            <!-- innerWrap -->
+            <div class="innerWrap clearFix">
+                <!-- breadcrumb -->
+                <div class="breadcrumb">
+			<strong class="hideEl">현재 위치: </strong>
+			<a href="/" class="bcHomeBtn hideTxt">HOME</a>
+			<span class="hideEl">&gt;</span>
+			
+			<div class="">
+				<em>고객참여</em>
+				<button type="button" class="bcLinkLayerBtn hideTxt">주 메뉴 목록 열기</button>
+				<!-- bcLinkLayer -->
+				<ul class="bcLinkLayer" role="region" aria-hidden="true" aria-expanded="false">
+					
+					<li><a href="medicalInfo.jsp">진료안내</a></li>
+                            <li><a href="/">이용안내</a></li>
+                            <li><a href="clientSound.jsp">고객참여</a></li>
+                            <li><a href="intro.jsp">병원소개</a></li>
+					 
+				</ul>
+				<!-- //bcLinkLayer -->
+			</div>
+			<span class="hideEl">&gt;</span>
+			<div class="">
+				<em>고객의소리</em>
+				<button type="button" class="bcLinkLayerBtn hideTxt">서브 메뉴 목록 열기</button>
+				<!-- bcLinkLayer -->
+				<ul class="bcLinkLayer" role="region" aria-hidden="true" aria-expanded="false">
+					
+					<li><a href="thankyouwrite.jsp">고객의소리</a></li>
+					
+				</ul>
+				<!-- //bcLinkLayer -->
+			</div>
+			<span class="hideEl">&gt;</span>
+			
+			<div class="">
+				<em>감사합니다</em>
+				<button type="button" class="bcLinkLayerBtn hideTxt">서브 메뉴 목록 열기</button>
+				<!-- bcLinkLayer -->
+				<ul class="bcLinkLayer" role="region" aria-hidden="true" aria-expanded="false" style="display: none;" tabindex="0">
+					
+					<li><a href="clientConsultation.jsp">고객상담실 업무안내</a></li>
+					
+					<li><a href="clientSound.jsp">고객의소리 등록</a></li>
+					
+					<li><a href="thankyouwrite.jsp">감사합니다</a></li>
+					
+					<li><a href="suggestions.jsp">건의합니다</a></li>
+					
+					<li><a href="allThanksView.jsp">감사이야기</a></li>
+					
+				</ul>
+				<!-- //bcLinkLayer -->
+			</div>
+			
+		</div>
+                <!-- //breadcrumb -->
+                <!-- bcQuickMenu -->
+                <ul class="bcQuickMenu">
+                    <li class=""><a href="/reservation/reservation.do">진료예약</a></li>
+                    <li><a href="/reservation/confirm/rsvConfirm.do">예약조회</a></li>
+                </ul>
+                <!-- //bcQuickMenu -->
+            </div>
+            <!-- //innerWrap -->
+        </div>
         <div class="contUtilMenuWrap">
             <ul class="contUtilMenu">
                 <li class="pagePrint" style="display: list-item;">

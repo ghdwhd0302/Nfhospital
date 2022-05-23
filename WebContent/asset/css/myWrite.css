@@ -200,12 +200,145 @@ p{
 }
 /* hearder끝 */
 
+/* TopBar 시작*/
 .contTopBar{
     z-index: 99;
     width: 100%;
     height: 50px;
     background-color: #2763ba;
 }
+
+.clearFix:before, .clearFix:after, .clearFix > .b, .clearFix > .a{
+    content: ' ';
+    display: table;
+}
+
+.breadcrumb{
+    float: left;
+}
+
+.hideEl, .pagination [class*=Btn] span{
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    border: none;
+    clip: rect(1px,1px,1px,1px);
+}
+
+.bcHomeBtn{
+    position: relative;
+    width: 48px;
+    border: 1px solid #5d8acb;
+    border-width: 0 1px;
+}
+
+.bcHomeBtn, .breadcrumb > div{
+    float: left;
+    height: 50px;
+    line-height: 50px;
+}
+
+.bcHomeBtn:before, .bcHomeBtn > .b{
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 16px;
+    margin: -9px 0 0 -8px;
+    background: url("http://www.snuh.org/asset/img/common/spr_common.png") no-repeat -110px -73px;
+}
+
+.breadcrumb > div{
+    position: relative;
+    min-width: 188px;
+    max-width: 250px;
+    max-width: 300px;
+    border-right: 1px solid #5d8acb;
+}
+
+.breadcrumb em{
+    display: block;
+    padding: 0 51px 0 20px;
+    color: #fff;
+    font-style: normal;
+}
+
+.ellipsisTxt, .breadcrumb em, .bcLinkLayer a, .newsPaperImg em, .ellipsisTit[class*=boardTypeImg] em, .boardTypeTbl td a{
+    overflow: hidden;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.bcLinkLayerBtn{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.bcLinkLayer{
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: -1px;
+    left: -1px;
+    border-top: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.breadcrumb > div:after, .breadcrumb > div > .a{
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 11px;
+    height: 6px;
+    margin-top: -3px;
+    background: url("http://www.snuh.org/asset/img/common/spr_common.png") no-repeat -65px -27px;
+}
+
+.bcLinkLayer a{
+    display: block;
+    height: 48px;
+    padding: 0 20px;
+    border: 1px solid #ccc;
+    border-top: 0;
+    line-height: 48px;
+    transition: .3s color;
+}
+
+.bcQuickMenu{
+    float: right;
+    width: 220px;
+    margin-right: -18px;
+    padding: 0 18px;
+    text-align: center;
+    background: url("http://www.snuh.org/asset/img/common/bg_bcQuickMenu.png") no-repeat 0 0;
+}
+
+.bcQuickMenu li{
+    float: left;
+    position: relative;
+    width: 50%;
+}
+
+.bcQuickMenu a{
+    display: block;
+    height: 50px;
+    color: #fff;
+    line-height: 50px;
+    background-color: transparent;
+}
+
+/* TopBar끝 */
 
 .contUtilMenuWrap{
     overflow: hidden;
