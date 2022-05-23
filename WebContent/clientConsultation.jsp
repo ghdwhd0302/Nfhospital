@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>고객상담실 업무안내 | 서울대학교병원</title>
     <link rel="stylesheet" href="asset/css/clientConsultation.css">
-    <link rel="stylesheet" href="asset/css/footer.css">
+    <link rel="stylesheet" href="asset/css/KDHfooter.css">
     <link rel="stylesheet" href="asset/css/aside.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
