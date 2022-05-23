@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>감사합니다 | 서울대학교병원</title>
     <link rel="stylesheet" href="asset/css/allThanksView.css">
-    <link rel="stylesheet" href="asset/css/footer.css">
+    <link rel="stylesheet" href="asset/css/KDHfooter.css">
     <link rel="stylesheet" href="asset/css/aside.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -68,8 +68,8 @@
                 </div>
             </div>
             <div class="alignR btnWrap02">
-                <a href="/join/client/mySubmitList.do" role="button" class="btnType01">내가 작성한 글 보기</a>
-                <a href="/join/client/praiseReg.do" class="btnType03" role="button">감사합니다 글쓰기</a>
+                <a href="myWrite.jsp" role="button" class="btnType01">내가 작성한 글 보기</a>
+                <a href="thankyouwrite.jsp" class="btnType03" role="button">감사합니다 글쓰기</a>
             </div>
             <div class="cstBoardCard">
 		
