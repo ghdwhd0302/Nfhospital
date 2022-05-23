@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 
-
+/* 
 #content{
 	width:60%;
 	margin-left: 20%;
@@ -47,10 +47,10 @@ ul.clearFix li{
 	text-align: right;
 }
 
-/* .boardTypeForm{
+.boardTypeForm{
 	border-top:1px solid black; 
 }
- */
+
 table{
 	width:100%;
 	border-spacing:0 40px;
@@ -71,6 +71,7 @@ td{
 .colorPoint {
     color: #2763ba;
 }
+
 .boardTypeForm td {
     vertical-align: middle;
     height: 40px;
@@ -83,7 +84,7 @@ td{
      appearance: radio;
 }
 .feFoRadio {
-    display: inline-block;
+    display: inline-block; 
     width: 24px;
     height: 24px;
 }
@@ -91,6 +92,9 @@ td{
     z-index: 1;
     border: none;
     border-radius: 0;
+}
+#nation{
+	
 }
  .feFoSelect select {
     display: inline-block;
@@ -123,4 +127,79 @@ input[type=tel], input[type=text], input[type=email], input[type=number], input[
     width: 24px;
     height: 24px;
     background: url("https://www.snuh.org/asset/img/common/spr_common.png") no-repeat -169px -27px;
+}
+ */
+
+.first_tr {
+	border-top: 1px solid black;
+}
+
+.last_tr {
+	border-bottom: 1px solid black;
+}
+
+.boardTypeForm {
+	height: 420px;
+}
+
+#content {
+	width: 60%;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+.contHeadingWrap {
+	font-size: 30px;
+	font-weight: bold;
+	margin-left: 40px;
+	margin-top: 70px;
+}
+
+ul.clearFix {
+	width: 100%;
+	height: 200px;
+	padding: 0;
+}
+
+ul.clearFix li {
+	border: 1px solid #ccc;
+	color: #ccc;
+	font-weight: bold;
+	list-style: none;
+	width: 33%;
+	height: 80px;
+	float: left;
+	font-size: 26px;
+	letter-spacing: 1px;
+	text-align: center;
+}
+
+.current {
+	background-color: #2763ba;
+	color: #black;
+}
+
+.current b {
+	width: 200px;
+	color: black;
+}
+
+.supText {
+	text-align: right;
+}
+
+table {
+	width: 100%;
+	border-spacing: 0 40px;
+	border-collapse: collapse;
+	font-size: 20px;
+}
+
+tr {
+	border-top: 1px solid #ccc;
+	margin-bottom: 20px;
+}
+
+td {
+	padding: 10px 10px 10px 20px;
 }

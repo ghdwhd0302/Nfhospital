@@ -25,160 +25,224 @@
 <body>
 	<jsp:include page="header.jsp" />
 	<div class="wrap">
-	<section class="container">
-		<div class="arrow prev">&lt;</div>
-		<div class="banner">
-			<div class="img">
-				<a
-					href="http://www.snuh.org/board/B003/view.do?viewType=true&bbs_no=5055">
-					<img src="https://www.snuh.org/asset/img/main/20220428.jpg">
+		<section class="container">
+			<div class="arrow prev">&lt;</div>
+			<div class="banner">
+				<div class="img">
+					<a
+						href="http://www.snuh.org/board/B003/view.do?viewType=true&bbs_no=5055">
+						<img src="https://www.snuh.org/asset/img/main/20220428.jpg">
 
-				</a>
+					</a>
+				</div>
+
+				<div class="img">
+					<a
+						href="http://www.snuh.org/board/B003/view.do?bbs_no=5825&pageIndex=1&restrictedBbsType=&viewType=&cate_cd=&searchKey=all&searchWord=%EB%B8%8C%EB%9E%9C%EB%93%9C">
+						<img src="https://www.snuh.org/asset/img/main/20220404.jpg">
+					</a>
+				</div>
+				<div class="img">
+					<a
+						href="http://www.snuh.org/board/B003/view.do?bbs_no=5565&pageIndex=1&restrictedBbsType=&viewType=&cate_cd=&searchKey=all&searchWord=%EC%8B%AC%EB%B0%A9%EC%84%B8%EB%8F%99+%ED%99%98%EC%9E%90">
+						<img src="https://www.snuh.org/asset/img/main/20210722.jpg">
+					</a>
+				</div>
 			</div>
+			<div class="arrow next">&gt;</div>
+			<div class="btns">
+				<button class="btn" type="button" style="list-style-type: none;"></button>
+				<button class="btn" type="button" style="list-style-type: none;"></button>
+				<button class="btn" type="button" style="list-style-type: none;"></button>
 
-			<div class="img">
-				<a
-					href="http://www.snuh.org/board/B003/view.do?bbs_no=5825&pageIndex=1&restrictedBbsType=&viewType=&cate_cd=&searchKey=all&searchWord=%EB%B8%8C%EB%9E%9C%EB%93%9C">
-					<img src="https://www.snuh.org/asset/img/main/20220404.jpg">
-				</a>
 			</div>
-			<div class="img">
-				<a
-					href="http://www.snuh.org/board/B003/view.do?bbs_no=5565&pageIndex=1&restrictedBbsType=&viewType=&cate_cd=&searchKey=all&searchWord=%EC%8B%AC%EB%B0%A9%EC%84%B8%EB%8F%99+%ED%99%98%EC%9E%90">
-					<img src="https://www.snuh.org/asset/img/main/20210722.jpg">
-				</a>
-			</div>
-		</div>
-		<div class="arrow next">&gt;</div>
-		<div class="btns">
-			<button class="btn" type="button" style="list-style-type: none;"></button>
-			<button class="btn" type="button" style="list-style-type: none;"></button>
-			<button class="btn" type="button" style="list-style-type: none;"></button>
+		</section>
 
-		</div>
-	</section>
-
-	<div class="container">
+		<div class="container">
 
 
 
-		<div class="row">
-			<div class="wrap2">
+			<div class="row">
+				<div class="wrap2">
+					<div class="col-sm-3">
+						<div class="col1">
+							<p>
+								<br>진료예약<br> <br> <br>빠르고 쉽게 진료예약을<br>하실
+								수 있습니다
+							</p>
+							<div class="btnWrap col01">
+								<a href="/reservation/reservation.do" role="button">진료예약</a> <a
+									href="#" role="button" onclick="goFirstReserve();">첫예약상담</a>
+							</div>
+						</div>
+
+					</div>
+					<div class="col-sm-3">
+						<div class="col2">
+							<p>
+								<br>진료과/센터<br> <br> <br>병원의 진료과/센터를<br>상세히
+								확인할 수 있습니다.
+							</p>
+							<div class="btnWrap col02">
+								<a
+									href="https://www.snuh.org/login.do?retUrl=%2Freservation%2Freservation.do"
+									role="button">진료과</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-3">
+						<div class="col3">
+							<p>
+								<br>진료안내<br> <br> <br>대표전화 1588-5700<br>암환자
+								상담 02-2072-0707
+							</p>
+							<div class="btnWrap col03">
+								<a href="" role="button">진료예약</a> <a href="" role="button"
+									onclick="goFirstReserve();">첫예약상담</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="col4">
+							<form action="index.html" method="post" class="loginForm">
+								<p>로그인</p>
+								<div class="textForm">
+									<input type="text" id="id" placeholder="아이디 입력">
+								</div>
+								<div class="textForm">
+									<input type="password" id="pwd" placeholder="패스워드 입력">
+								</div>
+								<div class="bottomText">
+									<a href="regi1.jsp">회원가입</a> <a href="findid.jsp">아이디/비밀번호
+										찾기</a>
+								</div>
+								<div>
+
+									<button type="button" id="login">로그인</button>
+
+
+
+								</div>
+
+							</form>
+						</div>
+					</div>
+
+				</div>
+				<div class="wrap3">
+					<div class="col-sm-3">
+						<div class="col5">
+							<a href="http://www.snuh.org/health/tv.do"> <br>건강 TV<br>
+								<br> <br>서울대학교 병원 의료진에게<br>듣는 팟캐스트
+							</a>
+
+						</div>
+
+					</div>
+
+					<div class="col-sm-3">
+						<div class="col6">
+							<a href="http://www.snuh.org/health/myDoctor.do"> <br>우리
+								집 주치의<br> <br> <br>하나의 질병에 대해서<br>깊이 있게
+								알아봅니다.
+							</a>
+
+						</div>
+
+					</div>
+					<div class="col-sm-3">
+						<div class="col7">
+							<a href="http://www.snuh.org/about/news/lecture/list.do"> <br>공개강좌<br>
+								<br> <br>누구에게나 열려있는<br>공개 건강강좌
+							</a>
+
+						</div>
+
+					</div>
+					<div class="col-sm-3">
+						<div class="col8">
+							<p>
+								<br>건강 채널<br> <br> <br>더 편하게 만나는 건강정보<br>
+								<br>
+							</p>
+
+							<a>페이스북</a> <a>포스트</a> <a>네이버 TV</a> <a>블로그</a>
+
+						</div>
+
+					</div>
+				</div>
+
+			<div class="wrap8">
 				<div class="col-sm-3">
-					<div class="col1">
+					<div class="col9">
 						<p>
-							<br>진료예약<br> <br> <br>빠르고 쉽게 진료예약을<br>하실
-							수 있습니다
+							<br>공공보건의료진흥원<br> <br> <br>공공보건의료 발전을 위해<br>다양한 사업을 수행하고
+							<br>있습니다.
+							
 						</p>
 						<div class="btnWrap col01">
-							<a href="/reservation/reservation.do" role="button">진료예약</a> <a
-								href="#" role="button" onclick="goFirstReserve();">첫예약상담</a>
+							<a href="javascript:alert('%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80 %EC%A4%80%EB%B9%84%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A4.');" role="button">진흥원 소개</a> <a
+								href="javascript:alert('%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80 %EC%A4%80%EB%B9%84%EC%A4%91%EC%9E%85%EB%8B%88%EB%8B%A4.');" role="button" onclick="goFirstReserve();">진흥원 사업</a>
 						</div>
 					</div>
 
 				</div>
 				<div class="col-sm-3">
-					<div class="col2">
+					<div class="col10">
 						<p>
-							<br>진료과/센터<br> <br> <br>병원의 진료과/센터를<br>상세히
-							확인할 수 있습니다.
+							<br>건강증진센터<br> <br><br> <br>질병 예방 및 삶의 질 향상을<br>위해 노력합니다.
 						</p>
 						<div class="btnWrap col02">
 							<a
-								href="https://www.snuh.org/login.do?retUrl=%2Freservation%2Freservation.do"
-								role="button">진료과</a>
+								href="http://dept.snuh.org/dept/HPC/index.do"
+								role="button">본원</a>
+								<a
+								href="http://healthcare.snuh.org/"
+								role="button">강남센터</a>
 						</div>
 					</div>
 				</div>
 
 				<div class="col-sm-3">
-					<div class="col3">
+					<div class="col11">
 						<p>
-							<br>진료안내<br> <br> <br>대표전화 1588-5700<br>암환자
-							상담 02-2072-0707
+							<br>발전후원회<br><br> <br> <br>따듯한 마음을 의료 발전으로<br>보답 하겠습니다.
 						</p>
 						<div class="btnWrap col03">
-							<a href="" role="button">진료예약</a> <a href="" role="button"
-								onclick="goFirstReserve();">첫예약상담</a>
+							<a href="http://dept.snuh.org/dept/SDF/index.do" role="button">발전후원회</a> <a href="http://isupport.tistory.com/" role="button"
+								onclick="goFirstReserve();">어린이병원후원</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-sm-3">
-					<div class="col4">
-						<form action="index.html" method="post" class="loginForm">
-							<p>로그인</p>
-							<div class="textForm">
-								<input type="text" id="id" placeholder="아이디 입력">
-							</div>
-							<div class="textForm">
-								<input type="password" id="pwd" placeholder="패스워드 입력">
-							</div>
-							<div class="bottomText">
-								<a href="regi1.jsp">회원가입</a> <a href="find.jsp">아이디/비밀번호
-									찾기</a>
-							</div>
-							<div>
-
-								<button type="button" id="login">로그인</button>
-								
-
-
-							</div>
-
-						</form>
-					</div>
-				</div>
-
-			</div>
-			<div class="wrap3">
-				<div class="col-sm-3">
-					<div class="col5">
-						<a href="http://www.snuh.org/health/tv.do"> <br>건강 TV<br>
-							<br> <br>서울대학교 병원 의료진에게<br>듣는 팟캐스트
-						</a>
-
-					</div>
-
-				</div>
-				
-				<div class="col-sm-3">
-					<div class="col6">
-						<a href="http://www.snuh.org/health/myDoctor.do"> <br>우리 집 주치의<br>
-							<br> <br>하나의 질병에 대해서<br>깊이 있게 알아봅니다.
-						</a>
-
-					</div>
-
-				</div>
-				<div class="col-sm-3">
-					<div class="col7">
-						<a href="http://www.snuh.org/about/news/lecture/list.do"> <br>공개강좌<br>
-							<br> <br>누구에게나 열려있는<br>공개 건강강좌
-						</a>
-
-					</div>
-
-				</div>
-				<div class="col-sm-3">
-					<div class="col8">
-						<p > <br>건강 채널<br>
-							<br> <br>더 편하게 만나는 건강정보<br><br>
+					<div class="col12">
+						<p>
+							<br>진료협력센터<br><br> <br> <br>네트워크로 하나되는 의료<br>SNUH 진료협력시스템
 						</p>
-						
-						<a>페이스북</a>
-						<a>포스트</a>
-						<a>네이버 TV</a>
-						<a>블로그</a>
-
+						<div class="btnWrap col03">
+							<a href="https://nrefer.snuh.org/SUB02/SUB0201" role="button">진료의뢰</a> <a href="https://nrefer.snuh.org/SUB04/SUB0404" role="button"
+								onclick="goFirstReserve();">협력병원</a>
+						</div>
 					</div>
-
 				</div>
+
 			</div>
+
+
+			</div>
+
+
+
+
 
 		</div>
 
-	</div>
 
+
+
+	</div>
 
 	<div class="road">
 		<h3>오시는길</h3>
@@ -191,7 +255,9 @@
 					class="picture"
 					src="data:image/jpeg;base64,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">
 				</a>
-				<p><strong>오시는길</strong></p>
+				<p>
+					<strong>오시는길</strong>
+				</p>
 			</div>
 			<div class="col-sm-4">
 				<a href="http://www.snuh.org/guide/inMapInfo.do"> <img
@@ -210,10 +276,6 @@
 			</div>
 		</div>
 	</div>
-
-	</div>
-
-
 
 
 

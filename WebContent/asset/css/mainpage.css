@@ -2,6 +2,12 @@
 /* *{
 	font-family: 'Nanum Myeongjo', serif;
 } */
+
+html {
+	position: relative;
+	min-height: 100%;
+	margin: 0;
+}
 .container{
 	width:100%;
 }
@@ -15,8 +21,10 @@
 }
 
 .road {
+	height:400px;
 	text-align: center;
 	border-top:1px solid black; 
+	
 }
 
 .row {
@@ -134,6 +142,13 @@ div.btns {
 	height: 310.06px;
 	background-color: 
 }
+.wrap8{
+	margin-top:60px;
+	padding-top:40px;
+	width:1140px;
+	height: 310.06px;
+	background-color: 
+}
 .col1 {
 	background-color: #008ace;
 	color: white;
@@ -157,12 +172,13 @@ div.btns {
 .col3 {
 	background-color: #2ca48f;
 	color: white;
-		width: 260px;
+	width: 260px;
 	height: 260px;
 	text-align: left;
 	padding-left: 15px;
 	margin-right: 20px;
 }
+
 
 .col4 {
 	width: 260px;
@@ -174,6 +190,45 @@ div.btns {
 	
 	
 }
+.col9 {
+	background-color: #627ad0;
+	color: white;
+	width: 260px;
+	height: 260px;
+	text-align: left;
+	padding-left: 15px;
+	margin-right: 20px;
+}
+.col10 {
+	background-color: #008ace;
+	color: white;
+	width: 260px;
+	height: 260px;
+	text-align: left;
+	padding-left: 15px;
+	margin-right: 20px;
+}
+
+.col11 {
+	background-color: #2ca48f;
+	color: white;
+	width: 260px;
+	height: 260px;
+	text-align: left;
+	padding-left: 15px;
+	margin-right: 20px;
+}
+.col12 {
+	background-color: #3298b7;
+	color: white;
+	width: 260px;
+	height: 260px;
+	text-align: left;
+	padding-left: 15px;
+	margin-right: 20px;
+}
+
+
 .bottomText{
 	width:198px;
 	height:20px;
@@ -197,7 +252,7 @@ div.btns {
 	text-align: left;
 	background-image: url("https://www.snuh.org/asset/img/main/bg_mainHealth01.jpg");
 	padding-left:15px;
-	
+
 }
 .col6 {
 	width: 260px;
@@ -206,6 +261,7 @@ div.btns {
 	margin-right: 20px;
 	background-image: url("https://www.snuh.org/asset/img/main/bg_mainHealth02.jpg");
 	padding-left:15px;
+	
 }
 .col7 {
 	width: 260px;
@@ -223,6 +279,30 @@ div.btns {
 	background-image: url("https://www.snuh.org/asset/img/main/bg_mainHealth04.jpg");
 	padding-left:15px;
 }
+
+
+
+.col5 a{
+	color:white;
+}
+
+.col6 a{
+	color:white;
+}
+.col7 a{
+	color:white;
+}
+.col8 a{
+	color:white;
+}
+.col8 p{
+	color:white;
+}
+
+
+
+
+
 .col01 > a{
 	 display: block;
     float: left;
@@ -269,7 +349,55 @@ div.btns {
     height: 40px;
     text-align: center;
     
-}
+} 
+.col9 > a {
+    display: block;
+    float: none;
+    margin-top: -1px;
+    margin-left:20px;
+    color: #fff;
+    border: 1px solid white;
+    width:201px;
+    height: 40px;
+    text-align: center;
+    
+} 
+.col10 > a {
+    display: block;
+    float: none;
+    margin-top: -1px;
+    margin-left:20px;
+    color: #fff;
+    border: 1px solid white;
+    width:201px;
+    height: 40px;
+    text-align: center;
+    
+} 
+.col11 > a {
+    display: block;
+    float: none;
+    margin-top: -1px;
+    margin-left:20px;
+    color: #fff;
+    border: 1px solid white;
+    width:201px;
+    height: 50px;
+    text-align: center;
+    
+} 
+.col12 > a {
+    display: block;
+    float: none;
+    margin-top: -1px;
+    margin-left:20px;
+    color: #fff;
+    border: 1px solid white;
+    width:201px;
+    height: 40px;
+    text-align: center;
+    
+} 
 .textForm{
 	border: 1px solid white;
 }
