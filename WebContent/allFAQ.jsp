@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>고객상담실 업무안내 | 서울대학교병원</title>
-    <link rel="stylesheet" href="asset/css/clientConsultation.css">
+    <title>이용안내 FAQ | 서울대학교병원</title>
+    <link rel="stylesheet" href="asset/css/allFAQ.css">
     <link rel="stylesheet" href="asset/css/KDHfooter.css">
     <link rel="stylesheet" href="asset/css/aside.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -71,64 +71,43 @@
             <div class="innerWrap clearFix">
                 <!-- breadcrumb -->
                 <div class="breadcrumb">
-			<strong class="hideEl">현재 위치: </strong>
-			<a href="/" class="bcHomeBtn hideTxt">HOME</a>
-			<span class="hideEl">&gt;</span>
-			
-			<div class="">
-				<em>고객참여</em>
-				<button type="button" class="bcLinkLayerBtn hideTxt">주 메뉴 목록 열기</button>
-				<!-- bcLinkLayer -->
-				<ul class="bcLinkLayer" role="region" aria-hidden="true" aria-expanded="false">
+                    <strong class="hideEl">현재 위치: </strong>
+                    <a href="mainpage.jsp" class="bcHomeBtn hideTxt">HOME</a>
+                    <span class="hideEl">&gt;</span>
+                    
+                    <div class="">
+                        <em>이용안내</em>
+                        <button type="button" class="bcLinkLayerBtn hideTxt">주 메뉴 목록 열기</button>
+                        <!-- bcLinkLayer -->
+                        <ul class="bcLinkLayer" role="region" aria-hidden="true" aria-expanded="false" style="display: none;">
+                                
+                            <li><a href="/reservation/meddept/main.do">진료안내</a></li>
+                            <li><a href="/content/M002001001.do">이용안내</a></li>
+                            <li><a href="/join/client.do">고객참여</a></li>
+                            <li><a href="/content/M005001.do">병원소개</a></li>
+                                
+                        </ul>
+                        <!-- //bcLinkLayer -->
+                    </div>
+                    <span class="hideEl">&gt;</span>
+                    <div class="">
+                        <em>FAQ(통합)</em>
+                        <button type="button" class="bcLinkLayerBtn hideTxt">서브 메뉴 목록 열기</button>
+                        <!-- bcLinkLayer -->
+                        <ul class="bcLinkLayer" role="region" aria-hidden="true" aria-expanded="false" style="display: none;" tabindex="0">
 					
-					<li><a href="medicalInfo.jsp">진료안내</a></li>
-                            <li><a href="/">이용안내</a></li>
-                            <li><a href="clientSound.jsp">고객참여</a></li>
-                            <li><a href="intro.jsp">병원소개</a></li>
-					 
-				</ul>
-				<!-- //bcLinkLayer -->
-			</div>
-			<span class="hideEl">&gt;</span>
-			<div class="">
-				<em>고객의소리</em>
-				<button type="button" class="bcLinkLayerBtn hideTxt">서브 메뉴 목록 열기</button>
-				<!-- bcLinkLayer -->
-				<ul class="bcLinkLayer" role="region" aria-hidden="true" aria-expanded="false">
-					
-					<li><a href="thankyouwrite.jsp">고객의소리</a></li>
-					
-				</ul>
-				<!-- //bcLinkLayer -->
-			</div>
-			<span class="hideEl">&gt;</span>
-			
-			<div class="">
-				<em>고객상담실 업무안내</em>
-				<button type="button" class="bcLinkLayerBtn hideTxt">서브 메뉴 목록 열기</button>
-				<!-- bcLinkLayer -->
-				<ul class="bcLinkLayer" role="region" aria-hidden="true" aria-expanded="false" style="display: none;" tabindex="0">
-					
-					<li><a href="clientConsultation.jsp">고객상담실 업무안내</a></li>
-					
-					<li><a href="clientSound.jsp">고객의소리 등록</a></li>
-					
-					<li><a href="thankyouwrite.jsp">감사합니다</a></li>
-					
-					<li><a href="suggestions.jsp">건의합니다</a></li>
-					
-					<li><a href="allThanksView.jsp">감사이야기</a></li>
-					
-				</ul>
-				<!-- //bcLinkLayer -->
-			</div>
-			
-		</div>
+                            <li><a href="/board/B005/list.do">FAQ(통합)</a></li>
+                            
+                        </ul>
+                        <!-- //bcLinkLayer -->
+                    </div>
+                    <span class="hideEl">&gt;</span>
+                </div>
                 <!-- //breadcrumb -->
                 <!-- bcQuickMenu -->
                 <ul class="bcQuickMenu">
-                    <li class=""><a href="/reservation/reservation.do">진료예약</a></li>
-                    <li><a href="/reservation/confirm/rsvConfirm.do">예약조회</a></li>
+                    <li class=""><a href="reservation.jsp">진료예약</a></li>
+                    <li><a href="newreservation.jsp">예약조회</a></li>
                 </ul>
                 <!-- //bcQuickMenu -->
             </div>
@@ -153,68 +132,171 @@
                 </li>
             </ul>
         </div>
-        <main id="content" class="cstomerContent replaceUtilMenu">
+        <main id="content" class="rsvContent replaceUtilMenu">
             <div class="contHeadingWrap">
-                <h2>고객상담실 업무안내</h2>
+                <h2>이용안내 FAQ</h2>
             </div>
-            <div class="lightIntroWrap iconType02">
-                <div class="contTitleWrap">
-                    <h3>고객상담실 방문 및 전화상담 시간</h3>
+            <div class="tabTypeCol5">
+                <ul class="clearFix">
+                    <li class="current"><a href="allFAQ.jsp">전체</a></li>
+                    
+                        <li class="">
+                            <a href="secondFAQ.jsp">외래</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="thirdFAQ.jsp">제증명</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="lastFAQ.jsp">기타</a>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="boardInfo clearFix">
+	
+	
+	
+                <span class="boardTotal">총 게시물: <em>5</em></span>
+                <!-- boardSearch -->
+                <div class="boardSearch">
+                
+                    
+                    
+                        
+                    
+                
+                    <form id="formBoardSearch" action="/board/B005/list.do" method="get">
+                        <input id="restrictedBbsType" name="restrictedBbsType" type="hidden" value="">
+                        <input id="viewType" name="viewType" type="hidden" value="">
+                        <input id="cate_cd" name="cate_cd" type="hidden" value="">
+                        <fieldset>
+                            <legend>게시판 검색</legend>
+                            <!-- select -->
+                            <label class="feForm feFoSelect" for="searchKey"><span>전체</span><select id="searchKey" name="searchKey" title="옵션" data-fe-idx="feFoSelectIdx1" style="opacity: 0;">
+                                <option value="all">전체</option>
+                                <option value="subject">제목</option>
+                                <option value="contents">내용</option>
+                            </select></label>
+                            <!-- //select -->
+                            <input id="searchWord" name="searchWord" title="키워드" class="keyword" type="text" value="">
+                            <button type="submit" class="btnSubmit">검색</button>
+                        </fieldset>
+                    </form>
                 </div>
-                <div class="contTextWrap"> 
-                    <p>평 일 : <strong class="colorPoint">오전 9시 ~ 오후 5시</strong></p>
+                <!-- //boardSearch -->
+            </div>
+            <div class="boardTypeTbl">
+                <table>
+                    <caption>
+                        이용안내 FAQ(번호, 제목, 작성일, 조회수, 파일)
+                    </caption>
+                    <colgroup>
+                        
+                        
+                            <col style="width: 50px;">
+                            
+                                <col style="width: 100px;">
+                            
+                            <col style="width: auto;">
+                            <col style="width: 105px;">
+                            <col style="width: 65px;">
+                            <col style="width: 60px;">
+                        
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">번호</th>
+                            
+                                <th scope="col">분류</th>
+                            
+                            <th scope="col">제목</th>
+                            <th scope="col">작성일</th>
+                            <th scope="col">조회수</th>
+                            <th scope="col">파일</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                            <tr>
+                                <td>5</td>
+                                
+                                    <td>기타</td>
+                                
+                                <td class="alignL"><a href="lastFAQ_content2.jsp">개명으로 이름이 변경된 경우</a></td>
+                                <td>2019-12-09</td>
+                                <td>2371</td>
+                                <td></td>
+                            </tr>
+                        
+                            
+                            
+                            
+                            <tr>
+                                <td>4</td>
+                                
+                                <td>제증명</td>
+                                
+                                <td class="alignL"><a href="thirdFAQ_content2.jsp">상병명과 상병코드 등의 내용은 유선상으로 확인이 가능한가요?</a></td>
+                                <td>2017-10-16</td>
+                                <td>1967</td>
+                                <td></td>
+                            </tr>
+                        
+                            <tr>
+                                <td>3</td>
+                                
+                                <td>제증명</td>
+                                
+                                <td class="alignL"><a href="thirdFAQ_content1.jsp"> 진단서의 내용 수정이 필요합니다.</a></td>
+                                <td>2017-10-16</td>
+                                <td>1943</td>
+                                <td></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2</td>
+                                
+                                <td>외래</td>
+                                
+                                <td class="alignL"><a href="secondFAQ_content.jsp">인터넷상으로 진료예약 후 변경, 취소가 되는지요?</a></td>
+                                <td>2017-08-24</td>
+                                <td>3644</td>
+                                <td></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>1</td>
+                                
+                                    <td>기타</td>
+                                
+                                <td class="alignL"><a href="lastFAQ_content1.jsp">1588-5700 왜 전화가 안 되나요?</a></td>
+                                <td>2017-08-18</td>
+                                <td>1973</td>
+                                <td></td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
                 </div>
-                <p><strong class="colorPoint">02-2072-2002</strong></p>
-            </div>
-            <div class="contTitleWrap"> 
-                <h3>고객의 소리 접수방법</h3>
-            </div>
-            <ul class="listText col3"> 
-                <li class="nthChild"> 
-                    <div class="title"><i>01</i>방문</div> 
-                    <p>본관 2층 고객상담실<br></p> 
-                </li> 
-                <li class="nthChild"> 
-                    <div class="title"><i>02</i>전화</div> 
-                    <p>02-2072-2002<br></p> 
-                </li> 
-                <li class="nthChild"> 
-                    <div class="title"><i>03</i>팩스</div> 
-                    <p>02-2072-2881</p> 
-                </li> 
-                <li> 
-                    <div class="title"><i>04</i>우편</div> 
-                    <p>서울 종로구 대학로 101번지<br> 서울대학교병원 CS팀 고객상담실</p> 
-                </li> 
-                <li> 
-                    <div class="title"><i>05</i>건의함</div> 
-                    <p>각 층에 비치되어 있는<br> ‘고객의 소리’ 함 이용</p> 
-                </li> 
-                <li> 
-                    <div class="title">
-                        <i>06</i>
-                        인터넷
-                    </div> 
-                    <p>서울대학교병원 홈페이지<br> (고객참여 &gt; 고객의 소리)
-                    </p> 
-                    <a href="mainpage.jsp" role="button" class="btnType03">
-                        <span class="btnIconLink">바로가기</span>
-                    </a>
-                </li> 
-            </ul>
-        </main>
-        <aside id="aside" class="asideWrap" style="position: absolute; top: 180px;">
-            <h2>관련 콘텐츠</h2>
+                <div class="pagination">
+                    <a href="javascript:paginate(1)" class="firstBtn"><span>첫 페이지</span></a><a href="javascript:paginate(1)" class="prevBtn"><span>이전 페이지</span></a><a class="current" title="현재 페이지">1</a><a href="javascript:paginate(4)" class="nextBtn"><span>다음 페이지</span></a><a href="javascript:paginate(4)" class="lastBtn"><span>마지막 페이지</span></a>
+                    
+                </div>
+            </main>
+            <aside id="aside" class="asideWrap" style="position: absolute; top: 180px;">
+                <h2>관련 콘텐츠</h2>
             <!-- asideContList -->
             <ul class="asideContList">
         
                 
-                <li class=""><a href="allThanksView.jsp">감사합니다 전체보기</a></li>
-                <!--    
-                    <li class=""><a href="/join/client.do">고객의소리 등록</a></li>
+                <!-- <li class=""><a href="/join/client/praiseList.do">감사합니다 전체보기</a></li> -->
+                   
+                    <!-- <li class=""><a href="/join/client.do">고객의소리 등록</a></li>
                 
-                    <li class=""><a href="/content/M004001002.do">고객상담실 업무안내</a></li>
-                 -->
+                    <li class=""><a href="/content/M004001002.do">고객상담실 업무안내</a></li> -->
+                
             </ul>
             <!-- //asideContList -->
             <h2>자주 찾는 서비스</h2>
@@ -317,6 +399,6 @@
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="asset/js/clientConsultation.js"></script>
+<script src="asset/js/allFAQ.js"></script>
 <script src="asset/js/aside.js"></script>
 </html>
