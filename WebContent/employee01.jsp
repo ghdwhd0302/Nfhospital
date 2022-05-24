@@ -15,7 +15,7 @@
 		<aside>
       <div class="list">
         <div id="aside_blank">
-        	<img src="asset/img/hospital_logo1.png"> <div>서울 병원</div>	
+        	<img src="asset/img/hospital_logo.png"> <div>서울 병원</div>	
         </div>
         <div class="employee_page">관리자</div>
         <nav class="sub_nav">
