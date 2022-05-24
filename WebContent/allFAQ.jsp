@@ -31,10 +31,10 @@
                     </ul>
                     <ul class="topMenu">
                         <li>
-                            <a>로그아웃</a>
+                            <a href="mainpage.jsp">로그아웃</a>
                         </li>
                         <li>
-                            <a>마이페이지</a>
+                            <a href="mypage.jsp">마이페이지</a>
                         </li>
                         <li>
                             <a>Language</a>
@@ -81,10 +81,10 @@
                         <!-- bcLinkLayer -->
                         <ul class="bcLinkLayer" role="region" aria-hidden="true" aria-expanded="false" style="display: none;">
                                 
-                            <li><a href="/reservation/meddept/main.do">진료안내</a></li>
-                            <li><a href="/content/M002001001.do">이용안내</a></li>
-                            <li><a href="/join/client.do">고객참여</a></li>
-                            <li><a href="/content/M005001.do">병원소개</a></li>
+                            <li><a href="medicalInfo.jsp">진료안내</a></li>
+                            <li><a href="allFAQ.jsp">이용안내</a></li>
+                            <li><a href="clientSound.jsp">고객참여</a></li>
+                            <li><a href="intro.jsp">병원소개</a></li>
                                 
                         </ul>
                         <!-- //bcLinkLayer -->
@@ -96,7 +96,7 @@
                         <!-- bcLinkLayer -->
                         <ul class="bcLinkLayer" role="region" aria-hidden="true" aria-expanded="false" style="display: none;" tabindex="0">
 					
-                            <li><a href="/board/B005/list.do">FAQ(통합)</a></li>
+                            <li><a href="allFAQ.jsp">FAQ(통합)</a></li>
                             
                         </ul>
                         <!-- //bcLinkLayer -->
