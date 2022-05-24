@@ -1,132 +1,313 @@
 @charset "UTF-8";
 
-.content2 {
-	margin-left: 20%;
-	margin-right: 20%;
-}
-
-#content {
-	width: 60%;
-	margin-left: 20%;
-	margin-right: 20%;
+#content{
+	visibility: visible;
+    color: #000;
+    font-size: 16px;
+    vertical-align: baseline;
+    padding: 0;
+    border-radius: 0;
+    -webkit-font-smoothing: antialiased;
+    text-size-adjust: none;
+    list-style: none;
+    -webkit-tap-highlight-color: transparent;
+    font-family: 'Noto Sans KR Regular','Noto Sans CJK KR','Noto Sans KR','맑은 고딕',sans-serif;
+    font-weight: 400;
+    display: block;
+    outline: 0!important;
+    margin: auto;
+    min-height: 800px;
+    margin-top: 180px;
+    padding-top: 80px;
+    word-spacing: 0;
+    letter-spacing: -.5px;
+    width: 1100px;
+    padding-right: 0;
 }
 
 .contHeadingWrap {
-	font-size: 30px;
-	font-weight: bold;
-	margin-left: 40px;
-	margin-top: 70px;
+    overflow: hidden;
+    position: relative;
+    margin: -12px 0 43px;
+}
+#content.memJoinContent {
+    width: 1100px;
+    padding-right: 0;
 }
 
-ul.clearFix {
-	width: 100%;
-	height: 200px;
-	padding: 0;
-	margin: 0;
+.contTextWrap > :first-child {
+    overflow: hidden;
+    font-size: 20px;
+}
+#content {
+    word-spacing: 0;
+    letter-spacing: -.5px;
+}
+#content {
+    min-height: 800px;
+    margin-top: 180px;
+    padding-top: 80px;
 }
 
-ul.clearFix li {
-	border: 1px solid #ccc;
-	color: #ccc;
-	font-weight: bold;
-	list-style: none;
-	width: 33%;
-	height: 100px;
-	float: left;
-	font-size: 26px;
-	letter-spacing: 1px;
-	text-align: center;
-	padding-top: 10px;
+#content, .contRating {
+    width: 800px;
+    padding-right: 300px;
+}
+.disableOutline * {
+    outline: 0!important;
 }
 
-#agree {
-	width: 60%;
-	margin-left: 20%;
-	margin-right: 20%;
+.stepWrap li {
+    float: left;
+    width: 330px;
+    padding: 20px 0 18px 30px;
+    border: 1px solid #ccc;
+    color: #ccc;
+    font-size: 22px;
 }
 
-.current {
-	background-color: #2763ba;
-	color: #black;
+
+* {
+    font-family: 'Noto Sans KR Regular','Noto Sans CJK KR','Noto Sans KR','맑은 고딕',sans-serif;
+    font-weight: 400;
+}
+* {
+    vertical-align: baseline;
+  
+    padding: 0;
+    border-radius: 0;
+    -webkit-font-smoothing: antialiased;
+    text-size-adjust: none;
+    list-style: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
-.current b {
-	width: 200px;
-	color: black;
+
+
+.stepWrap li.current {
+    border-color: #2763ba;
+    color: #fff;
+    background: #2763ba;
 }
 
 .joinStepDesc {
-	padding-left: 410px;
-	background:
-		url("https://www.snuh.org/asset/img/member/bg_member_join.png")
-		no-repeat left 44%;
+    padding-left: 410px;
+    background: url("https://www.snuh.org/asset/img/member/bg_member_join.png") no-repeat left 44%;
 }
 
-[class*=scrollBox] {
-	overflow-y: scroll;
-	padding: 26px 30px 0;
-	border: 1px solid #ccc;
+.joinStepDesc .contTextWrap > :first-child {
+    float: none;
+    width: 100%;
 }
-
-.scrollBox {
-	max-height: 171px;
+.contTextWrap > :first-child {
+    overflow: hidden;
+    font-size: 20px;
 }
-
-.memJoinContent .persInforWrap {
-	margin-top: 32px;
+p {
+    color: #333;
+    word-break: keep-all;
+    line-height: 1.63;
+}
+.memJoinContent .checkAllBox {
+    margin: 40px 0 60px;
+    font-size: 20px;
+    text-align: center;
+}
+.boxTypeGray {
+    background-color: #f9f9f9;
+}
+[class*=boxType] {
+   
+    padding: 25px 30px;
 }
 
 .feFoCheck {
-	width: 24px;
-	height: 24px;
-	margin-right: 9px;
-	background: url("https://www.snuh.org/asset/img/common/spr_common.png")
-		no-repeat -195px -27px;
+    width: 24px;
+    height: 24px;
+    margin-right: 9px;
+    background: url(/asset/img/common/spr_common.png) no-repeat -195px -27px;
 }
-
 [class*=feFo] {
-	display: inline-block;
-	overflow: hidden;
-	position: relative;
-	vertical-align: middle;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+}
+[class*=feFo] > input, [class*=feFo] > select {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+.persInforWrap .contTextWrap {
+    margin: 0 0 26px;
+}
+.contTextWrap {
+    overflow: hidden;
+   
 }
 
+ label {
+    vertical-align: middle;
+}
+
+ .requiredTxt {  
+    font-size: 16px;
+    letter-spacing: -1px;
+}
+
+
+caption, legend {
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border: none;
+}	
+[class*=feFo] {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.terms{
+	    visibility: visible;
+    color: #000;
+    font-size: 16px;
+    word-spacing: 0;
+    letter-spacing: -.5px;
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    -webkit-font-smoothing: antialiased;
+    text-size-adjust: none;
+    list-style: none;
+    -webkit-tap-highlight-color: transparent;
+    font-family: 'Noto Sans KR Regular','Noto Sans CJK KR','Noto Sans KR','맑은 고딕',sans-serif;
+    font-weight: 400;
+    outline: 0!important;
+}
+   
+
+.contTextWrap > :first-child {
+    overflow: hidden;
+    float: left;
+    width: 80%;
+    font-size: 20px;
+}
+.persInforWrap .scrollBox {
+    max-height: 171px;
+}
+[class*=scrollBox] {
+    overflow-y: scroll;
+    padding: 26px 30px 0;
+    border: 1px solid #ccc;
+}
+
+.memJoinContent .persInforWrap {
+    margin-top: 32px;
+}
+.persInforWrap .terms .contTitleWrap {
+    margin: 25px 0 20px;
+}
 .contTitleWrap {
-	width: 60%;
-	height: 70px;
-	margin-left: 20%;
-	margin-right: 20%;
+    overflow: hidden;
+    position: relative;
+   
+}
+#wrap{
+	    visibility: visible;
+    color: #000;
+    font-size: 16px;
+    word-spacing: -.5px;
+    letter-spacing: -1px;
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    -webkit-font-smoothing: antialiased;
+    text-size-adjust: none;
+    list-style: none;
+    -webkit-tap-highlight-color: transparent;
+    font-family: 'Noto Sans KR Regular','Noto Sans CJK KR','Noto Sans KR','맑은 고딕',sans-serif;
+    font-weight: 400;
+    outline: 0!important;
+    overflow: hidden;
+    position: relative;
+    min-width: 1120px;
+    background-color: #fff;
+}
+h4{
+	
+	font-weight: 700;
+}
+div {
+    display: block;
+}
+p {
+    color: #333;
+    word-break: keep-all;
+    line-height: 1.63;
 }
 
-.contTitleWrap h3 {
-	float: left;
-	font-size: 30px;
+.persInforWrap .checkWrap {
+    padding: 29px;
+    border: 1px solid #ccc;
+    border-top: 0;
 }
 
-.contTabType {
-	width: 60%;
-	height: 70px;
-	margin-left: 20%;
-	margin-right: 20%;
+.memJoinContent .checkAllBox {
+    margin: 40px 0 60px;
+    font-size: 20px;
+    text-align: center;
+}
+.boxTypeGray {
+    background-color: #f9f9f9;
+}
+[class*=boxType] {
+   
+    padding: 25px 30px;
 }
 
+    
+    
+ .contTitleWrap{
+ visibility: visible;
+    color: #000;
+    font-size: 16px;
+    word-spacing: 0;
+    letter-spacing: -.5px;
+    vertical-align: baseline;
+    padding: 0;
+    border-radius: 0;
+    -webkit-font-smoothing: antialiased;
+    text-size-adjust: none;
+    list-style: none;
+    -webkit-tap-highlight-color: transparent;
+    font-family: 'Noto Sans KR Regular','Noto Sans CJK KR','Noto Sans KR','맑은 고딕',sans-serif;
+    font-weight: 400;
+    outline: 0!important;
+    overflow: hidden;
+    position: relative;
+    margin: 45px 0 28px;
+ }
+ 
+ [class*=tabType] li:first-child a {
+    margin-left: 0;
+}
 [class*=tabType] .current a {
-	color: #fff;
-	background-color: #2263bb;
+    border-color: #2263bb;
+    color: #fff;
+    background-color: #2263bb;
 }
 
 [class*=tabType] a {
-	height: 48px;
-	margin-left: -1px;
-	color: #666;
-	text-align: center;
-	line-height: 48px;
-}
-
-.boardTypeForm {
-	width: 60%;
-	height: 200px;
-	margin-left: 20%;
-	margin-right: 20%;
-	float: left;
+    display: block;
+    height: 48px;
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 48px;
 }
