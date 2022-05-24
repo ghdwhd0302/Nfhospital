@@ -1,0 +1,275 @@
+@charset "UTF-8";
+
+.stepWrap li {
+	float: left;
+	width: 330px;
+	padding: 20px 0 18px 30px;
+	border: 1px solid #ccc;
+	color: #ccc;
+	font-size: 22px;
+}
+
+#content.memJoinContent {
+	width: 1100px;
+	padding-right: 0;
+}
+
+#content {
+	word-spacing: 0;
+	letter-spacing: -.5px;
+	margin-left: 15%;
+	margin-right: 15%;
+	padding-left:15%;
+	padding-right:15%;
+	width: 70%;
+}
+
+#content {
+	min-height: 800px;
+	margin-top: 180px;
+	padding-top: 80px;
+
+	
+}
+
+main {
+	display: block;
+}
+
+li {
+	display: list-item;
+	text-align: -webkit-match-parent;
+}
+.boardTypeForm{
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+	
+}
+.boardTypeForm th{
+    vertical-align: middle;
+    height: 40px;
+    padding: 10px 10px 10px 20px;
+    color: #666;
+    font-weight: 400;
+    text-align: left;
+}
+.disableOutline * {
+	outline: 0 !important;
+}
+
+* {
+	font-family: 'Noto Sans KR Regular', 'Noto Sans CJK KR', 'Noto Sans KR',
+		'맑은 고딕', sans-serif;
+	font-weight: 400;
+}
+.boardTypeForm th {
+    vertical-align: middle;
+    height: 40px;
+    padding: 10px 10px 10px 20px;
+    color: #666;
+    font-weight: 400;
+    text-align: left;
+}
+* {
+	vertical-align: baseline;
+	margin: 0;
+	padding: 0;
+	border-radius: 0;
+	-webkit-font-smoothing: antialiased;
+	text-size-adjust: none;
+	list-style: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+div {
+	display: block;
+}
+[class*=tableType] .verTop, [class*=boardType] .verTop {
+    vertical-align: top;
+    padding-top: 13px;
+}
+body {
+	color: #000;
+	font-size: 16px;
+	word-spacing: -0.5px;
+	letter-spacing: -1px;
+}
+
+.activeJS {
+	visibility: visible;
+}
+
+::selection {
+	text-shadow: none;
+	background: #ddd;
+}
+
+.contHeadingWrap {
+	overflow: hidden;
+	position: relative;
+	margin: -12px 0 43px;
+}
+
+h2 {
+	font-family: 'Noto Sans KR Bold', 'Noto Sans CJK KR', 'Noto Sans KR',
+		'맑은 고딕', sans-serif;
+	font-weight: 700;
+}
+
+.stepWrap li:first-child {
+	margin-left: 0;
+}
+
+.stepWrap li {
+	float: left;
+	width: 331px;
+	padding: 20px 0 18px 30px;
+	border: 1px solid #ccc;
+	color: #ccc;
+	font-size: 22px;
+}
+
+
+p {
+    word-break: keep-all;
+    line-height: 1.63;
+}
+.boardTypeForm th{
+    vertical-align: middle;
+    height: 40px;
+    padding: 10px 10px 10px 20px;
+    color: #666;
+    font-weight: 400;
+    text-align: left;
+}
+ .boardTypeForm td {
+    vertical-align: middle;
+    height: 40px;
+    padding: 10px 10px 10px 20px;
+   font-weight: 400;
+    text-align: left;
+}
+.boardTypeForm td {
+    padding-left: 0;
+    color: #000;
+}
+input[type=text]{
+	
+    height: 38px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+    color: #666;
+    font-size: 16px;
+}
+
+[class*=btnType] {
+    overflow: visible;
+   
+    height: 40px;
+    padding: 0 20px;
+    color: #000;
+    font-size: 16px;
+    text-align: center;
+   
+    background-color: #fff;
+    cursor: pointer;
+}
+[class*=btn] {
+    display: inline-block;
+  
+}
+legend {
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border: none;
+ 
+    clip: rect(1px,1px,1px,1px);
+}
+.memJoinContent .supText {
+    color: #666;
+    text-align: right;
+}
+fieldset {
+    border: none;
+}
+.stepWrap li.current {
+    border-color: #2763ba;
+    color: #fff;
+    background: #2763ba;
+}
+
+
+.boardTypeForm .desc {
+    color: #2763ba;
+}
+
+
+.boardTypeForm p.error {
+    margin-top: 8px;
+}
+
+.boardTypeForm .error {
+    color: #d9090d;
+}
+
+.boardTypeForm span.desc {
+    vertical-align: middle;
+    margin-left: 8px;
+}
+.boardTypeForm tr td{
+    border-top: 1px solid #ccc;
+}
+.boardTypeForm .txtWrap {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+    line-height: 38px;
+}
+
+.feFoSelect select {
+    display: inline-block;
+    width: 100%;
+    color: #666;
+    font-size: 16px;
+}
+[class*=feFo] > select {
+    z-index: 1;
+    border: none;
+    border-radius: 0;
+}
+
+ [class*=feFo] > select {
+    position: relative;
+    
+    margin: 0;
+    padding: 0;
+}  
+.feFoRadio {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url("") no-repeat -169px -27px;
+}
+img {
+    vertical-align: middle;
+}
+.boardTypeForm td :first-child {
+    margin-left: 0;
+}
+.autoJoin .img img {
+    display: inline-block;
+    margin-top: 40px;
+}
+
+[class*=feFo] {
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+}
+.boardTypeForm .lblTxt {
+    display: inline-block;
+    margin: 0 15px 0 2px;
+}
