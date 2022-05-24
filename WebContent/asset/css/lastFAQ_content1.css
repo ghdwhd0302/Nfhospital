@@ -1,0 +1,94 @@
+contHeadingWrap + .boardView, .contHeadingWrap + .boardInfo{
+    margin-top: 50px;
+}
+
+.boardView{
+    border-top: 2px solid #000;
+}
+
+.viewTitle {
+    padding: 35px 10px 37px;
+    border-bottom: 1px solid #ebebeb;
+    text-align: center;
+}
+
+.viewTitle > :first-child {
+    font-size: 34px;
+    word-break: keep-all;
+    letter-spacing: -1.7px;
+    line-height: 1.29;
+}
+
+
+.viewTitle div {
+    margin-top: 18px;
+    font-size: 20px;
+}
+
+.viewTitle .date {
+    margin-top: 30px;
+    color: #666;
+    font-size: 16px;
+}
+
+.viewTitle div span:before{
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 1px;
+    height: 11px;
+    margin: -2px 20px 0 18px;
+    background-color: #ccc;
+}
+
+.viewContent {
+    padding: 40px 0;
+    border-bottom: 1px solid #ccc;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+[class*=boxType] + p, p + .referenMark, p + p {
+    margin-top: 8px;
+}
+
+.viewContent p + p {
+    margin-top: 25px;
+}
+
+[class*=btnType] {
+    overflow: visible;
+    vertical-align: top;
+    height: 40px;
+    padding: 0 20px;
+    color: #000;
+    font-size: 16px;
+    text-align: center;
+    line-height: 38px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+[class*=btn] {
+    display: inline-block;
+    border: 0;
+}
+
+[class*=btnWrap] {
+    display: block;
+    position: relative;
+    margin-top: 30px;
+    text-align: right;
+}
+
+[class*=btnWrap] [class*=btnType] {
+    margin: 0 0 0 10px;
+}
+
+a[class*=btnType] {
+    height: 38px;
+}
+
+.btnType01 {
+    border: 1px solid #ccc;
+}

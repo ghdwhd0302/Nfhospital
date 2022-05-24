@@ -3,7 +3,7 @@ body{
     font-size: 16px;
     word-spacing: -0.5px;
     letter-spacing: -1px; 
-    height: 2356.62px;
+    height: 1584px;
     font-family: 'Noto Sans KR', sans-serif;
 }
 
@@ -23,7 +23,7 @@ body{
     overflow: hidden;
     position: relative;
     min-width: 1120px;
-    height: 2356.62px;
+    height: 1584px;
     background-color: #fff; 
     margin-top: 23px;
 }
@@ -455,7 +455,7 @@ li.zoomIn{
     margin-left: 401.500px;
     margin-right: 401.500px;
     padding-top: 0;
-    height: 1752px;
+    height: 979.562px;
 }
 
 #content{
@@ -512,7 +512,7 @@ h2, h3{
     width: 25%;
 }
 
-.tabTypeCol4 li{
+.tabTypeCol5 li{
     width: 20%;
 }
 
@@ -545,42 +545,38 @@ a:link, a:visited, a:hover, a:active{
     clear: both;
 }
 
-
-.contTitleWrap{
-    overflow: hidden;
-    position: relative;
-    margin: 45px 0 28px;
-}
-
-.contTitleWrap > :first-child{
+.boardTotal{
     float: left;
-    font-size: 28px;
-    letter-spacing: -2.1px;
+    min-width: 110px;
+    margin-top: 7px;
+    color: #666;
 }
 
-[class*=tabType] + .contTitleWrap{
-    margin-top: -10px;
+.boardInfo > .boardTotal{
+    margin-top: 8px;
 }
 
-main > [class*=tableType]{
-    margin-top: 30px;
+.boardTotal em{
+    color: #2763ba;
+    font-style: normal;
 }
 
-[class*=tableType] table{
-    table-layout: fixed;
-    border-top: 2px solid #000;
+.boardSearch{
+    float: right;
 }
 
-[class*=tableType] > :first-child{
-    height: 250px;
+audio, button, canvas, iframe, img, input, label, select, svg, video{
+    vertical-align: middle;
 }
 
-table{
-    position: relative;
-    width: 100%;
-    border-spacing: 0;
-    border-collapse: collapse;
+button, input, textarea{
+    appearance: none;
 }
+
+a img, fieldset, img{
+    border: none;
+}
+
 
 caption, legend{
     position: absolute;
@@ -591,75 +587,147 @@ caption, legend{
     clip: rect(1px,1px,1px,1px);
 }
 
+.boardSearch .feFoSelect{
+    margin-right: 10px;
+}
+
+.boardSearch .feFoSelect, .boardSearch select, .boardSearch .keyword, .boardSearch .btnSubmit, .boardSearch .btnType01{
+    float: left;
+}
+
+[class*=feFo]{
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+}
+
+.feFoSelect{
+    position: relative;
+    width: 58px;
+    height: 38px;
+    padding: 0 35px 0 12px;
+    border: 1px solid #ccc;
+    color: #666;
+    font-size: 16px;
+    text-align: left;
+    line-height: 38px;
+    background-color: #fff;
+}
+
+
+.feFoSelect:after{
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    width: 7px;
+    height: 4px;
+    margin-top: -2px;
+    background: url("http://www.snuh.org/asset/img/common/spr_common.png") no-repeat -65px -70px;
+}
+
+.feFoSelect > span{
+    display: inline-block;
+    overflow: hidden;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+
+.feFoSelect select{
+    display: inline-block;
+    width: 100%;
+    color: #666;
+    font-size: 16px;
+}
+
+[class*=feFo] > select{
+    z-index: 1;
+    border: none;
+    border-radius: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+input[type=tel], input[type=text], input[type=email], input[type=number], input[type=password]{
+    height: 38px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+    color: #666;
+    font-size: 16px;
+    line-height: 38px;
+}
+
+.mdBrowser input[type=tel], .mdBrowser input[type=text], .mdBrowser input[type=email], .mdBrowser input[type=number], .mdBrowser input[type=password]{
+    line-height: inherit;
+}
+
+.boardSearch .keyword{
+    width: 151px;
+    border-right: 0;
+}
+
+.boardSearch .btnSubmit{
+    width: 70px;
+    height: 40px;
+    padding: 0 10px;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: -.8px;
+    line-height: 1.5;
+    background-color: #2763ba;
+    border: none;
+}
+
+[class*=boardType]{
+    margin-top: 30px;
+    border: 1px solid #000;
+    border-width: 2px 0 1px;
+}
+
+[class*=boardType] table{
+    table-layout: fixed;
+}
+
+table{
+    position: relative;
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
 caption{
     position: static;
     color: transparent;
 }
 
-[class*=tableType] th, [class*=tableType] td{
+.boardTypeTbl th, .boardTypeTbl td{
     vertical-align: middle;
-    border: 1px solid #ccc;
-    font-size: 16px;
+    padding: 15px 5px;
     font-weight: 400;
     text-align: center;
     word-break: break-all;
 }
 
-[class*=tableType] tbody tr:first-child th, [class*=tableType] tbody tr:first-child td{
-    border-top: 0;
-}
-
-
-[class*=tableType] tbody th{
-    vertical-align: middle;
+.boardTypeTbl thead th{
+    padding: 18px 5px;
+    border-bottom: 1px solid #000;
     color: #666;
-    background-color: #f5f5f5;
 }
 
-[class*=tableType] th{
-    padding: 13px 5px;
+.boardTypeTbl td{
+    border-top: 1px solid #ccc;
 }
 
-[class*=tableType] td.alignL{
-    border-top: 0;
-}
-
-[class*=tableType] td{
-    padding: 11px 5px 15px;
-}
-
-.textSpet{
-    overflow: hidden;
-    margin: -9px 0 0 -8px;
-}
-
-.textSpet span:first-child, .textSpet span{
-    display: inline-block;
-    position: relative;
-    margin: 9px 0 0 8px;
-    padding-right: 15px;
-}
-
-.textSpet span:after, .textSpet span > .a{
-    content: ' ';
-    position: absolute;
-    top: 9px;
-    right: 0;
-    width: 4px;
-    height: 7px;
-    background: url("http://www.snuh.org/asset/img/common/spr_common.png") no-repeat -468px -50px;
-}
-
-.textSpet span:last-child:after{
-    display: none;
-}
-
-.textSpet .end:after{
-    display: none;
-}
-
-
-[class*=tableType] th.alignL, [class*=tableType] td.alignL{
+.boardTypeTbl th.alignL, .boardTypeTbl td.alignL{
     padding-left: 20px;
 }
 
@@ -667,30 +735,108 @@ caption{
     text-align: left!important;
 }
 
-.referenMark{
-    margin-top: 8px;
-    padding-left: 20px;
-    color: #666;
-    text-indent: -20px;
-}
-
-.referenMark span{
-    margin-right: 5px;
-}
-
-[class*=boxType] + p, p + .referenMark, p + p{
-    margin-top: 8px;
-}
-
-.referenMark + .referenMark{
-    margin-top: 0;
-}
-
-a img, fieldset, img{
-    border: none;
-}
-
-audio, button, canvas, iframe, img, input, label, select, svg, video{
+.boardTypeTbl td a{
+    display: inline-block;
+    overflow: hidden;
     vertical-align: middle;
+    max-width: 92%;
 }
 
+.pagination{
+    position: relative;
+    margin-top: 30px;
+    text-align: center;
+}
+.pagination a{
+    display: inline-block;
+    vertical-align: middle;
+    min-width: 28px;
+    min-height: 28px;
+    margin-left: 2px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    white-space: nowrap;
+    line-height: 28px;
+}
+
+.pagination [class*=Btn]{
+    position: relative;
+    width: 38px;
+    height: 38px;
+    margin-left: 0;
+    padding: 0;
+    left: 0;
+}
+
+.hideEl, .pagination [class*=Btn] span{
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border: none;
+
+}
+
+.pagination .firstBtn:after, .pagination .firstBtn > .a, .pagination .lastBtn:after, .pagination .lastBtn > .a {
+    width: 12px;
+    height: 11px;
+    margin: -5.5px 0 0 -6px;
+}
+
+.pagination [class*=Btn]:after{
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-image: url("http://www.snuh.org/asset/img/common/spr_common.png");
+    background-repeat: no-repeat;
+    background-position: -221px -27px;
+}
+
+.firstBtn{
+    left: 7px;
+}
+
+.pagination .prevBtn{
+    left: 0px;
+    margin-right: 16px;
+    margin-left: 1px;
+}
+
+.pagination .prevBtn:after{
+    width: 6px;
+    height: 11px;
+    margin: -5.5px 0 0 -3px;
+    background-position: -221px -40px;
+}
+
+.pagination .current{
+    border-color: #2763ba;
+    color: #fff;
+    background-color: #2763ba;
+}
+
+.pagination .nextBtn{
+    margin-left: 16px;
+    right: 3px
+}
+
+.pagination .nextBtn:after{
+    width: 6px;
+    height: 11px;
+    margin: -5.5px 0 0 -3px;
+    background-position: -221px -53px;
+}
+
+.pagination .lastBtn{
+    margin-left: 1px;
+    right: 6px;
+}
+
+.pagination .lastBtn:after{
+    width: 12px;
+    height: 11px;
+    margin: -5.5px 0 0 -6px;
+    background-position: -221px -66px;
+}
