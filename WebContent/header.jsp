@@ -11,12 +11,7 @@
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <!-- [/] jquery -->
 
-<!-- bootstrap -->
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-	integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
-	crossorigin="anonymous"></script>
-<!-- [/] bootstrap -->
+
 
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -29,49 +24,281 @@
 
 <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
 
-<link rel="stylesheet" href="asset/css/header.css">
+<style>
+* {
+	font-family: 'Noto Sans KR Regular', 'Noto Sans CJK KR', 'Noto Sans KR',
+		'맑은 고딕', sans-serif;
+}
 
+#wrap {
+	overflow: hidden;
+	position: relative;
+	min-width: 1120px;
+	background-color: #fff;
+}
+
+#header {
+	left: 0;
+	z-index: 105;
+	width: 100%;
+	height: 129px;
+	border-bottom: 1px solid #fff;
+	background-color: #fff;
+	position: fixed;
+	top: 0px;
+}
+
+#header:before, #header>.b {
+	content: '';
+	position: absolute;
+	top: 59px;
+	right: 0;
+	left: 0;
+	height: 1px;
+	background-color: #ebebeb;
+}
+
+#header h1 {
+	display: block;
+	position: relative;
+	top: 18px;
+	width: 239px;
+	height: 25px;
+	margin: auto;
+}
+
+.innerwrap {
+	padding: 0 10px;
+	position: relative;
+	width: 1100px;
+	margin: auto;
+}
+
+#header .topLeftWrap {
+	position: absolute;
+	top: 18px;
+	left: 9px;
+	z-index: 100;
+}
+
+#header .topLeftWrap a {
+	display: block;
+	position: relative;
+	width: 160px;
+	height: 25px;
+	margin: auto;
+}
+
+#header .topMidWrap {
+	position: absolute;
+	top: 18px;
+	left: 20px;
+	z-index: 100;
+}
+
+.topMenuWrap {
+	position: absolute;
+	top: 18px;
+	right: 9px;
+	z-index: 100;
+}
+
+.topMenuWrap ul, .topMenuWrap li {
+	float: left;
+	padding: 0;
+	margin: 0;
+}
+
+.utilMenu {
+	margin: 2px 20px 0 0;
+}
+
+.utilMenu a, .utilMenu label {
+	color: #000;
+	font-size: 14px;
+}
+
+.topMenuWrap li {
+	list-style: none;
+}
+
+.topMenu li {
+	margin-right: 13px;
+}
+
+#gnb {
+	position: relative;
+	width: 1100px;
+	margin: auto;
+}
+
+.gnbList {
+	height: 70px;
+	margin: 0 100px;
+	text-align: center;
+	top: 58px;
+	position: absolute;
+	left: 28px;
+}
+
+.gnbList>li {
+	display: inline-block;
+	margin: 10px 25px;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: 700;
+}
+
+.gnbList * {
+	text-align: left;
+}
+
+.gnbList>li>a {
+	display: inline-block;
+	padding: 10px;
+	font-size: 20px;
+	transition: .2s color;
+}
+
+.contTopBar {
+	position: fixed;
+	top: 130px;
+	z-index: 99;
+	width: 100%;
+	height: 50px;
+	background-color: #2763ba;
+}
+
+.breadcrumb {
+	float: left;
+}
+
+.contUtilMenuWrap {
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+	width: 800px;
+	height: 30px;
+	margin: 264px auto 0;
+}
+
+#content {
+	min-height: 800px;
+	word-spacing: 0;
+	letter-spacing: -.5px;
+	width: 1090px;
+	margin: auto;
+}
+
+#content.replaceUtilMenu {
+	margin-top: -48px;
+	padding-top: 0;
+}
+
+.contHeadingWrap {
+	overflow: hidden;
+	margin: -12px 0 9px;
+	top: 248px;
+}
+
+.contHeadingWrap>:first-child {
+	float: left;
+	font-size: 40px;
+	letter-spacing: -2px;
+}
+
+[class*=tabType] {
+	position: relative;
+	margin: 50px 0 40px;
+}
+
+[class*=tabType] ul {
+	position: relative;
+	width: 100%;
+}
+
+.tabTypeCol2 li {
+	width: 47%;
+}
+
+[class*=tabType] li {
+	float: left;
+	position: absolute;
+}
+
+[class*=tabType] .current a {
+	border-color: #2263bb;
+	color: #fff;
+	background-color: #2263bb;
+}
+
+[class*=tabType] li:first-child a {
+	margin-left: 0;
+}
+
+[class*=tabType] a {
+	display: block;
+	height: 48px;
+	margin-left: -1px;
+	border: 1px solid #ccc;
+	border-bottom-color: transparent;
+	color: #666;
+	text-align: center;
+	line-height: 48px;
+}
+
+.topMenu a {
+	cursor: pointer;
+	text-decoration: none;
+	color: inherit;
+}
+
+.gnbList a {
+	cursor: pointer;
+	text-decoration: none;
+	color: inherit;
+}
+</style>
 </head>
 <body>
-	<div>
+	<div id="wrap">
+		<header id="header">
+			<div class="innerwrap">
+				<div class="topLeftWrap">
+					<a class="hideTxt"> <img
+						src="https://www.snuh.org/asset/img/common/outcomesbook_bt.png">
+					</a>
 
-		<div class="title">
+				</div>
+				<div class="topMidWrap">
+					<ul class="utilMenu" style="list-style: none">
 
-			<img class="logo"
-				src="https://www.snuh.org/asset/img/common/outcomesbook_bt.png"
-				align="left">
-			<p>
-				<a href="mainpage.jsp" style="padding-left: 27vw;"><strong>서울대학교병원</strong></a><a href="login.jsp" style="font-size: 20px; margin-left: 50px;padding-left: 13vw;">로그인</a> <a href="regi1.jsp" style="font-size: 20px; margin-left: 30px;padding-left: 5px;">회원가입</a>
-			</p>
-		
-		</div>
+						<li><a href="mainpage.jsp" style="font-size: 30px;margin-left: 15vw;margin-bottom: 10px;color:#2763ba"><strong>서울대학교 병원</strong></a></li>
+					</ul>
+				</div>
+				<div class="topMenuWrap">
+
+					<ul class="utilMenu"style="list-style: none" >
+
+						<li style="list-style: none"><a style="margin-right: 16px;">원격</a></li>
+					</ul>
+					<ul class="topMenu"style="list-style: none">
+						<li><a>로그아웃</a></li>
+						<li><a href="">마이페이지</a></li>
+
+					</ul>
+				</div>
+				<nav id="gnb">
+					<ul class="gnbList clearFix">
+						<li><a href="">진료안내</a></li>
+						<li><a href="">이용안내</a></li>
+						<li><a href="">건강정보</a></li>
+						<li><a href="">고객참여</a></li>
+						<li><a href="">병원소개</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
 	</div>
-	<div class="wrap">
-		<ul class="nav nav-tabs">
-
-			<li class="nav-item dropdown"><img class="menubar"
-				src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAV1BMVEX///8AAADV1dVWVlaenp5ZWVk+Pj7m5ubz8/NRUVFzc3NCQkKioqL8/PzT09N/f38YGBiysrK9vb1oaGiLi4tISEh+fn7x8fHNzc1jY2Pf398ZGRleXl66+7c9AAABbklEQVR4nO3d2W7CMBBA0TRsYd9bSvn/7yxqH4nfRhrLnPMHVwQTJNvTdQAAAAAAAAAAAADAq93nbFKT2X4X2jfMPuozG+ICvw7ZNaMOcYnL7JaCZVTgLbuk6BZUuMoOKVoFFa6zQ4rWQYXz7JCieVBhrQtN3FKzyQ4p2gQVDtkhRWE/iMfskoJjVGCtz2nUM/qnr+/FdNJHBj4t+rosgvsAAAAAAAAAAIC3sj1tpjXZnLaxgdPsXWwjQjfufWfXjDrHBe6zWwr2UYH37JKiqA2Kl+yQoktQ4TU7pOgaVNj+eYv2P8P2v4f1rqX3oML2fw+77pzdMirwnabOIyWh76Vv8N8CAAAAAAAAAAB4L63fQdtPsnexvYi9R7jGAyWhW/eav8+7/TvZa9xc+i/qOW1/NkL75y3an1HS/pyZ9mcFVbvUhM176oY6Z3b9BI4l2z6ya0Y8AgOf+n1ts/OiB3gAAAAAAAAAAAAAQBt+AXvZJrcbULfPAAAAAElFTkSuQmCC"
-				id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-				aria-expanded="false">
-
-				<ul id="dropdown-menu" class="dropdown-menu"
-					aria-labelledby="navbarDropdown">
-					<li><a class="dropdown-item" href="#">진료안내</a></li>
-					<li><a class="dropdown-item" href="#">이용안내</a></li>
-					<li><hr class="dropdown-divider">병원소개</li>
-					<li><a class="dropdown-item" href="#">고객참여</a></li>
-				</ul></li>
-			<li class="nav-item"><a class="nav-link active"
-				aria-current="page" href="#">진료안내</a></li>
-			<li class="nav-item"><a class="nav-link" href="#">이용안내</a></li>
-			<li class="nav-item"><a class="nav-link" href="#">병원소개</a></li>
-			<li class="nav-item"><a class="nav-link disabled">고객참여</a></li>
-
-		</ul>
-
-	</div>
-
-
 
 
 

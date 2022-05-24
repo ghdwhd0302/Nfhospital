@@ -1,11 +1,9 @@
-
-
 body{
     color: #000;
     font-size: 16px;
     word-spacing: -0.5px;
     letter-spacing: -1px; 
-    height: 1529.62px;
+    height: 1584px;
     font-family: 'Noto Sans KR', sans-serif;
 }
 
@@ -17,18 +15,26 @@ body{
     text-size-adjust: none;
     list-style: none;
     font-weight: 400;
+    font-family: 'Noto Sans KR', sans-serif;
+    outline: 0!important;
 }
 
 #wrap{
     overflow: hidden;
     position: relative;
     min-width: 1120px;
-    height: 1529.62px;
+    height: 1584px;
     background-color: #fff; 
     margin-top: 23px;
 }
 a:link{
     text-decoration: none;
+}
+
+p{
+    color: #333;
+    word-break: keep-all;
+    line-height: 1.63;
 }
 
 .skipToContent{
@@ -47,6 +53,8 @@ a:link{
     background-color: rgba(25, 145, 205, .8);
     transition: .1s ease-in-out;
 }
+
+/* header시작 */
 
 #header {
     left: 0;
@@ -334,6 +342,10 @@ a:link{
 
 /* TopBar끝 */
 
+b, h1, h2, h3, h4, h5, h6, strong, th{
+    font-weight: 700;
+}
+
 .contUtilMenuWrap{
     overflow: hidden;
     position: relative;
@@ -397,6 +409,7 @@ a:link{
 li.zoomOut, li.zoomIn{
     margin-right: 0;
     height: 30px;
+    top: 4px;
 }
 
 li.zoomIn{
@@ -442,7 +455,7 @@ li.zoomIn{
     margin-left: 401.500px;
     margin-right: 401.500px;
     padding-top: 0;
-    height: 925px;
+    height: 979.562px;
 }
 
 #content{
@@ -469,187 +482,361 @@ h2, h3{
     font-weight: 700;
 }
 
-.clearFix::before{
+[class*=tabType]{
+    position: relative;
+    margin: 50px 0 40px;
+}
+
+[class*=tabType] ul{
+    position: relative;
+    width: 100%;
+}
+
+[class*=tabType]:after{
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #2263bb;
+}
+
+.clearFix:before, .clearFix:after{
     content: ' ';
     display: table;
 }
 
-.clearFix::after{
-    content: ' ';
-    clear: both;
-    display: table;
-}
-
-.cstomLinkBox .cstomBox{
+[class*=tabType] li{
     float: left;
-    width: 333px;
-    height: 166px;
-    margin-top: 8px;
-    padding: 23px 37px 30px 30px;
-    background: url("http://www.snuh.org/asset/img/join/bg_customerBox01.png") no-repeat 0 0;
+    width: 25%;
 }
 
-.cstomLinkBox .cstomBox h4{
-    margin-bottom: 7px;
-    font-size: 28px;
-    color: #fff;
-    font-weight: 700;
+.tabTypeCol5 li{
+    width: 20%;
 }
 
-.cstomLinkBox .cstomBox p{
-    font-size: 18px;
-    color: #fff;
-}
-
-p{
-    word-break: keep-all;
-    line-height: 1.63;
-}
-
-[class*=btnType]{
-    overflow: visible;
-    vertical-align: top;
-    height: 40px;
-    padding: 0 20px;
-    color: #000;
-    font-size: 16px;
+[class*=tabType] a{
+    display: block;
+    height: 48px;
+    margin-left: -1px;
+    border: 1px solid #ccc;
+    border-bottom-color: transparent;
+    color: #666;
     text-align: center;
+    line-height: 48px;
+}
+
+a:link, a:visited, a:hover, a:active{
+    text-decoration: none;
+}
+
+[class*=tabType] li:first-child a{
+    margin-left: 0;
+}
+
+[class*=tabType] .current a{
+    border-color: #2263bb;
+    color: #fff;
+    background-color: #2263bb;
+}
+
+.clearFix:after{
+    clear: both;
+}
+
+.boardTotal{
+    float: left;
+    min-width: 110px;
+    margin-top: 7px;
+    color: #666;
+}
+
+.boardInfo > .boardTotal{
+    margin-top: 8px;
+}
+
+.boardTotal em{
+    color: #2763ba;
+    font-style: normal;
+}
+
+.boardSearch{
+    float: right;
+}
+
+audio, button, canvas, iframe, img, input, label, select, svg, video{
+    vertical-align: middle;
+}
+
+button, input, textarea{
+    appearance: none;
+}
+
+a img, fieldset, img{
+    border: none;
+}
+
+
+caption, legend{
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    border: none;
+    clip: rect(1px,1px,1px,1px);
+}
+
+.boardSearch .feFoSelect{
+    margin-right: 10px;
+}
+
+.boardSearch .feFoSelect, .boardSearch select, .boardSearch .keyword, .boardSearch .btnSubmit, .boardSearch .btnType01{
+    float: left;
+}
+
+[class*=feFo]{
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+}
+
+.feFoSelect{
+    position: relative;
+    width: 58px;
+    height: 38px;
+    padding: 0 35px 0 12px;
+    border: 1px solid #ccc;
+    color: #666;
+    font-size: 16px;
+    text-align: left;
     line-height: 38px;
     background-color: #fff;
-    cursor: pointer;
 }
 
-[class*=btn] {
+
+.feFoSelect:after{
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    width: 7px;
+    height: 4px;
+    margin-top: -2px;
+    background: url("http://www.snuh.org/asset/img/common/spr_common.png") no-repeat -65px -70px;
+}
+
+.feFoSelect > span{
     display: inline-block;
-    border: 0;
+    overflow: hidden;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
 }
 
-.cstomLinkBox p + [class*=btnWrap] {
-    margin-top: 50px;
+.feFoSelect select{
+    display: inline-block;
+    width: 100%;
+    color: #666;
+    font-size: 16px;
+}
+
+[class*=feFo] > select{
+    z-index: 1;
+    border: none;
+    border-radius: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+input[type=tel], input[type=text], input[type=email], input[type=number], input[type=password]{
+    height: 38px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+    color: #666;
+    font-size: 16px;
+    line-height: 38px;
+}
+
+.mdBrowser input[type=tel], .mdBrowser input[type=text], .mdBrowser input[type=email], .mdBrowser input[type=number], .mdBrowser input[type=password]{
+    line-height: inherit;
+}
+
+.boardSearch .keyword{
+    width: 151px;
+    border-right: 0;
+}
+
+.boardSearch .btnSubmit{
+    width: 70px;
+    height: 40px;
+    padding: 0 10px;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: -.8px;
+    line-height: 1.5;
+    background-color: #2763ba;
+    border: none;
+}
+
+[class*=boardType]{
+    margin-top: 30px;
+    border: 1px solid #000;
+    border-width: 2px 0 1px;
+}
+
+[class*=boardType] table{
+    table-layout: fixed;
+}
+
+table{
+    position: relative;
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+caption{
+    position: static;
+    color: transparent;
+}
+
+.boardTypeTbl th, .boardTypeTbl td{
+    vertical-align: middle;
+    padding: 15px 5px;
+    font-weight: 400;
+    text-align: center;
+    word-break: break-all;
+}
+
+.boardTypeTbl thead th{
+    padding: 18px 5px;
+    border-bottom: 1px solid #000;
+    color: #666;
+}
+
+.boardTypeTbl td{
+    border-top: 1px solid #ccc;
+}
+
+.boardTypeTbl th.alignL, .boardTypeTbl td.alignL{
+    padding-left: 20px;
 }
 
 .alignL{
     text-align: left!important;
 }
 
-.cstomLinkBox [class*=btnWrap].alignL [class*=btnType]{
-    margin: 0;
-    padding: 0 15px;
-    border-color: #fff;
-    background-color: transparent;
+.boardTypeTbl td a{
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    max-width: 92%;
 }
 
-.cstomLinkBox .cstomBox a{
-    color: #fff;
-}
-
-.cstomLinkBox [class*=btnType]{
-    float: left;
-}
-
-a[class*=btnType]{
-    height: 38px;
-}
-
-a:visited{
-    text-decoration: none;
-}
-
-.btnType02{
-    border: 1px solid #000;
-}
-
-.cstomLinkBox [class*=btnType] + [class*=btnType] {
-    float: right;
-}
-
-[class*=btnWrap].alignL [class*=btnType]{
-    margin: 0 10px 0 0;
-}
-
-.cstomLinkBox .cstomBox + .cstomBox {
-    background: url("http://www.snuh.org/asset/img/join/bg_customerBox02.png") no-repeat 0 0;
-}
-
-[class*=btnWrap]{
-    display: block;
+.pagination{
     position: relative;
     margin-top: 30px;
-    text-align: right;
-}
-
-[class*=btnWrap] [class*=btnType]{
-    margin: 0 0 0 10px;
-}
-
-.btnType01{
-    border: 1px solid #ccc;
-}
-
-.contTitleWrap > :first-child{
-    float: left;
-    font-size: 28px;
-    letter-spacing: -2.1px;
-}
-
-.cstomerGuide{
-    position: relative;
-    height: 80px;
-    padding-left: 100px;
-}
-
-.cstomerGuide::before{
-    content: ' ';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 80px;
-    height: 82px;
-    background: url("http://www.snuh.org/asset/img/join/spr_join.png") no-repeat -52px -173px;
-}
-
-.cstomerGuide .contTextWrap{
-    margin-top: 0;
-}
-
-.contTextWrap{
-    overflow: hidden;
-    margin: 30px 0 10px;
-}
-
-.contTextWrap > p:first-child{
-    float: none;
-    width: 100%;
-}
-
-.contTextWrap > :first-child {
-    overflow: hidden;
-    float: left;
-    width: 80%;
-    font-size: 20px;
-}
-
-.cstomLinkBox ~ .contTitleWrap{
-    margin-top: 50px;
-}
-
-.contTitleWrap{
-    overflow: hidden;
-    position: relative;
-    margin: 45px 0 28px;
-}
-
-.contTitleWrap > :first-child{
-    float: left;
-    font-size: 28px;
-    letter-spacing: -2.1px;
-}
-
-.cstomerContent .custImg{
     text-align: center;
 }
-
-img{
+.pagination a{
+    display: inline-block;
     vertical-align: middle;
+    min-width: 28px;
+    min-height: 28px;
+    margin-left: 2px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    white-space: nowrap;
+    line-height: 28px;
+}
+
+.pagination [class*=Btn]{
+    position: relative;
+    width: 38px;
+    height: 38px;
+    margin-left: 0;
+    padding: 0;
+    left: 0;
+}
+
+.hideEl, .pagination [class*=Btn] span{
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
     border: none;
+
+}
+
+.pagination .firstBtn:after, .pagination .firstBtn > .a, .pagination .lastBtn:after, .pagination .lastBtn > .a {
+    width: 12px;
+    height: 11px;
+    margin: -5.5px 0 0 -6px;
+}
+
+.pagination [class*=Btn]:after{
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-image: url("http://www.snuh.org/asset/img/common/spr_common.png");
+    background-repeat: no-repeat;
+    background-position: -221px -27px;
+}
+
+.firstBtn{
+    left: 7px;
+}
+
+.pagination .prevBtn{
+    left: 0px;
+    margin-right: 16px;
+    margin-left: 1px;
+}
+
+.pagination .prevBtn:after{
+    width: 6px;
+    height: 11px;
+    margin: -5.5px 0 0 -3px;
+    background-position: -221px -40px;
+}
+
+.pagination .current{
+    border-color: #2763ba;
+    color: #fff;
+    background-color: #2763ba;
+}
+
+.pagination .nextBtn{
+    margin-left: 16px;
+    right: 3px
+}
+
+.pagination .nextBtn:after{
+    width: 6px;
+    height: 11px;
+    margin: -5.5px 0 0 -3px;
+    background-position: -221px -53px;
+}
+
+.pagination .lastBtn{
+    margin-left: 1px;
+    right: 6px;
+}
+
+.pagination .lastBtn:after{
+    width: 12px;
+    height: 11px;
+    margin: -5.5px 0 0 -6px;
+    background-position: -221px -66px;
 }
