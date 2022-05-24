@@ -5,7 +5,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<<<<<<< HEAD
 <link rel="stylesheet" href="asset/css/footer.css">
+=======
+<link rel="stylesheet" href="asset/css/footer.css"> 
+>>>>>>> master
 <style>
 #footer {
     margin-top: 100px;
