@@ -179,6 +179,7 @@
 }
 
 .contHeadingWrap {
+	height:300px;
     overflow: hidden;
     margin: -12px 0 9px;
     top: 248px;
@@ -883,64 +884,11 @@
     </style>
 </head>
 <body>
-    <div id="wrap">
-        <header id="header">
-            <div class="innerwrap">
-                <div class="topLeftWrap">
-                    <a class="hideTxt">
-                        <img src="https://www.snuh.org/asset/img/common/outcomesbook_bt.png">
-                    </a>
-                </div>
-                <div class="topMenuWrap">
-                    <ul class="utilMenu">
-                        <li>
-                            <a style="margin-right: 16px;">원격</a>
-                        </li>
-                    </ul>
-                    <ul class="topMenu">
-                        <li>
-                            <a>로그아웃</a>
-                        </li>
-                        <li>
-                            <a>마이페이지</a>
-                        </li>
-                        <li>
-                            <a>Language</a>
-                        </li>
-                    </ul>
-                </div>
-                <nav id="gnb" class>
-                    <ul class="gnbList clearFix">
-                        <li>
-                            <a>진료안내</a>
-                        </li>
-                        <li>
-                            <a>이용안내</a>
-                        </li>
-                        <li>
-                            <a>건강정보</a>
-                        </li>
-                        <li>
-                            <a>고객참여</a>
-                        </li>
-                        <li>
-                            <a>병원소개</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        <div class="contTopBar">
-            <div class="innerWrap clearFix">
-<!--                <div class="breadcrumb">
-                파란띠
-                </div> -->
-            </div>
-        </div>
-        <div class="contUtilMenuWrap">
-
-        </div>
+   	
+   		 <jsp:include page="header.jsp" />
+     	<div id="wrap">
         <main id="content" class="myPage replaceUtilMenu"> 
+        
             <div class="contHeadingWrap">
                 <h2>회원가입</h2>
             </div>
@@ -962,72 +910,12 @@
                 <p>가입완료되었습니다</p>
             </div>
             <div class="btnWrap02 alignC" style="padding-left: 497px; position: absolute;">
-                <a href="" id="confirmBtn" role="button" class="btnType03">확인</a>
+                <a href="mainpage.jsp" id="confirmBtn" role="button" class="btnType03">확인</a>
             </div>
+            
+       
         </main>
-        <div id="wrap4">
-            <footer id="footer">
-                <ul class="innerWrap footerLink">
-                    <li>
-                        <a href="" class="colorPoint04" target="_blank">
-                        비급여진료비용
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" target="_blank">
-                        환자권리장전
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" target="_blank">
-                        이용약관
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" class="colorPoint04" target="_blank">
-                        개인정보 처리방침
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" target="_blank">
-                        정보공개
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" data-layer="layerEmail" class="layerBtn">
-                        정보무단수집거부공개
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" data-layer="layerDown" class="layerBtn">
-                        뷰어 다운로드
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" target="_blank">
-                        진료협력센터
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" target="_blank">
-                        장례식장
-                        </a>
-                    </li>
-                </ul>
-                <div class="footerInfo">
-                    <div class="innerWrap">
-                        <div>
-                        <address class="clearFix">
-                            <p style="font-style: normal; margin-top: -32px;">
-                                주소 : 03080 서울특별시 종로구 대학로 101(연건동 28)&nbsp;&nbsp;대표전화 : 1588-5700&nbsp;&nbsp;홈페이지 의견접수
-                                <br>
-                                COPYRIGHT 2010 SEOUL NATIONAL UNIVERSITY HOSPITAL. ALL RIGHTS RESERVED
-                            </p>
-                        </address>
-                    </div>
-                </div>
-            </footer>
-        </div>
-    </div>
+              <jsp:include page="footer.jsp" />
+</div>
 </body>
 </html>

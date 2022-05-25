@@ -22,7 +22,7 @@
 </head>
 
 <body>
-
+	<jsp:include page="header.jsp" />
 	<div id="wrap">
 
 
@@ -1482,7 +1482,7 @@ https://www.snuh.org/asset/img/member/img_mem9.png
 				<!-- //boardTypeForm -->
 			</fieldset>
 		</form>
-		<div class="btnWrap" style="padding-left: 90%;">
+		<div class="btnWrap" style="padding-left: 70%;">
 			<button type="button" class="btnType03 btnBig" id="nextBtn" >다음단계</button>
 		</div>
 		</main>
@@ -1635,7 +1635,7 @@ function validateOp(){
 </script>
 
 	
-		
+		<jsp:include page="footer.jsp" />
 </div>
 </body>
 </html>
