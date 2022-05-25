@@ -17,8 +17,119 @@
 <body>
     <div id="wrap">
         <a href="#content" class="skipToContent">본문으로 바로가기</a>
-        <header id="header" class style="position: fixed; top: 0px"></header>
-        <div class="contTopBar" style="position: fixed; top: 130px;"></div>
+         <header id="header">
+            <div class="innerwrap">
+                <h1><a href="mainpage.jsp" class="hideTxt">서울대학교병원</a></h1>
+                <div class="topLeftWrap">
+                    <a href="https://dept.snuh.org/dept/OC/index.do" class="hideTxt" id="outcomes">Outcomes Book</a>
+                </div>
+                <div class="topMenuWrap">
+                    <ul class="utilMenu">
+                        <li>
+                            <a style="margin-right: 16px;">원격</a>
+                        </li>
+                    </ul>
+                    <ul class="topMenu">
+                        <li>
+                            <a href="mainpage.jsp">로그아웃</a>
+                        </li>
+                        <li>
+                            <a href="mypage.jsp">마이페이지</a>
+                        </li>
+                        <li>
+                            <a>Language</a>
+                        </li>
+                    </ul>
+                </div>
+                <nav id="gnb" class>
+<!--                     <button class="totMenuBtn hideTxt" type="button" aria-controls="totMenu">
+                    </button> -->
+                    <!-- 전체 메뉴 아이콘 집어넣어야함 -->
+                    <button class="totMenuBtn hideTxt" type="button" aria-controls="totMenu">전체 메뉴 열기</button>
+                    <ul class="gnbList clearFix">
+                        <li>
+                            <a>진료안내</a>
+                        </li>
+                        <li>
+                            <a>이용안내</a>
+                        </li>
+                        <li>
+                            <a>건강정보</a>
+                        </li>
+                        <li>
+                            <a>고객참여</a>
+                        </li>
+                        <li>
+                            <a>병원소개</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="contTopBar" style="position: fixed; top: 130px;">
+            <!-- innerWrap -->
+            <div class="innerWrap clearFix">
+                <!-- breadcrumb -->
+                <div class="breadcrumb">
+                    <strong class="hideEl">현재 위치: </strong>
+                    <a href="mainpage.jsp" class="bcHomeBtn hideTxt">HOME</a>
+                    <span class="hideEl">&gt;</span>
+                    
+                    <div class="">
+                        <em>진료안내</em>
+                        <button type="button" class="bcLinkLayerBtn hideTxt">주 메뉴 목록 열기</button>
+                        <!-- bcLinkLayer -->
+                        <ul class="bcLinkLayer" role="region" aria-hidden="true" aria-expanded="false" style="display: none;">
+                                
+                            <li><a href="medicalInfo.jsp">진료안내</a></li>
+                            <li><a href="allFAQ.jsp">이용안내</a></li>
+                            <li><a href="clientSound.jsp">고객참여</a></li>
+                            <li><a href="intro.jsp">병원소개</a></li>
+                                
+                        </ul>
+                        <!-- //bcLinkLayer -->
+                    </div>
+                    <span class="hideEl">&gt;</span>
+                    <div class="">
+                        <em>외래진료안내</em>
+                        <button type="button" class="bcLinkLayerBtn hideTxt">서브 메뉴 목록 열기</button>
+                        <!-- bcLinkLayer -->
+                        <ul class="bcLinkLayer" role="region" aria-hidden="true" aria-expanded="false" style="display: none;">
+                            
+                            <li><a href="reservation.jsp">인터넷진료예약</a></li>
+                            
+                            <li><a href="newreservation.jsp">예약확인/취소</a></li>
+                            
+                            <li><a href="medicalInfo.jsp">외래진료안내</a></li>
+                            
+                        </ul>
+                        <!-- //bcLinkLayer -->
+                    </div>
+                    <span class="hideEl">&gt;</span>
+                    
+                    <div class="">
+                        <em>진료안내</em>
+                        <button type="button" class="bcLinkLayerBtn hideTxt">서브 메뉴 목록 열기</button>
+                        <!-- bcLinkLayer -->
+                        <ul class="bcLinkLayer" role="region" aria-hidden="true" aria-expanded="false" style="display: none;">
+                            
+                            <li><a href="medicalInfo.jsp">진료안내</a></li>
+                            
+                        </ul>
+                        <!-- //bcLinkLayer -->
+                    </div>
+                    
+                </div>
+                <!-- //breadcrumb -->
+                <!-- bcQuickMenu -->
+                <ul class="bcQuickMenu">
+                    <li class=""><a href="reservation.jsp">진료예약</a></li>
+                    <li><a href="newreservation.jsp">예약조회</a></li>
+                </ul>
+                <!-- //bcQuickMenu -->
+            </div>
+            <!-- //innerWrap -->
+        </div>
         <div class="contUtilMenuWrap">
             <ul class="contUtilMenu">
                 <li class="pagePrint" style="display: list-item;">
@@ -80,7 +191,7 @@
                 <li class="skin03"><em>인터넷예약</em> 
                     <p>병원 홈페이지에 <span class="colorPoint">회원가입 후 이용</span>하실 수 있습니다.<br>
                     인터넷예약은 <span class="colorPoint">24시간 이용</span>하실 수 있습니다.&nbsp;</p> 
-                    <div class="btnWrap alignL"> <span class="btnIconLink"><a href="/reservation/reservation.do" role="button" class="btnType03 btnSmall">인터넷 예약하기</a></span></div></li> 
+                    <div class="btnWrap alignL"> <span class="btnIconLink"><a href="reservation.jsp" role="button" class="btnType03 btnSmall">인터넷 예약하기</a></span></div></li> 
                 <li class="skin04"><em>앱예약</em> 
                     <p>서울대학교병원&nbsp; 핸드폰 어플리케이션을 <span class="colorPoint">구글플레이 또는 앱스토어에서 다운로드 </span>받으신 후 이용하실 수 있습니다. 어플리케이션을 통한 예약은<span class="colorPoint"> 24시간 이용</span>하실 수 있습니다.<br>
                     <img src="http://www.snuh.org/upload/editor/images/000018/20190607105542236_TIV3L51N.jpg" title="" alt="" style="vertical-align: baseline; border: 0px solid rgb(0, 0, 0);"></p></li> 

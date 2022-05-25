@@ -6,10 +6,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>고객상담실 업무안내 | 서울대학교병원</title>
-    <link rel="stylesheet" href="asset/css/clientConsultation.css">
+    <title>이용안내 FAQ | 서울대학교병원</title>
+    <link rel="stylesheet" href="asset/css/allFAQ.css">
     <link rel="stylesheet" href="asset/css/KDHfooter.css">
     <link rel="stylesheet" href="asset/css/aside.css">
+    <link rel="stylesheet" href="asset/css/lastFAQ_content2.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
@@ -31,10 +32,10 @@
                     </ul>
                     <ul class="topMenu">
                         <li>
-                            <a>로그아웃</a>
+                            <a href="mainpage.jsp">로그아웃</a>
                         </li>
                         <li>
-                            <a>마이페이지</a>
+                            <a href="mypage.jsp">마이페이지</a>
                         </li>
                         <li>
                             <a>Language</a>
@@ -71,64 +72,43 @@
             <div class="innerWrap clearFix">
                 <!-- breadcrumb -->
                 <div class="breadcrumb">
-			<strong class="hideEl">현재 위치: </strong>
-			<a href="/" class="bcHomeBtn hideTxt">HOME</a>
-			<span class="hideEl">&gt;</span>
-			
-			<div class="">
-				<em>고객참여</em>
-				<button type="button" class="bcLinkLayerBtn hideTxt">주 메뉴 목록 열기</button>
-				<!-- bcLinkLayer -->
-				<ul class="bcLinkLayer" role="region" aria-hidden="true" aria-expanded="false">
+                    <strong class="hideEl">현재 위치: </strong>
+                    <a href="/" class="bcHomeBtn hideTxt">HOME</a>
+                    <span class="hideEl">&gt;</span>
+                    
+                    <!-- <div class="">
+                        <em>이용안내</em>
+                        <button type="button" class="bcLinkLayerBtn hideTxt">주 메뉴 목록 열기</button>
+                        bcLinkLayer
+                        <ul class="bcLinkLayer" role="region" aria-hidden="true" aria-expanded="false" style="display: none;">
+                                
+                            <li><a href="/reservation/meddept/main.do">진료안내</a></li>
+                            <li><a href="/content/M002001001.do">이용안내</a></li>
+                            <li><a href="/join/client.do">고객참여</a></li>
+                            <li><a href="/content/M005001.do">병원소개</a></li>
+                                
+                        </ul>
+                        //bcLinkLayer
+                    </div> -->
+                    <span class="hideEl">&gt;</span>
+                    <!-- <div class="">
+                        <em>FAQ(통합)</em>
+                        <button type="button" class="bcLinkLayerBtn hideTxt">서브 메뉴 목록 열기</button>
+                        bcLinkLayer
+                        <ul class="bcLinkLayer" role="region" aria-hidden="true" aria-expanded="false" style="display: none;" tabindex="0">
 					
-					<li><a href="medicalInfo.jsp">진료안내</a></li>
-                            <li><a href="/">이용안내</a></li>
-                            <li><a href="clientSound.jsp">고객참여</a></li>
-                            <li><a href="intro.jsp">병원소개</a></li>
-					 
-				</ul>
-				<!-- //bcLinkLayer -->
-			</div>
-			<span class="hideEl">&gt;</span>
-			<div class="">
-				<em>고객의소리</em>
-				<button type="button" class="bcLinkLayerBtn hideTxt">서브 메뉴 목록 열기</button>
-				<!-- bcLinkLayer -->
-				<ul class="bcLinkLayer" role="region" aria-hidden="true" aria-expanded="false">
-					
-					<li><a href="thankyouwrite.jsp">고객의소리</a></li>
-					
-				</ul>
-				<!-- //bcLinkLayer -->
-			</div>
-			<span class="hideEl">&gt;</span>
-			
-			<div class="">
-				<em>고객상담실 업무안내</em>
-				<button type="button" class="bcLinkLayerBtn hideTxt">서브 메뉴 목록 열기</button>
-				<!-- bcLinkLayer -->
-				<ul class="bcLinkLayer" role="region" aria-hidden="true" aria-expanded="false" style="display: none;" tabindex="0">
-					
-					<li><a href="clientConsultation.jsp">고객상담실 업무안내</a></li>
-					
-					<li><a href="clientSound.jsp">고객의소리 등록</a></li>
-					
-					<li><a href="thankyouwrite.jsp">감사합니다</a></li>
-					
-					<li><a href="suggestions.jsp">건의합니다</a></li>
-					
-					<li><a href="allThanksView.jsp">감사이야기</a></li>
-					
-				</ul>
-				<!-- //bcLinkLayer -->
-			</div>
-			
-		</div>
+                            <li><a href="/board/B005/list.do">FAQ(통합)</a></li>
+                            
+                        </ul>
+                        //bcLinkLayer
+                    </div> -->
+                    <span class="hideEl">&gt;</span>
+                </div>
                 <!-- //breadcrumb -->
                 <!-- bcQuickMenu -->
                 <ul class="bcQuickMenu">
-                    <li class=""><a href="/reservation/reservation.do">진료예약</a></li>
-                    <li><a href="/reservation/confirm/rsvConfirm.do">예약조회</a></li>
+                    <li class=""><a href="reservation.jsp">진료예약</a></li>
+                    <li><a href="newreservation.jsp">예약조회</a></li>
                 </ul>
                 <!-- //bcQuickMenu -->
             </div>
@@ -153,55 +133,80 @@
                 </li>
             </ul>
         </div>
-        <main id="content" class="cstomerContent replaceUtilMenu">
+        <main id="content" class="rsvContent replaceUtilMenu">
             <div class="contHeadingWrap">
-                <h2>고객상담실 업무안내</h2>
+                <h2>이용안내 FAQ</h2>
             </div>
-            <div class="lightIntroWrap iconType02">
-                <div class="contTitleWrap">
-                    <h3>고객상담실 방문 및 전화상담 시간</h3>
+            <div class="boardView">
+                <!-- viewTitle -->
+                <div class="viewTitle">
+                    <h3>
+                        개명으로 이름이 변경된 경우
+                    </h3>
+                    
+                    
+                    
+                    <div class="date">
+                        조회수 : 2375
+                        <span class="">작성일 : 2019-12-09</span>
+                    </div>
+                    
+                    
                 </div>
-                <div class="contTextWrap"> 
-                    <p>평 일 : <strong class="colorPoint">오전 9시 ~ 오후 5시</strong></p>
+                <!-- //viewTitle -->
+                <!-- viewContent -->
+                <div class="viewContent">
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                                    
+                                    <p></p><p>홈페이지 회원과&nbsp;병원 환자정보는 분리 운영되고 있습니다. 홈페이지는 환자가 아닌 사람들도 회원가입이 가능하기 때문에 아래와 같은 상황이 발생할 수 있습니다.&nbsp;</p>
+                        <p><br></p>
+                        <p><span style="font-weight: bold;">1. 홈페이지 회원가입이 안 되는 경우</span></p>
+                        <p>&nbsp; 가. 개명 이전 이름으로 회원가입 방법</p>
+                        <p>&nbsp; &nbsp;①&nbsp;홈페이지에서 '진료회원 인증'화면에서 '주민등록번호 확인'을 통해 회원가입</p>
+                        <p>&nbsp; &nbsp;②&nbsp;홈페이지 담당자(02-2072-0596)에게 회원정보 수정 신청</p>
+                        <p>&nbsp; &nbsp;②&nbsp;내원하셔서 환자정보 수정 신청</p>
+                        <p><br></p>
+                        <p>&nbsp; 나. 개명된 회원으로 회원가입</p>
+                        <p>&nbsp; &nbsp;①&nbsp;'웹회원'으로 회원가입 신청</p>
+                        <p>&nbsp; &nbsp;②&nbsp;홈페이지 담당자(02-2072-0596)에게 회원정보 수정 신청</p>
+                        <p>&nbsp; &nbsp;③&nbsp;내원하셔서 환자정보 수정 신청</p>
+                        <p><br></p>
+                        <p><span style="font-weight: bold;">2. 홈페이지 회원정보를 변경하길 희망하는 경우</span></p>
+                        <p>&nbsp; 가. 병원에 개명된 이름이 등록되어 있는 경우</p>
+                        <p>&nbsp; &nbsp; - 회원탈퇴 후 재가입</p>
+                        <p>&nbsp; &nbsp; - 홈페이지 담당자(02-2072-0596)에게 회원정보 수정 신청</p>
+                        <p><br></p>
+                        <p>&nbsp; 나. 병원에 개명 이전 이름이 등록되어 있는 경우</p>
+                        <p>&nbsp; &nbsp;①&nbsp;내원하셔서 개명된 이름을 변경</p>
+                        <p>&nbsp; &nbsp;②&nbsp;홈페이지 담당자(02-2072-0596)에게 회원정보 수정 신청</p>
+                        <p><br></p>
+                        <p><span style="font-weight: bold;">3. 개명 후 병원에 필요한 서류</span></p>
+                        <p>&nbsp; &nbsp;<span style="font-weight: bold;">주민등록 초본</span>을 지참하셔서 변경 신청</p>
+                        <div><br></div><p></p>
+                    
+                    
+                    
+                    
+                    
+                    
                 </div>
-                <p><strong class="colorPoint">02-2072-2002</strong></p>
+                <!-- //viewContent -->
+                <div class="btnWrap">
+		
+		
+                    <a href="allFAQ.jsp" class="btnType01">목록</a>
+                
             </div>
-            <div class="contTitleWrap"> 
-                <h3>고객의 소리 접수방법</h3>
             </div>
-            <ul class="listText col3"> 
-                <li class="nthChild"> 
-                    <div class="title"><i>01</i>방문</div> 
-                    <p>본관 2층 고객상담실<br></p> 
-                </li> 
-                <li class="nthChild"> 
-                    <div class="title"><i>02</i>전화</div> 
-                    <p>02-2072-2002<br></p> 
-                </li> 
-                <li class="nthChild"> 
-                    <div class="title"><i>03</i>팩스</div> 
-                    <p>02-2072-2881</p> 
-                </li> 
-                <li> 
-                    <div class="title"><i>04</i>우편</div> 
-                    <p>서울 종로구 대학로 101번지<br> 서울대학교병원 CS팀 고객상담실</p> 
-                </li> 
-                <li> 
-                    <div class="title"><i>05</i>건의함</div> 
-                    <p>각 층에 비치되어 있는<br> ‘고객의 소리’ 함 이용</p> 
-                </li> 
-                <li> 
-                    <div class="title">
-                        <i>06</i>
-                        인터넷
-                    </div> 
-                    <p>서울대학교병원 홈페이지<br> (고객참여 &gt; 고객의 소리)
-                    </p> 
-                    <a href="mainpage.jsp" role="button" class="btnType03">
-                        <span class="btnIconLink">바로가기</span>
-                    </a>
-                </li> 
-            </ul>
+            
         </main>
         <aside id="aside" class="asideWrap" style="position: absolute; top: 180px;">
             <h2>관련 콘텐츠</h2>
@@ -209,12 +214,12 @@
             <ul class="asideContList">
         
                 
-                <li class=""><a href="allThanksView.jsp">감사합니다 전체보기</a></li>
-                <!--    
-                    <li class=""><a href="/join/client.do">고객의소리 등록</a></li>
+                <!-- <li class=""><a href="/join/client/praiseList.do">감사합니다 전체보기</a></li> -->
+                   
+                    <!-- <li class=""><a href="/join/client.do">고객의소리 등록</a></li>
                 
-                    <li class=""><a href="/content/M004001002.do">고객상담실 업무안내</a></li>
-                 -->
+                    <li class=""><a href="/content/M004001002.do">고객상담실 업무안내</a></li> -->
+                
             </ul>
             <!-- //asideContList -->
             <h2>자주 찾는 서비스</h2>
@@ -317,6 +322,6 @@
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="asset/js/clientConsultation.js"></script>
+<script src="asset/js/allFAQ.js"></script>
 <script src="asset/js/aside.js"></script>
 </html>
