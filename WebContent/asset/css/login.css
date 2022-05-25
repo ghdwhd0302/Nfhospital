@@ -1,36 +1,31 @@
 @charset "UTF-8";
-
+#wrap4{
+	width:100%;
+}
+#content{
+	width: 100%;
+}
+.logBox1{
+	width: 100%;
+	background-color: #f9f9f9d1;
+	
+}
 .logBox {
+	width:100%;
 	border-top: 1px solid #2263bb;
 	margin-top: 100px;
-	margin-left: 20%;
-	margin-right: 20%;
-	background-color: #f9f9f9d1;
+	float:left;
+	background-color: white;
 }
 
 .regularTxt {
 	text-align: center;
 }
 
-.background1 {
-	height: 20%;
-	background-color: #f9f9f9d1;
+p {
+    margin: 0 0 30px;
 }
 
-.background2 {
-	padding-top: 0;
-	background-color: #f9f9f9d1;
-}
-
-[class*=logBoxWrap] .logBox {
-	float: left;
-	width: 352px;
-	height: 656px;
-	padding: 62px 93px 60px;
-	border-top: 2px solid #2763ba;
-	text-align: center;
-	background-color: #fff;
-}
 
 input[type=id] {
 	margin-left: 20%;
@@ -40,7 +35,7 @@ input[type=id] {
 	width: 60%
 }
 
-.logBox .inputText, .completeJoin .inputText {
+.inputText{
 	display: block;
 	width: 40%;
 	height: 50px;
@@ -52,19 +47,4 @@ input[type=id] {
 .btnBig{
 	width:40%;
 	margin-left: 30%;
-}
-
-.Box1 {
-	width: 400px;
-	height: 260px;
-	margin-left: 30%;
-}
-
-.Box1 a {
-	float: left;
-	color: black;
-	width: 150px;
-	height: 80px;
-	font-size: 15px;
-	
 }
