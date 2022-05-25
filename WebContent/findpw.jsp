@@ -24,7 +24,7 @@
 </head>
 <body>
 		
-
+<jsp:include page="header.jsp" />
 <script type="text/javascript">
 
 	function outcomesFnc(e) {
@@ -145,7 +145,8 @@
 		});
 	});
 </script>
-
+<div id="wrap">
+			
 <!-- content -->
 <main id="content" class="findContent">
 	<div class="contHeadingWrap">
@@ -164,8 +165,8 @@
 		<p>가입하신 당시 인증 방법 중 한가지를 선택하여 찾으실 수 있습니다.</p>
 	</div>
 	<div class="memType03 clearFix">
-		<a href="/" class="layerBtn" data-layer="layerMail" style="width:50%;float:left;"><span class="mEMail">가입정보</span>이메일 이용하기</a>
-		<a href="javascript:void(0);" id="mBtn" style="width:50%;"><span class="mPhone">휴대전화</span>본인 인증하기</a>
+		<a href="/" class="layerBtn" data-layer="layerMail"  style="width:50%;float:left;height: 120px;"><span class="mEMail">가입정보</span>이메일 이용하기<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1emQe9ZHGyS9LwS6lzkyBrw51Xsgeg4ca1Q&usqp=CAU" style="height: auto;max-width: 100px"></a>
+		<a href="javascript:void(0);" id="mBtn" style="width:50%;height: 120px;"><span class="mPhone">휴대전화</span>본인 인증하기<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAaVBMVEX///8AAAA1NTXAwMD09PSdnZ3W1tZycnL4+Pg5OTkVFRWTk5OysrLFxcWgoKBBQUFhYWFYWFh9fX3q6urb29t3d3e4uLgoKCjLy8sXFxfDw8MhISFcXFwfHx83NzfT09OqqqqKiooODg5yHwEDAAADQElEQVR4nO3Y63aaQBiFYUfxjKJijIlpc7j/i2yMq20qrAaHvYcs1vv+z+c8kYGRwaBFs+N6WiyCs0UxXR9nbRbZgpdvrLbPbQ5Zet/ylMx37scy8ReZJ+VdyhP6sqcOgO/XarJLtRx2AgxhWKYBZt675/9apPkWf3YGDGGeArjrEBjCzg987hQYwrNduG22kMVhcluHt2aDt27gvuG/ev+NJt9W010YMbrhZPdObLgMozBm9A1Nmi7j9ebRy6ajJwbX35qfR+fT2yoaT/aeT7t9GF7ybsSGzwpr3udF82vJV2EVzrvmBffZtKvfTZ8bIkSIsPNSCe/W45St75ILV9bPqbZKLhxZP6faCKEohL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL76L3xMLjzMspTNDsmF3YUQIcLuQ4jQKbwfH8tZeVze91T4kP8Zkz/0UViUn+aURf+E1+vSTfouwvJqUtk34bgyatwv4SKrjMreeiXc1Mza9Er4UjPr5VsK55GreqyZ9fj1n9U2twpjH2OrmlmryFmFVbiNXFXdW53R139W29Yq3EWu6rVm1mvkrJ1VmEeuqu7Kir3i85pZuiaRqwqTyqhn3Shpscuqbp7YLR28wOiNGF6uBsU+Dc3bcDDYxy7s6nYaeyMNYW8Wxl9c/xy+o4/d5mfFuegbxPsNdXQ5f2ejFr9/zfeZc9E78b3T0265ezq1mODehR/Fnk0Vec+kv8sWnQEfqj8zLZVdvTUdXr8KsZXF/nht1ybRN/hRHvsKokXe82ilWcsX17d2Ws7SAs/GQ7prdXNI77sgj+tp4b2zLorp+tiK9wsJGEAUSb81awAAAABJRU5ErkJggg==" style="max-width: 100px;height: auto;"></a>
 	</div>
 	<p class="referenMark"><span>※&nbsp;</span>회원정보가 변경되어 본인 확인이 불가할 경우 02-2072-0596 으로 연락주십시오.</p>
 
@@ -180,7 +181,7 @@
 	</form>
 	<!-- layerWrap -->
 	
-	<section class="layerWrap layerMail" style="margin-left: -230px; display: block; float:left;padding-left: 12vw;" tabindex="0">
+	<section class="layerWrap layerMail" >
 		<h1>회원정보 이메일 확인</h1>
 		<!-- layerContent -->
 		<div class="layerContent">
@@ -222,7 +223,7 @@
 		</div>
 
 	</section>
-	<section class="layerWrap layerHp" style="margin-top: 34px; padding-left: 30vw;">
+	<section class="layerWrap layerHp" >
 		<h1>회원정보 휴대전화번호 확인</h1>
 		<!-- layerContent -->
 		<div class="layerContent">
@@ -268,6 +269,8 @@
 </main>
 
 
-
+<jsp:include page="footer.jsp" />
+</div>
 </body>
+
 </html>

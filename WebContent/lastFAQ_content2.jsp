@@ -20,7 +20,7 @@
         <a href="#content" class="skipToContent">본문으로 바로가기</a>
         <header id="header">
             <div class="innerwrap">
-                <h1><a href="/main.do" class="hideTxt">서울대학교병원</a></h1>
+                <h1><a href="mainpage.jsp" class="hideTxt">서울대학교병원</a></h1>
                 <div class="topLeftWrap">
                     <a href="https://dept.snuh.org/dept/OC/index.do" class="hideTxt" id="outcomes">Outcomes Book</a>
                 </div>
@@ -32,10 +32,10 @@
                     </ul>
                     <ul class="topMenu">
                         <li>
-                            <a>로그아웃</a>
+                            <a href="mainpage.jsp">로그아웃</a>
                         </li>
                         <li>
-                            <a>마이페이지</a>
+                            <a href="mypage.jsp">마이페이지</a>
                         </li>
                         <li>
                             <a>Language</a>
@@ -76,10 +76,10 @@
                     <a href="/" class="bcHomeBtn hideTxt">HOME</a>
                     <span class="hideEl">&gt;</span>
                     
-                    <div class="">
+                    <!-- <div class="">
                         <em>이용안내</em>
                         <button type="button" class="bcLinkLayerBtn hideTxt">주 메뉴 목록 열기</button>
-                        <!-- bcLinkLayer -->
+                        bcLinkLayer
                         <ul class="bcLinkLayer" role="region" aria-hidden="true" aria-expanded="false" style="display: none;">
                                 
                             <li><a href="/reservation/meddept/main.do">진료안내</a></li>
@@ -88,27 +88,27 @@
                             <li><a href="/content/M005001.do">병원소개</a></li>
                                 
                         </ul>
-                        <!-- //bcLinkLayer -->
-                    </div>
+                        //bcLinkLayer
+                    </div> -->
                     <span class="hideEl">&gt;</span>
-                    <div class="">
+                    <!-- <div class="">
                         <em>FAQ(통합)</em>
                         <button type="button" class="bcLinkLayerBtn hideTxt">서브 메뉴 목록 열기</button>
-                        <!-- bcLinkLayer -->
+                        bcLinkLayer
                         <ul class="bcLinkLayer" role="region" aria-hidden="true" aria-expanded="false" style="display: none;" tabindex="0">
 					
                             <li><a href="/board/B005/list.do">FAQ(통합)</a></li>
                             
                         </ul>
-                        <!-- //bcLinkLayer -->
-                    </div>
+                        //bcLinkLayer
+                    </div> -->
                     <span class="hideEl">&gt;</span>
                 </div>
                 <!-- //breadcrumb -->
                 <!-- bcQuickMenu -->
                 <ul class="bcQuickMenu">
-                    <li class=""><a href="/reservation/reservation.do">진료예약</a></li>
-                    <li><a href="/reservation/confirm/rsvConfirm.do">예약조회</a></li>
+                    <li class=""><a href="reservation.jsp">진료예약</a></li>
+                    <li><a href="newreservation.jsp">예약조회</a></li>
                 </ul>
                 <!-- //bcQuickMenu -->
             </div>
@@ -226,13 +226,13 @@
             <!-- asideServiceList -->
             <ul class="asideServiceList clearFix">
                 
-                    <li class=""><a href="/reservation/meddept/main.do">본원</a></li>
+                    <li class=""><a href="mainpage.jsp">본원</a></li>
                 
-                    <li class=""><a href="/reservation/reservation.do">진료예약</a></li>
+                    <li class=""><a href="reservation.jsp">진료예약</a></li>
                 
-                    <li class=""><a href="/content/M001004001.do">진료안내</a></li>
+                    <li class=""><a href="medicalInfo.jsp">진료안내</a></li>
                 
-                    <li class=""><a href="/reservation/confirm/rsvConfirm.do">외래예약확인</a></li>
+                    <li class=""><a href="newreservation.jsp">외래예약확인</a></li>
                 
             </ul>
             <!-- //asideServiceList -->

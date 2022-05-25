@@ -2215,12 +2215,10 @@ html,body{
 		<ul class="clearFix feTab" data-pannel="1" data-tab-group="feTab1Gr0" role="tablist">
 			
 				
-					<li class="current"><a href="#contTabType01" role="tab" aria-selected="true" style="width:50%;float:left;">본인명의 휴대전화 인증</a></li>
-					<li><a href="regi1(1).jsp" role="tab" aria-selected="false">주민등록번호 확인</a></li>
+					<li><a href="regi1.jsp" role="tab" aria-selected="false" style="width:50%;float:left;background-color: white;color:black;">본인명의 휴대전화 인증</a></li>
+					<li class="current"><a href="#" role="tab" aria-selected="true">주민등록번호 확인</a></li>
 				
 				
-				
-			
 		</ul>
 	</div>
 	<!-- //tabType -->
@@ -2300,7 +2298,7 @@ html,body{
 						</table>
 					</div>
 					<div class="btnWrap">
-						<a ><button type="button" class="btnType03 btnBig" id="hNextBtn">다음단계</button></a>
+						<button type="button" class="btnType03 btnBig" id="hNextBtn">다음단계</button>
 					</div>
 				</fieldset>
 			</form>
