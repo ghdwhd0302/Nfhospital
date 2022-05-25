@@ -13,7 +13,9 @@
     <div id="wrap">
       <aside>
         <div id="topic_list" class="list">
-          <div id="aside_blank"></div>
+          <div id="aside_blank">
+            <img src="asset/img/hospital_logo.png"><div style="padding-right:48px;background-color: #627f9b;">서울 병원</div>	
+          </div>
           <div class="employee_page">관리자</div>
           <nav class="sub_nav">
           <ul id="topic_list_tree" class="tree">
@@ -33,7 +35,7 @@
              </li>
              <li id="list3" class="list">
               <div class="label">
-                <a href="http://localhost:9000/NfHospital/mainpage.jsp">
+                <a href="https://www.snuh.org/main.do">
                 <div>로그아웃</div>
                </a>
               </div>
@@ -42,9 +44,9 @@
           </nav>
         </div>
       </aside>
-      <header>
+      <header style="background-color: #627f9b82;">
        <div id="doc_name">
-        장준혁 님(jjh1234)
+        <b>장준혁 님(jjh1234)</b>
        </div>
       </header>
       <section>
@@ -52,7 +54,7 @@
         <div>
          <div class="title">
           <h3>환자정보</h3>
-           <div class="home"><a href="http://localhost:9000/NfHospital/mainpage.jsp">Home</a> / 환자관리 / 환자정보 조회</div>
+           <div class="home"><a href="https://www.snuh.org/main.do">Home</a> / 환자관리 / 환자정보 조회</div>
          </div>
         </div>
         <div class="wrap_table">

@@ -15,7 +15,7 @@
 		<aside>
       <div class="list">
         <div id="aside_blank">
-        	<img src="asset/img/hospital_logo.png"> <div>서울 병원</div>	
+        	<img src="asset/img/hospital_logo.png"><div style="padding-right:48px;background-color: #627f9b;">서울 병원</div>	
         </div>
         <div class="employee_page">관리자</div>
         <nav class="sub_nav">
@@ -45,9 +45,9 @@
         </nav>
       </div>
         </aside>
-        <header>
+        <header style="background-color: #627f9b82;">
           <div id="doc_name">
-              장준혁 님(jjh1234)
+              <b>장준혁 님(jjh1234)</b>
           </div>
             
         </header>

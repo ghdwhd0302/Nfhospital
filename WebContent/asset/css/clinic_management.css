@@ -44,6 +44,15 @@ aside {
 #aside_blank {
    height: 50px;
 }
+
+#aside_blank img {
+	width : 30px;
+	padding-top: 11px;
+	float: left;
+    padding-left: 23px;
+    filter: opacity(1);
+}
+
 .employee_page {
     line-height: 3.5;
     height: 60px;
@@ -52,7 +61,7 @@ aside {
     color: #fff;
     
 }
-.list {
+div.list {
     list-style: none;
     line-height: 3.5;
     height: 60px;
@@ -60,6 +69,7 @@ aside {
     color: #fff;
    
 }
+
 
 section {
     float: right;
@@ -114,6 +124,7 @@ th {
     background-color: #dbdbdb75;
     color: #777;
     text-align: initial;
+    position: relative;
 }
 .tables {
     display: flex;
@@ -123,6 +134,7 @@ th {
 
 td {
     height: 20vh;
+
 }
 
 img {
@@ -131,24 +143,95 @@ img {
     float: right;
     cursor: pointer;
 }
-#call_img {
-    padding-top: 1px;
-    padding-left: 10px;
-}
-.layer {
+
+input.memo-button {
+    width: 25px;
     position: absolute;
-    z-index: -1;
-    border: 1px solid #dbd1d1de ;
-    border-collapse: collapse;
-    height: 45px;
-    padding-right: 20px;
-    padding-left: 20px;
-    width: 19%;
+    right: 52px;
+    height: 23px;
+    filter: opacity(0.5);
+    
+}
+input.call-button {
+    width: 25px;
+    position: absolute;
+    right: 15px;
+    height: 24px;
+    filter: opacity(0.5);
+
+}   
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal .bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .modalBox {
+    position: absolute;
+    background-color: #fff;
+    width: 600px;
+    height: 600px;
+}
+    /* padding: 15px; */
+  
+.modalBox h1 {
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    letter-spacing: -1.2px;
+    background-color: #018ace;
+}   
+
+.modal_table {
+    width: fit-content;
 }
 
-textarea {
+.modal_td {
+    height: 4vh;
+}
+
+.modal_td input {
+    width: -webkit-fill-available;
+}
+  .modalBox button {
+    display: block;
+    width: 80px;
+    margin: 0 auto;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  textarea.modal_textarea {
+    height: 39vh;
+    border: none;
+    font-size: x-large;
+    width: -webkit-fill-available;
     resize: none;
 }
+  button.closeBtn {
+    position: absolute;
+    bottom: 12px;
+    right: 23px;
+    background-color: #018ace;
+    color: #fff;
+    border: none;
+    height: 30px;
+  }
+  
 
 
   

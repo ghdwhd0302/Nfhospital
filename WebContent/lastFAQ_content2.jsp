@@ -202,7 +202,7 @@
                 <div class="btnWrap">
 		
 		
-                    <a href="allFAQ.html" class="btnType01">목록</a>
+                    <a href="allFAQ.jsp" class="btnType01">목록</a>
                 
             </div>
             </div>

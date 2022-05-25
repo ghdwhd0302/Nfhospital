@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 * {
     margin:0;
     padding:0; 
@@ -16,7 +17,8 @@ header {
     float: right;
     width: 89vw;
     height: 50px;
-    background: #ffffff;	
+    background: #fff;	
+    
 
 }
 #doc_name {
@@ -38,15 +40,11 @@ aside {
 }
 #aside_blank img {
 	width : 30px;
-	padding-top: 10px;
+	padding-top: 11px;
 	float: left;
-    padding-left: 12px;
+    padding-left: 23px;
 }
 
-span {
-	
-	line-height : 3px;
-}
 div.employee_page {
     line-height: 3.5;
     height: 60px;
