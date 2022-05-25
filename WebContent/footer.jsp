@@ -5,12 +5,26 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="asset/css/footer.css"> 
 <style>
 #footer {
-    margin-top: 100px;
+	width:100%;
     background-color: #31354e;
     font-weight: 700;
+    position: absolute;
+   	bottom:0;
+    margin: 0;
+    height: 200px;
+    left: 0;
+   
+}
+#wrap4{
+height:300px;
+}
+.footer{
+	position: absolute;
+	width: 100%;
+	margin: 0;
+   
 }
 
 .footerLink {
@@ -40,6 +54,7 @@
 }
 
 .footerInfo {
+	width:100%;
     padding: 64px 0 60px;
     border-top: 1px solid #22263b;
 }
@@ -122,6 +137,7 @@
 <body>
    <div id="wrap4">
       <footer id="footer">
+      	<div class="footer">
          <ul class="innerWrap footerLink">
             <li>
                     <a href="" class="colorPoint04" target="_blank">
@@ -180,6 +196,7 @@
                         </p>
                </address>
             </div>
+         </div>
          </div>
          </div>
       </footer>

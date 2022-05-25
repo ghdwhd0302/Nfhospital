@@ -59,7 +59,7 @@
 
 .stepWrap li {
     float: left;
-    width: 330px;
+    width: 33%;
     padding: 20px 0 18px 30px;
     border: 1px solid #ccc;
     color: #ccc;
@@ -120,12 +120,17 @@ p {
    
     padding: 25px 30px;
 }
-
+.btnType03 {
+    border: 1px solid #2263bb;
+    color: #fff;
+    background-color: #2263bb;
+    margin-left: 93%;
+}
 .feFoCheck {
     width: 24px;
     height: 24px;
     margin-right: 9px;
-    background: url(/asset/img/common/spr_common.png) no-repeat -195px -27px;
+    background: url("https://www.snuh.org/asset/img/common/spr_common.png") no-repeat -195px -27px;
 }
 [class*=feFo] {
     display: inline-block;

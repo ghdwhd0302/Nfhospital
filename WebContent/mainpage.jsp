@@ -16,7 +16,7 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap"
 	rel="stylesheet">
-<!-- <link rel="stylesheet" href="file/css/mainpage.css"> -->
+
 <title>인터넷 진료 예약</title>
 <style>
 * {
@@ -123,7 +123,7 @@
 	height: 70px;
 	margin: 0 100px;
 	text-align: center;
-	top: 58px;
+	top: 20px;
 	position: absolute;
 	left: 28px;
 }
@@ -819,6 +819,12 @@ div.btns {
 						src="https://www.snuh.org/asset/img/common/outcomesbook_bt.png">
 					</a>
 				</div>
+				<div class="topMidWrap">
+					<ul class="utilMenu" style="list-style: none">
+
+						<li><a href="mainpage.jsp" style="font-size: 30px;margin-left: 20vw;margin-bottom: 10px;color:#2763ba"><strong>서울 병원</strong></a></li>
+					</ul>
+				</div>
 				<div class="topMenuWrap">
 					<ul class="utilMenu">
 						<li><a style="margin-right: 16px;">원격</a></li>
@@ -829,7 +835,7 @@ div.btns {
 						<li><a>Language</a></li>
 					</ul>
 				</div>
-				<nav id="gnb" class>
+				<nav id="gnb" >
 					<!--                     <button class="totMenuBtn hideTxt" type="button" aria-controls="totMenu">
                     </button> -->
 					<!-- 전체 메뉴 아이콘 집어넣어야함 -->

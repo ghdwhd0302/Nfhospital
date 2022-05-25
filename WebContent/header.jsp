@@ -89,13 +89,6 @@
 	margin: auto;
 }
 
-#header .topMidWrap {
-	position: absolute;
-	top: 18px;
-	left: 20px;
-	z-index: 100;
-}
-
 .topMenuWrap {
 	position: absolute;
 	top: 18px;
@@ -136,7 +129,7 @@
 	height: 70px;
 	margin: 0 100px;
 	text-align: center;
-	top: 58px;
+	top: 20px;
 	position: absolute;
 	left: 28px;
 }
@@ -159,15 +152,6 @@
 	transition: .2s color;
 }
 
-.contTopBar {
-	position: fixed;
-	top: 130px;
-	z-index: 99;
-	width: 100%;
-	height: 50px;
-	background-color: #2763ba;
-}
-
 .breadcrumb {
 	float: left;
 }
@@ -179,83 +163,6 @@
 	width: 800px;
 	height: 30px;
 	margin: 264px auto 0;
-}
-
-#content {
-	min-height: 800px;
-	word-spacing: 0;
-	letter-spacing: -.5px;
-	width: 1090px;
-	margin: auto;
-}
-
-#content.replaceUtilMenu {
-	margin-top: -48px;
-	padding-top: 0;
-}
-
-.contHeadingWrap {
-	overflow: hidden;
-	margin: -12px 0 9px;
-	top: 248px;
-}
-
-.contHeadingWrap>:first-child {
-	float: left;
-	font-size: 40px;
-	letter-spacing: -2px;
-}
-
-[class*=tabType] {
-	position: relative;
-	margin: 50px 0 40px;
-}
-
-[class*=tabType] ul {
-	position: relative;
-	width: 100%;
-}
-
-.tabTypeCol2 li {
-	width: 47%;
-}
-
-[class*=tabType] li {
-	float: left;
-	position: absolute;
-}
-
-[class*=tabType] .current a {
-	border-color: #2263bb;
-	color: #fff;
-	background-color: #2263bb;
-}
-
-[class*=tabType] li:first-child a {
-	margin-left: 0;
-}
-
-[class*=tabType] a {
-	display: block;
-	height: 48px;
-	margin-left: -1px;
-	border: 1px solid #ccc;
-	border-bottom-color: transparent;
-	color: #666;
-	text-align: center;
-	line-height: 48px;
-}
-
-.topMenu a {
-	cursor: pointer;
-	text-decoration: none;
-	color: inherit;
-}
-
-.gnbList a {
-	cursor: pointer;
-	text-decoration: none;
-	color: inherit;
 }
 </style>
 </head>
@@ -272,7 +179,7 @@
 				<div class="topMidWrap">
 					<ul class="utilMenu" style="list-style: none">
 
-						<li><a href="mainpage.jsp" style="font-size: 30px;margin-left: 15vw;margin-bottom: 10px;color:#2763ba"><strong>서울대학교 병원</strong></a></li>
+						<li><a href="mainpage.jsp" style="font-size: 30px;margin-left: 20vw;margin-bottom: 10px;color:#2763ba"><strong>서울 병원</strong></a></li>
 					</ul>
 				</div>
 				<div class="topMenuWrap">
