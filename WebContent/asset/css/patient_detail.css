@@ -53,6 +53,13 @@ aside {
 #aside_blank {
    height: 50px;
 }
+
+#aside_blank img {
+	width : 30px;
+	padding-top: 11px;
+	float: left;
+    padding-left: 23px;
+}
 .employee_page {
     line-height: 3.5;
     height: 60px;
@@ -61,7 +68,7 @@ aside {
     color: #fff;
     
 }
-.list {
+div.list {
     list-style: none;
     line-height: 3.5;
     height: 60px;
