@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http//mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="Member">
-   <!-- 회원가입 -->
-   <insert id="join" parameterType="patientListVO">
-      insert into tbl_member
-      (member_id, member_name, member_pw, member_gender, member_address, member_address_detail)
-      values(#{memberId}, #{memberName}, #{memberPw}, #{memberGender}, #{memberAddress}, #{memberAddressDetail})
+<mapper namespace="PatientList">
+   <!-- 환자 추가 -->
+   <insert id="add" parameterType="patientListVO">
+      insert into patient_list
+      (patientNum, name, phoneNum, addPhoneNum, gender, age, hospitalRoom, hospitalDate, medication, disease, symptom, temperature, bloodPressure)
+      values(#{patientNum}, #{name}, #{phoneNum}, #{addPhoneNum}, #{gender}, #{age}, #{hospitalRoom}, #{hospitalDate}, #{medication}, #{disease}, #{symptom}, #{temperature}, #{bloodPressure})
    </insert>
    
-   <!-- 아이디 중복검사 -->
-   <!-- 기본 자료형은 앞에 _를 붙이고, 클래스 자료형은 앞글자를 소문자로만 바꿔준다. -->
-   <select id="checkId" parameterType="string" resultType="int">
-      select count(member_id) from tbl_member where member_id = #{memberId}
+   <!-- 환자 조회 -->
+   <select id="view" parameterType="patientListVO">
+      select patientNum, name, phoneNum, addPhoneNum, gender, age, hospitalRoom, hospitalDate, medication, disease, symptom, temperature, bloodPressure
+      from patient_list where patientNum = #{patientNum}
    </select>
    
 </mapper>
