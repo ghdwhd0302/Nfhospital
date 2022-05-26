@@ -23,7 +23,15 @@ public class WriteOk implements Action{
 		writeVO.setTime(req.getParameter("writeTime"));
 		writeVO.setTitle(req.getParameter("writeTitle"));
 		writeVO.setWriteNum(req.getParameter("writeNum"));
+
+		writeDAO.write(writeVO);
 		
-		return null;
+		req.setAttribute("writeTitle", writeVO.getTitle());
+		
+		actionInfo.setRedirect(false);
+		
+		actionInfo.setPath("/");
+		
+		return actionInfo;
 	}
 }
