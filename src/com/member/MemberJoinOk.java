@@ -25,7 +25,7 @@ public class MemberJoinOk implements Action{
 		memberInfoVO.setResidentNum(req.getParameter("memberInfoResidentNum"));
 		memberInfoVO.setEmail(req.getParameter("memberInfoEmail"));
 		memberInfoVO.setAddress(req.getParameter("memberInfoAddress"));
-		memberInfoVO.setPhonNum(req.getParameter("memberInfoPhoneNum"));
+		memberInfoVO.setPhoneNum(req.getParameter("memberInfoPhoneNum"));
 		memberInfoVO.setAddPhoneNum(req.getParameter("memberInfoAddPhoneNum"));
 		memberInfoVO.setBirth(req.getParameter("memberInfoBirth"));
 		memberInfoVO.setGender(req.getParameter("memberInfoGender"));

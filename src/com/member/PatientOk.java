@@ -15,27 +15,27 @@ import com.member.domain.vo.ReservationVO;
 public class PatientOk implements Action{
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-		PatientListVO patientlistVO = new PatientListVO();
-		PatientListDAO patientlistDAO = new PatientListDAO();
+		PatientListVO patientListVO = new PatientListVO();
+		PatientListDAO patientListDAO = new PatientListDAO();
 		ActionInfo actionInfo = new ActionInfo();
 		
-		patientlistVO.setAddPhoneNum(req.getParameter("patientlistAddPhoneNum"));
-		patientlistVO.setAge(req.getParameter("patientlistAge"));
-		patientlistVO.setBloodPressure(req.getParameter("patientlistBloodPressure"));
-		patientlistVO.setDisease(req.getParameter("patientlistDisease"));
-		patientlistVO.setGender(req.getParameter("patientlistGender"));
-		patientlistVO.setHospitalDate(req.getParameter("patientlistHospitalDate"));
-		patientlistVO.setHospitalRoom(req.getParameter("patientlistHospitalRoom"));
-		patientlistVO.setMedication(req.getParameter("patientlistMedication"));
-		patientlistVO.setName(req.getParameter("patientlistName"));
-		patientlistVO.setPatientNum(req.getParameter("patientlistPatientNum"));
-		patientlistVO.setPhoneNum(req.getParameter("patientlistPhoneNum"));
-		patientlistVO.setSymptom(req.getParameter("patientlistSymptom"));
-		patientlistVO.setTemperature(req.getParameter("patientlistTemperature"));
+		patientListVO.setAddPhoneNum(req.getParameter("patientlistAddPhoneNum"));
+		patientListVO.setAge(Integer.parseInt(req.getParameter("patientlistAge")));
+		patientListVO.setBloodPressure(req.getParameter("patientlistBloodPressure"));
+		patientListVO.setDisease(req.getParameter("patientlistDisease"));
+		patientListVO.setGender(req.getParameter("patientlistGender"));
+		patientListVO.setHospitalDate(req.getParameter("patientlistHospitalDate"));
+		patientListVO.setHospitalRoom(req.getParameter("patientlistHospitalRoom"));
+		patientListVO.setMedication(req.getParameter("patientlistMedication"));
+		patientListVO.setName(req.getParameter("patientlistName"));
+		patientListVO.setPatientNum(Integer.parseInt(req.getParameter("patientlistPatientNum")));
+		patientListVO.setPhoneNum(req.getParameter("patientlistPhoneNum"));
+		patientListVO.setSymptom(req.getParameter("patientlistSymptom"));
+		patientListVO.setTemperature(Double.parseDouble(req.getParameter("patientlistTemperature")));
 		
-		patientlistDAO.list(patientListVO);
+		patientListDAO.list(patientListVO);
 		
-		req.setAttribute("patientlistName", patientlistVO.getName());
+		req.setAttribute("patientlistName", patientListVO.getName());
 		
 		actionInfo.setRedirect(false);
 		actionInfo.setPath("/");
