@@ -4,6 +4,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.member.domain.vo.MemberInfoVO;
+import com.mybatis.config.MyBatisConfig;
 
 public class MemberInfoDAO {
 	SqlSessionFactory sqlSessionFactory = MyBatisConfig.getSqlSessionFactory();
