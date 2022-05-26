@@ -25,8 +25,14 @@ public class ReservationOk implements Action{
 		reservationVO.setMedicalDept(req.getParameter("reservation.MedicalDept"));
 		reservationVO.setScheduleDate(req.getParameter("reservation.ScheduleDate"));
 		
-				
-		return null;
+		reservationDAO.reservation(reservationVO);		
+		
+		req.setAttribute("reservationName", reservationVO.getName());
+		
+		actionInfo.setRedirect(false);
+		actionInfo.setPath("/");
+		
+		return actionInfo;
 	}
 	
 }
