@@ -81,7 +81,7 @@
 				<ul class="bcLinkLayer" role="region" aria-hidden="true" aria-expanded="false">
 					
 					<li><a href="medicalInfo.jsp">진료안내</a></li>
-                            <li><a href="/">이용안내</a></li>
+                            <li><a href="allFAQ.jsp">이용안내</a></li>
                             <li><a href="clientSound.jsp">고객참여</a></li>
                             <li><a href="intro.jsp">병원소개</a></li>
 					 
