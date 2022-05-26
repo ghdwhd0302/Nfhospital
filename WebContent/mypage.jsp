@@ -12,264 +12,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
-    <style>
-    * {
-    font-family: 'Noto Sans KR Regular','Noto Sans CJK KR','Noto Sans KR','맑은 고딕',sans-serif;
-}
-
-#wrap {
-    overflow: hidden;
-    position: relative;
-    min-width: 1120px;
-    background-color: #fff;
-}
-
-#header {
-    left: 0;
-    z-index: 105;
-    width: 100%;
-    height: 129px;
-    border-bottom: 1px solid #fff;
-    background-color: #fff;
-    position: fixed;
-    top: 0px;
-}
-
-#header:before, #header > .b {
-    content: '';
-    position: absolute;
-    top: 59px;
-    right: 0;
-    left: 0;
-    height: 1px;
-    background-color: #ebebeb;
-}
-
-#header h1 {
-    display: block;
-    position: relative;
-    top: 18px;
-    width: 239px;
-    height: 25px;
-    margin: auto;
-}
-
-.innerwrap{
-    padding: 0 10px;
-    position: relative;
-    width: 1100px;
-    margin: auto;
-}
-
-#header .topLeftWrap {
-    position: absolute;
-    top: 18px;
-    left: 9px;
-    z-index: 100;
-}
-
-#header .topLeftWrap a {
-    display: block;
-    position: relative;
-    width: 160px;
-    height: 25px;
-    margin: auto;
-}
-
-.topMenuWrap {
-    position: absolute;
-    top: 18px;
-    right: 9px;
-    z-index: 100;
-}
-
-.topMenuWrap ul, .topMenuWrap li {
-    float: left;
-    padding: 0;
-    margin: 0;
-}
-
-.utilMenu {
-    margin: 2px 20px 0 0;
-}
-
-.utilMenu a, .utilMenu label {
-    color: #000;
-    font-size: 14px;
-}
-
-.topMenuWrap li{
-    list-style: none;
-}
-
-.topMenu li {
-    margin-right: 13px;
-}
-
-#gnb{
-    position: relative;
-    width: 1100px;
-    margin: auto;
-}
-
-.gnbList {
-    height: 70px;
-    margin: 0 100px;
-    text-align: center;
-    top: 58px;
-    position: absolute;
-    left: 28px;
-}
-
-
-.gnbList > li {
-    display: inline-block;
-    margin: 10px 25px;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: 700;
-}
-
-.gnbList * {
-    text-align: left;
-}
-
-.gnbList > li > a {
-    display: inline-block;
-    padding: 10px;
-    font-size: 20px;
-    transition: .2s color;
-}
-
-.contTopBar {
-    position: fixed;
-    top: 130px;
-    z-index: 99;
-    width: 100%;
-    height: 50px;
-    background-color: #2763ba;
-}
-
-.breadcrumb {
-    float: left;
-}
-
-.contUtilMenuWrap {
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
-    width: 800px;
-    height: 30px;
-    margin: 264px auto 0;
-}
-
-#content{
-    min-height: 800px;
-    word-spacing: 0;
-    letter-spacing: -.5px;
-    width: 1090px;
-    margin: auto;
-}
-
-#content.replaceUtilMenu {
-    margin-top: -48px;
-    padding-top: 0;
-}
-
-.contHeadingWrap {
-    overflow: hidden;
-    margin: -12px 0 9px;
-    top: 248px;
-}
-
-.contHeadingWrap > :first-child {
-    float: left;
-    font-size: 40px;
-    letter-spacing: -2px;
-}
-
-.myPage .row {
-    margin: -10px 0 0 -10px;
-}
-
-.myPage .row.col2 .item {
-    width: 294px;
-    border-top: 2px solid #2763ba;
-}
-
-.myPage .row .item {
-    float: left;
-    position: relative;
-    height: 215px;
-    margin: 10px 0 0 10px;
-    padding: 30px;
-    border: 1px solid #ccc;
-}
-
-.myPage .item .title {
-    margin-bottom: 25px;
-    font-size: 20px;
-    margin-top: -7px;
-}
-
-.noData {
-    padding: 35px 0;
-    text-align: center;
-}
-
-.myPage .item .more {
-    overflow: hidden;
-    position: absolute;
-    top: 28px;
-    right: 30px;
-    width: 20px;
-    height: 20px;
-    border: 1px solid #ccc;
-    color: transparent;
-    text-indent: 100%;
-    word-break: break-all;
-    white-space: nowrap;
-}
-
-.myPage .personal .btnWrap {
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
-    width: 335px;
-    margin-top: 0;
-}
-
-.myPage .personal [class*=btnType] {
-    float: left;
-    width: 149px;
-    margin: 0;
-}
-
-button[class*=btnType] {
-    line-height: normal;
-}
-
-.btnType01 {
-    border: 1px solid #ccc;
-}
-
-[class*=btnType] {
-    overflow: visible;
-    vertical-align: top;
-    height: 40px;
-    padding: 0 20px;
-    color: #000;
-    font-size: 16px;
-    text-align: center;
-    background-color: #fff;
-    cursor: pointer;
-}
-    </style>
-    <title>메인페이지</title>
+    <link rel="stylesheet" href="asset/css/mypage.css">
+    <link rel="stylesheet" href="asset/css/KDHfooter.css">
+    <title>마이페이지</title>
 </head>
 <body>
     <div id="wrap">
+        <a href="#content" class="skipToContent">본문으로 바로가기</a>
         <header id="header">
             <div class="innerwrap">
+                <h1><a href="mainpage.jsp" class="hideTxt">서울대학교병원</a></h1>
                 <div class="topLeftWrap">
                     <a class="hideTxt">
                         <img src="https://www.snuh.org/asset/img/common/outcomesbook_bt.png">
@@ -286,7 +38,7 @@ button[class*=btnType] {
                             <a>로그아웃</a>
                         </li>
                         <li>
-                            <a>마이페이지</a>
+                            <a href="mainpage.html">마이페이지</a>
                         </li>
                         <li>
                             <a>Language</a>
@@ -297,35 +49,90 @@ button[class*=btnType] {
 <!--                     <button class="totMenuBtn hideTxt" type="button" aria-controls="totMenu">
                     </button> -->
                     <!-- 전체 메뉴 아이콘 집어넣어야함 -->
+                    <button class="totMenuBtn hideTxt" type="button" aria-controls="totMenu">전체 메뉴 열기</button>
                     <ul class="gnbList clearFix">
                         <li>
-                            <a>진료안내</a>
+                            <a href="">진료안내</a>
                         </li>
                         <li>
-                            <a>이용안내</a>
+                            <a href="">이용안내</a>
                         </li>
                         <li>
-                            <a>건강정보</a>
+                            <a href="">건강정보</a>
                         </li>
                         <li>
-                            <a>고객참여</a>
+                            <a href="">고객참여</a>
                         </li>
                         <li>
-                            <a>병원소개</a>
+                            <a href="">병원소개</a>
                         </li>
                     </ul>
                 </nav>
             </div>
         </header>
-        <div class="contTopBar">
+        <div class="contTopBar" style="position: fixed; top:130px;">
             <div class="innerWrap clearFix">
-<!--                <div class="breadcrumb">
-                파란띠
-                </div> -->
+                <!-- breadcrumb -->
+                <div class="breadcrumb">
+                    <strong class="hideEl">현재 위치: </strong>
+                    <a href="mainpage.jsp" class="bcHomeBtn hideTxt">HOME</a>
+                    <span class="hideEl">&gt;</span>
+                    
+                    <div class="">
+                        <em>마이페이지</em>
+                        <button type="button" class="bcLinkLayerBtn hideTxt">주 메뉴 목록 열기</button>
+                        <!-- bcLinkLayer -->
+                        <ul class="bcLinkLayer" role="region" aria-hidden="true" aria-expanded="false" style="display: none;">
+                                
+                            <li><a href="mypage.jsp">마이페이지</a></li>
+                            
+                                
+                        </ul>
+                        <!-- //bcLinkLayer -->
+                    </div>
+                    <span class="hideEl">&gt;</span>
+                    <div class="">
+                        <em>마이페이지</em>
+                        <button type="button" class="bcLinkLayerBtn hideTxt">서브 메뉴 목록 열기</button>
+                        <!-- bcLinkLayer -->
+                        <ul class="bcLinkLayer" role="region" aria-hidden="true" aria-expanded="false" style="display: none;" tabindex="0">
+					
+                            <li><a href="mypage.jsp">마이페이지</a></li>
+                            <li><a href="newreservation.jsp">예약확인/취소</a></li>
+                            <li><a href="profilechange.jsp">개인정보수정</a></li>
+                            <li><a href="">회원탈퇴</a></li>
+                            
+                        </ul>
+                        <!-- //bcLinkLayer -->
+                    </div>
+                    <span class="hideEl">&gt;</span>
+                </div>
+                <!-- //breadcrumb -->
+                <!-- bcQuickMenu -->
+                <ul class="bcQuickMenu">
+                    <li class=""><a href="reservation.jsp">진료예약</a></li>
+                    <li><a href="newreservation.jsp">예약조회</a></li>
+                </ul>
             </div>
         </div>
         <div class="contUtilMenuWrap">
-
+            <ul class="contUtilMenu">
+                <!-- <li class="pagePrint" style="display: list-item;">
+                    <a href="" role="button">인쇄</a>
+                </li>
+                <li class="likeContent">
+                    <a href="" role="button" id="interestCont" onclick="append()">관심콘텐츠</a>
+                </li>
+                <li class="copyURL lastChild" style="display: list-item;">
+                    <a href="" role="button" onclick="paste()">URL복사</a>                    
+                </li>
+                <li class="zoomOut" style="display: list-item;">
+                    <button type="button" class="hideTxt" disabled></button>
+                </li>
+                <li class="zoomIn" style="display: list-item;">
+                    <button type="button" class="hideTxt"></button>
+                </li> -->
+            </ul>
         </div>
         <main id="content" class="myPage replaceUtilMenu"> 
             <div class="contHeadingWrap">
@@ -333,19 +140,22 @@ button[class*=btnType] {
             </div>
             <div class="row col2 clearFix">
                 <div class="item">
-                    <h3 class="title">진료예약확인</h3>
+                    <h3 class="title">
+                    	<a href="" style="cursor:poiner">진료예약확인</a>
+                    </h3>
                     <p class="noData">조회 가능한 진료 예약이 없습니다.</p>
-                    <a role="button" class="more"></a>
                 </div>
                 <div class="item">
-                    <h3 class="title">최근 진료이력조회</h3>
+                    <h3 class="title">
+                    	<a href="" style="cursor:poiner">최근 진료이력조회</a>
+                    </h3>
                     <p class="noData">최근 1년간 수진이력이 존재하지 않습니다.</p>
-                    <a role="button" class="more"></a>
                 </div>
                 <div class="item">
-                    <h3 class="title">처방전 조회</h3>
+                    <h3 class="title">
+                    	<a href="" style="cursor:poiner">처방전 조회</a>
+                    </h3>
                     <p class="noData">조회 가능한 처방전이 없습니다.</p>
-                    <a role="button" class="more"></a>
                 </div>
                 <div class="item">
                     <h3 class="title">주치의 정보</h3>
@@ -359,10 +169,10 @@ button[class*=btnType] {
                         원하실 경우 아래의 버튼을 클릭해주세요.
                     </p>
                     <div class="btnWrap">
-                        <button type="button" class="btnType01" onclick="location.href='profilechange.jsp'">
+                        <button type="button" class="btnType01" onclick="location.href='profilechange.html'">
                             회원정보 수정
                         </button>
-                        <button type="button" class="btnType01" onclick="location.href='passwordchange.jsp'">
+                        <button type="button" class="btnType01" onclick="location.href='passwordchange.html'">
                             비밀번호 변경
                         </button>
                     </div>
@@ -381,5 +191,66 @@ button[class*=btnType] {
             </div>
         </main>
     </div>
+    <footer id="footer">
+        <div class="ftMenuWrap">
+            <div class="footerMenu">
+                <div class="innerWrap clearFix">
+                    <ul class="ftMenuList01">
+                        <li><a href="//child.snuh.org/main.do" target="_blank">어린이병원</a></li>
+                        <li><a href="//cancer.snuh.org/main.do" target="_blank">암병원</a></li>
+                        <li><a href="//www.snubh.org/" target="_blank">분당서울대병원</a></li>
+                        <li><a href="//www.brmh.org/" target="_blank">보라매병원</a></li>
+                        <li><a href="//healthcare.snuh.org/" target="_blank">강남센터</a></li>
+                        <li><a href="http://medicine.snu.ac.kr" target="_blank">서울대학교의과대학</a></li>
+                    </ul>
+                    <ul class="ftMenuList02">
+                        <li><a href="#ftMenuCol01" class="" title="진료과 메뉴 레이어 열기">진료과</a></li>
+                        <li><a href="#ftMenuCol02" class="" title="주요센터 메뉴 레이어 열기">주요센터</a></li>
+                        <li><a href="#ftMenuCol03" class="" title="주요부서 메뉴 레이어 열기">주요부서</a></li>
+                        <li><a href="#ftMenuCol04" class="" title="주요서비스 메뉴 레이어 열기">주요서비스</a></li>
+                        <li><a href="#ftMenuCol05" class="" title="패밀리사이트 메뉴 레이어 열기">패밀리사이트</a></li>
+                    </ul>
+                    <div class="ftMenuLayer clearFix" role="region" aria-hidden="true" aria-expanded="false" style="display: none; visibility: visible;"></div>
+                </div>
+            </div>
+        </div>
+        <ul class="innerWrap footerLink">
+            <li><a href="/reservation/unPaid/list.do" class="colorPoint04" target="_blank">비급여진료비용</a></li>
+            <li><a href="/content/M004005.do" target="_blank">환자권리장전</a></li>
+            <li><a href="/footer/service.do" target="_blank">이용약관</a></li>
+            <li><a href="/footer/privacy.do" class="colorPoint04" target="_blank">개인정보 처리방침</a></li>
+            <li><a href="/content/M004006002.do" target="_blank">정보공개</a></li>
+            <li><a href="/" data-layer="layerEmail" class="layerBtn">정보무단수집거부공개</a></li>
+            <li><a href="/" data-layer="layerDown" class="layerBtn">뷰어 다운로드</a></li>
+            <li><a href="//nrefer.snuh.org" target="_blank">진료협력센터</a></li>
+            <li><a href="//funeral.snuh.org/main.do" target="_blank">장례식장</a></li>
+        </ul>
+        <div class="footerInfo">
+            <div class="innerWrap">
+                <address class="clearfix">
+                    <p>주소 : 03080 서울특별시 종로구 대학로 101(연건동 28)</p>
+                    <p>대표전화 : <a href="tel:1588-5700">1588-5700</a></p>
+                    <p>
+                        <a href="/login.do?retUrl=/content/M005009.do">홈페이지 의견접수</a>
+                    </p>
+                </address>
+                <p class="copyright">COPYRIGHT 2010 SEOUL NATIONAL UNIVERSITY HOSPITAL. ALL RIGHTS RESERVED</p>
+                <ul class="awardList">
+                    <li class="item05 hideTxt"><a href="/board/B003/view.do?viewType=true&ampbbs_no=5224">전자의무기록시스템</a></li>
+                    <li class="item01 hideTxt"><a href="/board/B003/view.do?bbs_no=1509">보건복지부 제 1호</a></li>
+                    <li class="item04 hideTxt" name="ismsTxt"><a href="#ismsTxt" class="ismsTxtBtn">서울대학교병원 정보보호 관리체계(ISMS) 인증
+                        [유효기간] 2021.02.17 ~ 2024.02.16 
+                        [인증범위] 의료정보시스템(EMR,OCS),홈페이지 및 모바일 애플리케이션  운영</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="ftIsmsTxt">
+            <p>서울대학교병원 정보보호 관리체계(ISMS) 인증<br>
+                [유효기간] 2021.02.17 ~ 2024.02.16<br> 
+                [인증범위] 의료정보시스템(EMR,OCS),홈페이지 및 모바일 애플리케이션 운영</p>
+        </div>   
+    </footer>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="asset/js/allFAQ.js"></script>
 </html>
