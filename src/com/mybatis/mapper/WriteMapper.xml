@@ -3,9 +3,9 @@
 <mapper namespace="Write">
    <!-- 글 작성 -->
    <insert id="write" parameterType="writeVO">
-      insert into tbl_member
-      (member_id, member_name, member_pw, member_gender, member_address, member_address_detail)
-      values(#{memberId}, #{memberName}, #{memberPw}, #{memberGender}, #{memberAddress}, #{memberAddressDetail})
+      insert into write
+      (title, content, id, time)
+      values(#{title}, #{content}, #{id}, #{time})
    </insert>
    
 </mapper>
