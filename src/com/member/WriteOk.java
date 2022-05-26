@@ -22,7 +22,7 @@ public class WriteOk implements Action{
 		writeVO.setId(req.getParameter("writeId"));
 		writeVO.setTime(req.getParameter("writeTime"));
 		writeVO.setTitle(req.getParameter("writeTitle"));
-		writeVO.setWriteNum(req.getParameter("writeNum"));
+		writeVO.setWriteNum(Integer.parseInt(req.getParameter("writeNum")));
 
 		writeDAO.write(writeVO);
 		
