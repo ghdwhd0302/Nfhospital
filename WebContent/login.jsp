@@ -19,44 +19,44 @@
 </head>
 <body>
 	<jsp:include page="header.jsp" />
+	<div class="wrap">
 
-	<div class="background">
+		<div class="logBox1">
+			<div class="logBox">
+				<p class="regularTxt"
+					style="text-align: center; font-size: 30px; margin-top: 15%;">
+					<strong>로그인</strong>
+				</p>
+				<p class="colorPoint02" style="text-align: center; font-size: 20px">
+					서울대학교병원 홈페이지 회원 서비스는<br>로그인 후 이용하실 수 있습니다.
+				</p>
+				<form id="memberVo" action="mainpage.jsp" method="post">
+					<input id="retUrl" name="retUrl" type="hidden" value="">
+					<div>
+						<input id="id" name="id" placeholder="아이디/진찰권 번호(환자번호)"
+							class="inputText" type="text" value="">
+					</div>
+					<div>
+						<input id="pass" name="pass" onkeydown="check();"
+							placeholder="비밀번호" class="inputText" type="password" value="">
+					</div>
+					<button type="button" id="loginBtn" class="btnType03 btnBig">로그인</button>
 
-		<div class="logBox">
-			<p class="regularTxt" style="text-align: center; font-size: 30px;margin-top: 15%;">
-				<strong>로그인</strong>
-			</p>
-			<p class="colorPoint02" style="text-align: center; font-size: 20px">
-				서울대학교병원 홈페이지 회원 서비스는<br>로그인 후 이용하실 수 있습니다.
-			</p>
-			<form id="memberVo" action="mainpage.jsp" method="post">
-				<input id="retUrl" name="retUrl" type="hidden" value="">
-				<div>
-					<input id="id" name="id" placeholder="아이디/진찰권 번호(환자번호)"
-						class="inputText" type="text" value="">
-				</div>
-				<div>
-					<input id="pass" name="pass" onkeydown="check();"
-						placeholder="비밀번호" class="inputText" type="password" value="">
-				</div>
-				<button type="button" id="loginBtn" class="btnType03 btnBig">로그인</button>
+				</form>
 
-			</form>
-			
-				
-			<div class="telBox">
-				<div class="Box1">
-				<a href="regi1.jsp" >회원가입</a> 
-				<a href="findid.jsp">아이디/비밀번호 찾기</a>
-				</div>
-				
-				
+
+				<div class="telBox">
+					<div class="Box1">
+						<a href="regi1.jsp">회원가입</a> <a href="findid.jsp">아이디/비밀번호 찾기</a>
+					</div>
+
+
 				</div>
 			</div>
-
 		</div>
+		<jsp:include page="footer.jsp" />
 	</div>
 
-	<jsp:include page="footer.jsp" />
+
 </body>
 </html>

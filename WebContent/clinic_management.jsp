@@ -13,7 +13,9 @@
     <div id="wrap">
       <aside>
         <div id="topic_list" class="list">
-          <div id="aside_blank"></div>
+          <div id="aside_blank">
+            <img src="asset/img/hospital_logo.png"><div style="padding-right:48px;background-color: #627f9b;">서울 병원</div>	
+          </div>
           <div class="employee_page">관리자</div>
           <nav class="sub_nav">
           <ul id="topic_list_tree" class="tree">
@@ -42,9 +44,9 @@
           </nav>
         </div>
       </aside>
-      <header>
+      <header style="background-color: #627f9b82;">
        <div id="doc_name">
-        장준혁 님(jjh1234)
+        <b>장준혁 님(jjh1234)</b>
        </div>
       </header>
       <section>
@@ -66,8 +68,8 @@
                   <tr>
                     <th>
                       <a href="patient_wait.jsp">윤요정</a>
-                       <img src="asset/img/call.png" id="call_img" >
-                       <img src="asset/img/memo.png" >
+                      <input type="image" name="button" class="memo-button" src="asset/img/memo.png">
+                      <input type="image" name="button" class="call-button" src="asset/img/call.png">
                     </th>
                   </tr>
                 </thead>
@@ -77,79 +79,79 @@
                   </tr>
                 </tbody>
               </table>
-            <table>
-             <thead>
-               <tr>
-                 <th>
-                   
-                    <img src="asset/img/call.png" id="call_img" >
-                    <img src="asset/img/memo.png" >
-                 </th>
-               </tr>
-             </thead>
-             <tbody>
-               <tr>
-                 <td></td>
-               </tr>
-             </tbody>
-           </table>
-           <table>
-             <thead>
-               <tr>
-                 <th>
-                   
-                    <img src="asset/img/call.png" id="call_img" >
-                    <img src="asset/img/memo.png" >
-                 </th>
-               </tr>
-             </thead>
-             <tbody>
-               <tr>
-                 <td></td>
-               </tr>
-             </tbody>
-           </table>
-           <table>
-             <thead>
-               <tr>
-                 <th>
-                   
-                    <img src="asset/img/call.png" id="call_img" >
-                    <img src="asset/img/memo.png" >
-                 </th>
-               </tr>
-             </thead>
-             <tbody>
-               <tr>
-                 <td></td>
-               </tr>
-             </tbody>
-           </table>
-           <table>
-             <thead>
-               <tr>
-                 <th>
-                   
-                    <img src="asset/img/call.png" id="call_img" >
-                    <img src="asset/img/memo.png" >
-                 </th>
-               </tr>
-             </thead>
-             <tbody>
-               <tr>
-                 <td></td>
-               </tr>
-             </tbody>
-           </table>
-           </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      <a href="patient_wait.jsp">윤요정</a>
+                      <input type="image" name="button" class="memo-button" src="asset/img/memo.png">
+                      <input type="image" name="button" class="call-button" src="asset/img/call.png">
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      <a href="patient_wait.jsp">윤요정</a>
+                      <input type="image" name="button" class="memo-button" src="asset/img/memo.png">
+                      <input type="image" name="button" class="call-button" src="asset/img/call.png">
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      <a href="patient_wait.jsp">윤요정</a>
+                      <input type="image" name="button" class="memo-button" src="asset/img/memo.png">
+                      <input type="image" name="button" class="call-button" src="asset/img/call.png">
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      <a href="patient_wait.jsp">윤요정</a>
+                      <input type="image" name="button" class="memo-button" src="asset/img/memo.png">
+                      <input type="image" name="button" class="call-button" src="asset/img/call.png">
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <div class="tables">
               <table>
                 <thead>
                   <tr>
                     <th>
-                      
-                       <img src="asset/img/call.png" id="call_img" >
-                       <img src="asset/img/memo.png" >
+                      <a href="patient_wait.jsp">윤요정</a>
+                      <input type="image" name="button" class="memo-button" src="asset/img/memo.png">
+                      <input type="image" name="button" class="call-button" src="asset/img/call.png">
                     </th>
                   </tr>
                 </thead>
@@ -159,95 +161,105 @@
                   </tr>
                 </tbody>
               </table>
-            <table>
-             <thead>
-               <tr>
-                 <th>
-                   
-                    <img src="asset/img/call.png" id="call_img" >
-                    <img src="asset/img/memo.png" >
-                 </th>
-               </tr>
-             </thead>
-             <tbody>
-               <tr>
-                 <td></td>
-               </tr>
-             </tbody>
-           </table>
-           <table>
-             <thead>
-               <tr>
-                 <th>
-                   
-                    <img src="asset/img/call.png" id="call_img" >
-                    <img src="asset/img/memo.png" >
-                 </th>
-               </tr>
-             </thead>
-             <tbody>
-               <tr>
-                 <td></td>
-               </tr>
-             </tbody>
-           </table>
-           <table>
-             <thead>
-               <tr>
-                 <th>
-                   
-                    <img src="asset/img/call.png" id="call_img" >
-                    <img src="asset/img/memo.png" >
-                 </th>
-               </tr>
-             </thead>
-             <tbody>
-               <tr>
-                 <td></td>
-               </tr>
-             </tbody>
-           </table>
-           <table>
-             <thead>
-               <tr>
-                 <th>
-                   
-                    <img src="asset/img/call.png" id="call_img" >
-                    <img src="asset/img/memo.png" >
-                 </th>
-               </tr>
-             </thead>
-             <tbody>
-               <tr>
-                 <td></td>
-               </tr>
-             </tbody>
-           </table>
-           </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      <a href="patient_wait.jsp">윤요정</a>
+                      <input type="image" name="button" class="memo-button" src="asset/img/memo.png">
+                      <input type="image" name="button" class="call-button" src="asset/img/call.png">
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      <a href="patient_wait.jsp">윤요정</a>
+                      <input type="image" name="button" class="memo-button" src="asset/img/memo.png">
+                      <input type="image" name="button" class="call-button" src="asset/img/call.png">
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      <a href="patient_wait.jsp">윤요정</a>
+                      <input type="image" name="button" class="memo-button" src="asset/img/memo.png">
+                      <input type="image" name="button" class="call-button" src="asset/img/call.png">
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      <a href="patient_wait.jsp">윤요정</a>
+                      <input type="image" name="button" class="memo-button" src="asset/img/memo.png">
+                      <input type="image" name="button" class="call-button" src="asset/img/call.png">
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
           </div>
         </div>
 
       </div>
      </section>
-     <!-- <section class="layer">
-       <div class="layer_wrap">
-         <h4>의료진 메모 입력</h4>
-           <div>
-             <table>
-               <tr>
-                <th>작성자</th>
-                 <td></td>
-               </tr>
-               <tr>
-                <th>내용</th>
-                <td><textarea name="memo" id="memo" cols="30" rows="10"></textarea></td>
-               </tr>
-             </table>
-           </div> 
-            <button>취소</button>
-            <button>확인</button>
-       </div>
-     </section> -->
+     <!-- layerContent -->
+     <!-- 답장 -->
+     <div class="modal hidden">
+      <div class="bg"></div>
+      <div class="modalBox">
+        <h1>답장 보내기</h1>
+        <table class="modal_table">
+          <tr>
+            <th>이름</th>
+            <td class="modal_td"><input type="text" name="name"></td>
+          </tr>
+          <tr>
+            <th>연락처</th>
+            <td class="modal_td"><input type="text" name="phone"></td>
+          </tr>
+        </table>
+        <form>
+          <p>
+            <textarea class="modal_textarea" cols="50" rows="25"></textarea>
+          </p>
+        </form>
+        <button class="closeBtn">확인</button>
+      </div>
     </div>
+    <!-- 전화 -->
+     
+     <!-- //layerContent -->
+      </div>
 </body>
+<script src="asset/js/clinic_management.js"></script>
 </html>
