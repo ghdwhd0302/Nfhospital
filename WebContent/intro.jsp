@@ -19,9 +19,11 @@
         <a href="#content" class="skipToContent">본문으로 바로가기</a>
         <header id="header">
             <div class="innerwrap">
-                <h1><a href="/main.do" class="hideTxt">서울대학교병원</a></h1>
+                <h1><a href="mainpage.jsp">서울 병원</a></h1>
                 <div class="topLeftWrap">
-                    <a href="https://dept.snuh.org/dept/OC/index.do" class="hideTxt" id="outcomes">Outcomes Book</a>
+                    <a href="mainpage.jsp">
+	                	<img src="./asset/img/hospital_logo.png" style="width: 30px; height: 30px;">
+                    </a>
                 </div>
                 <div class="topMenuWrap">
                     <ul class="utilMenu">
@@ -31,10 +33,10 @@
                     </ul>
                     <ul class="topMenu">
                         <li>
-                            <a>로그아웃</a>
+                            <a href="mainpage.jsp">로그아웃</a>
                         </li>
                         <li>
-                            <a>마이페이지</a>
+                            <a href="mypage.jsp">마이페이지</a>
                         </li>
                         <li>
                             <a>Language</a>
@@ -81,7 +83,7 @@
                         <ul class="bcLinkLayer" role="region" aria-hidden="true" aria-expanded="false" style="display: none;">
                                 
                             <li><a href="medicalInfo.jsp">진료안내</a></li>
-                            <li><a href="/">이용안내</a></li>
+                            <li><a href="allFAQ.jsp">이용안내</a></li>
                             <li><a href="clientSound.jsp">고객참여</a></li>
                             <li><a href="intro.jsp">병원소개</a></li>
                             
@@ -128,28 +130,28 @@
                 <h2>병원개요</h2>
             </div>
             <div class="contTitleWrap">
-                <h3>서울대학교병원의 어제 오늘 그리고 미래</h3>
+                <h3>서울병원의 어제 오늘 그리고 미래</h3>
             </div>
             <div class="imgWrap1">
                 <img src="http://www.snuh.org/asset/img/about/img_overview01.jpg">
             </div>
             <p class="lightTxtIntro">
-                지난 한세기 서울대학교병원은 국민의 건강과 생명을 지키고
+                지난 한세기 서울병원은 국민의 건강과 생명을 지키고
                 <br>
                 우리나라 의학발전을 선도해 왔습니다.
             </p>
             <p>
                 1885년, 한국 최초의 서양식 국립병원인 제중원에서 출발하여
                 <br>
-                1978년, 특수법인 서울대학교병원으로 개편해 오늘에 이르고 있습니다.
+                1978년, 특수법인 서울병원으로 개편해 오늘에 이르고 있습니다.
             </p>
             <p>
-                현재 서울대학교병원은 본원을 비롯한 어린이병원, 암병원 그리고 의생명연구원
+                현재 서울병원은 본원을 비롯한 어린이병원, 암병원 그리고 의생명연구원
                 으로 구성되어 있습니다. 1,751개 병상을 운영하고 있으며 1일&nbsp;9,000명의
                  외래환자를 1,800명의 의사 등 8천명의 직원이 돌보고 있습니다.
             </p>
             <p>
-                서울대학교병원은 인류의 건강을 수호하는 세계 속의 병원으로 힘차게 전진해
+                서울병원은 인류의 건강을 수호하는 세계 속의 병원으로 힘차게 전진해
                 나가고 있으며,
                 <br>
                 특히
@@ -164,7 +166,7 @@
             </div>
             <div class="contTextWrap alignC">
                 <p>
-                    서울대학교병원은 교육법에 의한 의학, 간호학 및 약학 등에 관한 교육, 
+                    서울병원은 교육법에 의한 의학, 간호학 및 약학 등에 관한 교육, 
                     연구와 진료를 통하여
                     <br>
                     의학발전을 도모하고 국민보건향상에 기여함을 목적으로 한다.
