@@ -19,9 +19,11 @@
         <a href="#content" class="skipToContent">본문으로 바로가기</a>
         <header id="header">
             <div class="innerwrap">
-                <h1><a href="mainpage.jsp" class="hideTxt">서울대학교병원</a></h1>
+                <h1><a href="mainpage.jsp">서울 병원</a></h1>
                 <div class="topLeftWrap">
-                    <a href="https://dept.snuh.org/dept/OC/index.do" class="hideTxt" id="outcomes">Outcomes Book</a>
+                   <a href="mainpage.jsp">
+	                	<img src="./asset/img/hospital_logo.png" style="width: 30px; height: 30px;">
+                    </a>
                 </div>
                 <div class="topMenuWrap">
                     <ul class="utilMenu">
@@ -31,10 +33,10 @@
                     </ul>
                     <ul class="topMenu">
                         <li>
-                            <a>로그아웃</a>
+                            <a href="mainpage.jsp">로그아웃</a>
                         </li>
                         <li>
-                            <a>마이페이지</a>
+                            <a href="mypage.jsp">마이페이지</a>
                         </li>
                         <li>
                             <a>Language</a>
@@ -72,7 +74,7 @@
                 <!-- breadcrumb -->
                 <div class="breadcrumb">
 			<strong class="hideEl">현재 위치: </strong>
-			<a href="/" class="bcHomeBtn hideTxt">HOME</a>
+			<a href="mainpage.jsp" class="bcHomeBtn hideTxt">HOME</a>
 			<span class="hideEl">&gt;</span>
 			
 			<div class="">
@@ -81,8 +83,8 @@
 				<!-- bcLinkLayer -->
 				<ul class="bcLinkLayer" role="region" aria-hidden="true" aria-expanded="false">
 					
-					<li><a href="medicalInfo.jsp">진료안내</a></li>
-                            <li><a href="/">이용안내</a></li>
+                            <li><a href="medicalInfo.jsp">진료안내</a></li>
+                            <li><a href="allFAQ.jsp">이용안내</a></li>
                             <li><a href="clientSound.jsp">고객참여</a></li>
                             <li><a href="intro.jsp">병원소개</a></li>
 					 
@@ -127,8 +129,8 @@
                 <!-- //breadcrumb -->
                 <!-- bcQuickMenu -->
                 <ul class="bcQuickMenu">
-                    <li class=""><a href="/reservation/reservation.do">진료예약</a></li>
-                    <li><a href="/reservation/confirm/rsvConfirm.do">예약조회</a></li>
+                    <li class=""><a href="reservation.jsp">진료예약</a></li>
+                    <li><a href="newreservation.jsp">예약조회</a></li>
                 </ul>
                 <!-- //bcQuickMenu -->
             </div>
@@ -184,7 +186,7 @@
                 </li> 
                 <li> 
                     <div class="title"><i>04</i>우편</div> 
-                    <p>서울 종로구 대학로 101번지<br> 서울대학교병원 CS팀 고객상담실</p> 
+                    <p>서울 종로구 대학로 101번지<br> 서울병원 CS팀 고객상담실</p> 
                 </li> 
                 <li> 
                     <div class="title"><i>05</i>건의함</div> 
@@ -195,7 +197,7 @@
                         <i>06</i>
                         인터넷
                     </div> 
-                    <p>서울대학교병원 홈페이지<br> (고객참여 &gt; 고객의 소리)
+                    <p>서울병원 홈페이지<br> (고객참여 &gt; 고객의 소리)
                     </p> 
                     <a href="mainpage.jsp" role="button" class="btnType03">
                         <span class="btnIconLink">바로가기</span>
