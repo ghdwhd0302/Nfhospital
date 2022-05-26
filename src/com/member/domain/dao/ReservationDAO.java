@@ -14,12 +14,12 @@ public class ReservationDAO {
 		sqlSession = sqlSessionFactory.openSession(true);
 	}
 	
-	public void reservation(ReservationVO reservationVO) {
-		sqlSession.insert("Member.reservation", reservationVO);
+	public void add(ReservationVO reservationVO) {
+		sqlSession.insert("Reservation.add", reservationVO);
 	}
 	
 	public boolean checkID(String id) {
-		return (Integer)sqlSession.selectOne("Member.checkId", id) == 1;
+		return (Integer)sqlSession.selectOne("Reservation.view", id) == 1;
 	}
 	
 	
