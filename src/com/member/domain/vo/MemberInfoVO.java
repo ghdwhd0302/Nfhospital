@@ -7,7 +7,7 @@ public class MemberInfoVO {
 	private String residentNum;
 	private String email;
 	private String address;
-	private String phonNum;
+	private String phoneNum;
 	private String addPhoneNum;
 	private String birth;
 	private String gender;
