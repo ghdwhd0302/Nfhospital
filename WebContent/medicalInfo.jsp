@@ -19,9 +19,11 @@
         <a href="#content" class="skipToContent">본문으로 바로가기</a>
          <header id="header">
             <div class="innerwrap">
-                <h1><a href="mainpage.jsp" class="hideTxt">서울대학교병원</a></h1>
+                <h1><a href="mainpage.jsp">서울 병원</a></h1>
                 <div class="topLeftWrap">
-                    <a href="https://dept.snuh.org/dept/OC/index.do" class="hideTxt" id="outcomes">Outcomes Book</a>
+                    <a href="mainpage.jsp">
+	                	<img src="./asset/img/hospital_logo.png" style="width: 30px; height: 30px;">
+                    </a>
                 </div>
                 <div class="topMenuWrap">
                     <ul class="utilMenu">
@@ -182,7 +184,7 @@
                     <li class="">암병원: [암병원] 1층 로비</li>
                     </ul></li> 
                 <li class="skin02"><em>전화예약</em> 
-                    <p>서울대학교병원 <span class="colorPoint">예약센터(<a href="tel:1588-5700">1588-5700</a>)</span>에서 예약을 안내해드립니다.</p> 
+                    <p>서울병원 <span class="colorPoint">예약센터(<a href="tel:1588-5700">1588-5700</a>)</span>에서 예약을 안내해드립니다.</p> 
                     <ul class="listType01"> 
                     <li class="">평일: 오전 9시 ~ 오후 6시</li> 
                     <li class="">토요일: 오전 9시 ~ 오후 1시&nbsp;</li> 
@@ -193,7 +195,7 @@
                     인터넷예약은 <span class="colorPoint">24시간 이용</span>하실 수 있습니다.&nbsp;</p> 
                     <div class="btnWrap alignL"> <span class="btnIconLink"><a href="reservation.jsp" role="button" class="btnType03 btnSmall">인터넷 예약하기</a></span></div></li> 
                 <li class="skin04"><em>앱예약</em> 
-                    <p>서울대학교병원&nbsp; 핸드폰 어플리케이션을 <span class="colorPoint">구글플레이 또는 앱스토어에서 다운로드 </span>받으신 후 이용하실 수 있습니다. 어플리케이션을 통한 예약은<span class="colorPoint"> 24시간 이용</span>하실 수 있습니다.<br>
+                    <p>서울병원&nbsp; 핸드폰 어플리케이션을 <span class="colorPoint">구글플레이 또는 앱스토어에서 다운로드 </span>받으신 후 이용하실 수 있습니다. 어플리케이션을 통한 예약은<span class="colorPoint"> 24시간 이용</span>하실 수 있습니다.<br>
                     <img src="http://www.snuh.org/upload/editor/images/000018/20190607105542236_TIV3L51N.jpg" title="" alt="" style="vertical-align: baseline; border: 0px solid rgb(0, 0, 0);"></p></li> 
                 <li class="skin05"><em>1,2차 의료기관 의뢰</em> 
                     <p>1.2차 의료기관에서 <span class="colorPoint">요양급여의뢰서(진료의뢰서)를 발급받으신 초진 환자</span>는 진료협력센터를 통해 예약 가능합니다.<br> ※의뢰서 미소지 시 상담이 제한 될 수 있습니다.</p> 
