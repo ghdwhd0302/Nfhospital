@@ -15,11 +15,7 @@ public class WriteDAO {
 	}
 	
 	public void write(WriteVO writeVO) {
-		sqlSession.insert("Member.write", writeVO);
-	}
-	
-	public boolean checkID(String writeNum) {
-		return (Integer)sqlSession.selectOne("Member.checkId", writeNum) == 1;
+		sqlSession.insert("Write.write", writeVO);
 	}
 
 }
