@@ -34,7 +34,7 @@
 .topMenuWrap {
     position: absolute;
     top: 18px;
-    right: 9px;
+    right: 200px;
     z-index: 100;
 }
 
@@ -417,13 +417,15 @@ p{
 }
 
 #header h1 a{
-    display: block;
+   display: block;
     position: relative;
-    top: 0px;
+    top: -12px;
+    right: -10px;
     width: 239px;
     height: 25px;
     margin: auto;
-    background: url("http://www.snuh.org/asset/img/common/spr_common.png") no-repeat 0 0;
+     font-weight: 700;
+    color: #2763ba;
 }
 
 #header .topLeftWrap {
@@ -440,7 +442,6 @@ p{
     width: 160px;
     height: 25px;
     margin: auto;
-    background: url("http://www.snuh.org/asset/img/common/outcomesbook_bt.png") no-repeat 0 0;
 }
 
 #gnb > button[class*=tot]{
