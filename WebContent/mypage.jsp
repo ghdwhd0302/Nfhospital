@@ -38,7 +38,7 @@
                             <a>로그아웃</a>
                         </li>
                         <li>
-                            <a href="mainpage.html">마이페이지</a>
+                            <a href="mainpage.jsp">마이페이지</a>
                         </li>
                         <li>
                             <a>Language</a>
@@ -169,10 +169,10 @@
                         원하실 경우 아래의 버튼을 클릭해주세요.
                     </p>
                     <div class="btnWrap">
-                        <button type="button" class="btnType01" onclick="location.href='profilechange.html'">
+                        <button type="button" class="btnType01" onclick="location.href='profilechange.jsp'">
                             회원정보 수정
                         </button>
-                        <button type="button" class="btnType01" onclick="location.href='passwordchange.html'">
+                        <button type="button" class="btnType01" onclick="location.href='passwordchange.jsp'">
                             비밀번호 변경
                         </button>
                     </div>
