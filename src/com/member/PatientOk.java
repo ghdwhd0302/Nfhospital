@@ -33,7 +33,7 @@ public class PatientOk implements Action{
 		patientListVO.setSymptom(req.getParameter("patientlistSymptom"));
 		patientListVO.setTemperature(Double.parseDouble(req.getParameter("patientlistTemperature")));
 		
-		patientListDAO.list(patientListVO);
+		patientListDAO.add(patientListVO);
 		
 		req.setAttribute("patientlistName", patientListVO.getName());
 		
