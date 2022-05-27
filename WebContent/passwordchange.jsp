@@ -21,10 +21,10 @@
         <a href="#content" class="skipToContent">본문으로 바로가기</a>
         <header id="header">
             <div class="innerwrap">
-                <h1><a href="mainpage.jsp" class="hideTxt">서울대학교병원</a></h1>
+                <h1><a href="mainpage.jsp" >서울 병원</a></h1>
                 <div class="topLeftWrap">
-                    <a class="hideTxt">
-                        <img src="https://www.snuh.org/asset/img/common/outcomesbook_bt.png">
+                    <a href="mainpage.jsp">
+                        <img src="./asset/img/hospital_logo.png" style="width: 30px; height: 30px;">
                     </a>
                 </div>
                 <div class="topMenuWrap">
@@ -50,19 +50,19 @@
                     <button class="totMenuBtn hideTxt" type="button" aria-controls="totMenu">전체 메뉴 열기</button>
                     <ul class="gnbList clearFix">
                         <li>
-                            <a href="">진료안내</a>
+                            <a href="medicalInfo.jsp">진료안내</a>
                         </li>
                         <li>
-                            <a href="">이용안내</a>
+                            <a href="allFAQ.jsp">이용안내</a>
                         </li>
                         <li>
                             <a href="">건강정보</a>
                         </li>
                         <li>
-                            <a href="">고객참여</a>
+                            <a href="clientSound.jsp">고객참여</a>
                         </li>
                         <li>
-                            <a href="">병원소개</a>
+                            <a href="intro.jsp">병원소개</a>
                         </li>
                     </ul>
                 </nav>
