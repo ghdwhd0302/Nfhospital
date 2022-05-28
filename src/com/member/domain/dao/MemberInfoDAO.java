@@ -1,5 +1,7 @@
 package com.member.domain.dao;
 
+import java.util.HashMap;
+
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
@@ -14,8 +16,14 @@ public class MemberInfoDAO {
 		sqlSession = sqlSessionFactory.openSession(true);
 	}
 	
+	//회원가입
 	public void join(MemberInfoVO memberInfoVO) {
 		sqlSession.insert("Member.join", memberInfoVO);
+	}
+	
+	//로그인
+	public String login(HashMap<String, String> memberInfoMap) {
+		return sqlSession.selectOne("Member.login", memberInfoMap);
 	}
 	
 	public boolean checkID(String id) {

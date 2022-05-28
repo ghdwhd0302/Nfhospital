@@ -13,4 +13,10 @@
       select count(id) from member_info where id = #{memberId}
    </select>
    
+   <!-- 로그인 -->
+   <select id="login" parameterType="map" resultType="string">
+   		select name from member_info
+   		where id = #{id} and password = #{password}
+   </select>
+   
 </mapper>
