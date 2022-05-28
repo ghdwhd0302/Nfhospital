@@ -3,19 +3,19 @@
 <mapper namespace="Member">
    <!-- 회원가입 -->
    <insert id="join" parameterType="memberInfoVO">
-      insert into member_info
-      (id, password, name, residentNum, email, address, phoneNum, addPhoneNum, birth, gender)
+      insert into tbl_member_info
+      (id, password, name, resident_num, email, address, phoneNum, add_phone_num, birth, gender)
       values(#{id}, #{password}, #{name}, #{residentNum}, #{email}, #{address}, #{phoneNum}, #{addPhoneNum}, #{birth}, #{gender})
    </insert>
    
    <!-- 아이디 중복검사 -->
    <select id="checkId" parameterType="string" resultType="int">
-      select count(id) from member_info where id = #{memberId}
+      select count(id) from tbl_member_info where id = #{id}
    </select>
    
    <!-- 로그인 -->
    <select id="login" parameterType="map" resultType="string">
-   		select name from member_info
+   		select name from tbl_member_info
    		where id = #{id} and password = #{password}
    </select>
    
