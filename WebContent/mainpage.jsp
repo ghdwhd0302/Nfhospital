@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -546,7 +547,7 @@ input[type=tel], input[type=text], input[type=email], input[type=number],
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	width: 156px;
+	width: 198px;
 	background-color: #2763ba;
 	color: white;
 }
@@ -807,6 +808,35 @@ div.btns {
     bottom: 10px;
     width: 90vw;
 }
+
+.mainLoginWrap .userName{
+	display: block;
+	margin-bottom: 19px;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.mainLoginWrap p strong{
+	font-size: 20px;
+}
+
+.mainLoginWrap p{
+	line-height: 1.4;
+}
+
+.mainLoginWrap [class*=btnWrap] [class*=btnType]{
+	margin-left: 0;
+	border-color: #2763ba;
+}
+
+.mainLoginWrap .logout{
+	position: absolute;
+	top: 25px;
+	right: 30px;
+	color: #000;
+}
+
+
 </style>
 </head>
 <body>
@@ -830,7 +860,12 @@ div.btns {
 						<li><a style="margin-right: 16px;">원격</a></li>
 					</ul>
 					<ul class="topMenu">
+					<c:if test="${empty name}">
+						<li><a>로그인</a></li>
+					</c:if>
+					<c:if test="${not empty name}">
 						<li><a>로그아웃</a></li>
+					</c:if>
 						<li><a>마이페이지</a></li>
 						<li><a>Language</a></li>
 					</ul>
@@ -928,32 +963,51 @@ div.btns {
 							대표전화 <strong>1588-5700</strong>
 						</p>
 					</div>
-					<div class="mainCol mainLoginWrap">
-						<ul class="mainTab feTab" data-pannel="1"
-							data-tab-group="feTab1Gr0">
-							<li class="current"><a href="login.jsp" role="tab"
-								aria-selected="true">로그인</a></li>
-						</ul>
-						<div id="login" class="feTabCont" role="tabpanel"
-							aria-hidden="false" data-tab-group="feTab1Gr0"
-							style="display: block;">
-							<form name="loginForm" id="loginForm" method="post" action="">
-								<fieldset>
-									<!-- <legend>로그인</legend> -->
-									<input type="text" name="id" title="아이디/회원 번호"
-										placeholder="아이디/회원 번호"> <input type="password"
-										name="pass" title="비밀번호" placeholder="비밀번호"
-										onkeydown="check();">
-									<div class="user">
-										<a href="regi1.jsp" style="font-size: 14px; color: inherit;">회원가입</a> <a
-											href="findid.jsp" style="font-size: 14px; color: inherit;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;아이디/비밀번호
-											찾기</a>
+						 <!-- 로그인 안한 상태 -->
+						 	<c:if test="${empty name}">
+								<div class="mainCol mainLoginWrap">
+										<ul class="mainTab feTab" data-pannel="1"
+											data-tab-group="feTab1Gr0">
+											<li class="current"><a href="login.jsp" role="tab"
+												aria-selected="true">로그인</a></li>
+										</ul>
+										<div id="login" class="feTabCont" role="tabpanel"
+											aria-hidden="false" data-tab-group="feTab1Gr0"
+											style="display: block;">
+											<form name="loginForm" id="loginForm" method="post" action="MemberLoginOk.me">
+												<fieldset>
+													<legend>로그인</legend>
+													<input type="text" name="id" title="아이디/회원 번호"
+														placeholder="아이디/회원 번호"> <input type="password"
+														name="password" title="비밀번호" placeholder="비밀번호"
+														onkeydown="check();">
+													<div class="user">
+														<a href="regi1.jsp" style="font-size: 14px; color: inherit;">회원가입</a> <a
+															href="findid.jsp" style="font-size: 14px; color: inherit;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;아이디/비밀번호
+															찾기</a>
+													</div>
+													<input type="button" class="btnType03" value="로그인">
+												</fieldset>
+											</form>
+										</div>
 									</div>
-									<a href="" onclick="goLogin();" role="button" class="btnType03">로그인</a>
-								</fieldset>
-							</form>
-						</div>
-					</div>
+						 	</c:if>
+						 	<!-- 로그인 성공한 상태 -->
+							<c:if test="${not empty name}">
+								<div class="mainCol mainLoginWrap">
+								<strong class="userName"><c:out value="${name}"/> 님</strong>
+								<p>
+									오늘도 좋은 하루 보내시고<br>
+									<strong>건강을 기원</strong>합니다.
+								</p>
+								<div class="btnWrap col02">
+								<a href="newreservation.jsp" role="button" class="btnType04">예약확인/취소</a>
+								
+								<a href="prereservation.jsp" role="button" class="btnType04">진료이력조회</a>
+								</div>
+								<a href="mainpage.jsp" class="logout">로그아웃</a>
+								</div>
+							</c:if>
 				</div>
 			</div>
 		</div>
@@ -1077,6 +1131,8 @@ div.btns {
 				</div>
 		</footer>
 	</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     const banner = document.querySelector("div.banner");
     const arrows = document.querySelectorAll("div.arrow")
@@ -1117,6 +1173,22 @@ div.btns {
         count = count == 6 ? 0 : count;
         banner.style.transform = "translate(-" + count * 90 + "vw)";
     }, 3000);
+    
+    
+    let form = document.loginForm;
+
+    $(".btnType03").on("click", function(){
+    	console.log("들어옴");
+    	if(!form.id.value){
+    		alert("아이디를 입력해주세요.");
+    		return;
+    	}
+    	if(!form.password.value){
+    		alert("패스워드를 입력해주세요.");
+    		return;
+    	}
+    	
+    	form.submit();
+    });
 </script>
-</body>
 </html>
