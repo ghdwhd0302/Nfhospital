@@ -30,17 +30,17 @@
 				<p class="colorPoint02" style="text-align: center; font-size: 20px">
 					서울대학교병원 홈페이지 회원 서비스는<br>로그인 후 이용하실 수 있습니다.
 				</p>
-				<form id="memberVo" action="mainpage.jsp" method="post">
+				<form id="memberVo" action="MemberLoginOk.me" method="post" name="loginForm">
 					<input id="retUrl" name="retUrl" type="hidden" value="">
 					<div>
 						<input id="id" name="id" placeholder="아이디/진찰권 번호(환자번호)"
 							class="inputText" type="text" value="">
 					</div>
 					<div>
-						<input id="pass" name="pass" onkeydown="check();"
+						<input id="pass" name="password" onkeydown="check();"
 							placeholder="비밀번호" class="inputText" type="password" value="">
 					</div>
-					<button type="button" id="loginBtn" class="btnType03 btnBig">로그인</button>
+					<input type="button" id="loginBtn" class="btnType03 btnBig" value="로그인">
 
 				</form>
 
@@ -59,4 +59,21 @@
 
 
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+let form = document.loginForm;
+
+$("input#loginBtn").on("click", function(){
+	if(!form.id.value){
+		alert("아이디를 입력해주세요.");
+		return;
+	}
+	if(!form.password.value){
+		alert("패스워드를 입력해주세요.");
+		return;
+	}
+	
+	form.submit();
+});
+</script>
 </html>

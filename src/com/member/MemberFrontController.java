@@ -8,7 +8,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.ibatis.session.SqlSession;
+
 import com.member.action.ActionInfo;
+import com.member.domain.vo.MemberInfoVO;
+import com.mybatis.config.MyBatisConfig;
 
 public class MemberFrontController extends HttpServlet {
 
@@ -36,8 +40,11 @@ public class MemberFrontController extends HttpServlet {
 			actionInfo.setPath(req.getContextPath() + "/join.jsp");
 		} else if (command.equals("CheckIdOk.me")) {
 			new CheckIdOk().execute(req, resp);
-		} else {
+		} else if(command.equals("MemberLoginOk.me")) { 
+			actionInfo = new MemberLoginOk().execute(req, resp);
+		}else {
 			// 404 일 때 출력할 에러 페이지 경로 작성
+
 		}
 
 		
