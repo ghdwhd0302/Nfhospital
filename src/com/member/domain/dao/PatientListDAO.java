@@ -15,4 +15,12 @@ public class PatientListDAO {
 		sqlSession = sqlSessionFactory.openSession(true);
 	}
 	
+	public void add(PatientListVO patientListVO) {
+		sqlSession.insert("PatientList.add", patientListVO);
+	}
+	
+	public boolean checkID(String patientNum) {
+		return (Integer)sqlSession.selectOne("PatientList.view", patientNum) == 1;
+	}
+	
 }

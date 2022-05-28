@@ -14,5 +14,8 @@ public class WriteDAO {
 		sqlSession = sqlSessionFactory.openSession(true);
 	}
 	
+	public void write(WriteVO writeVO) {
+		sqlSession.insert("Write.write", writeVO);
+	}
 
 }
