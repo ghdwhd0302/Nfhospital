@@ -14,11 +14,6 @@ public class MemberInfoDAO {
 		sqlSession = sqlSessionFactory.openSession(true);
 	}
 	
-	public void join(MemberInfoVO memberInfoVO) {
-		sqlSession.insert("Member.join", memberInfoVO);
-	}
 	
-	public boolean checkID(String id) {
-		return (Integer)sqlSession.selectOne("Member.checkId", id) == 1;
-	}
+	
 }
