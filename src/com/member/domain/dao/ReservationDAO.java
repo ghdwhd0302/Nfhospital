@@ -15,7 +15,6 @@ public class ReservationDAO {
 	}
 	
 	public void add(ReservationVO reservationVO) {
-		sqlSession.insert("Reservation.add", reservationVO);
 	}
 	
 	public boolean checkID(String id) {
