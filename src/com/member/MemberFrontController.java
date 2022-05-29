@@ -49,14 +49,14 @@ public class MemberFrontController extends HttpServlet {
 
 		
 		
-		if (command.equals("ReservationOk.me")) {
+		if (command.equals("ReservationOk.re")) {
 			actionInfo = new ReservationOk().execute(req, resp);
 
-		} else if (command.equals("Reservation.me")) {
+		} else if (command.equals("Reservation.re")) {
 			actionInfo = new ActionInfo();
 			actionInfo.setRedirect(true);
 			actionInfo.setPath(req.getContextPath() + "/reservation.jsp");
-		} else if (command.equals("ReservationCheckOk.me")) {
+		} else if (command.equals("ReservationCheckOk.re")) {
 			new ReservationCheckOk().execute(req, resp);
 		} else {
 			// 404 일 때 출력할 에러 페이지 경로 작성
@@ -64,14 +64,14 @@ public class MemberFrontController extends HttpServlet {
 		
 		
 		
-		if (command.equals("PatientOk.me")) {
+		if (command.equals("PatientOk.do")) {
 			actionInfo = new PatientOk().execute(req, resp);
 
-		} else if (command.equals("Patient.me")) {
+		} else if (command.equals("Patient.do")) {
 			actionInfo = new ActionInfo();
 			actionInfo.setRedirect(true);
 			actionInfo.setPath(req.getContextPath() + "/patient.jsp");
-		} else if (command.equals("PatientCheckOk.me")) {
+		} else if (command.equals("PatientCheckOk.do")) {
 			new PatientCheckOk().execute(req, resp);
 		} else {
 			// 404 일 때 출력할 에러 페이지 경로 작성
@@ -79,10 +79,10 @@ public class MemberFrontController extends HttpServlet {
 		
 		
 		
-		if (command.equals("WriteOk.me")) {
+		if (command.equals("WriteOk.wr")) {
 			actionInfo = new WriteOk().execute(req, resp);
 
-		} else if (command.equals("Write.me")) {
+		} else if (command.equals("Write.wr")) {
 			actionInfo = new ActionInfo();
 			actionInfo.setRedirect(true);
 			actionInfo.setPath(req.getContextPath() + "/write.jsp");
