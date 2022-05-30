@@ -36,6 +36,28 @@ public class MemberFrontController extends HttpServlet {
 			actionInfo.setPath(req.getContextPath() + "/join.jsp");
 		} else if (command.equals("CheckIdOk.me")) {
 			new CheckIdOk().execute(req, resp);
+
+		} else if(command.equals("MemberLoginOk.me")) { 
+			actionInfo = new MemberLoginOk().execute(req, resp);
+		} else if(command.equals("CheckCodeOk.me")) {
+			new CheckCodeOk().execute(req, resp);
+		}else {
+			// 404 일 때 출력할 에러 페이지 경로 작성
+
+		}
+
+		
+		
+		if (command.equals("ReservationOk.me")) {
+			actionInfo = new ReservationOk().execute(req, resp);
+
+		} else if (command.equals("Reservation.me")) {
+			actionInfo = new ActionInfo();
+			actionInfo.setRedirect(true);
+			actionInfo.setPath(req.getContextPath() + "/reservation.jsp");
+		} else if (command.equals("ReservationCheckOk.me")) {
+			new ReservationCheckOk().execute(req, resp);
+
 		} else {
 			// 404 일 때 출력할 에러 페이지 경로 작성
 		}

@@ -21,9 +21,8 @@ public class CheckIdOk implements Action {
       MemberInfoDAO memberInfoDAO = new MemberInfoDAO();
       JSONObject resultJSON = new JSONObject();
       
-      String memberId = req.getParameter("memberInfoId");
+      String memberId = req.getParameter("id");
       resultJSON.put("check", memberInfoDAO.checkID(memberId));
-      
       out.print(resultJSON.toJSONString());
       out.close();
       return null;
