@@ -33,6 +33,7 @@
 #content.memJoinContent {
     width: 1100px;
     padding-right: 0;
+    height: 2200px;
 }
 
 .contTextWrap > :first-child {
@@ -120,18 +121,17 @@ p {
    
     padding: 25px 30px;
 }
-.btnType03 {
-    border: 1px solid #2263bb;
-    color: #fff;
-    background-color: #2263bb;
-    margin-left: 93%;
-}
 .feFoCheck {
     width: 24px;
     height: 24px;
     margin-right: 9px;
     background: url("https://www.snuh.org/asset/img/common/spr_common.png") no-repeat -195px -27px;
 }
+
+.feFoCheck.checked{
+	background-position: -195px -53px;
+}
+
 [class*=feFo] {
     display: inline-block;
     overflow: hidden;
@@ -316,3 +316,203 @@ p {
     text-align: center;
     line-height: 48px;
 }
+
+
+[class*=boardType]{
+	    margin-top: 30px;
+    border: 1px solid #000;
+    border-width: 2px 0 1px;
+}
+.boardTypeForm{
+	    margin-top: 20px;
+}
+
+[class*=boardType] table{
+	    table-layout: fixed;
+}
+table{
+	position: relative;
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.boardTypeForm th, .boardTypeForm td{
+	    vertical-align: middle;
+    height: 40px;
+    padding: 10px 10px 10px 20px;
+    color: #666;
+    font-weight: 400;
+    text-align: left;
+}
+
+.boardTypeForm tr td, .boardTypeForm tr th{
+	border-top: 1px solid #ccc;
+}
+
+.boardTypeForm tr:first-child td, .boardTypeForm tr:first-child th{
+	    border-top: 0;
+}
+
+[class*=btn]{
+	display: inline-block;
+    border: 0;
+}
+
+[class*=btnType]{
+	overflow: visible;
+    vertical-align: top;
+    height: 40px;
+    padding: 0 20px;
+    color: #000;
+    font-size: 16px;
+    text-align: center;
+    line-height: 38px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.btnType02{
+	    border: 1px solid #000;
+}
+
+button[class*=btnType]{
+	line-height: normal;
+}
+
+.boardTypeForm [class*=btnType]{
+	    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.boardTypeForm td :first-child{
+	
+	    margin-left: 0;
+}
+
+input[type=tel], input[type=text], input[type=email], input[type=number], input[type=password]{
+	    height: 38px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+    color: #666;
+    font-size: 16px;
+    line-height: 38px;
+}
+.boardTypeForm [class*=btnType]:first-child{
+	    margin-left: 0;
+}
+
+.mdBrowser input[type=tel], .mdBrowser input[type=text], .mdBrowser input[type=email], .mdBrowser input[type=number], .mdBrowser input[type=password]{
+	line-height: inherit;
+}
+
+.boardTypeForm .inputText{
+	width: 178px;
+}
+
+.boardTypeForm span.error, .boardTypeForm span.desc{
+	vertical-align: middle;
+    margin-left: 8px;
+}
+
+.boardTypeForm .desc{
+	    color: #2763ba;
+}
+
+.feFoRadio{
+	display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url("https://www.snuh.org/asset/img/common/spr_common.png") no-repeat -169px -27px;
+}
+
+.feFoRadio.checked{
+	    background-position: -195px -53px;
+}
+
+.boardTypeForm .lblTxt{
+	display: inline-block;
+    margin: 0 15px 0 2px;
+}
+
+.boardTypeForm .inputTextSmall{
+	    width: 100px;
+}
+
+.boardTypeForm .txtWrap{
+	    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+    line-height: 38px;
+}
+
+
+.mdBrowser input[type=tel], .mdBrowser input[type=text], .mdBrowser input[type=email], .mdBrowser input[type=number], .mdBrowser input[type=password]{
+	line-height: inherit;
+}
+
+.boardTypeForm td{
+	padding-left: 0;
+    color: #000;
+}
+
+
+
+[class*=btnWrap]{
+	    display: block;
+    position: relative;
+    margin-top: 30px;
+    text-align: right;
+}
+
+.boardTypeForm + .btnWrap{
+	    margin-top: 40px;
+}
+
+
+.btnBig{
+	min-width: 120px;
+    height: 60px;
+    padding: 0 30px;
+    font-size: 18px;
+    letter-spacing: -1px;
+    line-height: 58px;
+}
+
+button[class*=btnType]{
+	line-height: normal;
+}
+
+
+[class*=btnWrap] [class*=btnType]{
+	margin: 0 0 0 10px;
+}
+
+.btnType03 {
+    border: 1px solid #2263bb;
+    color: #fff;
+    background-color: #2263bb;
+    margin-left: 93%;
+}
+
+input[type=tel]{
+	vertical-align: middle;
+	text-align: center;
+	width: 70px;
+}
+
+input.num4{
+	width: 80px;
+}
+
+input.keyNum{
+	margin-left: 30px;
+	width: 100px;
+	vertical-align: middle;
+	text-align: center;
+	
+}
+
+
+

@@ -26,6 +26,7 @@ public class MemberInfoDAO {
 		return sqlSession.selectOne("Member.login", memberInfoMap);
 	}
 	
+	//아이디 중복검사
 	public boolean checkID(String id) {
 		return (Integer)sqlSession.selectOne("Member.checkId", id) == 1;
 	}
