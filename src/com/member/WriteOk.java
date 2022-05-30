@@ -8,13 +8,13 @@ import javax.servlet.http.HttpServletResponse;
 import com.member.action.Action;
 import com.member.action.ActionInfo;
 import com.member.domain.dao.WriteDAO;
-import com.member.domain.vo.WriteVO;
+import com.member.domain.vo.SuggestionsWrite;
 
 public class WriteOk implements Action{
 	
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-		WriteVO writeVO = new WriteVO();
+		SuggestionsWrite writeVO = new SuggestionsWrite();
 		WriteDAO writeDAO = new WriteDAO();
 		ActionInfo actionInfo = new ActionInfo();
 		
@@ -29,8 +29,7 @@ public class WriteOk implements Action{
 		req.setAttribute("writeTitle", writeVO.getTitle());
 		
 		actionInfo.setRedirect(false);
-		
-		actionInfo.setPath("/");
+		actionInfo.setPath("/thankyouwrite.jsp");
 		
 		return actionInfo;
 	}
