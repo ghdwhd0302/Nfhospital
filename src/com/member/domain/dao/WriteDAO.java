@@ -6,7 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.member.domain.vo.MemberVO;
-import com.member.domain.vo.SuggestionsWrite;
+import com.member.domain.vo.SuggestionsWriteVO;
 import com.member.domain.vo.ThankyouWriteVO;
 import com.mybatis.config.MyBatisConfig;
 
@@ -28,8 +28,6 @@ public class WriteDAO {
 		return sqlSession.selectOne("Write.writeChoose");				
 	}
 	
-	//
-		
 	//내가 작성한 글 목록
 	
 	//내가 작성한 글 선택 출력
