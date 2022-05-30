@@ -74,88 +74,16 @@ html,body{
 			
 			
 
-			//환자이름 입력 체트
-			if($(this).closest('form').find('[id=ptnm]').val() == "") {
-				alert("본인 인증을 통해 이름을 입력해주세요.");
-				$(this).closest('form').find('[id=ptnm]').focus();
-				return false;
-			}
+		
 
-			//주민등록번호, 환자등록번호로 인증할 경우  2017-11-13 Semi ADD
-			if($(this).closest('form').find('[id=confirmTel0101]').is(':checked')) {
-				if($(this).closest('form').find('[id=citizen1]').val() == "") {
-					alert("주민등록번호 앞자리를 입력해주세요.");
-					$(this).closest('form').find('[id=citizen1]').focus();
-					return false;
-				}
-				if($(this).closest('form').find('[id=citizen2]').val() == "") {
-					alert("주민등록번호 뒷자리를 입력해주세요.");
-					$(this).closest('form').find('[id=citizen2]').focus();
-					return false;
-				}
-				
-				if(!idNumCheck.test($(this).closest('form').find('[id=citizen1]').val())) {
-					alert("주민등록번호 앞자리는 숫자를 입력해주세요");
-					$(this).closest('form').find('[id=citizen1]').focus();
-					return false;
-				}
-				
-				if(!idNumCheck.test($(this).closest('form').find('[id=citizen2]').val())) {
-					alert("주민등록번호 뒷자리는 숫자를 입력해주세요");
-					$(this).closest('form').find('[id=citizen2]').focus();
-					return false;
-				}
-				
-			}
 			
 			
 			
 			
 						
-			//인증 점검 추가 2017-11-13 Semi ADD joinAuthYn - authHpYn
-			if(!errFlag){
-				if($(this).closest('form').find('[id=joinAuthYn]').val() != "Y"){
-					alert("본인인증이 필요합니다.");
-					return false;
-				}
-				frm.submit();
-			}
-
-			//frm.submit();
 			
-		});
 
-
-			
-			//인증 점검 추가 2017-11-13 Semi ADD joinAuthYn
-			if(!errFlag){
-				if($(this).closest('form').find('[id=joinAuthYn]').val() != "Y"){
-					alert("본인인증이 필요합니다.");
-					return false;
-				}
-				frm.submit();
-			}
-
-			//frm.submit();
-		});
-
-		//주민번호인증 다음단계 클릭
-		$('#hNextBtn').click(function() {
-			var errFlag = false;
-			var frm = $('#hForm');
-			var queryString = $("form[name=hForm]").serialize();
-
-			if($('input:checkbox[id="checkbox01"]').is(":checked") == false) {
-				alert("이용약관 동의에 체크해주세요.");
-				$("#checkbox01").focus();
-				return false;
-			}
-
-			if($('input:checkbox[id="checkbox02"]').is(":checked") == false) {
-				alert("개인정보처리방침 동의에 체크해주세요.");
-				$("#checkbox02").focus();
-				return false;
-			}
+		
 
 			//이름 입력 체크
 			if($(this).closest('form').find('[id=ptnm]').val() == "") {
@@ -1924,11 +1852,11 @@ $(".agree").find("input[type='checkbox']").click(function(){
 			return;
 		}
 		
-	 	 if(!check){
+	 	 /*  if(!check){
 			alert("휴대폰번호 인증을 해주세요.")
 			submitCheck = false;
 			return;
-		} 
+		}   */
 		
 		if(!$("#ptnm").val()){
 			alert("이름을 입력해주세요.")

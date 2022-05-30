@@ -33,7 +33,6 @@ public class MemberLoginOk implements Action {
 		name = memberInfoDAO.login(memberInfoMap);
 		if(name != null) {
 			//로그인 성공
-			System.out.println(name);
 			session.setAttribute("name", name);
 			actionInfo.setRedirect(false);
 			actionInfo.setPath("/mainpage.jsp");

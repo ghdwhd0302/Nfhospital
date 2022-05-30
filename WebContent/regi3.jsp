@@ -908,7 +908,7 @@
                 </li>
             </ul>
             <div class="confirmWrap">
-                <p>가입완료되었습니다<%-- <c:out value="${name}"/> --%>님 환영합니다.</p>
+                <p>가입완료되었습니다 <span style="color: #2763ba"><%=request.getParameter("name")%></span>님 환영합니다!</p>
             </div>
             <div class="btnWrap02 alignC" style="padding-left: 497px; position: absolute;">
                 <a href="mainpage.jsp" id="confirmBtn" role="button" class="btnType03">확인</a>
