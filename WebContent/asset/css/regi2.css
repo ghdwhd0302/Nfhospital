@@ -106,6 +106,10 @@ body {
 	margin: -12px 0 43px;
 }
 
+span.required{
+	color: red;
+}
+
 h2 {
 	font-family: 'Noto Sans KR Bold', 'Noto Sans CJK KR', 'Noto Sans KR',
 		'맑은 고딕', sans-serif;
@@ -226,6 +230,19 @@ fieldset {
     line-height: 38px;
 }
 
+.feFoSelect{
+	position: relative;
+    width: 58px;
+    height: 38px;
+    padding: 0 35px 0 12px;
+    border: 1px solid #ccc;
+    color: #666;
+    font-size: 16px;
+    text-align: left;
+    line-height: 38px;
+    background-color: #fff;
+}
+
 .feFoSelect select {
     display: inline-block;
     width: 100%;
@@ -238,9 +255,12 @@ fieldset {
     border-radius: 0;
 }
 
- [class*=feFo] > select {
-    position: relative;
-    
+ [class*=feFo] > input, [class*=feFo] > select {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     margin: 0;
     padding: 0;
 }  
@@ -248,7 +268,7 @@ fieldset {
     display: inline-block;
     width: 24px;
     height: 24px;
-    background: url("") no-repeat -169px -27px;
+    background: url("https://www.snuh.org/asset/img/common/spr_common.png") no-repeat -169px -27px;
 }
 img {
     vertical-align: middle;
@@ -270,3 +290,65 @@ img {
     display: inline-block;
     margin: 0 15px 0 2px;
 }
+
+.boardTypeForm .inputText{
+	width: 178px;
+}
+
+input[type=tel], input[type=text], input[type=email], input[type=number], input[type=password]{
+	height: 38px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+    color: #666;
+    font-size: 16px;
+    line-height: 38px;
+}
+
+.mdBrowser input[type=tel], .mdBrowser input[type=text], .mdBrowser input[type=email], .mdBrowser input[type=number], .mdBrowser input[type=password]{
+	line-height: inherit;
+}
+
+.feFoSelect > span{
+	    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.boardTypeForm .feFoSelect{
+	width: 151px;
+}
+
+
+.boardTypeForm .inputText + .feFoSelect{
+	    margin-left: 8px;
+}
+
+.feFoSelect:after{
+	content: '';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    width: 7px;
+    height: 4px;
+    margin-top: -2px;
+    background: url("https://www.snuh.org/asset/img/common/spr_common.png") no-repeat -65px -70px;
+}
+
+.btnType03{
+	    border: 1px solid #2263bb;
+    color: #fff;
+    background-color: #2263bb;
+}
+
+#postFind, .btnType01, #makeAddr{
+	border: 1px solid #ccc;
+}
+
+.feFoRadio.checked{
+	background-position: -169px -53px;
+}
+
+

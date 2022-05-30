@@ -42,6 +42,8 @@ public class MemberFrontController extends HttpServlet {
 			new CheckIdOk().execute(req, resp);
 		} else if(command.equals("MemberLoginOk.me")) { 
 			actionInfo = new MemberLoginOk().execute(req, resp);
+		} else if(command.equals("CheckCodeOk.me")) {
+			new CheckCodeOk().execute(req, resp);
 		}else {
 			// 404 일 때 출력할 에러 페이지 경로 작성
 
