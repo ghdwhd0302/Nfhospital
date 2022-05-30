@@ -3,19 +3,19 @@
 <mapper namespace="Write">
 
 	<!-- 감사합니다 게시글 전체 목록 -->
-	<select id="writeList" resultType="writeVO">		
+	<select id="ThankyouWriteList" resultType="writeVO">		
 		select write_num, title, content, id, time
 		from thank_you_write order by write_num desc						
 	</select>
 	
 	<!-- 감사합니다 게시글 선택 출력 -->
-	<select id="writeChoose" resultType="writeVO">		
+	<select id="hankyouWriteChoose" resultType="writeVO">		
 		select title, content, id, time
 		from thank_you_write		
 	</select>
 	
-	<!-- 고객의 소리 게시글 선택 출력 -->
-	<select id="writeChoose" resultType="writeVO">		
+	<!-- 건의합니다 게시글 선택 출력 -->
+	<select id="suggestWriteChoose" resultType="writeVO">		
 		select title, content, id, time
 		from client_sound_write 			
 	</select>

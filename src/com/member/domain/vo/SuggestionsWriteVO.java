@@ -1,13 +1,13 @@
 package com.member.domain.vo;
 
-public class SuggestionsWrite {
+public class SuggestionsWriteVO {
 	private int writeNum;
 	private String title;
 	private String content;
 	private String id;
 	private String time;
 	
-	public SuggestionsWrite() {;}
+	public SuggestionsWriteVO() {;}
 
 	public int getWriteNum() {
 		return writeNum;
