@@ -167,8 +167,8 @@
 							</tr>
 							<tr>
 								<th scope="row"><span class="required">*</span> 휴대전화</th>
-								<td><input id="hp_no" name="phoneNum1" type="hidden" value="<%=request.getParameter("phone1") %>">
-									<label class="feForm feFoSelect selectSmall" for="hp1"><span>010</span><select
+								<td><input id="hp_no" name="phoneNum1" type="hidden" value="">
+									<label class="feForm feFoSelect selectSmall" for="hp1"><span><%=request.getParameter("phone1") %></span><select
 										title="휴대전화 첫번째 자리" id="hp1" name="" class="selectTypeM"
 										data-fe-idx="feFoSelectIdx2" disabled="" style="opacity: 0;"><option
 												value="010">010</option>
@@ -223,9 +223,10 @@
 							</tr>
 							<tr>
 								<th scope="row"><span class="required">*</span> 생년월일</th>
-								<td><input id="birth" name="residentNum" type="hidden" value="<%=request.getParameter("citizen1") +"-"+ request.getParameter("citizen2")%>">
+								<td><input id="birth" name="birth" type="hidden" value="">
+										<input id="residentNum" name="residentNum" type="hidden" value="<%=request.getParameter("citizen1") +"-"+ request.getParameter("citizen2")%>">
 									<label class="feForm feFoSelect dateYY" for="year"><span></span>
-									<select title="생년월일 연도" id="year" name="year" class="dateYY" data-fe-idx="feFoSelectIdx4" style="opacity: 0;">
+									<select title="생년월일 연도" id="year" name="year" class="dateYY" data-fe-idx="feFoSelectIdx4" style="opacity: 0;" value="">
 											<option value="">연도</option>
 											<option value="2022">2022</option>
 											<option value="2021">2021</option>
@@ -341,9 +342,11 @@
 											<option value="1911">1911</option>
 											<option value="1910">1910</option>
 									</select></label><span class="txtWrap">-</span> <label
-									class="feForm feFoSelect dateMM" for="month"><span><%=request.getParameter("citizen1").substring(2, 4) %></span><select
-										title="생년월일 월" id="month" class="dateMM " required=""
-										data-fe-idx="feFoSelectIdx5" disabled="" style="opacity: 0;" value="<%=request.getParameter("citizen1").substring(2, 4) %>">
+									class="feForm feFoSelect dateMM" for="month">
+									<input type="hidden" id="month" name="month"  value="<%=request.getParameter("citizen1").substring(2, 4) %>">
+									<span><%=request.getParameter("citizen1").substring(2, 4) %></span><select
+										title="생년월일 월" class="dateMM " required=""
+										data-fe-idx="feFoSelectIdx5" disabled="" style="opacity: 0;" >
 											<option value="">월</option>
 											<option value="01">01</option>
 											<option value="02">02</option>
@@ -358,10 +361,12 @@
 											<option value="11">11</option>
 											<option value="12">12</option>
 									</select></label><span class="txtWrap">-</span> <label
-									class="feForm feFoSelect dateDD" for="date"><span><%=request.getParameter("citizen1").substring(4) %></span><select
-										title="생년월일 일" id="date" name="date" class="dateDD"
+									class="feForm feFoSelect dateDD" for="date">
+									<input type="hidden" id="date" name="date"  value="<%=request.getParameter("citizen1").substring(4) %>">	
+									<span><%=request.getParameter("citizen1").substring(4) %></span><select
+										title="생년월일 일"  class="dateDD"
 										required="" data-fe-idx="feFoSelectIdx6" disabled=""
-										style="opacity: 0;"  value="<%=request.getParameter("citizen1").substring(4) %>">
+										style="opacity: 0;">
 											<option value="">일</option>
 											<option value="01">01</option>
 											<option value="02">02</option>
@@ -1148,7 +1153,12 @@ function validateOp(){
 	})
 	
 	$("#year").on('change', function(){
-		$(this).prev('span').text($("#year option:checked").text())
+		$(this).prev('span').text($("#year option:checked").text());
+		$(this).val($("#year option:checked").text());
+			if($('#year').val() != "" && $('#month').val() != "" && $('#date').val() != "") {
+				let birthday = $('#year').val() + "-" + $('#month').val() + "-" + $('#date').val();
+				$('#birth').val(birthday);
+			}
 	})
 	
 	
@@ -1356,6 +1366,7 @@ function validateOp(){
 			}
 
 			if($('#hp1').val() != "" && $('#hp2').val() != "" && $('#hp3').val() != "") {
+				console.log("들어옴")
 				var hpNo = $('#hp1').val() + "-" + $('#hp2').val() + "-" + $('#hp3').val();
 				$('#hp_no').val(hpNo);
 			}
@@ -1372,10 +1383,6 @@ function validateOp(){
 			}
 
 
-			if($('#year').val() != "" && $('#month').val() != "" && $('#date').val() != "") {
-				var birthday = $('#year').val() + "-" + $('#month').val() + "-" + $('#date').val();
-				$('#birth').val(birthday);
-			}
 
 			if($('#prevent').val() == "") {
 				alert("자동가입방지를 입력해주세요.");
