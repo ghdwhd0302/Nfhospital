@@ -5,7 +5,6 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
-import com.member.domain.vo.MemberVO;
 import com.member.domain.vo.SuggestionsWriteVO;
 import com.member.domain.vo.ThankyouWriteVO;
 import com.mybatis.config.MyBatisConfig;
@@ -33,17 +32,17 @@ public class WriteDAO {
 	//내가 작성한 글 선택 출력
 	
 	//글 작성
-	public void write(ThankyouWriteVO writeVO) {
-		sqlSession.insert("Write.write", writeVO);
+	public void write(ThankyouWriteVO ThankyouWriteVO) {
+		sqlSession.insert("ThankyouWrite.thankyouWrite", ThankyouWriteVO);
 	}
 	
 	//글 수정
-	public void writeUpdate(ThankyouWriteVO writeVO) {
-		sqlSession.update("Write.writeUpdate", writeVO);
+	public void writeUpdate(ThankyouWriteVO ThankyouWriteVO) {
+		sqlSession.update("ThankyouWrite.thankyouWriteUpdate", ThankyouWriteVO);
 	}
 	
 	//글 삭제
-	public void writeDelete(ThankyouWriteVO writeVO) {
-		sqlSession.delete("Write.writeDelete", writeVO);
+	public void writeDelete(ThankyouWriteVO ThankyouWriteVO) {
+		sqlSession.delete("ThankyouWrite.thankyouWriteDelete", ThankyouWriteVO);
 	}
 }

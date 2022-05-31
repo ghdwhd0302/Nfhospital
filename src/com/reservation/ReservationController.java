@@ -1,4 +1,4 @@
-package com.member;
+package com.reservation;
 
 import java.io.IOException;
 
