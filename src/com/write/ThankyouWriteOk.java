@@ -1,4 +1,4 @@
-package com.member;
+package com.write;
 
 import java.io.IOException;
 
@@ -10,29 +10,30 @@ import com.member.action.ActionInfo;
 import com.member.domain.dao.WriteDAO;
 import com.member.domain.vo.ThankyouWriteVO;
 
-public interface ThankyouWriteOk extends Action {
+public class ThankyouWriteOk implements Action {
 
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+		req.setCharacterEncoding("UTF-8");
 		ThankyouWriteVO thankyouWriteVO = new ThankyouWriteVO();
 		WriteDAO writeDAO = new WriteDAO();
 		ActionInfo actionInfo = new ActionInfo();
 		
-		thankyouWriteVO.setContent(req.getParameter("writeContent"));
-		thankyouWriteVO.setId(req.getParameter("writeId"));
-		thankyouWriteVO.setTime(req.getParameter("writeTime"));
-		thankyouWriteVO.setTitle(req.getParameter("writeTitle"));
 		thankyouWriteVO.setWriteNum(Integer.parseInt(req.getParameter("writeNum")));
+		thankyouWriteVO.setTitle(req.getParameter("title"));
+		thankyouWriteVO.setContent(req.getParameter("content"));
+		thankyouWriteVO.setId(req.getParameter("id"));
+		thankyouWriteVO.setTime(req.getParameter("time"));
 		
 		writeDAO.write(thankyouWriteVO);
 		
-		req.setAttribute("writeTitle", thankyouWriteVO.getTitle());
+		req.setAttribute("title", thankyouWriteVO.getTitle());
 		
 		actionInfo.setRedirect(false);
-		actionInfo.setPath("/thankyouwrite.jsp");
+		actionInfo.setPath("write/thankyouwrite.jsp");
 		
 		return actionInfo;
-}
+	}
 	
 	
 }

@@ -1,4 +1,4 @@
-package com.member;
+package com.write;
 
 import java.io.IOException;
 
@@ -11,7 +11,7 @@ import com.member.domain.dao.WriteDAO;
 import com.member.domain.vo.SuggestionsWriteVO;
 import com.member.domain.vo.ThankyouWriteVO;
 
-public class suggestWriteOk implements Action{
+public class SuggestWriteOk implements Action{
 	
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
@@ -34,5 +34,6 @@ public class suggestWriteOk implements Action{
 		
 		return actionInfo;
 		
+	}
 		
 }
