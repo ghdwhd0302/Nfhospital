@@ -8,7 +8,6 @@
 		<typeAlias type="com.member.domain.vo.MemberInfoVO" alias="memberInfoVO"/>
 		<typeAlias type="com.member.domain.vo.PatientListVO" alias="patientListVO"/>
 		<typeAlias type="com.member.domain.vo.ReservationVO" alias="reservationVO"/>
-		<typeAlias type="com.member.domain.vo.WriteVO" alias="writeVO"/>
 	</typeAliases>
 
 	<environments default="mysql">

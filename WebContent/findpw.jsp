@@ -21,6 +21,17 @@
 <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
 
 <link rel="stylesheet" href="asset/css/findid.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="asset/css/findid.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
+<style>
+</style>
 </head>
 <body>
 		
@@ -66,6 +77,7 @@
 
 
 <script type="text/javascript">
+	
 	var birthNumCheck=/^[0-9]*$/ ;
 	$(function() {
 
@@ -160,36 +172,19 @@
 		</ul>
 	</div>
 	<!-- //tabType -->
-	<div class="confirmWrap pwConfirmWrap">
-		<p>비밀번호를 잊으셨습니까?</p>
-		<p>가입하신 당시 인증 방법 중 한가지를 선택하여 찾으실 수 있습니다.</p>
-	</div>
-	<div class="memType03 clearFix">
-		<a href="/" class="layerBtn" data-layer="layerMail"  style="width:50%;float:left;height: 120px;"><span class="mEMail">가입정보</span>이메일 이용하기<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1emQe9ZHGyS9LwS6lzkyBrw51Xsgeg4ca1Q&usqp=CAU" style="height: auto;max-width: 100px"></a>
-		<a href="javascript:void(0);" id="mBtn" style="width:50%;height: 120px;"><span class="mPhone">휴대전화</span>본인 인증하기<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAaVBMVEX///8AAAA1NTXAwMD09PSdnZ3W1tZycnL4+Pg5OTkVFRWTk5OysrLFxcWgoKBBQUFhYWFYWFh9fX3q6urb29t3d3e4uLgoKCjLy8sXFxfDw8MhISFcXFwfHx83NzfT09OqqqqKiooODg5yHwEDAAADQElEQVR4nO3Y63aaQBiFYUfxjKJijIlpc7j/i2yMq20qrAaHvYcs1vv+z+c8kYGRwaBFs+N6WiyCs0UxXR9nbRbZgpdvrLbPbQ5Zet/ylMx37scy8ReZJ+VdyhP6sqcOgO/XarJLtRx2AgxhWKYBZt675/9apPkWf3YGDGGeArjrEBjCzg987hQYwrNduG22kMVhcluHt2aDt27gvuG/ev+NJt9W010YMbrhZPdObLgMozBm9A1Nmi7j9ebRy6ajJwbX35qfR+fT2yoaT/aeT7t9GF7ybsSGzwpr3udF82vJV2EVzrvmBffZtKvfTZ8bIkSIsPNSCe/W45St75ILV9bPqbZKLhxZP6faCKEohL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL4QqkLoC6EqhL76L3xMLjzMspTNDsmF3YUQIcLuQ4jQKbwfH8tZeVze91T4kP8Zkz/0UViUn+aURf+E1+vSTfouwvJqUtk34bgyatwv4SKrjMreeiXc1Mza9Er4UjPr5VsK55GreqyZ9fj1n9U2twpjH2OrmlmryFmFVbiNXFXdW53R139W29Yq3EWu6rVm1mvkrJ1VmEeuqu7Kir3i85pZuiaRqwqTyqhn3Shpscuqbp7YLR28wOiNGF6uBsU+Dc3bcDDYxy7s6nYaeyMNYW8Wxl9c/xy+o4/d5mfFuegbxPsNdXQ5f2ejFr9/zfeZc9E78b3T0265ezq1mODehR/Fnk0Vec+kv8sWnQEfqj8zLZVdvTUdXr8KsZXF/nht1ybRN/hRHvsKokXe82ilWcsX17d2Ws7SAs/GQ7prdXNI77sgj+tp4b2zLorp+tiK9wsJGEAUSb81awAAAABJRU5ErkJggg==" style="max-width: 100px;height: auto;"></a>
-	</div>
-	<p class="referenMark"><span>※&nbsp;</span>회원정보가 변경되어 본인 확인이 불가할 경우 02-2072-0596 으로 연락주십시오.</p>
-
-	<form name="reqPCCForm" method="post" action="">
-		<input type="hidden" name="reqInfo" value="609A87FA9B2B786D2E352288893788CF6562FE275E7FEAB63A4E372C5F755A4DB7295D2304368F3DCBCE35F4A446736E0F126204F08EB6AD1E5629F133B195CE9B21283AC4A38C1728994476938C1054409F56D8ECB27E538F3F1DB7EA21F21E9A44939308920657E30AD5DAC19FC40C83C07ACBCB6DF3F590D6A1F5C530197259110E0986CDEE857CCDE3586A9F73BD3303B82A5B130517BF67A9116AAC12DCAC53C4FE07561EBC4A9FAA9F181F54856F28C4C5F969F79A7CEA25E20FBD89199C4DA94AF62538EE00976CB77F60B887D6D6C5FE0E998665EFB25A6B71D40842">
-		<input type="hidden" name="retUrl" value="32https://www.snuh.org/member/phoneAuthResponse.do?authKind=findPassword">
-	</form>
 	
-	<form name="reqCBAForm" method="post" action="">
-		<input type="hidden" name="reqInfo" value="5816AA2186DF11A14BC7E1688F88D091C1D2A454109ABC8227D8F1392817B7F3AB675CD9A9643AD68ADFC35B465C0D176AC0D0C5C3B096892653241F04FCEBB51119CDAB6CE85178F34D1ACCA3FFE4BE890D6923DE5A4E787E68EAE75E42228D2C95FCFADBFCF6A7EFCE5311A06D771F8767808B12DE4E3C6550C88A01E0852DA4D83147C6A69DCE524FF896D32980ECDE18FE10E70182450907A91078D7FE04CD0E5340EFB92E6D8E7A0A8C2B821491981285156FEAB5D63F68CA5B03029112">
-		<input type="hidden" name="retUrl" value="23https://www.snuh.org/member/ipinAuthResponse.do?authKind=findPassword&amp;join_type=null">
-	</form>
+
 	<!-- layerWrap -->
 	
 	<section class="layerWrap layerMail" >
-		<h1>회원정보 이메일 확인</h1>
+		<h1 style="color: #2263bb;">비밀번호 찾기</h1>
 		<!-- layerContent -->
 		<div class="layerContent">
 			<form id="mForm" name="mForm" action="./findPassMailResult.do" method="post">
 				<fieldset>
 					<legend>이메일확인</legend>
 					<div class="boardTypeForm">
-						<table>
+						<table class="tb">
 							<caption>이메일확인(이름, 이메일주소, 생년월일)</caption>
 							<colgroup>
 								<col style="width: 135px;">
@@ -224,14 +219,13 @@
 
 	</section>
 	<section class="layerWrap layerHp" >
-		<h1>회원정보 휴대전화번호 확인</h1>
 		<!-- layerContent -->
 		<div class="layerContent">
 			<form id="hForm" name="hForm" action="./findPassHpResult.do" method="post">
 				<fieldset>
 					<legend>휴대전화번호 확인</legend>
 					<div class="boardTypeForm">
-						<table>
+						<table  class="tb">
 							<caption>휴대전화번호 (이름, 휴대전화번호, 생년월일)</caption>
 							<colgroup>
 								<col style="width: 135px;">

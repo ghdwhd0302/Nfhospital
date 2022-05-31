@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%request.setCharacterEncoding("UTF-8"); %>
 <!DOCTYPE html>
@@ -12,6 +13,7 @@
 <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
+
 <!-- Then include bootstrap js -->
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
@@ -19,6 +21,12 @@
 	crossorigin="anonymous"></script>
 
 <link rel="stylesheet" href="asset/css/regi2.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </head>
@@ -104,7 +112,7 @@
 							<tr>
 								<th scope="row"><span class="required">*</span> 이름</th>
 								<td><input id="name" name="name" style="ime-mode: active;"
-									class="inputText" value="<%=request.getParameter("name") %>" type="text" readonly="readonly"></td> <!-- readonly!!추가해야함 -->
+									class="inputText" value="${param.name }" type="text" readonly="readonly"></td> <!-- readonly!!추가해야함 -->
 							</tr>
 
 
@@ -168,7 +176,7 @@
 							<tr>
 								<th scope="row"><span class="required">*</span> 휴대전화</th>
 								<td><input id="hp_no" name="phoneNum1" type="hidden" value="">
-									<label class="feForm feFoSelect selectSmall" for="hp1"><span><%=request.getParameter("phone1") %></span><select
+									<label class="feForm feFoSelect selectSmall" for="hp1"><span>${param.phone1}</span><select
 										title="휴대전화 첫번째 자리" id="hp1" name="" class="selectTypeM"
 										data-fe-idx="feFoSelectIdx2" disabled="" style="opacity: 0;"><option
 												value="010">010</option>
@@ -179,10 +187,10 @@
 											<option value="019">019</option></select></label> <span class="txtWrap">-</span>
 									<input type="tel" id="hp2" name="phoneNum2" class="inputTextSmall"
 									title="휴대전화 두번째 자리" maxlength="4" required=""
-									onkeydown="return onlyNumber();" disabled="" value="<%=request.getParameter("phone2") %>" > <span
+									onkeydown="return onlyNumber();" disabled="" value="${param.phone2}" > <span
 									class="txtWrap">-</span> <input type="tel" id="hp3" name="phoneNum3"
 									class="inputTextSmall" title="휴대전화 세번째 자리" maxlength="4"
-									required="" onkeydown="return onlyNumber();" disabled="" value="<%=request.getParameter("phone3") %>">
+									required="" onkeydown="return onlyNumber();" disabled="" value="${param.phone3}">
 									</td>
 							</tr>
 							<tr>
@@ -224,7 +232,7 @@
 							<tr>
 								<th scope="row"><span class="required">*</span> 생년월일</th>
 								<td><input id="birth" name="birth" type="hidden" value="">
-										<input id="residentNum" name="residentNum" type="hidden" value="<%=request.getParameter("citizen1") +"-"+ request.getParameter("citizen2")%>">
+										<input id="residentNum" name="residentNum" type="hidden" value="${param.citizen1}-${param.citizen2}">
 									<label class="feForm feFoSelect dateYY" for="year"><span></span>
 									<select title="생년월일 연도" id="year" name="year" class="dateYY" data-fe-idx="feFoSelectIdx4" style="opacity: 0;" value="">
 											<option value="">연도</option>
@@ -343,8 +351,8 @@
 											<option value="1910">1910</option>
 									</select></label><span class="txtWrap">-</span> <label
 									class="feForm feFoSelect dateMM" for="month">
-									<input type="hidden" id="month" name="month"  value="<%=request.getParameter("citizen1").substring(2, 4) %>">
-									<span><%=request.getParameter("citizen1").substring(2, 4) %></span><select
+									<input type="hidden" id="month" name="month"<c:set var="submonth" value="${fn:substring(param.citizen1, 2, 4)}"/>  value="${submonth}">
+									<span><c:out value="${submonth}"/></span><select
 										title="생년월일 월" class="dateMM " required=""
 										data-fe-idx="feFoSelectIdx5" disabled="" style="opacity: 0;" >
 											<option value="">월</option>
@@ -362,8 +370,8 @@
 											<option value="12">12</option>
 									</select></label><span class="txtWrap">-</span> <label
 									class="feForm feFoSelect dateDD" for="date">
-									<input type="hidden" id="date" name="date"  value="<%=request.getParameter("citizen1").substring(4) %>">	
-									<span><%=request.getParameter("citizen1").substring(4) %></span><select
+									<input type="hidden" id="date" name="date" <c:set var="subday" value="${fn:substring(param.citizen1, 4, 6)}"/>  value="${subday}">	
+									<span><c:out value="${subday}"/></span><select
 										title="생년월일 일"  class="dateDD"
 										required="" data-fe-idx="feFoSelectIdx6" disabled=""
 										style="opacity: 0;">
@@ -950,21 +958,7 @@
 												alt="1"> <img
 												src="https://www.snuh.org/asset/img/member/img_mem8.png"
 												alt="8">
-											<!--
-https://www.snuh.org/asset/img/member/img_mem0.png		->0
-https://www.snuh.org/asset/img/member/img_mem1.png      ->1
-https://www.snuh.org/asset/img/member/img_mem2.png		->2
-https://www.snuh.org/asset/img/member/img_mem3.png		->3
-https://www.snuh.org/asset/img/member/img_mem4.png
-https://www.snuh.org/asset/img/member/img_mem5.png
-https://www.snuh.org/asset/img/member/img_mem6.png
-https://www.snuh.org/asset/img/member/img_mem7.png
-https://www.snuh.org/asset/img/member/img_mem8.png
-https://www.snuh.org/asset/img/member/img_mem9.png
 
-
-
-  -->
 										</div>
 										<div class="info">
 											<p>
@@ -988,74 +982,44 @@ https://www.snuh.org/asset/img/member/img_mem9.png
 			<button type="button" class="btnType03 btnBig" id="nextBtn" >다음단계</button>
 		</div>
 		</main>
+		<jsp:include page="footer.jsp" />
+</div>
+</body>
 
-
-		<script>
-$(function(){
-	$(".ismsTxtBtn").mouseover(function(){ $('.ftIsmsTxt').css('display', 'block');});
-	$(".ismsTxtBtn").mouseleave(function(){ $('.ftIsmsTxt').css('display', 'none');});
-});
-
-function clientOpRegProc(){
-	if(validateOp()){
-
-		var tel_cl = $('#tel_cl01 option:selected').val() +'-'+ $('#tel_cl02').val() +'-'+ $('#tel_cl03').val();
-		var email_cl = $.trim($('#email_cl01').val()) +'@'+ $.trim($('#email_cl02').val());
-		var gubun_cl = $('#gubun_cl option:selected').val();
-		var title_cl = $('#title_cl').val();
-		var contents_cl = $('#contents_cl').val();
-
-		 $.ajax({
-			 async: false,
-			 url: "/client/opinion/ajaxClientOpRegProc.do",
-			 type:'post',
-			 data : { 'tel' : tel_cl , 'email' : email_cl, 'gubun' : gubun_cl, 'title' : title_cl, 'contents' : contents_cl},
-			 dataType : 'json',
-			 success: function(res){
-				 if(res == '1'){
-					$('.layerWrap').find('.layerCloseBtn').trigger('click');
-					location.reload();
-					 alert('홈페이지 의견접수가 완료되었습니다.');
-				 }
-	 	  	}
-		 });
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	function validateOp(){
+		var re = /^[0-9]+$/;
+		try {
+	 	if( $('#tel_cl02').val() == '' || $('#tel_cl03').val() == ''  || $('#email_cl01').val() == ''  || $('#email_cl02').val() == ''  || $('#title_cl').val() == ''  || $('#contents_cl').val() == ''){
+				alert('*(필수)항목은 반드시 입력해주세요'); return false;
+			}
+	
+			if(! (re.test($('#tel_cl02').val()) && re.test($('#tel_cl03').val())) ){
+				alert("전화번호는 숫자만 입력가능합니다.");return false;
+			}
+	
+			if(!$('#agree').is(':checked')){
+				alert('개인정보 처리방침에 동의해주세요.'); return false;
+			}
+			return true;
+		}catch (e) {
+			console.log(e);
+			return false;
+		}
 	}
-	return false;
-}
-
-function validateOp(){
-	var re = /^[0-9]+$/;
-	try {
- 	if( $('#tel_cl02').val() == '' || $('#tel_cl03').val() == ''  || $('#email_cl01').val() == ''  || $('#email_cl02').val() == ''  || $('#title_cl').val() == ''  || $('#contents_cl').val() == ''){
-			alert('*(필수)항목은 반드시 입력해주세요'); return false;
-		}
-
-		if(! (re.test($('#tel_cl02').val()) && re.test($('#tel_cl03').val())) ){
-			alert("전화번호는 숫자만 입력가능합니다.");return false;
-		}
-
-		if(!$('#agree').is(':checked')){
-			alert('개인정보 처리방침에 동의해주세요.'); return false;
-		}
-		return true;
-	}catch (e) {
-		console.log(e);
-		return false;
-	}
-}
 
 </script>
 		<!-- <script type="text/javascript" src="/asset/js/www_bs.js"></script> -->
 		<!-- www.snuh.org 본원 홈페이지 -->
 		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async=""
-			src="https://www.googletagmanager.com/gtag/js?id=UA-3227935-1"></script>
-		<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-3227935-1');
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-3227935-1"></script>
+<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'UA-3227935-1');
   
   
   
@@ -1166,13 +1130,8 @@ function validateOp(){
 	
 	
 </script>
-
-	
-		<jsp:include page="footer.jsp" />
-</div>
-</body>
-		<script type="text/javascript">
-	
+<script type="text/javascript">
+		let contextPath = "${pageContext.request.contextPath}";
 		
 		
 		
@@ -1182,22 +1141,23 @@ function validateOp(){
 		var idNumCheck=/^[0-9]*$/ ;
 		var passCheck=/^(?=.*[0-9])(?=.*[!@#$%^&*(),.;])[a-zA-Z0-9!@#$%^&*(),.;]{9,16}$/;
 		var blankCheck=/[\s]/g;
-
+	
+		
 		//아이디 중복확인 버튼 클릭 
 		//환자번호 사용을 방지하기 위해 숫자만 입력되지 않도록 체크 추가 2017-11-12 SEMI ADD
 		//한글이름 + 숫자는 가능하도록 처리 2017-11-12 SEMI ADD
-							$('#idChkBtn').click(function() {
-								if($('#id').val() == "") {
-									alert("아이디를 입력하신 후 중복체크를 해주세요.");
-									$('#id').focus();
-									return false;
-								} else {
-									var id = $('#id').val();
+			$('#idChkBtn').click(function() {
+				if($('#id').val() == "") {
+					alert("아이디를 입력하신 후 중복체크를 해주세요.");
+					$('#id').focus();
+						return false;
+					} else {
+							var id = $('#id').val();
 									
-									if(blankCheck.test(id)) {
-										alert('아이디에 공백이 입력되어 있습니다. 수정해 주십시오.');
-										$('#id').focus();
-									}
+							if(blankCheck.test(id)) {
+								alert('아이디에 공백이 입력되어 있습니다. 수정해 주십시오.');
+							$('#id').focus();
+						}
 								
 								//idPass = true;
 								if(idKorCheck.test(id)) {
@@ -1224,12 +1184,12 @@ function validateOp(){
 									alert("아이디는 한글, 영문, 숫자만 가능합니다.");
 									$('#id').focus();
 								}
-								
-								
+							
+								/* 아이디 중복검사 */
 										if(idPass){
 										
 										$.ajax({
-										url: "/Nfhospital/CheckIdOk.me",
+										url: contextPath + "/Nfhospital/CheckIdOk.me",
 										type: "get",
 										data: {id: $("input[name='id']").val()},
 										contentType: "application/json; charset=utf-8",
@@ -1238,8 +1198,10 @@ function validateOp(){
 											console.log(result.check);
 											if(result.check){
 												$("span#result").text("중복된 아이디입니다.");
+												$("#result").css("color", "red")
 											}else{
 												$("span#result").text("사용가능한 아이디입니다.");
+												$("#result").css("color", "blue")
 											}
 											
 											
@@ -1366,7 +1328,6 @@ function validateOp(){
 			}
 
 			if($('#hp1').val() != "" && $('#hp2').val() != "" && $('#hp3').val() != "") {
-				console.log("들어옴")
 				var hpNo = $('#hp1').val() + "-" + $('#hp2').val() + "-" + $('#hp3').val();
 				$('#hp_no').val(hpNo);
 			}
@@ -1398,6 +1359,8 @@ function validateOp(){
 			$('#memberVo').submit();
 		});
 
+		
+		
 
 	function addrSearch() {
 		var pop = window.open("./addrPopup.do", "pop","width=570,height=420, scrollbars=yes, resizable=yes");

@@ -1817,8 +1817,10 @@ $(".agree").find("input[type='checkbox']").click(function(){
 			console.log(passCode);
 			if(passCode == $(".keyNum").val()){
 				$("#result").text("인증완료 되었습니다.");
+				$("#result").css("color", "blue")
 			}else{
 				$("#result").text("다시 입력해주세요.");
+				$("#result").css("color", "red")
 				return;
 			}
 		}
@@ -1852,11 +1854,11 @@ $(".agree").find("input[type='checkbox']").click(function(){
 			return;
 		}
 		
-	 	 /*  if(!check){
+		   if(!check){
 			alert("휴대폰번호 인증을 해주세요.")
 			submitCheck = false;
 			return;
-		}   */
+		}  
 		
 		if(!$("#ptnm").val()){
 			alert("이름을 입력해주세요.")
