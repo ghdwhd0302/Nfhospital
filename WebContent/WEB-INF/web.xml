@@ -9,7 +9,11 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> master
   <servlet>
   	<servlet-name>MemberFrontController</servlet-name>
   	<servlet-class>com.member.MemberFrontController</servlet-class>
@@ -20,4 +24,42 @@
   	<url-pattern>*.me</url-pattern>
   </servlet-mapping>
   
+<<<<<<< HEAD
 </web-app>
+=======
+  <servlet>
+  	<servlet-name>PatientFrontController</servlet-name>
+  	<servlet-class>com.member.PatientFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>PatientFrontController</servlet-name>
+  	<url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>ReservationFrontController</servlet-name>
+  	<servlet-class>com.member.ReservationFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>ReservationFrontController</servlet-name>
+  	<url-pattern>*.re</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>WriteFrontController</servlet-name>
+  	<servlet-class>com.member.WriteFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>WriteFrontController</servlet-name>
+  	<url-pattern>*.wr</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
+
+
+
+
+>>>>>>> master

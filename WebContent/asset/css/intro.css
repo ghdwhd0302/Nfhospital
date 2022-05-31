@@ -89,11 +89,14 @@ a:link{
 #header h1 a{
     display: block;
     position: relative;
-    top: 0px;
+    top: -12px;
+    right: -10px;
     width: 239px;
     height: 25px;
     margin: auto;
-    background: url("http://www.snuh.org/asset/img/common/spr_common.png") no-repeat 0 0;
+    /* background: url("http://www.snuh.org/asset/img/common/spr_common.png") no-repeat 0 0; */
+    font-weight: 700;
+    color: #2763ba;
 }
 
 #header .topLeftWrap {
@@ -105,12 +108,17 @@ a:link{
 
 
 #header .topLeftWrap a {
+	overflow: visible;
     display: block;
     position: relative;
     width: 160px;
     height: 25px;
     margin: auto;
-    background: url("http://www.snuh.org/asset/img/common/outcomesbook_bt.png") no-repeat 0 0;
+}
+
+#header .topLeftWrap a img{
+	width: 30px;
+	height: 30px;
 }
 
 .topMenuWrap {

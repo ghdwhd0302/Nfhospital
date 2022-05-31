@@ -4,6 +4,10 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.member.domain.vo.ReservationVO;
+<<<<<<< HEAD
+=======
+import com.mybatis.config.MyBatisConfig;
+>>>>>>> master
 
 public class ReservationDAO {
 	SqlSessionFactory sqlSessionFactory = MyBatisConfig.getSqlSessionFactory();
@@ -13,6 +17,7 @@ public class ReservationDAO {
 		sqlSession = sqlSessionFactory.openSession(true);
 	}
 	
+<<<<<<< HEAD
 	public void reservation(ReservationVO reservationVO) {
 		sqlSession.insert("Member.reservation", reservationVO);
 	}
@@ -24,3 +29,14 @@ public class ReservationDAO {
 	
 }
 
+=======
+	public void add(ReservationVO reservationVO) {
+	}
+	
+	public boolean checkID(String id) {
+		return (Integer)sqlSession.selectOne("Reservation.view", id) == 1;
+	}
+	
+	
+}
+>>>>>>> master

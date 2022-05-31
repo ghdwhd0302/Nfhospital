@@ -19,9 +19,11 @@
         <a href="#content" class="skipToContent">본문으로 바로가기</a>
         <header id="header">
             <div class="innerwrap">
-                <h1><a href="mainpage.jsp" class="hideTxt">서울대학교병원</a></h1>
+                 <h1><a href="mainpage.jsp">서울 병원</a></h1>
                 <div class="topLeftWrap">
-                    <a href="https://dept.snuh.org/dept/OC/index.do" class="hideTxt" id="outcomes">Outcomes Book</a>
+                    <a href="mainpage.jsp">
+	                	<img src="./asset/img/hospital_logo.png" style="width: 30px; height: 30px;">
+                    </a>
                 </div>
                 <div class="topMenuWrap">
                     <ul class="utilMenu">

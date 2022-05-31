@@ -68,279 +68,22 @@ html,body{
 <!-- 메인 홈페이지 회원가입 2017-11-12 SEMI Check OK -->
 
 <script type="text/javascript">
-	$(function() {
-		
-		var idNumCheck=/^[0-9]*$/ ;
-		
-		$('#hShowCitizen2').click(function() {
-			if($('input:checkbox[id="hShowCitizen2"]').is(":checked") == true) {
-				$('#hForm').find('[id="citizen2"]').attr("type", "text");
-			} else {
-				$('#hForm').find('[id="citizen2"]').attr("type", "password");
-			}
-		});
-		
-		$('#gShowCitizen2').click(function() {
-			if($('input:checkbox[id="gShowCitizen2"]').is(":checked") == true) {
-				$('#gForm').find('[id="citizen2"]').attr("type", "text");
-			} else {
-				$('#gForm').find('[id="citizen2"]').attr("type", "password");
-			}
-		});
-		
-		$('#jShowCitizen2').click(function() {
-			if($('input:checkbox[id="jShowCitizen2"]').is(":checked") == true) {
-				$('#jForm').find('[id="citizen2"]').attr("type", "text");
-			} else {
-				$('#jForm').find('[id="citizen2"]').attr("type", "password");
-			}
-		});
-		
-		$('#checkbox03').click(function() {
-			$("input[name=checkbox]:checkbox").prop("checked", "checked");
-		});
-
-		//핸드폰인증 다음단계 클릭 (어린이/성인/동문/웹회원)
-		$('#hNextBtn').click(function() {
-			var errFlag = false;
-			var frm = $('#hForm');
-			var queryString = $("form[name=hForm]").serialize();
-			
-			if($('input:checkbox[id="checkbox01"]').is(":checked") == false) {
-				alert("이용약관 동의에 체크해주세요.");
-				$("#checkbox01").focus();
-				return false;
-			}
-
-			if($('input:checkbox[id="checkbox02"]').is(":checked") == false) {
-				alert("개인정보처리방침 동의에 체크해주세요.");
-				$("#checkbox02").focus();
-				return false;
-			}
-			
+	
 			
 			
 			
 			
 
-			//환자이름 입력 체트
-			if($(this).closest('form').find('[id=ptnm]').val() == "") {
-				alert("본인 인증을 통해 이름을 입력해주세요.");
-				$(this).closest('form').find('[id=ptnm]').focus();
-				return false;
-			}
+		
 
-			//주민등록번호, 환자등록번호로 인증할 경우  2017-11-13 Semi ADD
-			if($(this).closest('form').find('[id=confirmTel0101]').is(':checked')) {
-				if($(this).closest('form').find('[id=citizen1]').val() == "") {
-					alert("주민등록번호 앞자리를 입력해주세요.");
-					$(this).closest('form').find('[id=citizen1]').focus();
-					return false;
-				}
-				if($(this).closest('form').find('[id=citizen2]').val() == "") {
-					alert("주민등록번호 뒷자리를 입력해주세요.");
-					$(this).closest('form').find('[id=citizen2]').focus();
-					return false;
-				}
-				
-				if(!idNumCheck.test($(this).closest('form').find('[id=citizen1]').val())) {
-					alert("주민등록번호 앞자리는 숫자를 입력해주세요");
-					$(this).closest('form').find('[id=citizen1]').focus();
-					return false;
-				}
-				
-				if(!idNumCheck.test($(this).closest('form').find('[id=citizen2]').val())) {
-					alert("주민등록번호 뒷자리는 숫자를 입력해주세요");
-					$(this).closest('form').find('[id=citizen2]').focus();
-					return false;
-				}
-				
-				//성인 주민등록번호 자격 확인
-				$.ajax({
-					async: false,
-					cache: false,
-					type: "POST",
-					url: "/member/requestQualificationAjax.do",
-					data : queryString,
-					success: function(res){
-
-						if(res == "false"){
-							alert("가입정보를 한번 더 확인해 주십시오.");
-							errFlag = true;
-							return false;
-						} else if(res == "next") {
-							//alert("인증이 완료되었습니다.");
-							//frm.submit();
-							errFlag = false;
-							return false;
-						} else {
-							alert("인증횟수는 하루에 10번입니다.");
-							errFlag = true;
-							return false;
-						}
-					},
-					error:function(request,status,error){
-						alert("가입정보가 조회 중 오류가 발생하였습니다.");
-						errFlag = true;
-						return false;
-				  }
-				});
-				
-			}else if($(this).closest('form').find('[id=confirmTel0102]').is(':checked')) {
-				if($(this).closest('form').find('[id=pt_no]').val() == "") {
-					alert("환자등록번호를 입력해주세요.");
-					$(this).closest('form').find('[id=pt_no]').focus();
-					return false;
-				}
-			}
+			
 			
 			
 			
 						
-			//인증 점검 추가 2017-11-13 Semi ADD joinAuthYn - authHpYn
-			if(!errFlag){
-				if($(this).closest('form').find('[id=joinAuthYn]').val() != "Y"){
-					alert("본인인증이 필요합니다.");
-					return false;
-				}
-				frm.submit();
-			}
-
-			//frm.submit();
-			
-		});
-
-		//G-Pin인증 다음단계 클릭
-		$('#gNextBtn').click(function() {
-			var frm = $('#gForm');
-			var errFlag = false;
-			var queryString = $("form[name=gForm]").serialize();
-			
-			if($('input:checkbox[id="checkbox01"]').is(":checked") == false) {
-				alert("이용약관 동의에 체크해주세요.");
-				$("#checkbox01").focus();
-				return false;
-			}
-
-			if($('input:checkbox[id="checkbox02"]').is(":checked") == false) {
-				alert("개인정보처리방침 동의에 체크해주세요.");
-				$("#checkbox02").focus();
-				return false;
-			}
-
-
-			
-			
 			
 
-			//환자이름 입력 체트
-			if($(this).closest('form').find('[id=ptnm]').val() == "") {
-				alert("본인 인증을 통해 이름을 입력해주세요.");
-				$(this).closest('form').find('[id=ptnm]').focus();
-				return false;
-			}
-
-			//주민등록번호, 환자등록번호로 인증할 경우  2017-11-13 Semi ADD
-			if($(this).closest('form').find('[id=confirmTel0201]').is(':checked')) {
-				if($(this).closest('form').find('[id=citizen1]').val() == "") {
-					alert("환아 주민등록번호 앞자리를 입력해주세요.");
-					$(this).closest('form').find('[id=citizen1]').focus();
-					return false;
-				}
-				if($(this).closest('form').find('[id=citizen2]').val() == "") {
-					alert("환아 주민등록번호 뒷자리를 입력해주세요.");
-					$(this).closest('form').find('[id=citizen2]').focus();
-					return false;
-				}
-				
-				if(!idNumCheck.test($(this).closest('form').find('[id=citizen1]').val())) {
-					alert("주민등록번호 앞자리는 숫자를 입력해주세요");
-					$(this).closest('form').find('[id=citizen1]').focus();
-					return false;
-				}
-				
-				if(!idNumCheck.test($(this).closest('form').find('[id=citizen2]').val())) {
-					alert("주민등록번호 뒷자리는 숫자를 입력해주세요");
-					$(this).closest('form').find('[id=citizen2]').focus();
-					return false;
-				}
-				
-				//환자 주민등록번호 자격 확인
-				$.ajax({
-					async: false,
-					cache: false,
-					type: "POST",
-					url: "/member/requestQualificationAjax.do",
-					data : queryString,
-					success: function(res){
-
-						if(res == "false"){
-							alert("가입정보(이름, 주민등록번호)를 한번 더 확인해 주십시오.");
-							
-							$('#gForm').find('[id=ptnm]').attr("enable", false);
-							$('#gForm').find('[id="citizen1"]').attr("readonly", false);
-							$('#gForm').find('[id="citizen2"]').attr("readonly", false);
-
-							errFlag = true;
-							return false;
-						} else if(res == "next") {
-							//alert("인증이 완료되었습니다.");
-							//frm.submit();
-							errFlag = false;
-							return false;
-						} else {
-							alert("정보 확인서비스는 하루 10회입니다.\n예약센터(1588-5700)에서 진료예약 후 회원가입을 신청해 주십시오.");
-							errFlag = true;
-							return false;
-						}
-					},
-					error:function(request,status,error){
-						alert("가입정보가 조회 중 오류가 발생하였습니다.");
-						errFlag = true;
-						return false;
-				  }
-				});
-				
-			}else if($(this).closest('form').find('[id=confirmTel0202]').is(':checked')) {
-				if($(this).closest('form').find('[id=pt_no]').val() == "") {
-					alert("환아 환자등록번호를 입력해주세요.");
-					$(this).closest('form').find('[id=pt_no]').focus();
-					return false;
-				}
-			}
-			
-			
-			
-			
-			//인증 점검 추가 2017-11-13 Semi ADD joinAuthYn
-			if(!errFlag){
-				if($(this).closest('form').find('[id=joinAuthYn]').val() != "Y"){
-					alert("본인인증이 필요합니다.");
-					return false;
-				}
-				frm.submit();
-			}
-
-			//frm.submit();
-		});
-
-		//주민번호인증 다음단계 클릭
-		$('#jNextBtn').click(function() {
-			var errFlag = false;
-			var frm = $('#jForm');
-			var queryString = $("form[name=jForm]").serialize();
-
-			if($('input:checkbox[id="checkbox01"]').is(":checked") == false) {
-				alert("이용약관 동의에 체크해주세요.");
-				$("#checkbox01").focus();
-				return false;
-			}
-
-			if($('input:checkbox[id="checkbox02"]').is(":checked") == false) {
-				alert("개인정보처리방침 동의에 체크해주세요.");
-				$("#checkbox02").focus();
-				return false;
-			}
+		
 
 			//이름 입력 체크
 			if($(this).closest('form').find('[id=ptnm]').val() == "") {
@@ -371,307 +114,7 @@ html,body{
 				$(this).closest('form').find('[id=citizen2]').focus();
 				return false;
 			}
-						
-			//이메일 인증인경우 기간계 체크 -> 없는경우 건보단 체크	
-			if($(this).closest('form').find('[id=confirmTel02]').is(':checked')) {
-				var queryString = $("form[name=jForm]").serialize();
-
-				if($(this).closest('form').find('[id=email1]').val() == "") {
-					alert("이메일을 입력해주세요.");
-					$(this).closest('form').find('[id=email1]').focus();
-					return false;
-				}
-			}
-			
-			//휴대전화번호 인증인 경우
-			if($(this).closest('form').find('[id=confirmTel01]').is(':checked')) {
-				var queryString = $("form[name=jForm]").serialize();
-
-				if($(this).closest('form').find('[id=hpNo]').val() == "") {
-					alert("휴대전화번호를 입력해주세요.");
-					$(this).closest('form').find('[id=hpNo]').focus();
-					return false;
-				}
-			}
-			// 자격 확인
-			$.ajax({
-				async: false,
-				cache: false,
-				type: "POST",
-				url: "/member/requestQualificationAjax.do",
-				data : queryString,
-				success: function(res){
-
-					if(res == "false"){
-						alert("가입정보를 한번 더 확인해 주십시오.");
-						
-						$('#jForm').find('[id=ptnm]').attr("enable", false);
-						$('#jForm').find('[id="citizen1"]').attr("readonly", false);
-						$('#jForm').find('[id="citizen2"]').attr("readonly", false);
-						
-						errFlag = true;
-						return false;
-					} else if(res == "next") {
-						//alert("인증이 완료되었습니다.");
-						//frm.submit();
-						errFlag = false;
-						return false;
-					} else {
-						alert("인증횟수는 하루에 10번입니다.");
-						errFlag = true;
-						return false;
-					}
-				},
-				error:function(request,status,error){
-					alert("가입정보가 조회 중 오류가 발생하였습니다.");
-					errFlag = true;
-					return false;
-			  }
-			});
-			
-			//직원인증인 경우
-			
-			
-				if($(this).closest('form').find('[id=stf_no]').val() == "") {
-					alert("사원번호를 입력해주세요.");
-					$(this).closest('form').find('[id=stf_no]').focus();
-					return false;
-				}
-			
-			
-
-			if(!errFlag){
-				if($(this).closest('form').find('[id=joinAuthYn]').val() != "Y"){
-					alert("본인인증이 필요합니다.");
-					return false;
-				}
-				frm.submit();
-			}
-		});
-
-		$("#btnAuthNumber").click(function(){
-			if($("#authMailYn").val() =="Y"){
-				alert("이미 발송되었습니다.");
-				return;
-			}
-
-			if($("#email1").val() == ""){
-				alert("메일아이디를 입력해주세요.");
-				$("#email1").focus();
-				return;
-			}
-
-			if($("#email2").val() == ""){
-				alert("메일도메인을 입력해주세요.");
-				$("#email2").focus();
-				return;
-			}
-			var email = $("#email1").val() + "@" + $("#email2").val();
-
-			$.ajax({
-				async: false,
-				cache: false,
-				type: "POST",
-				url: "/member/sendJoinAuthMailAjax.do",
-				dataType : 'json',
-				data : {"email" : email},
-				success: function(res){
-					if(res != "false"){
-						alert("인증번호가 발송되었습니다.");
-						$("#authMailYn").val("Y");
-						
-						$("#btnAuthNumber").attr("disabled","disabled");
-
-						
-						$("#email1").attr("readonly","readonly");
-						$("#email2").attr("readonly","readonly");
-
-						
-						$("#btnAuth").attr("disabled",false);
-						return;
-					}
-				},
-				error:function(request,status,error){
-					alert("인증번호 발송 중 오류가 발생하였습니다.");
-					return;
-			  }
-			});
-			return;
-		});
-
-		$("#btnHpAuthNumber").click(function(){
-			
-			if($("#authHpYn").val() =="Y"){
-				alert("이미 발송되었습니다.");
-				return;
-			}
-						
-			//2017-11-16 SEMI Edit SMS 정보 체크 실패 
-			if($('#jForm').find('[id=hpNo]').val() == ""){
-				alert("휴대전화번호를 입력해주세요.");
-				$('#jForm').find('[id=hpNo]').focus();
-				return;
-			}
-
-			var url = '/m/smsSendAjax.do';
-			var data = {"sms_type" : "confirmChk", "phone" : $('#jForm').find('[id=hpNo]').val()};
-
-			$.ajax({
-				type: "POST",
-			    url: url,
-			    data: data,
-			    dataType : "json",
-			    success: function(data)
-			    {
-			    	if(data.result == "success") {
-			    		alert("SMS가 발송되었습니다.");
-		
-						$("#authHpYn").val("Y");
-						
-						$("#btnHpAuthNumber").attr("disabled","disabled");
-		
-						
-						$('#jForm').find('[id=hpNo]').attr("readonly","readonly");
-		
-						
-						$("#btnHpAuth").attr("disabled",false);
-						return;
-			    	} else {
-			    		  alert("SMS가 발송되지 않았습니다. 다시 시도해주세요.")
-			    	}
-			     }
-			});
-			return;
-		});
-
-		$("#btnAuth").click(function(){
-			if($("#authMailYn").val() != "Y"){
-				alert("인증번호받기를 클릭해주세요.")
-				return;
-			}
-
-			if($("#confirmTelNum").val() == ""){
-				alert("인증번호를 입력해주세요.");
-				return;
-			}
-
-			var email = $("#email1").val() + "@" + $("#email2").val();
-
-			$.ajax({
-				async: false,
-				cache: false,
-				type: "POST",
-				url: "/member/authNumProcAjax.do",
-				dataType : 'json',
-				data : {"authNumber" : $("#confirmTelNum").val().trim(), "email" : email},
-				success: function(res){
-					if(res == true){
-						$('#authYn').val("Y");
-						$('#jForm').find('[id=joinAuthYn]').val("Y");
-
-						$("#btnAuth").attr("disabled","disabled");
-						//$('#jForm').find('[id=ptnm]').attr("readonly", "readonly");
-						//$('#jForm').find('[id="citizen1"]').attr("readonly", "readonly");
-						//$('#jForm').find('[id="citizen2"]').attr("readonly", "readonly");
-						$('#jForm').find('[id="confirmTel01"]').attr("disabled", "disabled");
-						$('#jForm').find('[id="confirmTel02"]').attr("disabled", "disabled");
-
-						alert("인증이 완료되었습니다.");
-						return;
-					}else{
-						alert("인증번호가 올바르지 않습니다.");
-						return;
-					}
-				},
-				error:function(request,status,error){
-					alert("인증 중 오류가 발생하였습니다.");
-					return;
-			  }
-			});
-			return;
-		});
-
-		$("#btnHpAuth").click(function(){
-			if($("#authHpYn").val() != "Y"){
-				alert("인증번호받기를 클릭해주세요.")
-				return;
-			}
-
-			if($("#confirmHpNum").val() == ""){
-				alert("인증번호를 입력해주세요.");
-				return;
-			}
-			
-			var data = {"hpNo" : $('#jForm').find('[id=hpNo]').val(), "confirmNo" : $('#jForm').find('[id=confirmHpNum]').val() };
-			/* {"hpNo" : $('#jForm').find('[id=hpNo]').val(), "confirmNo" : $("#confirmHpNum").val() } */
-			
-			$.ajax({
-				async: false,
-				cache: false,
-				type: "POST",
-				url: "/member/authSmsNumProcAjax.do",
-				dataType : 'json',
-				data : data,
-				success: function(res){
-					if(res == true){
-						$('#authYn').val("Y");
-						$('#jForm').find('[id=joinAuthYn]').val("Y");
-
-						$("#btnAuth").attr("disabled","disabled");
-						$('#jForm').find('[id=ptnm]').attr("readonly", "readonly");
-						$('#jForm').find('[id="citizen1"]').attr("readonly", "readonly");
-						$('#jForm').find('[id="citizen2"]').attr("readonly", "readonly");
-						$('#jForm').find('[id="confirmTel01"]').attr("disabled", "disabled");
-						$('#jForm').find('[id="confirmTel02"]').attr("disabled", "disabled");
-
-						alert("인증이 완료되었습니다.");
-						return;
-					}else{
-						alert("인증번호가 올바르지 않습니다.");
-						return;
-					}
-				},
-				error:function(request,status,error){
-					alert("인증 중 오류가 발생하였습니다.");
-					return;
-			  }
-			});
-			return;
-		});
-
-		$('#mBtn').click(function() {
-			var PCC_window =window.open('', 'PCCV3Window', 'width=430, height=560, resizable=1, scrollbars=no, status=0, titlebar=0, toolbar=0, left=300, top=200' );
-			PCC_window.focus();
-			document.reqPCCForm.action = 'https://pcc.siren24.com/pcc_V3/jsp/pcc_V3_j10.jsp';
-			document.reqPCCForm.target="PCCV3Window";
-			document.reqPCCForm.submit();
-		});
-
-		if($('#hForm').find('[id=joinAuthYn]').val() == "Y") {
-			$('#mBtn').attr("disabled", "disabled")
-		}
-
-		$('#jBtn').click(function() {
-			var PCC_window =window.open('', 'PCCV3Window', 'width=430, height=560, resizable=1, scrollbars=no, status=0, titlebar=0, toolbar=0, left=300, top=200' );
-			PCC_window.focus();
-			document.reqPCCForm.action = 'https://pcc.siren24.com/pcc_V3/jsp/pcc_V3_j10.jsp';
-			document.reqPCCForm.target="PCCV3Window";
-			document.reqPCCForm.submit();
-		});
-		
-		
-		$('#ipinBtn').click(function() {
-			var PCC_window =window.open('', 'IPINWindow', 'width=450, height=500, resizable=1, scrollbars=no, status=0, titlebar=0, toolbar=0, left=300, top=200' );
-			PCC_window.focus();
-			document.reqCBAForm.action = 'https://ipin.siren24.com/i-PIN/jsp/ipin_j10.jsp';
-			document.reqCBAForm.target="IPINWindow";
-			document.reqCBAForm.submit();
-		});
-
-		$('#gpinBtn').click(function() {
-			var gpin = window.open("./gpinReqPopup.do?join_type=TG", "gpin"," directories=no,toolbar=no,width=450,height=550");
-		});
-	});
+	}); 
 
 	//숫자만 입력 가능
 	function onlyNumber() {
@@ -684,6 +127,8 @@ html,body{
 			window.event.returnValue = false;
 		}
 	}
+	
+
 </script>
 
 <main id="content" class="memJoinContent">
@@ -699,19 +144,19 @@ html,body{
 		<div class="contTextWrap">
 			<em></em>
 		</div>
-		<p>서울대학교병원 홈페이지는 이용을 원하는 모든 분들께 무료로 제공되고 있습니다.</p>
-		<p>단, 게시판 글 게재, 민원서비스, 진료예약 등 일부 컨텐츠는 서울대학교병원 온라인 회원에게만 제공하고 있습니다.</p>
-		<p>서울대학교병원의 온라인 회원정책은 <em class="colorPoint">웹회원과 진료회원</em>으로 나뉘어 서비스 되고 있습니다.<br>웹회원으로 가입하는 경우, 차후 소정의 절차를 거쳐 진료회원으로 가입할 수 있습니다.</p>
+		<p>서울병원 홈페이지는 이용을 원하는 모든 분들께 무료로 제공되고 있습니다.</p>
+		<p>단, 게시판 글 게재, 민원서비스, 진료예약 등 일부 컨텐츠는 서울병원 온라인 회원에게만 제공하고 있습니다.</p>
+		<p>서울병원의 온라인 회원정책은 <em class="colorPoint">웹회원과 진료회원</em>으로 나뉘어 서비스 되고 있습니다.<br>웹회원으로 가입하는 경우, 차후 소정의 절차를 거쳐 진료회원으로 가입할 수 있습니다.</p>
 		<p>진료회원으로 가입하면 인터넷 진료예약 등 보다 다양한 서비스를 이용할 수 있습니다.</p>
 		<p>회원 가입을 하시려면 <em class="colorPoint">아래의 서비스 이용약관에 동의해주세요.</em><br>회원님의 개인정보보호와 더욱 안정된 서비스를 위해 최선을 다하겠습니다. 감사합니다.</p>
 	</div>
 	<form>
-		<fieldset style="border-style: none;">
+		<fieldset style="border-style: none;" class="agree">
 			<legend>약관동의 및 본인인증</legend>
 			<!-- persInforWrap -->
 			<!-- checkAllBox -->
 			<div class="boxTypeGray checkAllBox">
-				<label class="feForm feFoCheck" for="checkbox00"><input type="checkbox" id="checkbox00" class="feFoCheckAll" data-fe-group="group1" title="이용약관, 개인정보처리방침 모두 동의" data-fe-idx="feFoCheckIdx1" style="opacity: 0;"></label>
+				<label class="feForm feFoCheck" for="checkbox00"><input type="checkbox" id="checkbox00" class="feFoCheckAll" data-fe-group="group1" title="이용약관, 개인정보처리방침 모두 동의" data-fe-idx="feFoCheckIdx1" style="opacity: 0;" checked="checked"></label>
 				<label for="checkbox00">이용약관, 개인정보처리방침 <b>모두</b> 동의합니다.</label>
 			</div>
 			<!-- //checkAllBox -->
@@ -734,7 +179,7 @@ html,body{
 <div class="contTitleWrap"> 
 <h3>제1장 총칙</h3> </div> 
 <div class="contTextWrap"> <strong>제1조 목적</strong> </div> 
-<p> 이 약관은 서울대학교병원(이하 "병원"이라 한다)에서 운영하는 인터넷 홈페이지의 서비스(이하 "서비스"라 한다)를<br> 이용함에 있어 사이트와 이용자의 권리 의무 및 책임사항을 규정함을 목적으로 합니다. </p> 
+<p> 이 약관은 서울병원(이하 "병원"이라 한다)에서 운영하는 인터넷 홈페이지의 서비스(이하 "서비스"라 한다)를<br> 이용함에 있어 사이트와 이용자의 권리 의무 및 책임사항을 규정함을 목적으로 합니다. </p> 
 <div class="contTextWrap"> <strong>제2조 용어정의</strong> </div> 
 <p>이 약관에서 사용하는 용어의 정의는 다음과 같습니다.</p> 
 <ul class="paddingList"> 
@@ -814,7 +259,7 @@ html,body{
 <li><span>d.</span>병원 내에 제공되는 정보를 변경하는 등 홈페이지 운영을 방해한 경우</li> 
 <li><span>e.</span>기타 회원으로서의 자격을 지속시키는 것이 부적절하다고 판단되는 경우</li> 
 </ul> </li> 
-<li> <span>(3)</span>서울대학교병원 인터넷 사이트를 통하여 진료예약을 한 후 정당한 사유 없이 2회 이상 임의로 진료예약을 포기한 경우 인터넷 진료예약서비스에 대한 자격을 최대 2년간 제한 할 수 있습니다. </li> 
+<li> <span>(3)</span>서울병원 인터넷 사이트를 통하여 진료예약을 한 후 정당한 사유 없이 2회 이상 임의로 진료예약을 포기한 경우 인터넷 진료예약서비스에 대한 자격을 최대 2년간 제한 할 수 있습니다. </li> 
 </ul> 
 <div class="contTextWrap"> <strong>제8조 회원의 재가입</strong> </div> 
 <ul class="paddingList"> 
@@ -944,13 +389,13 @@ html,body{
 
 
 <!-- layerWrap -->
-<p class="privacyIntro">서울대학교병원은 개인정보 보호법에 따라 이용자의 개인정보 보호 및 권익을 보호하고 개인정보와 관련한 이용자의 고충을 원활하게 처리할 수 있도록 다음과 같은 처리방침을 두고 있습니다.<br>
- 서울대학교병원은 개인정보처리방침을 개정하는 경우 웹사이트 공지사항(또는 개별공지)을 통하여 공지할 것입니다.<br>
+<p class="privacyIntro">서울병원은 개인정보 보호법에 따라 이용자의 개인정보 보호 및 권익을 보호하고 개인정보와 관련한 이용자의 고충을 원활하게 처리할 수 있도록 다음과 같은 처리방침을 두고 있습니다.<br>
+ 서울병원은 개인정보처리방침을 개정하는 경우 웹사이트 공지사항(또는 개별공지)을 통하여 공지할 것입니다.<br>
  본 방침은<span class="">&nbsp;2022년 4월 27일</span>부터 새롭게 시행됩니다.&nbsp;</p>
 <div class="contTitleWrap"> 
 <h3>제1조(개인정보의 처리 목적)</h3></div>
 <div class="contTextWrap"> 
-<p>서울대학교병원은 개인정보를 다음의 목적을 위해 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 사용되지 않으며, 처리 목적이 변경될 시에는 개인정보 보호법 제18조에 따라 필요한 조치를 이행할 예정입니다.<br>
+<p>서울병원은 개인정보를 다음의 목적을 위해 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 사용되지 않으며, 처리 목적이 변경될 시에는 개인정보 보호법 제18조에 따라 필요한 조치를 이행할 예정입니다.<br>
  <br></p></div>
 <div class="contTextWrap"><strong>가. 홈페이지 회원가입 및 관리</strong></div>
 <p>회원 가입의사 확인, 회원제 서비스 제공에 따른 본인 식별·인증, 회원자격 유지·관리, 제한적 본인확인제 시행에 따른 본인확인, 서비스 부정이용 방지, 만14세 미만 아동 개인정보 수집 시 법정대리인 동의 여부 확인, 각종 고지·통지, 고충처리, 분쟁 조정을 위한 기록 보존, 서비스 이용에 대한 통계 수집 등을 목적으로 홈페이지 회원 가입시 및 서비스 제공시 수집하여 개인정보를 처리합니다.</p>
@@ -980,12 +425,12 @@ html,body{
 <p>서비스 제공, 콘텐츠 제공, 맞춤 서비스 제공, 본인인증, 연령인증 등을 목적으로 개인정보를 처리합니다.<br>
  <br></p>
 <div class="contTextWrap"><strong>바. 모바일앱 서비스 제공</strong></div>
-<p>내일정, 진료예약정보, 진료내역 정보, 진료시간표 등 진료 관련 서비스, 검사결과, 처방약, 건강수첩·와파린 수첩 서비스, 환자등록번호 확인 서비스, 주차비 결제, 처방비·진료비 결제 서비스 및 이에 부수하는 서비스 제공<br> ※ 단, 모바일팩스 서비스는 제3자((주)SK텔링크)의 어플리케이션 연동으로 이루어짐에 따라, 개인정보 처리에 대한 서울대학교병원의 법적인 책임이 없으며, 해당 어플리케이션의 이용약관을 따릅니다.</p>
+<p>내일정, 진료예약정보, 진료내역 정보, 진료시간표 등 진료 관련 서비스, 검사결과, 처방약, 건강수첩·와파린 수첩 서비스, 환자등록번호 확인 서비스, 주차비 결제, 처방비·진료비 결제 서비스 및 이에 부수하는 서비스 제공<br> ※ 단, 모바일팩스 서비스는 제3자((주)SK텔링크)의 어플리케이션 연동으로 이루어짐에 따라, 개인정보 처리에 대한 서울병원의 법적인 책임이 없으며, 해당 어플리케이션의 이용약관을 따릅니다.</p>
 <div class="contTextWrap"><br></div>
 <div class="contTitleWrap"> 
 <h3>제2조(개인정보의 처리 및 보유기간)</h3></div>
 <div class="contTextWrap"> 
-<p>서울대학교병원은 법령에 따른 개인정보 보유·이용기간 또는 정보주체로부터 개인정보를 수집 시에 동의 받은 개인정보 보유·이용기간 내에서 개인정보를 처리·보유합니다.</p></div>
+<p>서울병원은 법령에 따른 개인정보 보유·이용기간 또는 정보주체로부터 개인정보를 수집 시에 동의 받은 개인정보 보유·이용기간 내에서 개인정보를 처리·보유합니다.</p></div>
 <p><strong><br> 각각의 개인정보 처리 및 보유 기간은 다음과 같습니다.</strong></p>
 <ul class="paddingList"> 
 <li>1)&nbsp;홈페이지 회원 가입 및 관리 : 홈페이지 탈퇴시까지 다만, 다음의 사유에 해당하는 경우에는 해당 사유 종료시까지 
@@ -1003,7 +448,7 @@ html,body{
 <div class="contTitleWrap"> 
 <h3>제3조(개인정보의 제3자 제공)</h3></div>
 <div class="contTextWrap"> 
-<p>서울대학교병원은 원칙적으로 정보주체의 개인정보를 수집·이용 목적으로 명시한 범위 내에서<br>
+<p>서울병원은 원칙적으로 정보주체의 개인정보를 수집·이용 목적으로 명시한 범위 내에서<br>
  처리하며, 다음 각 호의 경우를 제외하고는 정보주체의 사전 동의 없이는 본래의 목적 범위를<br> 초과하여 처리하거나 제3자에게 제공하지 않습니다.</p></div>
 <ul class="paddingList"> 
 <li>①&nbsp;정보주체로부터 별도의 동의를 받는 경우</li> 
@@ -1461,7 +906,7 @@ html,body{
 <td> 
 <p>29</p></td> 
 <td> 
-<p style="text-align: left;">공공기관의 고객만족도조사를 위한 서울대학교병원의 서비스를 직접 경험한 자에 대한 설문조사 실시</p></td> 
+<p style="text-align: left;">공공기관의 고객만족도조사를 위한 서울병원의 서비스를 직접 경험한 자에 대한 설문조사 실시</p></td> 
 <td> 
 <p style="text-align: left;">기획재정부, <br> 한국조세재정연구원</p></td> 
 <td> 
@@ -1476,7 +921,7 @@ html,body{
 </table> </div>
 <div class="contTitleWrap"> 
 <h3>제4조(개인정보처리 위탁)</h3></div>
-<p><strong>가. 서울대학교병원은 원활한 개인정보 업무처리를 위하여 다음과 같이 개인정보 처리업무를 위탁하고 있습니다.</strong></p>
+<p><strong>가. 서울병원은 원활한 개인정보 업무처리를 위하여 다음과 같이 개인정보 처리업무를 위탁하고 있습니다.</strong></p>
 <div class="tableType01"> 
 <table status="default"> 
 <caption> 개인정보 처리 위탁 </caption> 
@@ -1525,7 +970,7 @@ html,body{
 <td align="center"> 
 <p><strong>㈜레몬헬스케어</strong></p></td> 
 <td> 
-<p>서울대학교병원 고객용 스마트 모바일 어플리케이션 구축 사업 유지보수 계약</p></td> 
+<p>서울병원 고객용 스마트 모바일 어플리케이션 구축 사업 유지보수 계약</p></td> 
 <td> 
 <p>위탁계약 종료시까지</p></td> 
 </tr> 
@@ -1565,7 +1010,7 @@ html,body{
 <td align="center"> 
 <p><strong>㈜헬스커넥트</strong></p></td> 
 <td> 
-<p>서울대학교병원 스마트 병실 구축 사업</p></td> 
+<p>서울병원 스마트 병실 구축 사업</p></td> 
 <td> 
 <p>위탁계약 종료시까지</p></td> 
 </tr> 
@@ -1675,7 +1120,7 @@ html,body{
 <td align="center"> 
 <p><strong>㈜이지메디컴</strong></p></td> 
 <td> 
-<p>서울대학교병원 재고관리 및 CCDS 용역</p></td> 
+<p>서울병원 재고관리 및 CCDS 용역</p></td> 
 <td> 
 <p>위탁계약 종료시까지</p></td> 
 </tr> 
@@ -1872,28 +1317,28 @@ html,body{
 </tbody> 
 </table> </div>
 <p><br>
- <span style="font-weight: 700;">나. 서울대학교병원은 위탁계약 체결 시 개인정보 보호법 제26조에 따라 위탁업무 수행목적 외 개인정보 처리금지, 기술적/관리적 보호조치, 위탁업무의 목적 및 범위, 재 위탁 제한, 안전성 확보 조치에 관한 사항, 수탁자에 대한 관리/감독, 손해배상 등 책임에 관한 사항을 계약서 등 문서에 명시하고, 수탁자가 개인정보를 안전하게 처리하는지를 감독하고 있습니다.</span><br>
+ <span style="font-weight: 700;">나. 서울병원은 위탁계약 체결 시 개인정보 보호법 제26조에 따라 위탁업무 수행목적 외 개인정보 처리금지, 기술적/관리적 보호조치, 위탁업무의 목적 및 범위, 재 위탁 제한, 안전성 확보 조치에 관한 사항, 수탁자에 대한 관리/감독, 손해배상 등 책임에 관한 사항을 계약서 등 문서에 명시하고, 수탁자가 개인정보를 안전하게 처리하는지를 감독하고 있습니다.</span><br>
  <strong><br> 다. 위탁업무의 내용이나 수탁자가 변경될 경우에는 지체 없이 본 개인정보 처리방침을 통하여 공개하도록 하겠습니다.</strong></p>
 <div class="contTitleWrap"> 
 <h3>제5조(정보주체와 법정대리인의 권리, 의무 및 행사방법)</h3></div>
 <div class="contTextWrap"> 
 <p>이용자는 개인정보주체로서 다음과 같은 권리를 행사할 수 있습니다.</p></div>
-<p><strong>가. 정보주체는 서울대학교병원에 대해 언제든지 다음 각 호의 개인정보 보호 관련 권리를 행사할 수 있습니다.</strong></p>
+<p><strong>가. 정보주체는 서울병원에 대해 언제든지 다음 각 호의 개인정보 보호 관련 권리를 행사할 수 있습니다.</strong></p>
 <ul class="paddingList"> 
 <li>1) 개인정보 열람요구</li> 
 <li>2) 오류 등이 있을 경우 정정 요구</li> 
 <li>3) 삭제요구</li> 
 <li>4) 처리정지 요구<br></li> 
 </ul>
-<p><strong>나. ㉮항에 따른 권리 행사는 서울대학교병원에 개인정보 보호법 시행규칙 별지 제8호 서식에 따라 서면, 전자우편, 모사전송(FAX) 등을 통하여 하실 수 있으며 서울대학교병원은 이에 대해 지체 없이 조치하겠습니다.<br>
- <br></strong><strong>다. 정보주체가 개인정보의 오류 등에 대한 정정 또는 삭제를 요구한 경우에는 서울대학교병원은 정정 또는 삭제를 완료할 때까지 당해 개인정보를 이용하거나 제공하지 않습니다.<br>
+<p><strong>나. ㉮항에 따른 권리 행사는 서울병원에 개인정보 보호법 시행규칙 별지 제8호 서식에 따라 서면, 전자우편, 모사전송(FAX) 등을 통하여 하실 수 있으며 서울병원은 이에 대해 지체 없이 조치하겠습니다.<br>
+ <br></strong><strong>다. 정보주체가 개인정보의 오류 등에 대한 정정 또는 삭제를 요구한 경우에는 서울병원은 정정 또는 삭제를 완료할 때까지 당해 개인정보를 이용하거나 제공하지 않습니다.<br>
  <br></strong><strong>라. ㉮항에 따른 권리 행사는 정보주체의 법정대리인이나 위임을 받은 자 등 대리인을 통하여 하실 수 있습니다. 이 경우 개인정보 보호법 시행규칙 별지 제11호 서식에 따른 위임장을 제출하셔야 합니다.</strong><br>
  <br>
- <strong>마. 서울대학교병원은 권리행사를 요구를 받은 날로부터 10일 이내에 정보주체의 요구에 상응하는 조치를 취하고 그 결과를 정보주체에게 알리겠습니다.</strong></p>
+ <strong>마. 서울병원은 권리행사를 요구를 받은 날로부터 10일 이내에 정보주체의 요구에 상응하는 조치를 취하고 그 결과를 정보주체에게 알리겠습니다.</strong></p>
 <div class="contTitleWrap"> 
 <h3>제6조(처리하는 개인정보 항목)</h3></div>
 <div class="contTextWrap"> 
-<p>서울대학교병원은 다음의 개인정보 항목을 처리하고 있습니다.<br>
+<p>서울병원은 다음의 개인정보 항목을 처리하고 있습니다.<br>
  <br></p></div>
 <div class="contTextWrap"><strong>가. 홈페이지 회원가입 및 관리</strong></div>
 <ul class="listType01"> 
@@ -1965,14 +1410,14 @@ html,body{
 <li class="">필수 항목 : 휴대전화번호, 단말 MAC 주소</li> 
 <li class="">14세 미만 추가 필수 항목 : 법정대리인 이름, 관계</li> 
 </ul>
-<div class="contTextWrap"><strong>자.&nbsp;서울대학교병원 개인정보파일 현황</strong></div>
+<div class="contTextWrap"><strong>자.&nbsp;서울병원 개인정보파일 현황</strong></div>
 <ul class="listType01"> 
-<li class=""><span>개인정보보호 종합지원포털(</span><a href="http://www.privacy.go.kr" target="_blank" title="새 창으로 이동"><span>www.privacy.go.kr</span></a><span>) →민원마당→ 개인정보의 열람 등 요구 → 개인정보파일 목록 검색 → 기관명에 “서울대학교병원” 입력 후 조회</span></li> 
+<li class=""><span>개인정보보호 종합지원포털(</span><a href="http://www.privacy.go.kr" target="_blank" title="새 창으로 이동"><span>www.privacy.go.kr</span></a><span>) →민원마당→ 개인정보의 열람 등 요구 → 개인정보파일 목록 검색 → 기관명에 “서울병원” 입력 후 조회</span></li> 
 </ul>
 <div class="contTitleWrap"> 
 <h3>제7조(개인정보의 파기)</h3></div>
 <div class="contTextWrap"> 
-<p>서울대학교병원은 원칙적으로 개인정보 처리목적이 달성된 경우에는 지체 없이 해당 개인정보를 파기합니다. 파기의 절차, 기한 및 방법은 다음과 같습니다.<br>
+<p>서울병원은 원칙적으로 개인정보 처리목적이 달성된 경우에는 지체 없이 해당 개인정보를 파기합니다. 파기의 절차, 기한 및 방법은 다음과 같습니다.<br>
  <br></p></div>
 <div class="contTextWrap"><strong>가. 파기절차</strong></div>
 <p>이용자가 입력한 정보는 목적 달성 후 별도의 DB에 옮겨져(종이의 경우 별도의 서류) 내부 방침 및 기타 관련 법령에 따라 일정기간 저장된 후 혹은 즉시 파기됩니다. 이 때, DB로 옮겨진 개인정보는 법률에 의한 경우가 아니고서는 다른 목적으로 이용되지 않습니다.<br>
@@ -1985,7 +1430,7 @@ html,body{
 <div class="contTitleWrap"> 
 <h3>제8조(개인정보의 안전성 확보 조치)</h3></div>
 <div class="contTextWrap"> 
-<p>서울대학교병원은 개인정보보호법 제29조에 따라 다음과 같이 안전성 확보에 필요한 기술적/관리적 및 물리적 조치를 하고 있습니다.</p></div>
+<p>서울병원은 개인정보보호법 제29조에 따라 다음과 같이 안전성 확보에 필요한 기술적/관리적 및 물리적 조치를 하고 있습니다.</p></div>
 <div class="contTextWrap"><strong><br> 가. 개인정보 취급 직원의 최소화 및 교육</strong></div>
 <p>개인정보를 취급하는 직원을 지정하고 담당자에 한정시켜 최소화하여 개인정보를 관리하는 대책을 시행하고 있습니다.</p>
 <div class="contTextWrap"><strong><br> 나. 정기적인 자체 감사 실시</strong></div>
@@ -1995,7 +1440,7 @@ html,body{
 <div class="contTextWrap"><strong><br> 라. 개인정보의 암호화</strong></div>
 <p>이용자의 개인정보는 비밀번호는 암호화 되어 저장 및 관리되고 있어, 본인만이 알 수 있으며 중요한 데이터는 파일 및 전송 데이터를 암호화 하거나 파일 잠금 기능을 사용하는 등의 별도 보안기능을 사용하고 있습니다.</p>
 <div class="contTextWrap"><strong><br> 마. 해킹 등에 대비한 기술적 대책</strong></div>
-<p>서울대학교병원은 해킹이나 컴퓨터 바이러스 등에 의한 개인정보 유출 및 훼손을 막기 위하여 보안프로그램을 설치하고 주기적인 갱신·점검을 하며 외부로부터 접근이 통제된 구역에 시스템을 설치하고 기술적/물리적으로 감시 및 차단하고 있습니다.</p>
+<p>서울병원은 해킹이나 컴퓨터 바이러스 등에 의한 개인정보 유출 및 훼손을 막기 위하여 보안프로그램을 설치하고 주기적인 갱신·점검을 하며 외부로부터 접근이 통제된 구역에 시스템을 설치하고 기술적/물리적으로 감시 및 차단하고 있습니다.</p>
 <div class="contTextWrap"><strong><br> 바. 개인정보에 대한 접근 제한</strong></div>
 <p>개인정보를 처리하는 데이터베이스시스템에 대한 접근권한의 부여, 변경, 말소를 통하여 개인정보에 대한 접근통제를 위하여 필요한 조치를 하고 있으며 침입차단시스템을 이용하여 외부로부터의 무단 접근을 통제하고 있습니다.</p>
 <div class="contTextWrap"><strong><br> 사. 접속기록의 보관 및 위변조 방지</strong></div>
@@ -2006,7 +1451,7 @@ html,body{
 <p>개인정보를 보관하고 있는 개인정보처리시스템의 물리적 보관 장소를 별도로 두고 이에 대해 출입통제 절차를 수립·운영하고 있습니다.</p>
 <div class="contTitleWrap"> 
 <h3>제9조 (개인정보 보호책임자)</h3></div>
-<p><strong>가. 서울대학교병원은 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 정보주체의 불만처리 및 피해구제 등을 위하여 아래와 같이 개인정보 보호책임자를 지정하고 있습니다.<br>
+<p><strong>가. 서울병원은 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 정보주체의 불만처리 및 피해구제 등을 위하여 아래와 같이 개인정보 보호책임자를 지정하고 있습니다.<br>
  <br></strong></p>
 <p><strong>개인정보 보호책임자</strong></p>
 <ul class="listType01"> 
@@ -2046,10 +1491,10 @@ html,body{
 <li class="">부서명 : PI팀</li> 
 <li class="">연락처 : 02-2072-1514</li> 
 </ul>
-<div class="contTextWrap"><strong>서울대학교병원과 패밀리사이트 통합회원관리(SSO서비스)</strong></div>
+<div class="contTextWrap"><strong>서울병원과 패밀리사이트 통합회원관리(SSO서비스)</strong></div>
 <div class="tableType01"> 
 <table> 
-<caption>서울대학교병원과 패밀리 사이트</caption> 
+<caption>서울병원과 패밀리 사이트</caption> 
 <tbody> 
 <tr> 
 <th class="NamoSE_border_show" scope="row" style="width: 220px; border-width: 0.994318px;">사이트명(도메인)</th> 
@@ -2077,10 +1522,10 @@ html,body{
 </tr> 
 </tbody> 
 </table></div>
-<p><strong>나. 정보주체께서는 서울대학교병원의 서비스(또는 사업)를 이용하시면서 발생한 모든 개인정보 보호 관련 문의, 불만처리, 피해구제 등에 관한 사항을 개인정보 보호책임자 및 담당부서로 문의하실 수 있습니다. 서울대학교병원은 정보주체의 문의에 대해 지체 없이 답변 및 처리해드릴 것입니다.</strong></p>
+<p><strong>나. 정보주체께서는 서울병원의 서비스(또는 사업)를 이용하시면서 발생한 모든 개인정보 보호 관련 문의, 불만처리, 피해구제 등에 관한 사항을 개인정보 보호책임자 및 담당부서로 문의하실 수 있습니다. 서울병원은 정보주체의 문의에 대해 지체 없이 답변 및 처리해드릴 것입니다.</strong></p>
 <div class="contTitleWrap"> 
 <h3>제10조(개인정보 열람청구)</h3></div>
-<p><strong>가. 정보주체는 개인정보 보호법 제35조에 따른 개인정보의 열람 청구를 아래의 부서에 할 수 있습니다. 서울대학교병원은 정보주체의 개인정보 열람청구가 신속하게 처리되도록 노력하겠습니다. (14세 미만 아동은 법적 대리인의 동의를 통해 가능함)</strong></p>
+<p><strong>가. 정보주체는 개인정보 보호법 제35조에 따른 개인정보의 열람 청구를 아래의 부서에 할 수 있습니다. 서울병원은 정보주체의 개인정보 열람청구가 신속하게 처리되도록 노력하겠습니다. (14세 미만 아동은 법적 대리인의 동의를 통해 가능함)</strong></p>
 <p><strong><br> 홈페이지&nbsp;개인정보 열람청구 접수·처리부서</strong></p>
 <ul class="listType01"> 
 <li class="">부서명 : 홍보팀</li> 
@@ -2103,23 +1548,23 @@ html,body{
 <p><strong>개인정보보호위원회&nbsp;개인정보보호 종합지원 포털 → 개인정보 민원 → 개인정보 열람등 요구 (본인확인을 위하여 아이핀(I-PIN)이 있어야 함)</strong></p>
 <div class="contTitleWrap"> 
 <h3>제11조(권익침해 구제방법)</h3></div>
-<p>아래의 기관은 서울대학교병원과는 별개의 기관으로서, 서울대학교병원의 자체적인 개인정보 불만처리, 피해구제 결과에 만족하지 못하시거나 보다 자세한 도움이 필요하시면 문의하여 주시기 바랍니다.</p>
+<p>아래의 기관은 서울병원과는 별개의 기관으로서, 서울병원의 자체적인 개인정보 불만처리, 피해구제 결과에 만족하지 못하시거나 보다 자세한 도움이 필요하시면 문의하여 주시기 바랍니다.</p>
 <p><strong><br></strong><strong style="font-size: 12pt;">개인정보 분쟁조정위원회 :&nbsp;</strong><span style="font-size: 12pt;">1833-6972 (&nbsp;</span><a style="font-size: 12pt;" href="https://www.kopico.go.kr/" target="_blank">www.kopico.go.kr</a>&nbsp;)<strong><br> 개인정보 침해신고센터 :&nbsp;</strong><span style="font-size: 12pt;">(국번 없이) 118 (&nbsp;</span><a style="font-size: 12pt;" href="https://privacy.kisa.or.kr/" target="_blank">privacy.kisa.or.kr</a>&nbsp;)<br>
  <strong style="font-size: 12pt;">대검찰청 사이버수사과 :&nbsp;</strong><span style="font-size: 12pt;">(국번없이) 1301 cid@spo.go.kr (<a href="//www.spo.go.kr" target="_blank">www.spo.go.kr</a>)</span><br>
  <span style="font-weight: bold;">경찰청 사이버안전국 :&nbsp;</span>(국번없이) 182&nbsp;<span style="font-size: 10pt;"><span>(</span><a href="https://www.police.go.kr/www/security/cyber.jsp" target="_blank" title="새 창으로 이동"><span>https://www.police.go.kr/www/security/cyber.jsp</span></a><span>)</span></span></p>
 <p>또한, 개인정보의 열람, 정정·삭제, 처리정지 등에 대한 정보주체자의 요구에 대하여 공공기관의 장이 행한 처분 또는 부작위로 인하여 권리 또는 이익을 침해 받은 자는 행정심판법이 정하는 바에 따라 행정심판을 청구할 수 있습니다. 중앙행정심판위원회(<a href="//www.simpan.go.kr" target="_blank">www.simpan.go.kr</a>)의 전화번호 안내 참조</p>
 <div class="contTitleWrap"> 
 <h3>제12조(개인정보 자동수집 장치의 설치, 운영 및 그 거부에 관한 사항)</h3></div>
-<p class="conTxt">서울대학교병원은 이용자에게 특화된 맞춤서비스를 제공하기 위해서 이용자들의 정보를 수시로 저장하고 불러오는 '쿠키(cookie)'를 운용합니다. 쿠키란 웹사이트를 운영하는데 이용되는 서버가 이용자의 브라우저에 보내는 아주 작은 텍스트 파일로서 이용자의 컴퓨터 하드디스크에 저장됩니다. 서울대학교병원은 다음과 같은 목적을 위해 쿠키를 사용합니다.<br>
+<p class="conTxt">서울병원은 이용자에게 특화된 맞춤서비스를 제공하기 위해서 이용자들의 정보를 수시로 저장하고 불러오는 '쿠키(cookie)'를 운용합니다. 쿠키란 웹사이트를 운영하는데 이용되는 서버가 이용자의 브라우저에 보내는 아주 작은 텍스트 파일로서 이용자의 컴퓨터 하드디스크에 저장됩니다. 서울병원은 다음과 같은 목적을 위해 쿠키를 사용합니다.<br>
  <br></p>
 <p><strong>쿠키의 사용 목적</strong></p>
 <p>회원과 비회원의 접속 빈도나 방문 시간 등을 분석, 이용자의 취향과 관심분야를 파악 및 자취 추적, 각종 이벤트 참여 정도 및 방문 회수 파악 등을 통한 개인 맞춤 서비스 제공 이용자는 쿠키 설치에 대한 선택권을 가지고 있습니다. 따라서, 이용자는 웹브라우저에서 옵션을 설정함으로써 모든 쿠키를 허용하거나, 쿠키가 저장될 때마다 확인을 거치거나, 아니면 모든 쿠키의 저장을 거부할 수도 있습니다.</p>
 <p><strong><br> 쿠키 설정 거부 방법</strong></p>
 <p>쿠키 설정을 거부하는 방법으로는 이용자가 사용하는 웹 브라우저의 옵션을 선택함으로써 모든 쿠키를 허용하거나 쿠키를 저장할 때마다 확인을 거치거나, 모든 쿠키의 저장을 거부할 수 있습니다.설정방법 예(인터넷 익스플로어의 경우) : 웹 브라우저 상단의 도구 &gt;인터넷 옵션 &gt;개인정보단, 쿠키 설치를 거부하였을 경우 로그인이 필요한 일부 서비스 이용에 어려움이 있을 수 있습니다.</p>
-<p><strong><br> 이용자는 서울대학교병원 홈페이지에서 수집하는 개인정보에 대해 동의를 거부할 권리가 있으며, 동의 거부 시에는 회원가입 및 인터넷 진료예약, 민원등록, 개인건강기록서비스 (SNUH myCare) 등의 홈페이지 서비스가 일부 제한됩니다.</strong></p>
+<p><strong><br> 이용자는 서울병원 홈페이지에서 수집하는 개인정보에 대해 동의를 거부할 권리가 있으며, 동의 거부 시에는 회원가입 및 인터넷 진료예약, 민원등록, 개인건강기록서비스 (SNUH myCare) 등의 홈페이지 서비스가 일부 제한됩니다.</strong></p>
 <div class="contTitleWrap"> 
 <h3>제13조(영상정보처리기기 운영/관리에 관한 사항)</h3></div>
-<p class="conTxt">서울대학교병원(이하 병원)은 개인정보 보호법 제25조제1항에 근거하여 영상정보처리기기를 설치·운영하고 있으며, 본 방침을 통해 병원에서 처리하는 영상정보가 어떠한 용도와 방식으로 이용·관리되고 있는지 알려 드립니다.&nbsp;<br></p>
+<p class="conTxt">서울병원(이하 병원)은 개인정보 보호법 제25조제1항에 근거하여 영상정보처리기기를 설치·운영하고 있으며, 본 방침을 통해 병원에서 처리하는 영상정보가 어떠한 용도와 방식으로 이용·관리되고 있는지 알려 드립니다.&nbsp;<br></p>
 <p><br></p>
 <p><strong>설치 근거 및 설치 목적</strong></p>
 <p>환자 및 시설안전, 화재 및 범죄 예방, 주ㆍ정차관리</p>
@@ -2211,18 +1656,7 @@ html,body{
 	</div>
 	<!-- tabType -->
 	<!-- 2017-11-12 14세 미만은 법적 동의가 필요하여 관련 용어를 수정함 SEMI Check OK -->
-	<div class="tabTypeCol3 contTabType">
-		<ul class="clearFix feTab" data-pannel="1" data-tab-group="feTab1Gr0" role="tablist">
-			
-				
-					<li class="current"><a href="#contTabType01" role="tab" aria-selected="true" style="width:50%;float:left;">본인명의 휴대전화 인증</a></li>
-					<li><a href="regi1(1).jsp" role="tab" aria-selected="false">주민등록번호 확인</a></li>
-				
-				
-				
-			
-		</ul>
-	</div>
+
 	<!-- //tabType -->
 	
 		
@@ -2238,7 +1672,7 @@ html,body{
 				<input type="hidden" name="retUrl" value="23https://www.snuh.org/member/ipinAuthResponse.do?authKind=join&amp;join_type=TG">
 				<input type="hidden" name="addpara1" value="TG">
 			</form>
-			<form id="hForm" name="hForm" action="./joinStep3.do" method="post">
+			<form id="hForm" name="hForm" action="regi2.jsp" method="post">
 			<input id="join_type" name="join_type" type="hidden" value="TG">
 			<input id="cert_type" name="cert_type" value="H" type="hidden">
 			<input type="hidden" name="birthday" id="birthday">
@@ -2259,26 +1693,22 @@ html,body{
 							<tbody>
 								<tr>
 									<th scope="row">휴대전화 인증</th>
-									<td><button type="button" class="btnType02" id="mBtn">본인 인증하기</button></td>
+									<td>
+									<input type='tel' name='phone1'> -
+       								<input type='tel' name='phone2' class="num4"> -
+        							<input type='tel' name='phone3' class="num4">
+									<button type="button" class="btnType02" id="mBtn">휴대폰인증</button>
+									<input type="text" name='key' class="keyNum">
+									<input type="button" value="인증번호" class="btnType02" id="push">
+									<span id="result"></span>
+									</td>
 								</tr>
 								<tr>
 									<th scope="row">이름</th>
 									<td>
-										<input type="text" id="ptnm" name="pt_nm" class="inputText" title="이름" readonly="true">
-										<span class="desc">※ 인증 후 자동으로 이름이 입력됩니다.</span>
+										<input type="text" id="ptnm" name="name" class="inputText" title="이름" >
 									</td>
 								</tr>
-								
-									
-										<tr>
-											<th scope="row">인증방법 선택</th>
-											<td>
-												<label class="feForm feFoRadio checked" for="confirmTel0101"><input type="radio" id="confirmTel0101" name="confirmTel01" data-tg-group="confirmTel01" data-tg-trigger="confirmTel0101" checked="" data-fe-idx="feFoRadioIdx1" style="opacity: 0;"></label>
-												<label for="confirmTel0101" class="lblTxt">주민등록번호</label>
-												<label class="feForm feFoRadio" for="confirmTel0102"><input type="radio" id="confirmTel0102" name="confirmTel01" data-tg-group="confirmTel01" data-tg-trigger="confirmTel0102" data-fe-idx="feFoRadioIdx2" style="opacity: 0;"></label>
-												<label for="confirmTel0102" class="lblTxt">진찰권번호(환자번호)</label>
-											</td>
-										</tr>
 										<tr data-tg-group="confirmTel01" data-tg-wrap="confirmTel0101" role="region" aria-expanded="true" class="" style="display: table-row;">
 											<th scope="row">주민등록번호</th>
 											<td>
@@ -2286,16 +1716,6 @@ html,body{
 												<label class="feForm feFoCheck" for="hShowCitizen2"><input type="checkbox" id="hShowCitizen2" data-fe-idx="feFoCheckIdx5" style="opacity: 0;"></label><label for="hShowCitizen2">숨김정보 보기</label> <span class="desc">※ 병원 환자정보 확인을 위해 정확히 입력해 주십시오.</span>
 											</td>
 										</tr>
-										<tr data-tg-group="confirmTel01" data-tg-wrap="confirmTel0102" role="region" aria-expanded="false" class="tgHideEl" style="display: none;">
-											<th scope="row">진찰권번호<br>(환자번호)</th>
-											<td>
-												<input type="text" class="inputText" title="진찰권번호(환자번호)" id="pt_no" name="pt_no" maxlength="8" onkeydown="return onlyNumber();">
-												<span class="desc">※ 진료카드 혹은 진료비 영수증, 처방전에서 진찰권번호(환자번호)를 확인하실 수 있습니다.</span>
-											</td>
-										</tr>
-									
-									
-								
 							</tbody>
 						</table>
 					</div>
@@ -2307,162 +1727,10 @@ html,body{
 		</div>
 		<!-- //contTabType01 -->
 		<!-- contTabType02 -->
-		<div id="contTabType02" class="feTabCont" role="tabpanel" aria-hidden="true" data-tab-group="feTab1Gr0" style="display: none;">
-			<form id="gForm" name="gForm" action="./joinStep3.do" method="post">
-			<input id="join_type" name="join_type" type="hidden" value="TG">
-			<input id="cert_type" name="cert_type" value="I" type="hidden">
-			<input type="hidden" name="birthday" id="birthday">
-			<input type="hidden" name="dupKey" id="dupKey">
-			<input type="hidden" name="vi" id="vi">
-			<input type="hidden" name="gender" id="gender">
-			<input type="hidden" name="joinAuthYn" id="joinAuthYn">
-			<input type="hidden" name="rpst_nm" id="rpst_nm">
-				<fieldset>
-					<!-- boardTypeForm -->
-					<div class="boardTypeForm">
-						<table>
-							<caption>본인명의 아이핀(I-Pin) 인증(이름, 인증방법 선택, 휴대전화 인증)</caption>
-							<colgroup>
-								<col style="width: 140px;">
-								<col style="width: auto;">
-							</colgroup>
-							<tbody>
-								<tr>
-									<th scope="row">아이핀 인증</th>
-									<td><button type="button" class="btnType02" id="ipinBtn">본인 인증하기</button></td>
-								</tr>
-								<tr>
-									<th scope="row">이름</th>
-									<td>
-										<input type="text" id="ptnm" name="pt_nm" class="inputText" title="이름" readonly="true">
-										<span class="desc">※ 인증 후 자동으로 이름이 입력됩니다.</span>
-									</td>
-								</tr>
-								
-									
-										<tr>
-											<th scope="row">인증방법 선택</th>
-											<td>
-												<label class="feForm feFoRadio checked" for="confirmTel0201"><input type="radio" id="confirmTel0201" name="confirmTel" data-tg-group="confirmTel02" data-tg-trigger="confirmTel0201" checked="" data-fe-idx="feFoRadioIdx3" style="opacity: 0;"></label>
-												<label for="confirmTel0201" class="lblTxt">주민등록번호</label>
-												<label class="feForm feFoRadio" for="confirmTel0202"><input type="radio" id="confirmTel0202" name="confirmTel" data-tg-group="confirmTel02" data-tg-trigger="confirmTel0202" data-fe-idx="feFoRadioIdx4" style="opacity: 0;"></label>
-												<label for="confirmTel0202" class="lblTxt">진찰권번호(환자번호)</label>
-											</td>
-										</tr>
-										<tr data-tg-group="confirmTel02" data-tg-wrap="confirmTel0201" role="region" aria-expanded="true" class="" style="display: table-row;">
-											<th scope="row">주민등록번호</th>
-											<td>
-												<input type="text" id="citizen1" name="citizen1" maxlength="6" onkeydown="return onlyNumber();" class="inputTextSmall" title="주민등록번호 첫번째 여섯자리"><span class="txtWrap">-</span><input type="password" id="citizen2" name="citizen2" maxlength="7" onkeydown="return onlyNumber();" class="inputTextSmall" title="주민등록번호 나머지 자리">
-												<label class="feForm feFoCheck" for="gShowCitizen2"><input type="checkbox" id="gShowCitizen2" data-fe-idx="feFoCheckIdx6" style="opacity: 0;"></label><label for="gShowCitizen2">숨김정보 보기</label> <span class="desc">※ 정확히 입력해 주십시오. 병원 환자정보 확인을 위해 사용됩니다.</span>
-											</td>
-										</tr>
-										<tr data-tg-group="confirmTel02" data-tg-wrap="confirmTel0202" role="region" aria-expanded="false" class="tgHideEl" style="display: none;">
-											<th scope="row">진찰권번호<br>(환자번호)</th>
-											<td>
-												<input type="text" id="pt_no" name="pt_no" maxlength="8" onkeydown="return onlyNumber();" class="inputText" title="진찰권번호(환자번호)">
-												<span class="desc">※ 진료카드, 진료비 영수증, 처방전 등에서 진찰권번호(환자번호)를 확인하실 수 있습니다.</span>
-											</td>
-										</tr>
-									
-									
-								
-							</tbody>
-						</table>
-					</div>
-					<div class="btnWrap">
-						<button type="button" class="btnType03 btnBig" id="gNextBtn">다음단계</button>
-					</div>
-					<!-- //boardTypeForm -->
-				</fieldset>
-			</form>
-		</div>
+		
 		<!-- //contTabType02 -->
 		<!-- contTabType03 -->
-		<div id="contTabType03" class="feTabCont" role="tabpanel" aria-hidden="true" data-tab-group="feTab1Gr0" style="display: none;">
-			<form id="jForm" name="jForm" action="./joinStep3.do" method="post">
-			<input id="join_type" name="join_type" type="hidden" value="TG">
-			<input id="cert_type" name="cert_type" value="J" type="hidden">
-			<input type="hidden" name="birthday" id="birthday">
-			<input type="hidden" name="dupKey" id="dupKey">
-			<input type="hidden" name="vi" id="vi">
-			<input type="hidden" name="gender" id="gender">
-			<input type="hidden" name="joinAuthYn" id="joinAuthYn" value="N">
-			<input type="hidden" id="authMailYn" value="N">
-			<input type="hidden" id="authHpYn" value="N">
-			<input type="hidden" id="authYn" value="N">
-			<input type="hidden" name="pt_no" id="pt_no">
-				<fieldset>
-					<div class="boardTypeForm">
-						<table>
-							<caption>주민등록번호 확인 인증(이름, 인증방법 선택, 휴대전화번호 인증)</caption>
-							<colgroup>
-								<col style="width: 140px;">
-								<col style="width: auto;">
-							</colgroup>
-							<tbody>
-								<!-- 2017-11-12 주민등록번호 인증시 이름, 주민등록번호를 먼저 정보를 받고 휴대전화번호 인증을 진행함. SEMI Check OK -->
-								<tr>
-									<th scope="row">이름</th>
-									<td>
-										<input type="text" id="ptnm" name="pt_nm" class="inputText" title="이름" style="ime-mode:active;">
-									</td>
-								</tr>
-								<tr>
-									<th scope="row">주민등록번호</th>
-									<td>
-										<input type="text" id="citizen1" name="citizen1" class="inputTextSmall" title="주민등록번호 첫번째 여섯자리" maxlength="6" onkeydown="return onlyNumber();"><span class="txtWrap">-</span><input type="password" id="citizen2" name="citizen2" class="inputTextSmall" title="주민등록번호 나머지 자리" maxlength="7" onkeydown="return onlyNumber();">
-										<label class="feForm feFoCheck" for="jShowCitizen2"><input type="checkbox" id="jShowCitizen2" data-fe-idx="feFoCheckIdx7" style="opacity: 0;"></label><label for="jShowCitizen2">숨김정보 보기</label> <span class="desc">※ 정확히 입력해 주십시오. 환자정보 확인을 위해 사용됩니다.</span>
-									</td>
-								</tr>
-
-								
-								<tr>
-									<th scope="row">인증방법 선택</th>
-									<td>
-										<label class="feForm feFoRadio checked" for="confirmTel01"><input type="radio" id="confirmTel01" name="confirmTel" data-tg-group="confirmTel" value="tel" data-tg-trigger="confirmTel01" checked="" data-fe-idx="feFoRadioIdx5" style="opacity: 0;"></label>
-										<label for="confirmTel01" class="lblTxt">휴대전화번호</label>
-										<label class="feForm feFoRadio" for="confirmTel02"><input type="radio" id="confirmTel02" name="confirmTel" data-tg-group="confirmTel" value="email" data-tg-trigger="confirmTel02" data-fe-idx="feFoRadioIdx6" style="opacity: 0;"></label>
-										<label for="confirmTel02" class="lblTxt">E-mail</label>
-									</td>
-								</tr>
-								<tr data-tg-group="confirmTel" data-tg-wrap="confirmTel01" role="region" aria-expanded="true" class="" style="display: table-row;">
-									<th scope="row"><p class="hideEl">휴대전화번호</p></th>
-									<td>
-										<input type="text" name="hpNo" id="hpNo" class="inputText" placeholder="휴대전화번호" maxlength="13" onkeydown="return onlyNumber();">
-										<button type="button" class="btnType02" id="btnHpAuthNumber">인증번호 받기</button>
-										<span class="desc">※ 숫자만 입력 해 주십시오.</span>
-									</td>
-								</tr>
-								<tr data-tg-group="confirmTel" data-tg-wrap="confirmTel02" role="region" aria-expanded="false" class="tgHideEl" style="display: none;">
-									<th scope="row"><p class="hideEl">E-mail</p></th>
-									<td>
-										<input type="text" class="inputText" title="이메일 아이디" id="email1">
-										<span class="txtWrap">@</span>
-										<input type="text" class="inputText" title="도메인 주소" id="email2">
-										<label class="feForm feFoSelect emailSelect" for="feFoSelectIdx1"><span>직접입력</span><select class="selectTypeE" title="이메일 도메인" id="feFoSelectIdx1" data-fe-idx="feFoSelectIdx1" style="opacity: 0;">
-											<option value="default">직접입력</option>
-										<option value="chollian.net">chollian.net</option><option value="dreamwiz.com">dreamwiz.com</option><option value="empal.com">empal.com</option><option value="freechal.com">freechal.com</option><option value="gmail.com">gmail.com</option><option value="hanafos.com">hanafos.com</option><option value="hananet.net">hananet.net</option><option value="hanmail.net">hanmail.net</option><option value="hanmir.com">hanmir.com</option><option value="hitel.net">hitel.net</option><option value="hotmail.com">hotmail.com</option><option value="intizen.com">intizen.com</option><option value="kebi.com">kebi.com</option><option value="korea.com">korea.com</option><option value="kornet.net">kornet.net</option><option value="lycos.co.kr">lycos.co.kr</option><option value="msn.com">msn.com</option><option value="nate.com">nate.com</option><option value="naver.com">naver.com</option><option value="netian.com">netian.com</option><option value="netsgo.com">netsgo.com</option><option value="orgio.net">orgio.net</option><option value="paran.com">paran.com</option><option value="sayclub.com">sayclub.com</option><option value="shinbiro.com">shinbiro.com</option><option value="unitel.co.kr">unitel.co.kr</option></select></label>
-										<button type="button" class="btnType01" id="btnAuthNumber">인증번호 받기</button>
-									</td>
-								</tr>
-
-
-							</tbody>
-						</table>
-					</div>
-					<!-- //boardTypeForm -->
-					<div class="boxTypeGray confirmBox tgHideEl" data-tg-group="confirmTel" data-tg-wrap="confirmTel02" role="region" aria-expanded="false" style="display: none;">
-						<label for="confirmTelNum">인증번호</label> <input type="text" id="confirmTelNum" class="inputText"><button type="button" class="btnType01" id="btnAuth" disabled="">인증</button>
-					</div>
-					<div class="boxTypeGray confirmBox" data-tg-group="confirmTel" data-tg-wrap="confirmTel01" role="region" aria-expanded="true" style="display: block;">
-						<label for="confirmHpNum">인증번호</label> <input type="text" id="confirmHpNum" class="inputText"><button type="button" class="btnType01" id="btnHpAuth" disabled="">인증</button>
-					</div>
-					<div class="btnWrap">
-						<button type="button" class="btnType03 btnBig" id="jNextBtn">다음단계</button>
-					</div>
-				</fieldset>
-			</form>
-		</div>
+		
 		
 		
 	
@@ -2471,4 +1739,156 @@ html,body{
 </div>
 
 </body>
+<script>
+
+	//숨김정보 보이게 하기
+	$("#hShowCitizen2").click(function(){
+		if(!$(this).parent().attr('class').match('checked')){
+			$(this).parent().addClass('checked');
+			$("#citizen2").attr('type', 'text');
+		}else{
+			$(this).parent().removeClass('checked');
+			$("#citizen2").attr('type', 'password');
+		}
+		
+	})
+//수신정보동의 체크
+$(".agree").find("input[type='checkbox']").click(function(){
+	if(!$(this).parent().attr('class').match('checked')){//체크
+			$(this).parent().addClass('checked');
+		if($(this).attr('class').match('feFoCheckAll')){//모두 동의 클릭
+			$(".agree").find("input[type='checkbox']").parent().addClass('checked');
+		}else{//개별버튼 클릭
+			$(this).parent().addClass('checked');
+		}
+					
+	}else{//체크해제
+		$(this).parent().removeClass('checked');
+		if($(this).attr('class').match('feFoCheckAll')){//모두 동의 클릭해제
+			$(".agree").find("input[type='checkbox']").parent().removeClass('checked');
+		}else{//개별버튼 클릭해제
+			$(this).parent().removeClass('checked');
+		}
+	}
+	
+})
+
+
+	//휴대폰 번호 유효성
+	let phoneNum = null;
+	let check = false;
+	let phoneNums = null;
+	let passCode = null;
+	
+	$("#mBtn").on('click', function(){
+		let $phone1 = $("input[name='phone1']").val();
+		let $phone2 = $("input[name='phone2']").val();
+		let $phone3 = $("input[name='phone3']").val();
+		phoneNum = $phone1 + "-" + $phone2 + "-" + $phone3;
+		phoneNums = $phone1 + $phone2 + $phone3;
+		if(telValidator(phoneNum)){
+			alert("※ 인증번호를 전송했습니다. 3분 안에 입력해주세요.")
+				$.ajax({
+					url: "/Nfhospital/CheckCodeOk.me",
+					type: "get",
+					data: {phoneNum: phoneNums},
+					contentType: "application/json; charset=utf-8",
+					dataType: "json",
+					success: function(result){
+						passCode = result.code; 					
+					},
+					error: function(request, status, error){
+						console.log("실패..");
+						console.log(request);
+						console.log(status);
+						console.log(error);
+					}
+				});
+			check = true;
+		}
+	});
+		
+
+	
+	$("#push").click(function(){
+		if(!check){//check가 false일 때
+			alert("인증번호가 발송되지 않았습니다.")
+		}else{
+			console.log(passCode);
+			if(passCode == $(".keyNum").val()){
+				$("#result").text("인증완료 되었습니다.");
+			}else{
+				$("#result").text("다시 입력해주세요.");
+				return;
+			}
+		}
+		
+	})
+	
+
+		function telValidator(args) {
+	    var msg = '유효하지 않는 전화번호입니다.';
+	    // IE 브라우저에서는 당연히 var msg로 변경
+	    
+	    if (/^[0-9]{2,3}-[0-9]{3,4}-[0-9]{4}/.test(args)) {
+	        return true;
+	    }
+	    alert(msg);
+	    return false;
+	}
+		
+	let submitCheck = true;
+	let reg_name1 = /^[가-힣]+$/;
+	let citizen = /^(?:[0-9]{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[1,2][0-9]|3[0,1]))-[1-8][0-9]{6}$/;
+	/* $("#citizen1").val() + "-"+$("#citizen2").val() */
+	
+	
+	$("#hNextBtn").click(function(){
+		let $label = $("input[class='feFoCheckAll']").parent().attr('class').match('checked');
+		
+		if(!$label){
+			alert("이용약관 동의에 체크해주세요.")
+			submitCheck = false;
+			return;
+		}
+		
+	 	 /*  if(!check){
+			alert("휴대폰번호 인증을 해주세요.")
+			submitCheck = false;
+			return;
+		}   */
+		
+		if(!$("#ptnm").val()){
+			alert("이름을 입력해주세요.")
+			submitCheck = false;
+			return;
+		}
+		
+		if(!reg_name1.test($("#ptnm").val())){
+			alert("한글만 입력해주세요.")
+			submitCheck = false;
+			return;
+		}   
+		
+		if(!$("#citizen1").val() || !$("#citizen2").val()){
+			alert("주민등록번호를 입력해주세요.");
+			submitCheck = false;
+			return;
+		}
+		
+		
+		if(!citizen.test($("#citizen1").val() + "-"+$("#citizen2").val())){
+			alert("올바른 주민등록번호를 입력해주세요.");	
+			submitCheck = false;
+			return;
+		}
+		
+		hForm.submit();
+		
+	})
+		
+		
+
+
+</script>
 </html>

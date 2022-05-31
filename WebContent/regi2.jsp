@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%request.setCharacterEncoding("UTF-8"); %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,537 +28,12 @@
 	<div id="wrap">
 
 
-		<script type="text/javascript">
 
-	function outcomesFnc(e) {
-
-		var now = new Date();
-		var dday = new Date("2021", "11", "17","11","59","59");
-
-		if(now != dday) {
-			alert("콘텐츠 준비중입니다.");
-			e.preventDefault();
-			return false;
-		}else {
-			window.open('https://dept.snuh.org/dept/OC/index.do');
-		}
-
-	}
-</script>
-
-
-		<script type="text/javascript">
-
-		var locationInfo = {
-			cate0: $(".viewTitle h3").text(),
-			cate1: $(".breadcrumb em:eq(2)").text(),
-			cate2: $(".breadcrumb em:eq(1)").text(),
-			cate3: $(".breadcrumb em:eq(0)").text()
-		}
-</script>
 
 
 		<!-- //contTopBar -->
 
 		<!-- content -->
-
-
-
-
-
-
-
-
-
-
-		<script type="text/javascript">
-	$(function() {
-		if($('#join_type').val() != "TC") {
-
-			//성별
-			if($('#gender_1').val() == "0" || $('#gender_1').val() == "F") {
-				$('#female').parent('.feForm').addClass('checked');
-				$('#female').attr("checked", "checked");
-				$('#male').attr("disabled", "disabled");
-				$('#female').attr("disabled", "disabled");
-				$('#gender').val("F");
-			} else if($('#gender_1').val() == "1" || $('#gender_1').val() == "M") {
-				$('#male').parent('.feForm').addClass('checked');
-				$('#male').attr("checked", "checked");
-				$('#male').attr("disabled", "disabled");
-				$('#female').attr("disabled", "disabled");
-				$('#gender').val("M");
-			}
-
-			//생년월일
-			var birthDay = $('#birthday').val();
-			if(birthDay.length < 8) {
-				var cBirth = $('#jumin1').val();
-				if($('#jumin2').val() == "1" || $('#jumin2').val() == "2" || $('#jumin2').val() == "5" || $('#jumin2').val() == "6") {
-					cYear = "19"+cBirth.substring(0,2);
-					cMonth = cBirth.substring(2,4);
-					cDay = cBirth.substring(4,6)
-					$('#year').val(cYear).prop("selected", true);
-					$('#year').siblings('span').text(cYear);
-					$('#month').val(cMonth).prop("selected", true);
-					$('#month').siblings('span').text(cMonth);
-					$('#date').val(cDay).prop("selected", true);
-					$('#date').siblings('span').text(cDay);
-				} else if($('#jumin2').val() == "3" || $('#jumin2').val() == "4" || $('#jumin2').val() == "7" || $('#jumin2').val() == "8"){
-					cYear = "20"+cBirth.substring(0,2);
-					cMonth = cBirth.substring(2,4);
-					cDay = cBirth.substring(4,6)
-					$('#year').val(cYear).prop("selected", true);
-					$('#year').siblings('span').text(cYear);
-					$('#month').val(cMonth).prop("selected", true);
-					$('#month').siblings('span').text(cMonth);
-					$('#date').val(cDay).prop("selected", true);
-					$('#date').siblings('span').text(cDay);
-				}
-				
-			}else {
-				var year = birthDay.substring(0,4);
-				var month = birthDay.substring(4,6);
-				var day = birthDay.substring(6,8);
-			
-				$('#year').val(year).prop("selected", true);
-				$('#year').siblings('span').text(year);
-				$('#month').val(month).prop("selected", true);
-				$('#month').siblings('span').text(month);
-				$('#date').val(day).prop("selected", true);
-				$('#date').siblings('span').text(day);			
-			}
-
-			if($('#year').val() != "" ) {
-				$('#year').prop("disabled", true);
-			}
-			if($('#month').val() != "") {
-				$('#month').prop("disabled", true);
-			}
-			if($('#date').val() != "") {
-				$('#date').prop("disabled", true);
-			}
-
-			//핸드폰번호 (휴대전화번호 10자리, 11자리 처리 ???) 2017-11-12 SEMI ADD
-			var hpno = $('#hpNo').val();
-			//if(hpno == "") hpno = $('#hpno').val();
-			
-			if(hpno != "") {
-				if(hpno.length == 11) {
-					var hpno1 = hpno.substring(0,3);
-					var hpno2 = hpno.substring(3,7);
-					var hpno3 = hpno.substring(7,11);
-				} else if(hpno.length == 10) {
-					var hpno1 = hpno.substring(0,3);
-					var hpno2 = hpno.substring(3,6);
-					var hpno3 = hpno.substring(6,10);
-				}
-
-				$('#hp1').val(hpno1).prop("selected", true);
-				$('#hp2').val(hpno2);
-				$('#hp3').val(hpno3);
-				
-				if($('#hp1').val() != "" && $('#hp2').val() != "" ) {
-					$('#hp1').prop("disabled", true);
-					$('#hp2').prop("disabled", true);
-				}
-				if($('#hp3').val() != "") {
-					$('#hp3').prop("disabled", true);
-				}
-			}
-			
-			//성별 체크 2017-11-16 SEMI ADD
-			if($('#jumin2').val() == "1" || $('#jumin2').val() == "3" || $('#jumin2').val() == "5" || $('#jumin2').val() == "7") {
-				$('#male').parent('.feForm').addClass('checked');
-				$('#male').attr("checked", "checked");
-				$('#male').attr("disabled", "disabled");
-				$('#female').attr("disabled", "disabled");
-				$('#gender').val("M");
-			} else if($('#jumin2').val() == "2" || $('#jumin2').val() == "4" || $('#jumin2').val() == "6" || $('#jumin2').val() == "8") {
-				$('#female').parent('.feForm').addClass('checked');
-				$('#female').attr("checked", "checked");
-				$('#male').attr("disabled", "disabled");
-				$('#female').attr("disabled", "disabled");
-				$('#gender').val("F");
-			}
-
-				
-		} else if ($('#join_type').val() == "TC") {
-			//외국인번호 처리 추가 2017-11-12 SEMI ADD OK
-			var cBirth = $('#jumin1').val();
-			if($('#jumin2').val() == "1" || $('#jumin2').val() == "2" || $('#jumin2').val() == "5" || $('#jumin2').val() == "6") {
-				cYear = "19"+cBirth.substring(0,2);
-				cMonth = cBirth.substring(2,4);
-				cDay = cBirth.substring(4,6)
-				$('#year').val(cYear).prop("selected", true);
-				$('#year').siblings('span').text(cYear);
-				$('#month').val(cMonth).prop("selected", true);
-				$('#month').siblings('span').text(cMonth);
-				$('#date').val(cDay).prop("selected", true);
-				$('#date').siblings('span').text(cDay);
-			} else if($('#jumin2').val() == "3" || $('#jumin2').val() == "4" || $('#jumin2').val() == "7" || $('#jumin2').val() == "8"){
-				cYear = "20"+cBirth.substring(0,2);
-				cMonth = cBirth.substring(2,4);
-				cDay = cBirth.substring(4,6)
-				$('#year').val(cYear).prop("selected", true);
-				$('#year').siblings('span').text(cYear);
-				$('#month').val(cMonth).prop("selected", true);
-				$('#month').siblings('span').text(cMonth);
-				$('#date').val(cDay).prop("selected", true);
-				$('#date').siblings('span').text(cDay);
-			}
-			
-			///*##2019-07-17 ##정보 저장 ##회원가입
-			if($('#gender_1').val() == "F") {
-				$('#female').parent('.feForm').addClass('checked');
-				$('#female').attr("checked", "checked");
-				$('#male').attr("disabled", "disabled");
-				$('#female').attr("disabled", "disabled");
-				$('#gender').val("F");
-			} else if($('#gender_1').val() == "M") {
-				$('#male').parent('.feForm').addClass('checked');
-				$('#male').attr("checked", "checked");
-				$('#male').attr("disabled", "disabled");
-				$('#female').attr("disabled", "disabled");
-				$('#gender').val("M");
-			}
-			//생년월일
-			var birthDay = $('#birthday').val();
-			var year = birthDay.substring(0,4);
-			var month = birthDay.substring(4,6);
-			var day = birthDay.substring(6,8);
-
-			$('#year').val(year).prop("selected", true);
-			$('#year').siblings('span').text(year);
-			$('#month').val(month).prop("selected", true);
-			$('#month').siblings('span').text(month);
-			$('#date').val(day).prop("selected", true);
-			$('#date').siblings('span').text(day);
-			
-			//*/##2019-07-17 ##정보 저장 ##회원가입
-			
-			if($('#year').val() != "" ) {
-				$('#year').prop("disabled", true);
-			}
-			if($('#month').val() != "") {
-				$('#month').prop("disabled", true);
-			}
-			if($('#date').val() != "") {
-				$('#date').prop("disabled", true);
-			}
-			
-			//보호자 연락처가 있으면 2017-11-10 SEMI ADD 
-			var rpst_tel = $('#rpst_tel').val();
-			
-			if (rpst_tel !="") {
-				if(rpst_tel.length == 11) {
-					var hpno1 = rpst_tel.substring(0,3);
-					var hpno2 = rpst_tel.substring(3,7);
-					var hpno3 = rpst_tel.substring(7,11);
-				} else if(rpst_tel.length == 10) {
-					var hpno1 = rpst_tel.substring(0,3);
-					var hpno2 = rpst_tel.substring(3,6);
-					var hpno3 = rpst_tel.substring(6,10);
-				}
-				$('#hp1').val(hpno1).prop("selected", true);
-				$('#hp2').val(hpno2);
-				$('#hp3').val(hpno3);	
-			}
-			
-			if($('#hp1').val() != "" && $('#hp2').val() != "" ) {
-				$('#hp1').prop("disabled", true);
-				$('#hp2').prop("disabled", true);
-			}
-			if($('#hp3').val() != "") {
-				$('#hp3').prop("disabled", true);
-			}
-			
-			
-			//성별 체크 2017-11-12 SEMI ADD
-			if($('#jumin2').val() == "1" || $('#jumin2').val() == "3" || $('#jumin2').val() == "5" || $('#jumin2').val() == "7") {
-				$('#male').parent('.feForm').addClass('checked');
-				$('#male').attr("checked", "checked");
-				$('#male').attr("disabled", "disabled");
-				$('#female').attr("disabled", "disabled");
-				$('#gender').val("M");
-			} else if($('#jumin2').val() == "2" || $('#jumin2').val() == "4" || $('#jumin2').val() == "6" || $('#jumin2').val() == "8") {
-				$('#female').parent('.feForm').addClass('checked');
-				$('#female').attr("checked", "checked");
-				$('#male').attr("disabled", "disabled");
-				$('#female').attr("disabled", "disabled");
-				$('#gender').val("F");
-			}
-			
-		}
-		
-		
-		var idPass = false;
-		var idCheck=/^[가-힣A-Za-z0-9+]*$/ ;
-		var idKorCheck=/^[가-힣0-9]*$/ ;
-		var idNumCheck=/^[0-9]*$/ ;
-		var passCheck=/^(?=.*[0-9])(?=.*[!@#$%^&*(),.;])[a-zA-Z0-9!@#$%^&*(),.;]{9,16}$/;
-		var blankCheck=/[\s]/g;
-
-		//아이디 중복확인 버튼 클릭 
-		//환자번호 사용을 방지하기 위해 숫자만 입력되지 않도록 체크 추가 2017-11-12 SEMI ADD
-		//한글이름 + 숫자는 가능하도록 처리 2017-11-12 SEMI ADD
-		$('#idChkBtn').click(function() {
-			if($('#id').val() == "") {
-				alert("아이디를 입력하신 후 중복체크를 해주세요.");
-				$('#id').focus();
-				return false;
-			} else {
-				
-				var mid = encodeURIComponent($('#id').val().trim());
-
-				$.ajax({
-					async: false,
-					type: "GET",
-					url: "idDuplCheckAjax.do?id="+mid,
-					dataType : "json",
-					success: function(res){
-						if(!res){
-							alert("사용하실 수 없는 아이디 입니다.");
-						}else{
-							var id = $('#id').val();
-							
-							if(blankCheck.test(id)) {
-								alert('아이디에 공백이 입력되어 있습니다. 수정해 주십시오.');
-								$('#id').focus();
-							}
-							
-							//idPass = true;
-							if(idKorCheck.test(id)) {
-								if(id.length < 3 || id.length > 12) {
-									alert("한글아이디는 3자 ~ 12자까지 가능합니다.");
-									$('#id').focus();
-								} else if(idNumCheck.test(id)) {
-									alert("1자 이상 문자를 사용해야 합니다.");
-									$('#id').focus();
-								} else {
-									alert("사용가능한 아이디 입니다.");
-									idPass = true;
-								}
-							} else if(idCheck.test(id)) {
-								if(id.length < 6 || id.length > 12) {
-									alert("아이디는 6자 ~ 12자까지 가능합니다.");
-									$('#id').focus();
-								} else {
-									alert("사용가능한 아이디 입니다.");
-									idPass = true;
-								}
-							} else if(idNumCheck.test(id)) {
-								alert("1자 이상 문자를 사용해야 합니다.");
-								$('#id').focus();
-							} else {
-								alert("아이디는 한글, 영문, 숫자만 가능합니다.");
-								$('#id').focus();
-							}
-						}
-					}
-				});
-				return idPass;
-			}
-		});
-
-		$('#passConfirm').blur(function() {
-			if($('#pass').val() != $('#passConfirm').val()) {
-				$(".error").text("입력하신 비밀번호가 일치하지 않습니다.");
-				//$('#passConfirm').focus();
-				return false;
-			} else {
-				$(".error").text("");
-			}
-		});
-		
-		//20200504 아이디 검사 후 변경 하면 다시 검사
-		$('#id').change(function() {
-			idPass = false;
-		});
-
-		//다음단계 버튼 클릭
-		$('#nextBtn').click(function() {
-			if($('#id').val() == "") {
-				alert("아이디를 입력해주세요.");
-				$('#id').focus();
-				return false;
-			}
-
-			if(!idPass) {
-				alert("아이디 중복체크를 해주세요.");
-				return false;
-			}
-
-			if($('#pass').val() == "") {
-				alert("비밀번호를 입력해주세요.");
-				$('#pass').focus();
-				return false;
-			}
-
-			if($('#passConfirm').val() == "") {
-				alert("비밀번호확인을 입력해주세요.");
-				$('#passConfirm').focus();
-				return false;
-			}
-
-			if($('#pass').val() != "" && $('#pass').length > 0) {
-				var pass = $('#pass').val();
-				if(!passCheck.test(pass)) {
-					alert("비밀번호 규칙을 확인해주시기 바랍니다.\n*영문, 숫자, 특수문자(!@#$%^&*(),.;) 3가지 이상 조합 9 ~ 16자 이내");
-					$('#pass').focus();
-					return false;
-				}
-			}
-
-			if($('#name').val() == "") {
-				alert("이름을 입력해주세요.");
-				$('#name').focus();
-				return false;
-			}
-
-			if($('#email1').val() == "") {
-				alert("이메일 아이디를 입력해주세요.");
-				$('#email1').focus();
-				return false;
-			}
-
-			if($("#email2").val() == "") {
-				alert("이메일 도메인을 입력해주세요.");
-				$('#email2').focus();
-				return false;
-			}
-
-			if($('#email1').val() != "" && $('#email2').val() != "") {
-				var email = $('#email1').val() + "@" + $('#email2').val();
-				$('#email').val(email);
-			}
-
-			if($('#zipcode').val() == "") {
-				alert("우편번호를 입력해주세요.");
-				$('#zipcode').focus();
-				return false;
-			}
-
-			if($('#addr1').val() == "") {
-				alert("주소를 입력해주세요.");
-				$('#addr1').focus();
-				return false;
-			}
-
-			if($('#addr2').val() == "") {
-				alert("상세주소를 입력해주세요.");
-				$('#addr2').focus();
-				return false;
-			}
-
-			if($('#hp1').val() == "" ) {
-				alert("휴대전화 첫번쨰 자리를 입력해주세요.");
-				$('#hp1').focus();
-				return false;
-			}
-
-			if($('#hp2').val() == "" ) {
-				alert("휴대전화 두번째 자리를 입력해주세요");
-				$('#hp2').focus();
-				return false;
-			}
-
-			if($('#hp3').val() == "" ) {
-				alert("휴대전화 세번째 자리를 입력해주세요.");
-				$('#hp3').focus();
-				return false;
-			}
-
-			if($('#hp1').val() != "" && $('#hp2').val() != "" && $('#hp3').val() != "") {
-				var hpNo = $('#hp1').val() + "-" + $('#hp2').val() + "-" + $('#hp3').val();
-				$('#hp_no').val(hpNo);
-			}
-
-			if($('#tel1').val() != "" && $('#tel2').val() != "" && $('#tel3').val() != "") {
-				var telNo = $('#tel1').val() + "-" + $('#tel2').val() + "-" + $('#tel3').val();
-				$('#tel_no').val(telNo);
-			}
-
-			if($('#year').val() == "") {
-				alert("연도를 선택해 주세요.");
-				$('#year').focus();
-				return false;
-			}
-
-			if($('#month').val() == "") {
-				alert("월을 선택해 주세요.");
-				$('#month').focus();
-				return false;
-			}
-
-			if($('#date').val() == "") {
-				alert("일을 선택해주세요.");
-				$('#date').focus();
-				return false;
-			}
-
-			if($('#year').val() != "" && $('#month').val() != "" && $('#date').val() != "") {
-				var birthday = $('#year').val() + "-" + $('#month').val() + "-" + $('#date').val();
-				$('#birth').val(birthday);
-			}
-
-			if($('input:radio[name="sex"]:checked').length < 1) {
-				alert("성별을 선택해주세요.");
-				$('#gender').focus();
-				return false;
-			} else {
-				$("#gender").val($('input:radio[name="sex"]:checked').val());
-			}
-
-			if($('#prevent').val() == "") {
-				alert("자동가입방지를 입력해주세요.");
-				$('#prevent').focus();
-				return false;
-			}
-
-			if($('#prevent').val() != 25492318) {
-				alert("자동가입방지가 일치하지 않습니다.");
-				return false;
-			}
-
-			$('#memberVo').submit();
-		});
-
-		$('.btnNaver').click(function() {
-			var naver = window.open("https://nid.naver.com/oauth2.0/authorize?response_type=code&client_id=ViA9gUUaDxR6eblGzqIj&redirect_uri=https%3A%2F%2Fwww.snuh.org%2Fmember%2FnaverCallback.do&state=1135481100884332978281342092299264826694&auth_type=reprompt", "naver","width=570,height=420, scrollbars=yes, resizable=yes");
-		});
-	});
-
-	function addrSearch() {
-		var pop = window.open("./addrPopup.do", "pop","width=570,height=420, scrollbars=yes, resizable=yes");
-	}
-
-	// 팝업페이지에서 주소입력한 정보를 받아서, 현 페이지에 정보를 등록합니다.
-	function jusoCallBack(roadFullAddr,roadAddrPart1,addrDetail,roadAddrPart2,engAddr, jibunAddr, zipNo, admCd, rnMgtSn, bdMgtSn
-			, detBdNmList, bdNm, bdKdcd, siNm, sggNm, emdNm, liNm, rn, udrtYn, buldMnnm, buldSlno, mtYn, lnbrMnnm, lnbrSlno, emdNo){
-		document.form.addr1.value = roadAddrPart1 + roadAddrPart2;
-		document.form.addr2.value = addrDetail;
-		document.form.zipcode.value = zipNo;
-		document.form.dorocode.value = rnMgtSn;
-		document.form.sanyn.value = mtYn;
-		document.form.mainjibun.value = lnbrMnnm;
-		document.form.subjibun.value = lnbrSlno;
-		document.form.buildingno.value = bdMgtSn;
-		document.form.admcd.value = admCd;
-	}
-
-	//숫자만 입력 가능
-	function onlyNumber() {
-		if ((window.event.keyCode == 8) || (window.event.keyCode == 9)
-				|| (window.event.keyCode == 46)) {
-			window.event.returnValue = true;
-		} else if ((window.event.keyCode >= 96) && (window.event.keyCode <= 105)) {
-			window.event.returnValue = true;
-		} else if ((window.event.keyCode < 48) || (window.event.keyCode > 57)) {
-			window.event.returnValue = false;
-		}
-	}
-</script>
 
 		<main id="content" class="memJoinContent">
 		<div class="contHeadingWrap">
@@ -568,22 +45,22 @@
 			<li class="current"><b>STEP 02</b>회원정보</li>
 			<li><b>STEP 03</b>가입완료</li>
 		</ul>
-		<form id="memberVo" name="form" action="./joinProc.do" method="post">
+		<form id="memberVo" name="form" action="JoinOk.me" method="post">
 			<input id="join_type" name="join_type" type="hidden" value="TG">
 			<input id="cert_type" name="cert_type" type="hidden" value="J">
 			<input id="pt_no" name="pt_no" type="hidden" value="17804457">
-			<input id="gender" name="gender" type="hidden" value="F"> <input
-				type="hidden" id="mail" name="mail" value=""> <input
-				type="hidden" id="dupKey" name="dupKey" value=""> <input
-				type="hidden" id="birthday" name="birthday" value=""> <input
-				type="hidden" id="hpNo" name="hpNo" value=""> <input
-				type="hidden" id="vi" name="vi" value=""> <input
-				type="hidden" id="gender_1" name="gender_1" value="F"> <input
-				type="hidden" id="rpst_tel" name="rpst_tel" value=""> <input
-				type="hidden" id="jumin1" name="jumin1" value=""> <input
-				type="hidden" id="jumin2" name="jumin2" value="2"> <input
-				type="hidden" id="jumin3" name="jumin3" value="2057012"> <input
-				type="hidden" id="authkeyChk" name="authkeyChk"
+			<input id="gender" name="gender" type="hidden" value="F"> 
+			<input type="hidden" id="mail" name="mail" value=""> 
+			<inputtype="hidden" id="dupKey" name="dupKey" value=""> 
+				<input type="hidden" id="birthday" name="birthday" value=""> 
+				<input type="hidden" id="hpNo" name="hpNo" value=""> 
+				<input type="hidden" id="vi" name="vi" value=""> 
+				<input type="hidden" id="gender_1" name="gender_1" value="F"> 
+				<input type="hidden" id="rpst_tel" name="rpst_tel" value=""> 
+				<input type="hidden" id="jumin1" name="jumin1" value=""> 
+				<input type="hidden" id="jumin2" name="jumin2" value="2"> 
+				<input type="hidden" id="jumin3" name="jumin3" value="2057012"> 
+				<input type="hidden" id="authkeyChk" name="authkeyChk"
 				value="q6b/I8qkPKuFmP8/dtsC0/GAEDrTTqHptlCORuvTZDU=">
 
 			<fieldset>
@@ -607,14 +84,13 @@
 									type="text" value="" maxlength="12">
 								<button type="button" class="btnType01" id="idChkBtn"
 										data-layer="layerIdCheck">중복확인</button>
-									<span class="desc">한글(3자 이상), 영문 + 숫자 혼용 6~12자</span></td>
+									<span class="desc">한글(3자 이상), 영문 + 숫자 혼용 6~12자</span>
+									<span id="result" style="color: #ff3b00; vertical-align: middle; margin-left: 18px;"></span>
+									</td>
 							</tr>
 							<tr>
 								<th scope="row"><span class="required">*</span> 비밀번호</th>
-								<td><input id="pass" name="pass" title="비밀번호"
-									class="inputText" type="password" value=""><span
-									class="desc">영문, 숫자, 특수문자(!@#$%^&amp;*(),.;) 3가지 이상 조합으로
-										9~16자 이여야 합니다.</span></td>
+								<td><input id="pass" name="password" title="비밀번호" class="inputText" type="password" value=""><span class="desc">영문, 숫자, 특수문자(!@#$%^&amp;*(),.;) 3가지 이상 조합으로 9~16자 이여야 합니다.</span></td>
 							</tr>
 							<tr>
 								<th scope="row"><span class="required">*</span> 비밀번호 확인</th>
@@ -628,7 +104,7 @@
 							<tr>
 								<th scope="row"><span class="required">*</span> 이름</th>
 								<td><input id="name" name="name" style="ime-mode: active;"
-									class="inputText" value="" readonly="readonly" type="text"></td>
+									class="inputText" value="<%=request.getParameter("name") %>" type="text" readonly="readonly"></td> <!-- readonly!!추가해야함 -->
 							</tr>
 
 
@@ -640,38 +116,39 @@
 									title="이메일 아이디" required=""> <span class="txtWrap">@</span>
 									<input type="text" name="email2" id="email2" class="inputText"
 									title="도메인 주소" required=""> <label
-									class="feForm feFoSelect emailSelect" for="feFoSelectIdx1"><span>직접입력</span><select
-										class="selectTypeE" title="이메일 도메인" required=""
-										id="feFoSelectIdx1" data-fe-idx="feFoSelectIdx1"
-										style="opacity: 0;">
-
-											<option value="chollian.net">chollian.net</option>
-											<option value="dreamwiz.com">dreamwiz.com</option>
-											<option value="empal.com">empal.com</option>
-											<option value="freechal.com">freechal.com</option>
-											<option value="gmail.com">gmail.com</option>
-											<option value="hanafos.com">hanafos.com</option>
-											<option value="hananet.net">hananet.net</option>
-											<option value="hanmail.net">hanmail.net</option>
-											<option value="hanmir.com">hanmir.com</option>
-											<option value="hitel.net">hitel.net</option>
-											<option value="hotmail.com">hotmail.com</option>
-											<option value="intizen.com">intizen.com</option>
-											<option value="kebi.com">kebi.com</option>
-											<option value="korea.com">korea.com</option>
-											<option value="kornet.net">kornet.net</option>
-											<option value="lycos.co.kr">lycos.co.kr</option>
-											<option value="msn.com">msn.com</option>
-											<option value="nate.com">nate.com</option>
-											<option value="naver.com">naver.com</option>
-											<option value="netian.com">netian.com</option>
-											<option value="netsgo.com">netsgo.com</option>
-											<option value="orgio.net">orgio.net</option>
-											<option value="paran.com">paran.com</option>
-											<option value="sayclub.com">sayclub.com</option>
-											<option value="shinbiro.com">shinbiro.com</option>
-											<option value="unitel.co.kr">unitel.co.kr</option>
-									</select></label></td>
+									class="feForm feFoSelect emailSelect" for="feFoSelectIdx1">
+									<span>직접입력</span>
+									<select class="selectTypeE" title="이메일 도메인" required="" id="feFoSelectIdx1" data-fe-idx="feFoSelectIdx1" style="opacity: 0;">
+									<option value="default">직접입력</option>
+									<option value="chollian.net">chollian.net</option>
+									<option value="dreamwiz.com">dreamwiz.com</option>
+									<option value="empal.com">empal.com</option>
+									<option value="freechal.com">freechal.com</option>
+									<option value="gmail.com">gmail.com</option>
+									<option value="hanafos.com">hanafos.com</option>
+									<option value="hananet.net">hananet.net</option>
+									<option value="hanmail.net">hanmail.net</option>
+									<option value="hanmir.com">hanmir.com</option>
+									<option value="hitel.net">hitel.net</option>
+									<option value="hotmail.com">hotmail.com</option>
+									<option value="intizen.com">intizen.com</option>
+									<option value="kebi.com">kebi.com</option>
+									<option value="korea.com">korea.com</option>
+									<option value="kornet.net">kornet.net</option>
+									<option value="lycos.co.kr">lycos.co.kr</option>
+									<option value="msn.com">msn.com</option>
+									<option value="nate.com">nate.com</option>
+									<option value="naver.com">naver.com</option>
+									<option value="netian.com">netian.com</option>
+									<option value="netsgo.com">netsgo.com</option>
+									<option value="orgio.net">orgio.net</option>
+									<option value="paran.com">paran.com</option>
+									<option value="sayclub.com">sayclub.com</option>
+									<option value="shinbiro.com">shinbiro.com</option>
+									<option value="unitel.co.kr">unitel.co.kr</option>
+									</select>
+									</label>
+									</td>
 							</tr>
 							<tr>
 								
@@ -679,10 +156,10 @@
 								<td id="add"><input type="text" id="sample4_postcode"
 									placeholder="우편번호"> <input id="postFind" type="button"
 									onclick="sample4_execDaumPostcode()" value="우편번호 찾기"><br>
-									<input type="text" id="sample4_roadAddress" placeholder="도로명주소">
+									<input type="text" id="sample4_roadAddress" placeholder="도로명주소" name="address">
 									<input type="text" id="sample4_jibunAddress" placeholder="지번주소">
 									<span id="guide" style="color: #999; display: none"></span> <input
-									type="text" id="sample4_detailAddress" placeholder="상세주소">
+									type="text" id="sample4_detailAddress" placeholder="상세주소" name="addressDetail">
 									<input type="text" id="sample4_extraAddress" placeholder="참고항목">
 									<input type="button" id="makeAddr" onclick="addressmake()"
 									value="주소만들기"></td>
@@ -690,9 +167,9 @@
 							</tr>
 							<tr>
 								<th scope="row"><span class="required">*</span> 휴대전화</th>
-								<td><input id="hp_no" name="hp_no" type="hidden" value="">
-									<label class="feForm feFoSelect selectSmall" for="hp1"><span>010</span><select
-										title="휴대전화 첫번째 자리" id="hp1" name="hp1" class="selectTypeM"
+								<td><input id="hp_no" name="phoneNum1" type="hidden" value="">
+									<label class="feForm feFoSelect selectSmall" for="hp1"><span><%=request.getParameter("phone1") %></span><select
+										title="휴대전화 첫번째 자리" id="hp1" name="" class="selectTypeM"
 										data-fe-idx="feFoSelectIdx2" disabled="" style="opacity: 0;"><option
 												value="010">010</option>
 											<option value="011">011</option>
@@ -700,19 +177,19 @@
 											<option value="017">017</option>
 											<option value="018">018</option>
 											<option value="019">019</option></select></label> <span class="txtWrap">-</span>
-									<input type="tel" id="hp2" name="hp2" class="inputTextSmall"
+									<input type="tel" id="hp2" name="phoneNum2" class="inputTextSmall"
 									title="휴대전화 두번째 자리" maxlength="4" required=""
-									onkeydown="return onlyNumber();" disabled=""> <span
-									class="txtWrap">-</span> <input type="tel" id="hp3" name="hp3"
+									onkeydown="return onlyNumber();" disabled="" value="<%=request.getParameter("phone2") %>" > <span
+									class="txtWrap">-</span> <input type="tel" id="hp3" name="phoneNum3"
 									class="inputTextSmall" title="휴대전화 세번째 자리" maxlength="4"
-									required="" onkeydown="return onlyNumber();" disabled="">
+									required="" onkeydown="return onlyNumber();" disabled="" value="<%=request.getParameter("phone3") %>">
 									</td>
 							</tr>
 							<tr>
 								<th scope="row">추가연락처</th>
 								<td><input id="tel_no" name="tel_no" type="hidden" value="">
 									<label class="feForm feFoSelect selectSmall" for="tel1"><span>02</span><select
-										title="추가연락처 첫번째 자리" id="tel1" name="tel1" class="selectTypeP"
+										title="추가연락처 첫번째 자리" id="tel1" name="addphone1" class="selectTypeP"
 										data-fe-idx="feFoSelectIdx3" style="opacity: 0;"><option
 												value="02">02</option>
 											<option value="031">031</option>
@@ -737,20 +214,19 @@
 											<option value="017">017</option>
 											<option value="018">018</option>
 											<option value="019">019</option></select></label> <span class="txtWrap">-</span>
-									<input type="tel" id="tel2" name="tel2" class="inputTextSmall"
+									<input type="tel" id="tel2" name="addphone2" class="inputTextSmall"
 									title="추가연락처 두번째 자리" maxlength="4"
 									onkeydown="return onlyNumber();"> <span class="txtWrap">-</span>
-									<input type="tel" id="tel3" name="tel3" class="inputTextSmall"
+									<input type="tel" id="tel3" name="addphone3" class="inputTextSmall"
 									title="추가연락처 세번째 자리" maxlength="4"
 									onkeydown="return onlyNumber();"></td>
 							</tr>
 							<tr>
 								<th scope="row"><span class="required">*</span> 생년월일</th>
 								<td><input id="birth" name="birth" type="hidden" value="">
-									<label class="feForm feFoSelect dateYY" for="year"><span>1966</span><select
-										title="생년월일 연도" id="year" name="year" class="dateYY"
-										required="" data-fe-idx="feFoSelectIdx4" disabled=""
-										style="opacity: 0;">
+										<input id="residentNum" name="residentNum" type="hidden" value="<%=request.getParameter("citizen1") +"-"+ request.getParameter("citizen2")%>">
+									<label class="feForm feFoSelect dateYY" for="year"><span></span>
+									<select title="생년월일 연도" id="year" name="year" class="dateYY" data-fe-idx="feFoSelectIdx4" style="opacity: 0;" value="">
 											<option value="">연도</option>
 											<option value="2022">2022</option>
 											<option value="2021">2021</option>
@@ -866,9 +342,11 @@
 											<option value="1911">1911</option>
 											<option value="1910">1910</option>
 									</select></label><span class="txtWrap">-</span> <label
-									class="feForm feFoSelect dateMM" for="month"><span>07</span><select
-										title="생년월일 월" id="month" class="dateMM " required=""
-										data-fe-idx="feFoSelectIdx5" disabled="" style="opacity: 0;">
+									class="feForm feFoSelect dateMM" for="month">
+									<input type="hidden" id="month" name="month"  value="<%=request.getParameter("citizen1").substring(2, 4) %>">
+									<span><%=request.getParameter("citizen1").substring(2, 4) %></span><select
+										title="생년월일 월" class="dateMM " required=""
+										data-fe-idx="feFoSelectIdx5" disabled="" style="opacity: 0;" >
 											<option value="">월</option>
 											<option value="01">01</option>
 											<option value="02">02</option>
@@ -883,8 +361,10 @@
 											<option value="11">11</option>
 											<option value="12">12</option>
 									</select></label><span class="txtWrap">-</span> <label
-									class="feForm feFoSelect dateDD" for="date"><span>11</span><select
-										title="생년월일 일" id="date" name="date" class="dateDD"
+									class="feForm feFoSelect dateDD" for="date">
+									<input type="hidden" id="date" name="date"  value="<%=request.getParameter("citizen1").substring(4) %>">	
+									<span><%=request.getParameter("citizen1").substring(4) %></span><select
+										title="생년월일 일"  class="dateDD"
 										required="" data-fe-idx="feFoSelectIdx6" disabled=""
 										style="opacity: 0;">
 											<option value="">일</option>
@@ -1412,23 +892,45 @@
 											<option value="166">홍콩</option>
 
 									</select></label></td>
-							</tr>
-							<tr>
-								<th scope="row"><span class="required">*</span> 성별</th>
-								<td><label class="feForm feFoRadio" for="male"><input
-										type="radio" name="sex" id="male" value="M"
-										data-fe-idx="feFoRadioIdx1" disabled="disabled"
-										style="opacity: 0;"></label><label for="male" class="lblTxt">남자</label>
-									<label class="feForm feFoRadio checked" for="female"><input
-										type="radio" name="sex" id="female" value="F"
-										data-fe-idx="feFoRadioIdx2" checked="checked"
-										disabled="disabled" style="opacity: 0;"></label><label
-									for="female" class="lblTxt">여자</label> <span class="desc">정확히
-										선택해 주십시오.</span></td>
-							</tr>
+								</tr>
+								<c:if test="${(fn:substring(param.citizen2, 0, 1) eq '1') || (fn:substring(param.citizen2, 0, 1) eq '3')}">
+									<tr>
+										<th scope="row"><span class="required">*</span> 성별</th>
+										<td><label class="feForm feFoRadio checked" for="male"><input
+												type="radio" name="gender" id="male" value="M"
+												data-fe-idx="feFoRadioIdx1" 
+												style="opacity: 0;" checked="checked"></label><label for="male" class="lblTxt">남자</label>
+											<label class="feForm feFoRadio" for="female"><input
+												type="radio" name="gender" id="female" value="W"
+												data-fe-idx="feFoRadioIdx2" 
+												 style="opacity: 0;"></label><label
+											for="female" class="lblTxt">여자</label> <span class="desc">정확히
+												선택해 주십시오.</span></td>
+									</tr>
+								</c:if>
+								<c:if test="${(fn:substring(param.citizen2, 0, 1) eq '2') || (fn:substring(param.citizen2, 0, 1) eq '4')}">
+									<tr>
+										<th scope="row"><span class="required">*</span> 성별</th>
+										<td><label class="feForm feFoRadio" for="male"><input
+												type="radio" name="gender" id="male" value="M"
+												data-fe-idx="feFoRadioIdx1" 
+												style="opacity: 0;" ></label><label for="male" class="lblTxt">남자</label>
+											<label class="feForm feFoRadio checked" for="female"><input
+												type="radio" name="gender" id="female" value="W"
+												data-fe-idx="feFoRadioIdx2" 
+												 style="opacity: 0;" checked="checked"></label><label
+											for="female" class="lblTxt">여자</label> <span class="desc">정확히
+												선택해 주십시오.</span></td>
+									</tr>
+								</c:if>
+							
+							
 							<tr>
 								<th scope="row" class="verTop"><span class="required">*</span>
-									자동가입방지</th>
+											
+									자동가입방지
+									
+									</th>
 								<td>
 									<div class="autoJoin">
 										<div class="img">
@@ -1632,12 +1134,301 @@ function validateOp(){
 					}
 				}).open();
 	}
+	
+	//email select Event
+	$(".selectTypeE").on('change', function(){
+		$(".emailSelect").children('span').text($(this).val());
+		$("#email2").val($(this).val());
+	})
+	
+	
+	//plusTel Event
+	$("#tel1").on('change', function(){
+		$(this).prev('span').text($("#tel1 option:checked").text());
+	})
+	
+	//nation Event
+	$("#nation").on('change', function(){
+		$("label[for='nation']").children('span').text($("#nation option:checked").text()); 
+	})
+	
+	$("#year").on('change', function(){
+		$(this).prev('span').text($("#year option:checked").text());
+		$(this).val($("#year option:checked").text());
+			if($('#year').val() != "" && $('#month').val() != "" && $('#date').val() != "") {
+				let birthday = $('#year').val() + "-" + $('#month').val() + "-" + $('#date').val();
+				$('#birth').val(birthday);
+			}
+	})
+	
+	
+	
+	
+	
 </script>
 
 	
 		<jsp:include page="footer.jsp" />
 </div>
 </body>
+		<script type="text/javascript">
+	
+		
+		
+		
+		var idPass = false;
+		var idCheck=/^[가-힣A-Za-z0-9+]*$/ ;
+		var idKorCheck=/^[가-힣0-9]*$/ ;
+		var idNumCheck=/^[0-9]*$/ ;
+		var passCheck=/^(?=.*[0-9])(?=.*[!@#$%^&*(),.;])[a-zA-Z0-9!@#$%^&*(),.;]{9,16}$/;
+		var blankCheck=/[\s]/g;
+
+		//아이디 중복확인 버튼 클릭 
+		//환자번호 사용을 방지하기 위해 숫자만 입력되지 않도록 체크 추가 2017-11-12 SEMI ADD
+		//한글이름 + 숫자는 가능하도록 처리 2017-11-12 SEMI ADD
+							$('#idChkBtn').click(function() {
+								if($('#id').val() == "") {
+									alert("아이디를 입력하신 후 중복체크를 해주세요.");
+									$('#id').focus();
+									return false;
+								} else {
+									var id = $('#id').val();
+									
+									if(blankCheck.test(id)) {
+										alert('아이디에 공백이 입력되어 있습니다. 수정해 주십시오.');
+										$('#id').focus();
+									}
+								
+								//idPass = true;
+								if(idKorCheck.test(id)) {
+									if(id.length < 3 || id.length > 12) {
+										alert("한글아이디는 3자 ~ 12자까지 가능합니다.");
+										$('#id').focus();
+									} else if(idNumCheck.test(id)) {
+										alert("1자 이상 문자를 사용해야 합니다.");
+										$('#id').focus();
+									} else {
+										idPass = true;
+									} 
+								} else if(idCheck.test(id)) {
+									if(id.length < 6 || id.length > 12) {
+										alert("아이디는 6자 ~ 12자까지 가능합니다.");
+										$('#id').focus();
+									} else {
+										idPass = true;
+									}
+								}else if(idNumCheck.test(id)) {
+									alert("1자 이상 문자를 사용해야 합니다.");
+									$('#id').focus();
+								} else {
+									alert("아이디는 한글, 영문, 숫자만 가능합니다.");
+									$('#id').focus();
+								}
+								
+								
+										if(idPass){
+										
+										$.ajax({
+										url: "/Nfhospital/CheckIdOk.me",
+										type: "get",
+										data: {id: $("input[name='id']").val()},
+										contentType: "application/json; charset=utf-8",
+										dataType: "json",
+										success: function(result){
+											console.log(result.check);
+											if(result.check){
+												$("span#result").text("중복된 아이디입니다.");
+											}else{
+												$("span#result").text("사용가능한 아이디입니다.");
+											}
+											
+											
+										},
+										error: function(request, status, error){
+											console.log("실패..");
+											console.log(request);
+											console.log(status);
+											console.log(error);
+										}
+									});	
+					
+									}
+								}
+								return idPass;
+							});
+
+		$('#passConfirm').blur(function() {
+			if($('#pass').val() != $('#passConfirm').val()) {
+				$(".error").text("입력하신 비밀번호가 일치하지 않습니다.");
+				//$('#passConfirm').focus();
+				return false;
+			} else {
+				$(".error").text("");
+			}
+		});
+		
+		//20200504 아이디 검사 후 변경 하면 다시 검사
+		$('#id').change(function() {
+			idPass = false;
+		});
+
+		//다음단계 버튼 클릭
+		$('#nextBtn').click(function() {
+			if($('#id').val() == "") {
+				alert("아이디를 입력해주세요.");
+				$('#id').focus();
+				return false;
+			}
+
+			if(!idPass) {
+				alert("아이디 중복체크를 해주세요.");
+				return false;
+			}
+
+			if($('#pass').val() == "") {
+				alert("비밀번호를 입력해주세요.");
+				$('#pass').focus();
+				return false;
+			}
+
+			if($('#passConfirm').val() == "") {
+				alert("비밀번호확인을 입력해주세요.");
+				$('#passConfirm').focus();
+				return false;
+			}
+
+			if($('#pass').val() != "" && $('#pass').length > 0) {
+				var pass = $('#pass').val();
+				if(!passCheck.test(pass)) {
+					alert("비밀번호 규칙을 확인해주시기 바랍니다.\n*영문, 숫자, 특수문자(!@#$%^&*(),.;) 3가지 이상 조합 9 ~ 16자 이내");
+					$('#pass').focus();
+					return false;
+				}
+			}
+
+			if($('#name').val() == "") {
+				alert("이름을 입력해주세요.");
+				$('#name').focus();
+				return false;
+			}
+
+			if($('#email1').val() == "") {
+				alert("이메일 아이디를 입력해주세요.");
+				$('#email1').focus();
+				return false;
+			}
+
+			if($("#email2").val() == "") {
+				alert("이메일 도메인을 입력해주세요.");
+				$('#email2').focus();
+				return false;
+			}
+
+			if($('#email1').val() != "" && $('#email2').val() != "") {
+				var email = $('#email1').val() + "@" + $('#email2').val();
+				$('#email').val(email);
+			}
+
+			if($('#zipcode').val() == "") {
+				alert("우편번호를 입력해주세요.");
+				$('#zipcode').focus();
+				return false;
+			}
+
+			if($('#addr1').val() == "") {
+				alert("주소를 입력해주세요.");
+				$('#addr1').focus();
+				return false;
+			}
+
+			if($('#addr2').val() == "") {
+				alert("상세주소를 입력해주세요.");
+				$('#addr2').focus();
+				return false;
+			}
+
+			if($('#hp1').val() == "" ) {
+				alert("휴대전화 첫번쨰 자리를 입력해주세요.");
+				$('#hp1').focus();
+				return false;
+			}
+
+			if($('#hp2').val() == "" ) {
+				alert("휴대전화 두번째 자리를 입력해주세요");
+				$('#hp2').focus();
+				return false;
+			}
+
+			if($('#hp3').val() == "" ) {
+				alert("휴대전화 세번째 자리를 입력해주세요.");
+				$('#hp3').focus();
+				return false;
+			}
+
+			if($('#hp1').val() != "" && $('#hp2').val() != "" && $('#hp3').val() != "") {
+				console.log("들어옴")
+				var hpNo = $('#hp1').val() + "-" + $('#hp2').val() + "-" + $('#hp3').val();
+				$('#hp_no').val(hpNo);
+			}
+
+			if($('#tel1').val() != "" && $('#tel2').val() != "" && $('#tel3').val() != "") {
+				var telNo = $('#tel1').val() + "-" + $('#tel2').val() + "-" + $('#tel3').val();
+				$('#tel_no').val(telNo);
+			}
+
+			if($('#year').val() == "") {
+				alert("연도를 선택해 주세요.");
+				$('#year').focus();
+				return false;
+			}
+
+
+
+			if($('#prevent').val() == "") {
+				alert("자동가입방지를 입력해주세요.");
+				$('#prevent').focus();
+				return false;
+			}
+
+			if($('#prevent').val() != 25492318) {
+				alert("자동가입방지가 일치하지 않습니다.");
+				return false;
+			}
+
+			$('#memberVo').submit();
+		});
+
+
+	function addrSearch() {
+		var pop = window.open("./addrPopup.do", "pop","width=570,height=420, scrollbars=yes, resizable=yes");
+	}
+
+	// 팝업페이지에서 주소입력한 정보를 받아서, 현 페이지에 정보를 등록합니다.
+	function jusoCallBack(roadFullAddr,roadAddrPart1,addrDetail,roadAddrPart2,engAddr, jibunAddr, zipNo, admCd, rnMgtSn, bdMgtSn
+			, detBdNmList, bdNm, bdKdcd, siNm, sggNm, emdNm, liNm, rn, udrtYn, buldMnnm, buldSlno, mtYn, lnbrMnnm, lnbrSlno, emdNo){
+		document.form.addr1.value = roadAddrPart1 + roadAddrPart2;
+		document.form.addr2.value = addrDetail;
+		document.form.zipcode.value = zipNo;
+		document.form.dorocode.value = rnMgtSn;
+		document.form.sanyn.value = mtYn;
+		document.form.mainjibun.value = lnbrMnnm;
+		document.form.subjibun.value = lnbrSlno;
+		document.form.buildingno.value = bdMgtSn;
+		document.form.admcd.value = admCd;
+	}
+
+	//숫자만 입력 가능
+	function onlyNumber() {
+		if ((window.event.keyCode == 8) || (window.event.keyCode == 9)
+				|| (window.event.keyCode == 46)) {
+			window.event.returnValue = true;
+		} else if ((window.event.keyCode >= 96) && (window.event.keyCode <= 105)) {
+			window.event.returnValue = true;
+		} else if ((window.event.keyCode < 48) || (window.event.keyCode > 57)) {
+			window.event.returnValue = false;
+		}
+	}
+</script>
 </html>
 
 

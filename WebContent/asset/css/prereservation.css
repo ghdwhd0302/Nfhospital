@@ -1,15 +1,5 @@
 @charset "UTF-8";
-* {
-    font-family: 'Noto Sans KR Regular','Noto Sans CJK KR','Noto Sans KR','맑은 고딕',sans-serif;
-    text-decoration: none;
-}
 
-#wrap {
-    overflow: hidden;
-    position: relative;
-    min-width: 1120px;
-    background-color: #fff;
-}
 
 #header {
     left: 0;
@@ -41,32 +31,11 @@
     margin: auto;
 }
 
-.innerwrap{
-    padding: 0 10px;
-    position: relative;
-    width: 1100px;
-    margin: auto;
-}
-
-#header .topLeftWrap {
-    position: absolute;
-    top: 18px;
-    left: 9px;
-    z-index: 100;
-}
-
-#header .topLeftWrap a {
-    display: block;
-    position: relative;
-    width: 160px;
-    height: 25px;
-    margin: auto;
-}
 
 .topMenuWrap {
     position: absolute;
     top: 18px;
-    right: 9px;
+    right: 200px;
     z-index: 100;
 }
 
@@ -99,15 +68,6 @@
     margin: auto;
 }
 
-.gnbList {
-    height: 70px;
-    margin: 0 100px;
-    text-align: center;
-    top: 58px;
-    position: absolute;
-    left: 28px;
-}
-
 
 .gnbList > li {
     display: inline-block;
@@ -120,21 +80,6 @@
     text-align: left;
 }
 
-.gnbList > li > a {
-    display: inline-block;
-    padding: 10px;
-    font-size: 20px;
-    transition: .2s color;
-}
-
-.contTopBar {
-    position: fixed;
-    top: 130px;
-    z-index: 99;
-    width: 100%;
-    height: 50px;
-    background-color: #2763ba;
-}
 
 .breadcrumb {
     float: left;
@@ -164,7 +109,7 @@
 
 .contHeadingWrap {
     overflow: hidden;
-    margin: -12px 0 9px;
+    margin: -12px 0 70px;
     top: 248px;
 }
 
@@ -326,4 +271,638 @@
 .tab_ul_section03 li a {
     padding: 11px 0;
     font-weight: 600;
+}
+
+body{
+    color: #000;
+    font-size: 16px;
+    word-spacing: -0.5px;
+    letter-spacing: -1px; 
+    height: 1584px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+ *{
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    text-size-adjust: none;
+    list-style: none;
+    font-weight: 400;
+    font-family: 'Noto Sans KR', sans-serif;
+    outline: 0!important;
+}
+
+#wrap{
+    overflow: hidden;
+    position: relative;
+    min-width: 1120px;
+    height: 1584px;
+    background-color: #fff; 
+    margin-top: 23px;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+p{
+    color: #333;
+    word-break: keep-all;
+    line-height: 1.63;
+}
+
+.skipToContent{
+    position: absolute;
+    top: -60px;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    min-width: 320px;
+    height: 60px;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: -1.5px;
+    line-height: 60px;
+    background-color: rgba(25, 145, 205, .8);
+    transition: .1s ease-in-out;
+}
+
+
+#header {
+    left: 0;
+    z-index: 105;
+    width: 100%;
+    height: 129px;
+    border-bottom: 1px solid #fff;
+    background-color: #fff;
+    position: fixed;
+    top: 0px;
+}
+
+#header:before, #header > .b {
+    content: '';
+    position: absolute;
+    top: 59px;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background-color: #ebebeb;
+}
+
+#header h1 {
+    display: block;
+    position: relative;
+    top: 18px;
+    width: 239px;
+    height: 25px;
+    margin: auto;
+}
+
+#header h1 a{
+  display: block;
+    position: relative;
+    top: -12px;
+    right: -10px;
+    width: 239px;
+    height: 25px;
+    margin: auto;
+     font-weight: 700;
+    color: #2763ba;
+}
+
+#header .topLeftWrap {
+    position: absolute;
+    top: 18px;
+    left: 210px;
+    z-index: 100;
+}
+
+
+#header .topLeftWrap a {
+    display: block;
+    position: relative;
+    width: 160px;
+    height: 25px;
+    margin: auto;
+}
+
+#gnb > button[class*=tot]{
+    position: absolute;
+    top: 70px;
+    border: 0;
+    background-color: transparent;
+}
+
+.totMenuBtn{
+    left: 0;
+    width: 30px;
+    height: 22px;
+    margin-top: -11px;
+    background: url("http://www.snuh.org/asset/img/common/spr_common.png") no-repeat 0 -27px;
+}
+
+.gnbList {
+    height: 70px;
+    margin: 0 100px;
+    text-align: center;
+    top: 35px;
+    position: absolute;
+    left: 97px;
+}
+
+.gnbList > li > a {
+    display: inline-block;
+    padding: 10px;
+    font-size: 20px;
+    transition: .2s color;
+    font-weight: 700;
+}
+
+.contTopBar{
+    z-index: 99;
+    width: 100%;
+    height: 50px;
+    background-color: #2763ba;
+}
+
+.clearFix:before, .clearFix:after, .clearFix > .b, .clearFix > .a{
+    content: ' ';
+    display: table;
+}
+
+.breadcrumb{
+    float: left;
+}
+
+.hideEl, .pagination [class*=Btn] span{
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    border: none;
+    clip: rect(1px,1px,1px,1px);
+}
+
+.bcHomeBtn{
+    position: relative;
+    width: 48px;
+    border: 1px solid #5d8acb;
+    border-width: 0 1px;
+}
+
+.bcHomeBtn, .breadcrumb > div{
+    float: left;
+    height: 50px;
+    line-height: 50px;
+}
+
+.bcHomeBtn:before, .bcHomeBtn > .b{
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 16px;
+    margin: -9px 0 0 -8px;
+    background: url("http://www.snuh.org/asset/img/common/spr_common.png") no-repeat -110px -73px;
+}
+
+.breadcrumb > div{
+    position: relative;
+    min-width: 188px;
+    max-width: 250px;
+    max-width: 300px;
+    border-right: 1px solid #5d8acb;
+}
+
+.breadcrumb em{
+    display: block;
+    padding: 0 51px 0 20px;
+    color: #fff;
+    font-style: normal;
+}
+
+.ellipsisTxt, .breadcrumb em, .bcLinkLayer a, .newsPaperImg em, .ellipsisTit[class*=boardTypeImg] em, .boardTypeTbl td a{
+    overflow: hidden;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.bcLinkLayerBtn{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.bcLinkLayer{
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: -1px;
+    left: -1px;
+    border-top: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.breadcrumb > div:after, .breadcrumb > div > .a{
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 11px;
+    height: 6px;
+    margin-top: -3px;
+    background: url("http://www.snuh.org/asset/img/common/spr_common.png") no-repeat -65px -27px;
+}
+
+.bcLinkLayer a{
+    display: block;
+    height: 48px;
+    padding: 0 20px;
+    border: 1px solid #ccc;
+    border-top: 0;
+    line-height: 48px;
+    transition: .3s color;
+}
+
+.bcQuickMenu{
+    float: right;
+    width: 220px;
+    margin-right: -18px;
+    padding: 0 18px;
+    text-align: center;
+    background: url("http://www.snuh.org/asset/img/common/bg_bcQuickMenu.png") no-repeat 0 0;
+}
+
+.bcQuickMenu li{
+    float: left;
+    position: relative;
+    width: 50%;
+}
+
+.bcQuickMenu a{
+    display: block;
+    height: 50px;
+    color: #fff;
+    line-height: 50px;
+    background-color: transparent;
+}
+
+.contUtilMenuWrap{
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    width: 800px;
+    height: 30px;
+    margin: 264px auto 0;
+    padding: 1px 300px 0 0;
+}
+
+.contUtilMenuWrap .contUtilMenu{
+    margin-top: 0;
+}
+
+.contUtilMenu{
+    float: right;
+}
+
+.contUtilMenu li{
+    float: left;
+    position: relative;
+    margin-right: 26px;
+}
+
+.contUtilMenu a{
+    color: #888;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.likeContent::before {
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left: -13px;
+    width: 2px;
+    height: 9px;
+    margin-top: -3px;
+    background-color: #ccc;
+}
+
+.contUtilMenu .lastChild{
+    margin-right: 0;
+}
+
+.copyURL::before{
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left: -13px;
+    width: 2px;
+    height: 9px;
+    margin-top: -3px;
+    background-color: #ccc;
+}
+
+.contUtilMenu .zoomOut{
+    margin-left: 20px;
+}
+
+li.zoomOut, li.zoomIn{
+    margin-right: 0;
+    height: 30px;
+    top: 4px;
+}
+
+li.zoomIn{
+    left: -1px;
+}
+
+.contUtilMenu button{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    background-color: transparent;
+    top: -4px;
+}
+
+.contUtilMenu button::before{
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left:  50%;
+    width: 10px;
+    height: 10px;
+    margin: -5px 0 0 -5px;
+    background: url("http://www.snuh.org/asset/img/common/spr_common.png") no-repeat -65px -39px;
+}
+
+.contUtilMenu .zoomOut button::before{
+    width: 10px;
+    height: 2px;
+    margin: -1px 0 0 -5px;
+    background-position: -65px -35px;
+}
+
+.hideTxt{
+    overflow: hidden;
+    color: transparent;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+
+.innerWrap {
+    padding: 0 10px;
+    position: relative;
+    width: 1100px;
+    height: 51.625px;
+    margin: auto;
+}
+
+.breadcrumb{
+    float: left;
+}
+
+.hideEl, .pagination [class*=Btn] span{
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    border: none;
+    clip: rect(1px,1px,1px,1px);
+}
+
+.bcHomeBtn{
+    position: relative;
+    width: 48px;
+    border: 1px solid #5d8acb;
+    border-width: 0 1px;
+}
+
+.bcHomeBtn, .breadcrumb > div{
+    float: left;
+    height: 50px;
+    line-height: 50px;
+}
+
+.bcHomeBtn:before, .bcHomeBtn > .b{
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 16px;
+    margin: -9px 0 0 -8px;
+    background: url("http://www.snuh.org/asset/img/common/spr_common.png") no-repeat -110px -73px;
+}
+
+.breadcrumb > div{
+    position: relative;
+    min-width: 188px;
+    max-width: 250px;
+    max-width: 300px;
+    border-right: 1px solid #5d8acb;
+}
+
+.breadcrumb em{
+    display: block;
+    padding: 0 51px 0 20px;
+    color: #fff;
+    font-style: normal;
+}
+
+.ellipsisTxt, .breadcrumb em, .bcLinkLayer a, .newsPaperImg em, .ellipsisTit[class*=boardTypeImg] em, .boardTypeTbl td a{
+    overflow: hidden;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.bcLinkLayerBtn{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.bcLinkLayer{
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: -1px;
+    left: -1px;
+    border-top: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.breadcrumb > div:after, .breadcrumb > div > .a{
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 11px;
+    height: 6px;
+    margin-top: -3px;
+    background: url("http://www.snuh.org/asset/img/common/spr_common.png") no-repeat -65px -27px;
+}
+
+.bcLinkLayer a{
+    display: block;
+    height: 48px;
+    padding: 0 20px;
+    border: 1px solid #ccc;
+    border-top: 0;
+    line-height: 48px;
+    transition: .3s color;
+}
+
+.bcQuickMenu{
+    float: right;
+    width: 220px;
+    margin-right: -18px;
+    padding: 0 18px;
+    text-align: center;
+    background: url("http://www.snuh.org/asset/img/common/bg_bcQuickMenu.png") no-repeat 0 0;
+}
+
+.bcQuickMenu li{
+    float: left;
+    position: relative;
+    width: 50%;
+}
+
+.bcQuickMenu a{
+    display: block;
+    height: 50px;
+    color: #fff;
+    line-height: 50px;
+    background-color: transparent;
+}
+
+.contUtilMenuWrap{
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    width: 800px;
+    height: 30px;
+    margin: 264px auto 0;
+    padding: 1px 300px 0 0;
+}
+
+.contUtilMenuWrap .contUtilMenu{
+    margin-top: 0;
+}
+
+.contUtilMenu{
+    float: right;
+}
+
+.contUtilMenu li{
+    float: left;
+    position: relative;
+    margin-right: 26px;
+}
+
+.contUtilMenu a{
+    color: #888;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.likeContent::before {
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left: -13px;
+    width: 2px;
+    height: 9px;
+    margin-top: -3px;
+    background-color: #ccc;
+}
+
+.contUtilMenu .lastChild{
+    margin-right: 0;
+}
+
+.copyURL::before{
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left: -13px;
+    width: 2px;
+    height: 9px;
+    margin-top: -3px;
+    background-color: #ccc;
+}
+
+.contUtilMenu .zoomOut{
+    margin-left: 20px;
+}
+
+li.zoomOut, li.zoomIn{
+    margin-right: 0;
+    height: 30px;
+    top: 4px;
+}
+
+li.zoomIn{
+    left: -1px;
+}
+
+.contUtilMenu button{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    background-color: transparent;
+    top: -4px;
+}
+
+.contUtilMenu button::before{
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left:  50%;
+    width: 10px;
+    height: 10px;
+    margin: -5px 0 0 -5px;
+    background: url("http://www.snuh.org/asset/img/common/spr_common.png") no-repeat -65px -39px;
+}
+
+.contUtilMenu .zoomOut button::before{
+    width: 10px;
+    height: 2px;
+    margin: -1px 0 0 -5px;
+    background-position: -65px -35px;
+}
+
+.hideTxt{
+    overflow: hidden;
+    color: transparent;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+
+.innerWrap {
+    padding: 0 10px;
+    position: relative;
+    width: 1100px;
+    height: 51.625px;
+    margin: auto;
 }

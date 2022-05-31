@@ -4,6 +4,10 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.member.domain.vo.PatientListVO;
+<<<<<<< HEAD
+=======
+import com.mybatis.config.MyBatisConfig;
+>>>>>>> master
 
 
 public class PatientListDAO {
@@ -14,6 +18,7 @@ public class PatientListDAO {
 		sqlSession = sqlSessionFactory.openSession(true);
 	}
 	
+<<<<<<< HEAD
 	public void list(PatientListVO patientListVO) {
 		sqlSession.insert("Member.list", patientListVO);
 	}
@@ -23,3 +28,14 @@ public class PatientListDAO {
 	}
 	
 }
+=======
+	public void add(PatientListVO patientListVO) {
+		sqlSession.insert("PatientList.add", patientListVO);
+	}
+	
+	public boolean checkID(String patientNum) {
+		return (Integer)sqlSession.selectOne("PatientList.view", patientNum) == 1;
+	}
+	
+}
+>>>>>>> master

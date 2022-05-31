@@ -7,7 +7,7 @@ public class MemberInfoVO {
 	private String residentNum;
 	private String email;
 	private String address;
-	private String phonNum;
+	private String phoneNum;
 	private String addPhoneNum;
 	private String birth;
 	private String gender;
@@ -62,12 +62,12 @@ public class MemberInfoVO {
 		this.address = address;
 	}
 
-	public String getPhonNum() {
-		return phonNum;
+	public String getPhoneNum() {
+		return phoneNum;
 	}
 
-	public void setPhonNum(String phonNum) {
-		this.phonNum = phonNum;
+	public void setPhoneNum(String phoneNum) {
+		this.phoneNum = phoneNum;
 	}
 
 	public String getAddPhoneNum() {
@@ -93,6 +93,7 @@ public class MemberInfoVO {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
+
 	
 	
 	
