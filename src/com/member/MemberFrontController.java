@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.member.action.ActionInfo;
+import com.reservation.ReservationCheckOk;
+import com.reservation.ReservationOk;
 
 public class MemberFrontController extends HttpServlet {
 

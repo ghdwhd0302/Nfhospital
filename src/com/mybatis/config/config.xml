@@ -6,8 +6,15 @@
    </settings>
 	<typeAliases>
 		<typeAlias type="com.member.domain.vo.MemberInfoVO" alias="memberInfoVO"/>
+<<<<<<< HEAD
 		<typeAlias type="com.member.domain.vo.PatientListVO" alias="patientListVO"/>
 		<typeAlias type="com.member.domain.vo.ReservationVO" alias="reservationVO"/>
+=======
+		<typeAlias type="com.patient.domain.vo.PatientListVO" alias="patientListVO"/>
+		<typeAlias type="com.reservation.domain.vo.ReservationVO" alias="reservationVO"/>
+		<typeAlias type="com.write.domain.vo.ThankyouWriteVO" alias="thankyouWriteVO"/>
+		<typeAlias type="com.write.domain.vo.SuggestionsWriteVO" alias="suggestionsWriteVO"/>
+>>>>>>> 5ed397fe73a123a8525bf8af4597aa7e6cb85427
 	</typeAliases>
 
 	<environments default="mysql">
@@ -26,7 +33,7 @@
 		<mapper resource="com/mybatis/mapper/MemberMapper.xml" ></mapper>
 		<mapper resource="com/mybatis/mapper/PatientListMapper.xml" ></mapper>
 		<mapper resource="com/mybatis/mapper/ReservationMapper.xml" ></mapper>
-		<mapper resource="com/mybatis/mapper/WriteMapper.xml" ></mapper>
+		<mapper resource="com/mybatis/mapper/ThankyouWriteMapper.xml" ></mapper>
 	</mappers>
 
 </configuration>
