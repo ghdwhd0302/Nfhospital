@@ -43,6 +43,9 @@ public class MemberFrontController extends HttpServlet {
 			
 		} else if(command.equals("CheckCodeOk.me")) {// 휴대폰 인증
 			new CheckCodeOk().execute(req, resp);
+		
+		} else if(command.equals("FindIdOk.me")) {
+			new FindIdOk().execute(req, resp);
 		}else {
 			// 404 일 때 출력할 에러 페이지 경로 작성
 

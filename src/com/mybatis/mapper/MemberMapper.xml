@@ -19,4 +19,16 @@
    		where id = #{id} and password = #{password}
    </select>
    
+   <!-- 이메일로 아이디 찾기 -->
+   <select id="emailFindId" parameterType="map" resultType="string">
+   		select id from tbl_member_info
+   		where email = #{email} and name = #{name} and birth = #{birth}
+   </select>
+   
+   <!-- 휴대폰번호로 아이디 찾기 -->
+   <select id="phoneNumFindId" parameterType="map" resultType="string">
+   		select id from tbl_member_info
+   		where phoneNum = #{phoneNum} and name = #{name} and birth = #{birth}
+   </select>
+   
 </mapper>

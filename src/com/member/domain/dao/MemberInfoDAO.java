@@ -30,4 +30,14 @@ public class MemberInfoDAO {
 	public boolean checkID(String id) {
 		return (Integer)sqlSession.selectOne("Member.checkId", id) == 1;
 	}
+	
+	//이메일로 아이디 찾기
+	public String emailFindId(HashMap<String, String> memberInfoMap) {
+		return sqlSession.selectOne("Member.emailFindId", memberInfoMap);
+	}
+	//휴대폰번호로 아이디 찾기
+	public String phoneNumFindId(HashMap<String, String> memberInfoMap) {
+		return sqlSession.selectOne("Member.phoneNumFindId", memberInfoMap);
+	}
+	
 }
