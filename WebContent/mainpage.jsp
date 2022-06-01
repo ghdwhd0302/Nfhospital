@@ -1004,6 +1004,7 @@ div.btns {
 								<a href="newreservation.jsp" role="button" class="btnType04">예약확인/취소</a>
 								
 								<a href="prereservation.jsp" role="button" class="btnType04">진료이력조회</a>
+								
 								</div>
 								<a href="mainpage.jsp" class="logout">로그아웃</a>
 								</div>

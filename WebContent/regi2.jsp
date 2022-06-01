@@ -19,14 +19,12 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
 	integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
 	crossorigin="anonymous"></script>
-
+<link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="asset/css/regi2.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </head>
@@ -35,7 +33,104 @@
 	
 	<div id="wrap">
 	
-
+	<header id="header">
+            <div class="innerwrap">
+                <h1><a href="mainpage.jsp">서울 병원</a></h1>
+                <div class="topLeftWrap">
+                    <a href="mainpage.jsp">
+	                	<img src="./asset/img/hospital_logo.png" style="width: 30px; height: 30px;">
+                    </a>
+                </div>
+                <div class="topMenuWrap">
+                    <ul class="utilMenu">
+                        <li>
+                            <a style="margin-right: 16px;">원격</a>
+                        </li>
+                    </ul>
+                    <ul class="topMenu">
+                        <li>
+                            <a href="mainpage.jsp">로그아웃</a>
+                        </li>
+                        <li>
+                            <a href="mypage.jsp">마이페이지</a>
+                        </li>
+                        <li>
+                            <a>Language</a>
+                        </li>
+                    </ul>
+                </div>
+                <nav id="gnb" class>
+<!--                     <button class="totMenuBtn hideTxt" type="button" aria-controls="totMenu">
+                    </button> -->
+                    <!-- 전체 메뉴 아이콘 집어넣어야함 -->
+                    <button class="totMenuBtn hideTxt" type="button" aria-controls="totMenu">전체 메뉴 열기</button>
+                    <ul class="gnbList clearFix">
+                        <li>
+                            <a>진료안내</a>
+                        </li>
+                        <li>
+                            <a>이용안내</a>
+                        </li>
+                        <li>
+                            <a>건강정보</a>
+                        </li>
+                        <li>
+                            <a>고객참여</a>
+                        </li>
+                        <li>
+                            <a>병원소개</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="contTopBar" style="position: fixed; top: 130px;">
+            <!-- innerWrap -->
+            <div class="innerWrap clearFix">
+                <!-- breadcrumb -->
+                <div class="breadcrumb">
+                    <strong class="hideEl">현재 위치: </strong>
+                    <a href="/" class="bcHomeBtn hideTxt">HOME</a>
+                    <span class="hideEl">&gt;</span>
+                    
+                    <!-- <div class="">
+                        <em>이용안내</em>
+                        <button type="button" class="bcLinkLayerBtn hideTxt">주 메뉴 목록 열기</button>
+                        bcLinkLayer
+                        <ul class="bcLinkLayer" role="region" aria-hidden="true" aria-expanded="false" style="display: none;">
+                                
+                            <li><a href="/reservation/meddept/main.do">진료안내</a></li>
+                            <li><a href="/content/M002001001.do">이용안내</a></li>
+                            <li><a href="/join/client.do">고객참여</a></li>
+                            <li><a href="/content/M005001.do">병원소개</a></li>
+                                
+                        </ul>
+                        //bcLinkLayer
+                    </div> -->
+                    <span class="hideEl">&gt;</span>
+                    <!-- <div class="">
+                        <em>FAQ(통합)</em>
+                        <button type="button" class="bcLinkLayerBtn hideTxt">서브 메뉴 목록 열기</button>
+                        bcLinkLayer
+                        <ul class="bcLinkLayer" role="region" aria-hidden="true" aria-expanded="false" style="display: none;" tabindex="0">
+					
+                            <li><a href="/board/B005/list.do">FAQ(통합)</a></li>
+                            
+                        </ul>
+                        //bcLinkLayer
+                    </div> -->
+                    <span class="hideEl">&gt;</span>
+                </div>
+                <!-- //breadcrumb -->
+                <!-- bcQuickMenu -->
+                <ul class="bcQuickMenu">
+                    <li class=""><a href="reservation.jsp">진료예약</a></li>
+                    <li><a href="newreservation.jsp">예약조회</a></li>
+                </ul>
+                <!-- //bcQuickMenu -->
+            </div>
+            <!-- //innerWrap -->
+        </div>
 
 
 
@@ -978,7 +1073,7 @@
 				<!-- //boardTypeForm -->
 			</fieldset>
 		</form>
-		<div class="btnWrap" style="padding-left: 70%;">
+		<div class="btnWrap" style="padding-left: 1095px;">
 			<button type="button" class="btnType03 btnBig" id="nextBtn" >다음단계</button>
 		</div>
 		</main>

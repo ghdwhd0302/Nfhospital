@@ -5,10 +5,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link
@@ -23,7 +19,6 @@
 <link rel="stylesheet" href="asset/css/findid.css">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-<link rel="stylesheet" href="asset/css/findid.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
@@ -36,127 +31,10 @@
 <body>
 		
 <jsp:include page="header.jsp" />
-<script type="text/javascript">
-
-	function outcomesFnc(e) {
-
-		var now = new Date();
-		var dday = new Date("2021", "11", "17","11","59","59");
-
-		if(now != dday) {
-			alert("콘텐츠 준비중입니다.");
-			e.preventDefault();
-			return false;
-		}else {
-			window.open('https://dept.snuh.org/dept/OC/index.do');
-		}
-
-	}
-</script>
-	
-
-<script type="text/javascript">
-
-		var locationInfo = {
-			cate0: $(".viewTitle h3").text(),
-			cate1: $(".breadcrumb em:eq(2)").text(),
-			cate2: $(".breadcrumb em:eq(1)").text(),
-			cate3: $(".breadcrumb em:eq(0)").text()
-		}
-</script>
-
-
 		<!-- //contTopBar -->
 
 		<!-- content -->
-		
 
-
-
-
-
-
-<script type="text/javascript">
-	
-	var birthNumCheck=/^[0-9]*$/ ;
-	$(function() {
-
-		$('#mBtn').click(function() {
-			var PCC_window =window.open('', 'PCCV3Window', 'width=430, height=560, resizable=1, scrollbars=no, status=0, titlebar=0, toolbar=0, left=300, top=200' );
-			PCC_window.focus();
-			document.reqPCCForm.action = 'https://pcc.siren24.com/pcc_V3/jsp/pcc_V3_j10.jsp';
-			document.reqPCCForm.target="PCCV3Window";
-			document.reqPCCForm.submit();
-		});
-		
-		$('#ipinBtn').click(function() {
-			var IPIN_window =window.open('', 'IPINWindow', 'width=450, height=500, resizable=0, scrollbars=no, status=0, titlebar=0, toolbar=0, left=300, top=200' );
-			IPIN_window.focus();
-			document.reqCBAForm.action = 'https://ipin.siren24.com/i-PIN/jsp/ipin_j10.jsp';
-			document.reqCBAForm.target="IPINWindow";
-			document.reqCBAForm.submit();
-		});
-		
-		$('#confirmMailBtn').click(function() {
-			
-			if($('#mForm').find('[id=id]').val() == "" || $('#mForm').find('[id=name]').val() == "" || $('#mForm').find('[id=email]').val() == "" || $('#mForm').find('[id=birth]').val() == "") {
-				alert("모든 사항은 필수 입력입니다.");
-				return false;
-			} else {
-				var birth = $('#mForm').find('[id=birth]').val().replace(/-/gi,'');
-				
-				if(!birthNumCheck.test(birth) || birth.length < 8){
-					alert("생년월일 정보를 한번 더 확인해 주십시오.");
-					$('#mForm').find('[id=birth]').focus();
-					return false;
-				}
-				$.ajax({
-					async : false,
-					type : "get",
-					url : "./passMailCheck.do",
-					data : {"id" : $('#mForm').find('[id=id]').val(), "name" : $('#mForm').find('[id=name]').val(), "email" : $('#mForm').find('[id=email]').val(), "birth" : $('#mForm').find('[id=birth]').val()},
-					success : function(data) {
-						if(!data) {
-							alert("정보가 확인되지 않습니다. \n입력정보를 한번 더 확인해 주십시오.");
-						} else {
-							$('#mForm').submit();
-						}
-					}
-				});
-			}
-		});
-		
-		$('#confirmHpBtn').click(function() {
-
-			if($('#hForm').find('[id=id]').val() == "" || $('#hForm').find('[id=name]').val() == "" || $('#hForm').find('[id=hp_no]').val() == "" || $('#hForm').find('[id=birth]').val() == "") {
-				alert("모든 사항은 필수 입력입니다.");
-				return false;
-			} else {
-				
-				var birth = $('#hForm').find('[id=birth]').val().replace(/-/gi,'');
-				
-				if(!birthNumCheck.test(birth) || birth.length < 8){
-					alert("생년월일 정보를 한번 더 확인해 주십시오.");
-					$('#hForm').find('[id=birth]').focus();
-					return false;
-				}	
-				$.ajax({
-					async : false,
-					type : "get",
-					url : "./passHpCheck.do",
-					data : {"id" : $('#hForm').find('[id=id]').val(), "name" : $('#hForm').find('[id=name]').val(), "hp_no" : $('#hForm').find('[id=hp_no]').val(), "birth" : $('#hForm').find('[id=birth]').val()},
-					success : function(data) {
-						if(!data) {
-							alert("정보가 확인되지 않습니다. \n입력정보를 한번 더 확인해 주십시오.");
-						} else {
-							$('#hForm').submit();
-						}
-					}
-				});
-			}
-		});
-	});
-</script>
 <div id="wrap">
 			
 <!-- content -->
@@ -180,7 +58,7 @@
 		<h1 style="color: #2263bb;">비밀번호 찾기</h1>
 		<!-- layerContent -->
 		<div class="layerContent">
-			<form id="mForm" name="mForm" action="./findPassMailResult.do" method="post">
+			<form id="mForm" name="mForm" action="FindPwOk.me" method="post">
 				<fieldset>
 					<legend>이메일확인</legend>
 					<div class="boardTypeForm">
@@ -209,11 +87,25 @@
 								</tr>
 							</tbody>
 						</table>
+						<div class="femail" id="eresult" style="display: none;">
+							<div class="confirmWrap findConfirmWrap">
+								<p>비밀번호 찾기가 완료 되었습니다.</p>
+								<p>가입된 비밀번호는 아래와 같습니다.</p>
+							</div>
+							<div class="compTxt">
+							<!--//*2109-07-10 ##ID/PW찾기  -->
+							
+								<label for="memberInfo01">
+									<span style="color: #2263bb">▶</span>  회원님의 비밀번호는<span class="colorPoint ecolorPoint"></span> 입니다.
+								</label><br>
+							</div>
+						</div>
 					</div>
 				</fieldset>
 			</form>
 			<div class="btnWrap alignC">
 				<button type="button" class="btnType03" id="confirmMailBtn">확인하기</button>
+				<button class="logInBtn"  onclick="location.href='passwordchange.jsp' ">비밀번호 변경</button>
 			</div>
 		</div>
 
@@ -221,7 +113,7 @@
 	<section class="layerWrap layerHp" >
 		<!-- layerContent -->
 		<div class="layerContent">
-			<form id="hForm" name="hForm" action="./findPassHpResult.do" method="post">
+			<form id="hForm" name="hForm" action="FindPwOk.me" method="post">
 				<fieldset>
 					<legend>휴대전화번호 확인</legend>
 					<div class="boardTypeForm">
@@ -242,7 +134,7 @@
 								</tr>
 								<tr>
 									<th scope="row">휴대전화번호</th>
-									<td><input id="hp_no" name="hp_no" title="휴대전화번호" class="inputText" type="text" value="" maxlength="40"></td>
+									<td><input id="hp_no" name="phoneNum" title="휴대전화번호" class="inputText" type="text" value="" maxlength="40"></td>
 								</tr>
 								<tr>
 									<th scope="row">생년월일</th>
@@ -250,11 +142,25 @@
 								</tr>
 							</tbody>
 						</table>
+						<div class="fphone" id="presult" style="display: none;">
+							<div class="confirmWrap findConfirmWrap">
+								<p>비밀번호 찾기가 완료 되었습니다.</p>
+								<p>가입된 비밀번호는 아래와 같습니다.</p>
+							</div>
+							<div class="compTxt">
+							<!--//*2109-07-10 ##ID/PW찾기  -->
+							
+								<label for="memberInfo01">
+									<span style="color: #2263bb">▶</span>  회원님의 비밀번호는<span class="colorPoint fcolorPoint"></span> 입니다.
+								</label><br>
+							</div>
+						</div>
 					</div>
 				</fieldset>
 			</form>
 			<div class="btnWrap alignC">
 				<button type="button" class="btnType03" id="confirmHpBtn">확인하기</button>
+				<button class="logInBtn" onclick="location.href='passwordchange.jsp' ">비밀번호 변경</button>
 			</div>
 		</div>
 		
@@ -266,5 +172,102 @@
 <jsp:include page="footer.jsp" />
 </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+let contextPath = "${pageContext.request.contextPath}";
+	var birthNumCheck=/^[0-9]*$/ ;
+		
+		$('#confirmMailBtn').click(function() {
+			
+			if($('#mForm').find('[id=id]').val() == "" || $('#mForm').find('[id=name]').val() == "" || $('#mForm').find('[id=email]').val() == "" || $('#mForm').find('[id=birth]').val() == "") {
+				alert("모든 사항은 필수 입력입니다.");
+				return false;
+			} else {
+				var birth = $('#mForm').find('[id=birth]').val().replace(/-/gi,'');
+				
+				if(!birthNumCheck.test(birth) || birth.length < 8){
+					alert("생년월일 정보를 한번 더 확인해 주십시오.");
+					$('#mForm').find('[id=birth]').focus();
+					return false;
+				}
+				
+				if(!$('#mForm').find('[id=birth]').val().match("-")){
+					alert(" '-' " + "를 포함시켜 입력해주세요. ")
+					return false;
+				}
+				
+				$.ajax({
+					url: contextPath + "/Nfhospital/FindPwOk.me",
+					type: "get",
+					data: {id: mForm.id.value, name: mForm.name.value, email: mForm.email.value, birth: mForm.birth.value},
+					contentType: "application/json; charset=utf-8",
+					dataType: "json",
+					success: function(result){
+						console.log(result.find);
+						if(result.find != null){
+							$("#eresult").css("display", "block");
+							$(".ecolorPoint").text(result.find);
+						}else{
+							alert("가입되어 있지 않습니다.")
+						}
+						
+						
+					},
+					error: function(request, status, error){
+						console.log("실패..");
+						console.log(request);
+						console.log(status);
+						console.log(error);
+					}
+				});
+			}
+		});
+		
+		$('#confirmHpBtn').click(function() {
 
+			if($('#hForm').find('[id=id]').val() == "" || $('#hForm').find('[id=name]').val() == "" || $('#hForm').find('[id=hp_no]').val() == "" || $('#hForm').find('[id=birth]').val() == "") {
+				alert("모든 사항은 필수 입력입니다.");
+				return false;
+			} else {
+				
+				var birth = $('#hForm').find('[id=birth]').val().replace(/-/gi,'');
+				
+				if(!birthNumCheck.test(birth) || birth.length < 8){
+					alert("생년월일 정보를 한번 더 확인해 주십시오.");
+					$('#hForm').find('[id=birth]').focus();
+					return false;
+				}	
+				
+				if(!$('#hForm').find('[id=birth]').val().match("-")){
+					alert(" '-' " + "를 포함시켜 입력해주세요. ")
+					return false;
+				}
+				
+				$.ajax({
+					url: contextPath + "/Nfhospital/FindPwOk.me",
+					type: "get",
+					data: {id: hForm.id.value, name: hForm.name.value, phoneNum: hForm.phoneNum.value, birth: hForm.birth.value},
+					contentType: "application/json; charset=utf-8",
+					dataType: "json",
+					success: function(result){
+						console.log(result.find);
+						if(result.find != null){
+							$("#presult").css("display", "block");
+							$(".fcolorPoint").text(result.find);
+						}else{
+							alert("가입되어 있지 않습니다.")
+						}
+						
+						
+					},
+					error: function(request, status, error){
+						console.log("실패..");
+						console.log(request);
+						console.log(status);
+						console.log(error);
+					}
+				});
+			}
+		});
+</script>
 </html>

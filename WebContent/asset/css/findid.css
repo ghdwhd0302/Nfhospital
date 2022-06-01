@@ -363,7 +363,15 @@ label{
 }
 
 .logInBtn{
-	
+	overflow: visible;
+    height: 40px;
+    padding: 0 20px;
+    color: #000;
+    font-size: 16px;
+    text-align: center;
+    background-color: #fff;
+    cursor: pointer;
+        border: 1px solid #ccc;
 }
 
 

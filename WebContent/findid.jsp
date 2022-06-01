@@ -14,10 +14,10 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="asset/css/findid.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
 <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
@@ -94,7 +94,6 @@
 								<label for="memberInfo01">
 									<span style="color: #2263bb">▶</span>  회원님의 아이디는<span class="colorPoint ecolorPoint"></span> 입니다.
 								</label><br>
-								<button class="logInBtn">로그인하기</button>
 							</div>
 						</div>
 					</div>
@@ -102,6 +101,7 @@
 			</form>
 			<div class="btnWrap alignC">
 				<button type="button" class="btnType03" id="confirmMailBtn">확인하기</button>
+				<button class="logInBtn"  onclick="location.href='login.jsp' ">로그인하기</button>
 			</div>
 		</div>
 		<!-- //layerContent -->
@@ -154,6 +154,7 @@
 			</form>
 			<div class="btnWrap alignC">
 				<button type="button" class="btnType03" id="confirmHpBtn">확인하기</button>
+				<button class="logInBtn" onclick="location.href='login.jsp' ">로그인하기</button>
 			</div>
 		</div>
 		<!-- //layerContent -->
@@ -254,7 +255,7 @@ let contextPath = "${pageContext.request.contextPath}";
 						console.log(result.find);
 						if(result.find != null){
 							$("#presult").css("display", "block");
-							$(".pcolorPoint").text(result.find);
+							$(".fcolorPoint").text(result.find);
 						}else{
 							alert("가입되어 있지 않습니다.")
 						}
