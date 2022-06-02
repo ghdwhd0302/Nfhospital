@@ -7,8 +7,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.member.action.Action;
 import com.member.action.ActionInfo;
-import com.member.domain.dao.WriteDAO;
-import com.member.domain.vo.ThankyouWriteVO;
+import com.write.domain.dao.WriteDAO;
+import com.write.domain.vo.ThankyouWriteVO;
 
 public class ThankyouWriteOk implements Action {
 

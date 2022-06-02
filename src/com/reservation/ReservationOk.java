@@ -7,8 +7,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.member.action.Action;
 import com.member.action.ActionInfo;
-import com.member.domain.dao.ReservationDAO;
-import com.member.domain.vo.ReservationVO;
+import com.reservation.domain.dao.ReservationDAO;
+import com.reservation.domain.vo.ReservationVO;
 
 public class ReservationOk implements Action{
 	@Override
