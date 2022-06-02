@@ -1,4 +1,4 @@
-package com.member.domain.vo;
+package com.write.domain.vo;
 
 public class ThankyouWriteVO {
 
