@@ -29,6 +29,7 @@
 		<mapper resource="com/mybatis/mapper/PatientListMapper.xml" ></mapper>
 		<mapper resource="com/mybatis/mapper/ReservationMapper.xml" ></mapper>
 		<mapper resource="com/mybatis/mapper/ThankyouWriteMapper.xml" ></mapper>
+		<mapper resource="com/mybatis/mapper/SuggestionsMapper.xml" ></mapper>
 	</mappers>
 
 </configuration>
