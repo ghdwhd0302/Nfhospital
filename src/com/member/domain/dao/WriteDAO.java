@@ -17,32 +17,28 @@ public class WriteDAO {
 		sqlSession = sqlSessionFactory.openSession(true);
 	}
 	
-	//감사합니다 게시글 전체 목록
+	//내가 작성한 글 목록
 	public List<ThankyouWriteVO> writeList(){
 		return sqlSession.selectList("Write.writeList");				
 	}
 	
-	//감사합니다 게시글 선택 출력
+	//내가 작성한 글 선택 출력
 	public ThankyouWriteVO writeChoose(){
 		return sqlSession.selectOne("Write.writeChoose");				
 	}
 	
-	//내가 작성한 글 목록
-	
-	//내가 작성한 글 선택 출력
-	
 	//글 작성
-	public void write(ThankyouWriteVO ThankyouWriteVO) {
-		sqlSession.insert("ThankyouWrite.thankyouWrite", ThankyouWriteVO);
+	public void write(ThankyouWriteVO thankyouWriteVO) {
+		sqlSession.insert("ThankyouWrite.write", thankyouWriteVO);
 	}
 	
 	//글 수정
-	public void writeUpdate(ThankyouWriteVO ThankyouWriteVO) {
-		sqlSession.update("ThankyouWrite.thankyouWriteUpdate", ThankyouWriteVO);
+	public void writeUpdate(ThankyouWriteVO thankyouWriteVO) {
+		sqlSession.update("ThankyouWrite.writeUpdate", thankyouWriteVO);
 	}
 	
 	//글 삭제
-	public void writeDelete(ThankyouWriteVO ThankyouWriteVO) {
-		sqlSession.delete("ThankyouWrite.thankyouWriteDelete", ThankyouWriteVO);
+	public void writeDelete(ThankyouWriteVO thankyouWriteVO) {
+		sqlSession.delete("ThankyouWrite.writeDelete", thankyouWriteVO);
 	}
 }
