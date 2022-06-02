@@ -171,7 +171,7 @@
                     </p>
                 </div>
             </div>
-            <form id="joinClientVo" action="" method="post" enctype="multipart/form-data">
+            <form id="joinClientVo" name="writeForm" action="${pageContext.request.contextPath }/write/ThankyouWriteOk.wr" method="post" enctype="multipart/form-data">
                 <fieldset>
                     <legend>감사합니다 등록</legend>
                     <div class="persInforWrap">
@@ -206,13 +206,13 @@
                                 <col style="width: 140px;">
                                 <col style="width: auto;">
                             </colgroup>
-                            <form method="post" action="${pageContext.request.contextPath }/write/ThankyouWriteOk.wr" name="writeForm">
+                            
 	                            <tbody>
 									<tr>
 	                                    <th scope="row">환자성함</th>
 	                                    <td><input id="ptname" name="name" title="환자성함" type="text" class="inputText validate-require" maxlength="16"></td>
 	                                    <th scope="row">환자등록정보</th>
-	                                    <td><input id="ptcd" name="ptcd" title="환자등록정보 성함" type="text" class="inputText validate-require" maxlength="8"></td>
+	                                    <td><input id="ptcd" name="nameCheck" title="환자등록정보 성함" type="text" class="inputText validate-require" maxlength="8"></td>
 	                                </tr>
 	        
 	        
@@ -299,7 +299,6 @@
 	                                    </td>
 	                                </tr> -->
 	                            </tbody>
-                            </form>
                         </table>
                     </div>
                     <div class="btnWrap alignC">
@@ -368,7 +367,7 @@
                         <ul class="ftMenuList01">
                             <li><a href="//child.snuh.org/main.do" target="_blank">어린이병원</a></li>
                             <li><a href="//cancer.snuh.org/main.do" target="_blank">암병원</a></li>
-                            <li><a href="//www.snubh.org/" target="_blank">분당서울대병원</a></li>
+                            <li><a href="//www.snubh.org/" target="_blank">분당서울병원</a></li>
                             <li><a href="//www.brmh.org/" target="_blank">보라매병원</a></li>
                             <li><a href="//healthcare.snuh.org/" target="_blank">강남센터</a></li>
                             <li><a href="http://medicine.snu.ac.kr" target="_blank">서울대학교의과대학</a></li>
@@ -408,14 +407,14 @@
                     <ul class="awardList">
                         <li class="item05 hideTxt"><a href="/board/B003/view.do?viewType=true&ampbbs_no=5224">전자의무기록시스템</a></li>
                         <li class="item01 hideTxt"><a href="/board/B003/view.do?bbs_no=1509">보건복지부 제 1호</a></li>
-                        <li class="item04 hideTxt" name="ismsTxt"><a href="#ismsTxt" class="ismsTxtBtn">서울대학교병원 정보보호 관리체계(ISMS) 인증
+                        <li class="item04 hideTxt" name="ismsTxt"><a href="#ismsTxt" class="ismsTxtBtn">서울병원 정보보호 관리체계(ISMS) 인증
                             [유효기간] 2021.02.17 ~ 2024.02.16 
                             [인증범위] 의료정보시스템(EMR,OCS),홈페이지 및 모바일 애플리케이션  운영</a></li>
                     </ul>
                 </div>
             </div>
             <div class="ftIsmsTxt">
-                <p>서울대학교병원 정보보호 관리체계(ISMS) 인증<br>
+                <p>서울병원 정보보호 관리체계(ISMS) 인증<br>
                     [유효기간] 2021.02.17 ~ 2024.02.16<br> 
                     [인증범위] 의료정보시스템(EMR,OCS),홈페이지 및 모바일 애플리케이션 운영</p>
             </div>   

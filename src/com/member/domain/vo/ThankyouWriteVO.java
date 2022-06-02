@@ -2,22 +2,15 @@ package com.member.domain.vo;
 
 public class ThankyouWriteVO {
 
-	private int writeNum;
 	private String title;
 	private String content;
 	private String id;
 	private String time;
+	private String name;
+	private String phoneNum;
 	
 	public ThankyouWriteVO() {;}
-
-	public int getWriteNum() {
-		return writeNum;
-	}
-
-	public void setWriteNum(int writeNum) {
-		this.writeNum = writeNum;
-	}
-
+	
 	public String getTitle() {
 		return title;
 	}
@@ -50,5 +43,20 @@ public class ThankyouWriteVO {
 		this.time = time;
 	}
 	
+	public String getName() {
+		return name;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public String getPhoneNum() {
+		return phoneNum;
+	}
+	
+	public void setPhoneNum(String phoneNum) {
+		this.phoneNum = phoneNum;
+	}
 	
 }
