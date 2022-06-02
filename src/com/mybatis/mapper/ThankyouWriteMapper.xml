@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http//mybatis.org/dtd/mybatis-3-mapper.dtd">
-<<<<<<< HEAD
-<<<<<<< HEAD:src/com/mybatis/mapper/WriteMapper.xml
-<mapper namespace="Write">
-=======
-=======
->>>>>>> 5ed397fe73a123a8525bf8af4597aa7e6cb85427
 <mapper namespace="ThankyouWrite">
 
 	<!-- 감사합니다 게시글 전체 목록 -->
@@ -40,5 +34,4 @@
       where where id = #{id}
    </delete>
    
->>>>>>> 5ed397fe73a123a8525bf8af4597aa7e6cb85427:src/com/mybatis/mapper/ThankyouWriteMapper.xml
 </mapper>
