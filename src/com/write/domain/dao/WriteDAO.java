@@ -1,13 +1,13 @@
-package com.member.domain.dao;
+package com.write.domain.dao;
 
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
-import com.member.domain.vo.SuggestionsWriteVO;
-import com.member.domain.vo.ThankyouWriteVO;
 import com.mybatis.config.MyBatisConfig;
+import com.write.domain.vo.SuggestionsWriteVO;
+import com.write.domain.vo.ThankyouWriteVO;
 
 public class WriteDAO {
 	SqlSessionFactory sqlSessionFactory = MyBatisConfig.getSqlSessionFactory();
