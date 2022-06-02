@@ -1,62 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http//mybatis.org/dtd/mybatis-3-mapper.dtd">
-<<<<<<< HEAD
-<<<<<<< HEAD:src/com/mybatis/mapper/WriteMapper.xml
-<mapper namespace="Write">
-=======
-=======
->>>>>>> 5ed397fe73a123a8525bf8af4597aa7e6cb85427
-<mapper namespace="ThankyouWrite">
 
-	<!-- 감사합니다 게시글 전체 목록 -->
-	<select id="thankyouWriteList" resultType="thankyouWriteVO">		
-		select write_num, title, content, id, time
-		from thank_you_write order by write_num desc						
-	</select>
-	
-	<!-- 감사합니다 게시글 선택 출력 -->
-	<select id="thankyouWriteChoose" resultType="thankyouWriteVO">		
-		select title, content, id, time
-		from thank_you_write		
-	</select>
-	
-	<!-- 건의합니다 게시글 선택 출력 -->
-	<select id="suggestWriteChoose" resultType="suggestWriteVO">		
-		select title, content, id, time
-		from client_sound_write 			
-	</select>
-		
-	<!-- 내가 작성한 글 목록 -->
-	<select id="myWriteList" resultType="writeVO">		
-		select write_num, title, content, id, time
-		from tbl_write order by write_num desc						
-	</select>
-	
-	<!-- 내가 작성한 글 선택 출력 -->
-	<select id="myWriteChoose" resultType="writeVO">		
-		select title, content, id, time
-		from tbl_write 			
-	</select>
-	
-   <!--감사합니다 글 작성 -->
-   <insert id="thankyouWrite" parameterType="thankyouWriteVO">
-      insert into tbl_write
-      (title, content, id, time)
-      values(#{title}, #{content}, #{id}, now())
-   </insert>
-   
-   <!--감사합니다 글 수정 -->
-   <update id="thankyouWriteUpdate" parameterType="thankyouWriteVO">
-      update tbl_write
-      set title = #{title}, content = #{content}, time = now()}
-      where id = #{id}
-   </update>
-   
-   <!--감사합니다 글 삭제 -->
-   <delete id="thankyouWriteDelete" parameterType="thankyouWriteVO">
-      delete from tbl_write
-      where where id = #{id}
-   </delete>
-   
->>>>>>> 5ed397fe73a123a8525bf8af4597aa7e6cb85427:src/com/mybatis/mapper/ThankyouWriteMapper.xml
+<mapper namespace="Write">
+
 </mapper>
