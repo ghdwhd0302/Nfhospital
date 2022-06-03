@@ -1,4 +1,4 @@
-package com.patient.domain.vo;
+package com.member.domain.vo;
 
 public class PatientListVO {
 	private int patientNum;

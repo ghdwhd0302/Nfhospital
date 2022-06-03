@@ -1,4 +1,4 @@
-package com.reservation.domain.vo;
+package com.member.domain.vo;
 
 public class ReservationVO {
 	private String id;

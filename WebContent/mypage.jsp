@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -144,10 +143,7 @@
                     <h3 class="title">
                     	<a href="" style="cursor:poiner">진료예약확인</a>
                     </h3>
-                    <p class="noData">조회 가능한 진료 예약이 없습니다.
-                    	
-                    </p>
-			         	  
+                    <p class="noData">조회 가능한 진료 예약이 없습니다.</p>
                 </div>
                 <div class="item">
                     <h3 class="title">
@@ -181,7 +177,6 @@
                         </button>
                     </div>
                 </div>
-                
                 <div class="item personal">
                     <h3 class="title">로그아웃</h3>
                     <p class="text">
@@ -258,6 +253,4 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="asset/js/allFAQ.js"></script>
-<script>
-</script>
 </html>

@@ -25,7 +25,6 @@ contHeadingWrap + .boardView, .contHeadingWrap + .boardInfo{
     text-align: center;
 }
 
-
 .viewTitle > :first-child {
     font-size: 34px;
     word-break: keep-all;

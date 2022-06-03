@@ -7,8 +7,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.member.action.Action;
 import com.member.action.ActionInfo;
-import com.write.domain.dao.WriteDAO;
-import com.write.domain.vo.ThankyouWriteVO;
+import com.member.domain.dao.WriteDAO;
+import com.member.domain.vo.ThankyouWriteVO;
 
 public class ThankyouWriteOk implements Action {
 
@@ -19,8 +19,7 @@ public class ThankyouWriteOk implements Action {
 		WriteDAO writeDAO = new WriteDAO();
 		ActionInfo actionInfo = new ActionInfo();
 		
-		thankyouWriteVO.setName(req.getParameter("name"));
-		thankyouWriteVO.setPhoneNum(req.getParameter("tel1"+"-"+"tel2"+"-"+"tel3"));
+		thankyouWriteVO.setWriteNum(Integer.parseInt(req.getParameter("writeNum")));
 		thankyouWriteVO.setTitle(req.getParameter("title"));
 		thankyouWriteVO.setContent(req.getParameter("content"));
 		thankyouWriteVO.setId(req.getParameter("id"));
@@ -29,10 +28,9 @@ public class ThankyouWriteOk implements Action {
 		writeDAO.write(thankyouWriteVO);
 		
 		req.setAttribute("title", thankyouWriteVO.getTitle());
-		req.setAttribute("content", thankyouWriteVO.getContent());
 		
 		actionInfo.setRedirect(false);
-		actionInfo.setPath("/allThanksView.jsp");
+		actionInfo.setPath("write/thankyouwrite.jsp");
 		
 		return actionInfo;
 	}

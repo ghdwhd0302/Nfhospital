@@ -30,10 +30,10 @@ public class WriteFrontController extends HttpServlet {
 		if (command.equals("/write/ThankyouWriteOk.wr")) {
 			actionInfo = new ThankyouWriteOk().execute(req, resp);
 
-		} else if (command.equals("/write/ThankyouWrite.wr")) {
+		} else if (command.equals("Write.wr")) {
 			actionInfo = new ActionInfo();
 			actionInfo.setRedirect(true);
-			actionInfo.setPath(req.getContextPath() + "/thankyouwrite.jsp");
+			actionInfo.setPath(req.getContextPath() + "/write.jsp");
 		} else {
 			// 404 일 때 출력할 에러 페이지 경로 작성
 		}
