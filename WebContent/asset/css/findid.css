@@ -224,3 +224,156 @@ p {
     content: '';
     display: table;
 }
+
+[class*=btnType] {
+    overflow: visible;
+    height: 40px;
+    padding: 0 20px;
+    color: #000;
+    font-size: 16px;
+    text-align: center;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+input.inputText {
+	border: 1px solid #ccc;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.btnType03{
+	border: 1px solid #2263bb;
+    color: #fff;
+    background-color: #2263bb;
+    text-decoration: none;
+}
+
+
+.layerContent{
+	margin-top: 35px;
+}
+
+
+.tb {
+	border-collapse: separate;
+	border-spacing: 0 3px;
+}
+
+legend{
+	color: #2263bb;
+}
+
+
+.findContent .confirmWrap{
+	margin-top: 0px;
+}
+
+p{
+	    color: #333;
+    word-break: keep-all;
+    line-height: 1.63;
+}
+
+.memJoinContent .confirmWrap p, .findContent .confirmWrap p, .dorContent .confirmWrap p{
+	margin-bottom: 9px;
+    color: #000;
+    font-size: 26px;
+    width: 685px;
+    margin-left: 495px;
+    letter-spacing: -1.3px;
+}
+
+.memJoinContent .confirmWrap p + p, .findContent .confirmWrap p + p, .dorContent .confirmWrap p + p{
+	color: #666;
+    font-size: 16px;
+    letter-spacing: -1px;
+}
+
+[class*=boxType] + p, p + .referenMark, p + p{
+	margin-top: 8px;
+}
+
+.findContent .compTxt{
+	width: 492px;
+    margin: 25px 7px 0px 565px;
+    padding: 2px;
+}
+
+[class*=feFo]{
+	display: inline-block;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+}
+
+.feFoRadio{
+	display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url("https://www.snuh.org/asset/img/common/spr_common.png") no-repeat -169px -27px;
+}
+
+
+.feFoRadio.checked{
+	background-position: -169px -53px;
+}
+
+
+[class*=feFo] > input{
+	position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.colorPoint{
+	color: #2763ba!important;
+}
+
+table{
+	float: left!important;
+	position: relative!important;
+}
+
+.findConfirmWrap{
+	position: relative;
+}
+
+.findConfirmWrap::before{
+	position: absolute;
+    top: 13px;
+    content: "";
+    left: 548px;
+    width: 2px;
+    height: 125px;
+    background-color: #2263bb;
+}
+
+label{
+	display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+    margin-left: 117px;
+    font-size: 14px;
+}
+
+.logInBtn{
+	overflow: visible;
+    height: 40px;
+    padding: 0 20px;
+    color: #000;
+    font-size: 16px;
+    text-align: center;
+    background-color: #fff;
+    cursor: pointer;
+        border: 1px solid #ccc;
+}
+
+
+
+
