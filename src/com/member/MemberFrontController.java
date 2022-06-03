@@ -49,8 +49,15 @@ public class MemberFrontController extends HttpServlet {
 		} else if(command.equals("FindIdOk.me")) {
 			new FindIdOk().execute(req, resp);
 		
-		}else if(command.equals("FindPwOk.me")){
+		} else if(command.equals("FindPwOk.me")){
 			new FindPwOk().execute(req, resp);
+	
+		} else if(command.equals("LogOutOk.me")) {
+			actionInfo = new LogOutOk().execute(req, resp);
+		
+		} else if(command.equals("MemberLogin.me")) {
+			actionInfo = new MemberLogin().execute(req, resp);
+		
 		}else {
 			// 404 일 때 출력할 에러 페이지 경로 작성
 
