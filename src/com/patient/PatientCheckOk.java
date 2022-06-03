@@ -10,7 +10,7 @@ import org.json.simple.JSONObject;
 
 import com.member.action.Action;
 import com.member.action.ActionInfo;
-import com.member.domain.dao.PatientListDAO;
+import com.patient.domain.dao.PatientListDAO;
 
 public class PatientCheckOk implements Action{
 	@Override

@@ -1,11 +1,10 @@
-package com.member.domain.dao;
+package com.reservation.domain.dao;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
-import com.member.domain.vo.ReservationVO;
-import com.member.domain.vo.ThankyouWriteVO;
 import com.mybatis.config.MyBatisConfig;
+import com.reservation.domain.vo.ReservationVO;
 
 public class ReservationDAO {
 	SqlSessionFactory sqlSessionFactory = MyBatisConfig.getSqlSessionFactory();
