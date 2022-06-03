@@ -25,6 +25,7 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="asset/css/KDHfooter.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </head>
@@ -49,7 +50,7 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
                     </ul>
                     <ul class="topMenu">
                         <li>
-                            <a href="mainpage.jsp">로그아웃</a>
+                            <a href="${pageContext.request.contextPath}/MemberLogin.me">로그인</a>
                         </li>
                         <li>
                             <a href="mypage.jsp">마이페이지</a>
@@ -255,7 +256,7 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 							</tr>
 							<tr>
 								
-								<th class="regiTitle">*주소</th>
+								<th class="regiTitle"><span class="required">*</span>주소</th>
 								<td id="add"><input type="text" id="sample4_postcode"
 									placeholder="우편번호"> <input id="postFind" type="button"
 									onclick="sample4_execDaumPostcode()" value="우편번호 찾기"><br>
@@ -1073,11 +1074,69 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 				<!-- //boardTypeForm -->
 			</fieldset>
 		</form>
-		<div class="btnWrap" style="padding-left: 1095px;">
+		<div class="btnWrap" style="padding-left: 999px;">
 			<button type="button" class="btnType03 btnBig" id="nextBtn" >다음단계</button>
 		</div>
 		</main>
-		<jsp:include page="footer.jsp" />
+		<footer id="footer">
+            <div class="ftMenuWrap">
+                <div class="footerMenu">
+                    <div class="innerWrap clearFix">
+                        <ul class="ftMenuList01">
+                            <li><a href="//child.snuh.org/main.do" target="_blank">어린이병원</a></li>
+                            <li><a href="//cancer.snuh.org/main.do" target="_blank">암병원</a></li>
+                            <li><a href="//www.snubh.org/" target="_blank">분당서울대병원</a></li>
+                            <li><a href="//www.brmh.org/" target="_blank">보라매병원</a></li>
+                            <li><a href="//healthcare.snuh.org/" target="_blank">강남센터</a></li>
+                            <li><a href="http://medicine.snu.ac.kr" target="_blank">서울대학교의과대학</a></li>
+                        </ul>
+                        <ul class="ftMenuList02">
+                            <li><a href="#ftMenuCol01" class="" title="진료과 메뉴 레이어 열기">진료과</a></li>
+                            <li><a href="#ftMenuCol02" class="" title="주요센터 메뉴 레이어 열기">주요센터</a></li>
+                            <li><a href="#ftMenuCol03" class="" title="주요부서 메뉴 레이어 열기">주요부서</a></li>
+                            <li><a href="#ftMenuCol04" class="" title="주요서비스 메뉴 레이어 열기">주요서비스</a></li>
+                            <li><a href="#ftMenuCol05" class="" title="패밀리사이트 메뉴 레이어 열기">패밀리사이트</a></li>
+                        </ul>
+                        <div class="ftMenuLayer clearFix" role="region" aria-hidden="true" aria-expanded="false" style="display: none; visibility: visible;"></div>
+                    </div>
+                </div>
+            </div>
+            <ul class="innerWrap footerLink">
+                <li><a href="/reservation/unPaid/list.do" class="colorPoint04" target="_blank">비급여진료비용</a></li>
+                <li><a href="/content/M004005.do" target="_blank">환자권리장전</a></li>
+                <li><a href="/footer/service.do" target="_blank">이용약관</a></li>
+                <li><a href="/footer/privacy.do" class="colorPoint04" target="_blank">개인정보 처리방침</a></li>
+                <li><a href="/content/M004006002.do" target="_blank">정보공개</a></li>
+                <li><a href="/" data-layer="layerEmail" class="layerBtn">정보무단수집거부공개</a></li>
+                <li><a href="/" data-layer="layerDown" class="layerBtn">뷰어 다운로드</a></li>
+                <li><a href="//nrefer.snuh.org" target="_blank">진료협력센터</a></li>
+                <li><a href="//funeral.snuh.org/main.do" target="_blank">장례식장</a></li>
+            </ul>
+            <div class="footerInfo">
+                <div class="innerWrap">
+                    <address class="clearfix">
+                        <p>주소 : 03080 서울특별시 종로구 대학로 101(연건동 28)</p>
+                        <p>대표전화 : <a href="tel:1588-5700">1588-5700</a></p>
+                        <p>
+                            <a href="/login.do?retUrl=/content/M005009.do">홈페이지 의견접수</a>
+                        </p>
+                    </address>
+                    <p class="copyright">COPYRIGHT 2010 SEOUL NATIONAL UNIVERSITY HOSPITAL. ALL RIGHTS RESERVED</p>
+                    <ul class="awardList">
+                        <li class="item05 hideTxt"><a href="/board/B003/view.do?viewType=true&ampbbs_no=5224">전자의무기록시스템</a></li>
+                        <li class="item01 hideTxt"><a href="/board/B003/view.do?bbs_no=1509">보건복지부 제 1호</a></li>
+                        <li class="item04 hideTxt" name="ismsTxt"><a href="#ismsTxt" class="ismsTxtBtn">서울대학교병원 정보보호 관리체계(ISMS) 인증
+                            [유효기간] 2021.02.17 ~ 2024.02.16 
+                            [인증범위] 의료정보시스템(EMR,OCS),홈페이지 및 모바일 애플리케이션  운영</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ftIsmsTxt">
+                <p>서울대학교병원 정보보호 관리체계(ISMS) 인증<br>
+                    [유효기간] 2021.02.17 ~ 2024.02.16<br> 
+                    [인증범위] 의료정보시스템(EMR,OCS),홈페이지 및 모바일 애플리케이션 운영</p>
+            </div>   
+        </footer>
 </div>
 </body>
 
