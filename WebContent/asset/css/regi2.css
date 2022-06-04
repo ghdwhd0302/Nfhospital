@@ -11,12 +11,20 @@
 *{
      box-sizing: content-box!important;
 }
+.hideTxt{
+    overflow: hidden;
+    color: transparent;
+    text-indent: 100%;
+    white-space: nowrap;
+}
 a:link, a:visited, a:hover, a:active {
     text-decoration: none;
 }
 #content.memJoinContent {
-	width: 70%;
-	padding-right: 0;
+	width: 1100px;
+    padding-right: 0;
+    height: 1200px;
+    margin-top: 180px;
 }
 
 h1{
@@ -35,6 +43,11 @@ h1{
 	margin-top: 180px;
 	padding-top: 80px;
 	
+}
+
+#content {
+    word-spacing: 0;
+    letter-spacing: -.5px;
 }
 #header {
     left: 0;
@@ -407,8 +420,9 @@ body {
 
 .contHeadingWrap {
 	overflow: hidden;
-	position: relative;
-	margin: -12px 0 43px;
+    position: relative;
+    margin: -12px 0 43px;
+    font-size: 27px;
 }
 
 span.required{
@@ -419,6 +433,8 @@ h2 {
 	font-family: 'Noto Sans KR Bold', 'Noto Sans CJK KR', 'Noto Sans KR',
 		'맑은 고딕', sans-serif;
 	font-weight: 700;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .stepWrap li:first-child {
@@ -427,7 +443,7 @@ h2 {
 
 .stepWrap li {
 	float: left;
-	width: 26%;
+	width: 30%;
 	/* padding: 20px 0 18px 30px; */
 	border: 1px solid #ccc;
 	color: #ccc;
@@ -583,7 +599,7 @@ img {
 }
 .autoJoin .img img {
     display: inline-block;
-    margin-top: 40px;
+    margin-top: 10px;
 }
 
 [class*=feFo] {
@@ -813,17 +829,10 @@ input[type=tel], input[type=text], input[type=email], input[type=number], input[
     padding-top: 0;
 }
 
-.contHeadingWrap {
-	height: 220px;
-    overflow: hidden;
-    margin: -12px 0 9px;
-    top: 155px;
-}
-
 .contHeadingWrap > :first-child {
-    float: left;
-    font-size: 40px;
+    font-size: 41px;
     letter-spacing: -2px;
+    font-weight: 700;
 }
 
 [class*=tabType] {
@@ -876,4 +885,12 @@ input[type=tel], input[type=text], input[type=email], input[type=number], input[
     cursor:pointer; 
     text-decoration:none; 
     color: inherit;
+}
+
+ul, address{
+	margin-bottom: 0px!important;
+}
+
+p{
+	margin: 0px!important;
 }
