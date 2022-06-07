@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,11 +35,14 @@
                         </li>
                     </ul>
                     <ul class="topMenu">
+                    <c:if test="${empty name}">
+                  		<li><a href="${pageContext.request.contextPath}/MemberLogin.me" style="color: #000;">로그인</a></li>
+               		</c:if>
+               		<c:if test="${not empty name}">
+                  		<li><a href="${pageContext.request.contextPath}/LogOutOk.me" style="color: #000;">로그아웃</a></li>
+               		</c:if>
                         <li>
-                            <a>로그아웃</a>
-                        </li>
-                        <li>
-                            <a href="mainpage.html">마이페이지</a>
+                            <a href="mypage.jsp">마이페이지</a>
                         </li>
                         <li>
                             <a>Language</a>
@@ -244,10 +248,7 @@
             							<input type="radio" name="clinic" value="AN" onclick="viewInformation('DP','1','AN', '','Y');" title="마취통증의학과" id="feFoRadioIdx25" data-fe-idx="feFoRadioIdx25" style="opacity:0;">
             							<span>마취통증의학과</span>
             						</label>
-            						<label class="feForm feFoRadio" for="feFoRadioIdx26">
-            							<input type="radio" name="clinic" value="TR" onclick="viewInformation('DP','1','TR', '','Y');" title="방사선종양학과" id="feFoRadioIdx26" data-fe-idx="feFoRadioIdx26" style="opacity:0;">
-            							<span>마취통증의학과</span>
-            						</label>
+            						
             					</div>
             				</div>
             			</div>
@@ -255,12 +256,12 @@
             	</div>
             	
             	<div class="rsvInfoWrap" style="margin-left: 10px;">
-            	<form action="${pageContext.request.contextPath }/reservation/ReservationOk.re" name="reservationForm" method="post" style="color:white; margin-left:22px;">
+            	<form action="${pageContext.request.contextPath }/ReservationOk.re" name="reservationForm" method="post" style="color:white; margin-left:22px;">
             		<div class="user">
             			<h3>예약하실 정보확인</h3>
             			<dl>
             				<input type="hidden" id="name" name="name" value="">
-            				<dt>환자명 :</dt>
+            				<dt>환자명 :<c:out value="${sessionScope.list.getName()}"/></dt>
             				<!-- 여기는 로그인된 이름값 가져오기 -->
             				<dd></dd>
             			</dl>
@@ -288,8 +289,8 @@
             				<li>
             					진료일시
             					<i style="font-style: normal;"> : </i>
-            					<input type="date" name="scheduleDate"  style="border: none; background-color: #2763ba; color: white; font-size: 16px;" >
-            					<em style="display: none;"></em>
+            					<input type="date" name="scheduleDate"  style="border: none; background-color: #2763ba; color: white; font-size: 16px;" ><br>
+            					
             				</li>
             				<li>
             					진료시간 
@@ -297,7 +298,7 @@
             					<input type="time" name="scheduleDate" min="09:00" max="17:00" step="900" required style="border: none; background-color: #2763ba; color: white; font-size: 16px;" >
             				</li>
             				<li>
-            					<input type="button" id="confirmBtn" value="예약 확정" class="btnType03" onclick="reservation()"
+            					<input type="button" id="confirmBtn" value="예약 확정" class="btnType03" onclick="send()"
             			style="border: 1px solid #2263bb; color: #fff; background-color: #2263bb; padding: 5px 103px 15px 78px; text-align: center; font-size: 19px; cursor: pointer;">
             				</li>
             			</ul>
@@ -507,6 +508,7 @@ $(document).ready(function() {
 	  $(".feForm").click(function(){
 		  $("#medicalDept").val($(".select1").text());
 	  $(".select1").text("알레르기내과");
+	  $("#medicalDept").val($(".select1").text());
 	  });
 	  
 	});
@@ -544,9 +546,13 @@ $(document).ready(function() {
 	  $(".select2").text("서장호");
 	  $("#doctor").val($(".select2").text()); 
 	  });
+	  
 	});
    
    $("#name").val($("#named").text());
    
+   function send(){	   
+	   reservationForm.submit();
+   }
 </script>
 </html>

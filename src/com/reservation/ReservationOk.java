@@ -13,6 +13,7 @@ import com.reservation.domain.vo.ReservationVO;
 public class ReservationOk implements Action{
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+		req.setCharacterEncoding("UTF-8");
 		ReservationVO reservationVO = new ReservationVO();
 		ReservationDAO reservationDAO = new ReservationDAO();
 		ActionInfo actionInfo = new ActionInfo();
@@ -27,7 +28,8 @@ public class ReservationOk implements Action{
 		
 		reservationDAO.reservation(reservationVO);		
 		
-		req.setAttribute("name", reservationVO.getName());
+		req.setAttribute("medicalDept", reservationVO.getMedicalDept());
+		
 		
 		actionInfo.setRedirect(false);
 		actionInfo.setPath("/newreservation.jsp");

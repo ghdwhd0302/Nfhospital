@@ -1,5 +1,7 @@
 package com.reservation.domain.dao;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
@@ -17,9 +19,9 @@ public class ReservationDAO {
 	/*public void add(ReservationVO reservationVO) {
 	}*/
 	
-	public boolean checkID(String id) {
+	/*public boolean checkID(String id) {
 		return (Integer)sqlSession.selectOne("Reservation.view", id) == 1;
-	}
+	}*/
 	
 	//예약
 	public void reservation(ReservationVO reservationVO) {
@@ -27,13 +29,13 @@ public class ReservationDAO {
 	}
 		
 	//예약조회
-	public void reservations(ReservationVO reservationVO) {
-		sqlSession.selectList("Reservation.reservations", reservationVO);
+	public List<ReservationVO> selectReservations(){
+		return sqlSession.selectList("Reservation.selectReservations");
 	}
 	
-	//예약취소
-	public void reservationDelete(ReservationVO reservationVO) {
-		sqlSession.delete("Reservation.reservationDelete", reservationVO);
+	//예약삭제
+	public void reservationDelete(int reservationNum) {
+		sqlSession.delete("Reservation.reservationDelete", reservationNum);
 	}
 	
 	//예약수정
